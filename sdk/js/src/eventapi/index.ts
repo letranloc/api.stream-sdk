@@ -454,6 +454,7 @@ export class EventApi extends ApiClient {
         handler.handler( payload ? payload[ name ] as any : undefined, { isFromCurrentSession: payload.sessionId === this.sessionId } );
       }
     }
+  }
 
   /**
    * Make an RPC call
