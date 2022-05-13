@@ -18,12 +18,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_NPM_AUTH_TOKEN }}" >> ~/.npmrc
-          echo "\"@golightstream:registry\"=https://npm.pkg.github.com" >> ~/.npmrc
-          npm ci
-          npm run build
-          npm run publish-docs
+          cd examples/js/scenes-demo
+          npm run publish-demo
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
