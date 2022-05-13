@@ -245,6 +245,8 @@ export const HostView = () => {
   const [ token, setToken ] = useState<string>( localStorage[ 'token' ] );
   const [ broadcastKit, setBroadcastKit ] = useState<BroadcastKit>( null );
 
+  localStorage.removeItem( 'token' );
+
   useEffect( () => {
 
     if ( !token ) return;
