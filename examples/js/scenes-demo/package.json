@@ -9,7 +9,7 @@
     "publish-demo": "npm install && rm -f ../../../docs/demo && vite build --emptyOutDir --outDir ../../../docs/demo --base=/demo/"
   },
   "dependencies": {
-    "@api.stream/sdk": "file:../../../sdk/js/api.stream-sdk-1.0.15.tgz",
+    "@api.stream/sdk": "^1.0.17",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.6.2",
