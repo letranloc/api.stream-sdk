@@ -21,7 +21,7 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    implementation 'stream.api:api.stream-sdk:1.0.16'
+    implementation 'stream.api:api.stream-sdk:1.0.17'
     // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
     implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.19.4'
     // https://mvnrepository.com/artifact/com.google.api.grpc/proto-google-common-protos
