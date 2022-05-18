@@ -29,7 +29,7 @@
     "build:live": "nodemon --delay 500ms --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
   },
   "dependencies": {
-    "@api.stream/sdk": "^1.0.1",
+    "@api.stream/sdk": "^1.0.19",
     "axios": "^0.26.1",
     "express": "^4.17.3"
   },

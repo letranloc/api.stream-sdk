@@ -5,6 +5,7 @@
  * -------------------------------------------------------------------------------------------- */
 
 import { ApiStream, LiveApiModel, LayoutApiModel, LiveKitUtils } from "@api.stream/sdk";
+import { S3ACL } from "@api.stream/sdk/lib/liveapi/proto/ts/live/v21/api";
 import { nanoid } from "nanoid";
 
 export class BroadcastKit {
@@ -227,9 +228,9 @@ export class BroadcastKit {
             debug: debug
           }
         },
-        webrtc: {
-          hosted: {}
-        }
+        // webrtc: {
+        //   hosted: {}
+        // }
       } );
       this.project = response.project;
     }
@@ -424,6 +425,65 @@ export class BroadcastKit {
       srcId: response.source?.sourceId as string,
       url: ( response.source.address.rtmpPush ) ? response.source.address.rtmpPush.url : response.source.address.rtmpPull.url
     };
+  }
+
+  async getOrCreateRecording ( name: string, region: string, bucket: string, prefix: string, accessKey: string, secretKey: string ) {
+    // does it exist?
+    for ( let destination of this.project?.destinations as LiveApiModel.Destination[] ) {
+      if ( destination.metadata[ 'name' ] == name ) {
+        let dresponse = await this.api.LiveApi().destination?.updateDestination( {
+          collectionId: this.collection?.collectionId,
+          projectId: this.project?.projectId,
+          destinationId: destination.destinationId,
+          address: {
+            s3Storage: {
+              region: region,
+              bucket: bucket,
+              prefix: prefix,
+              accessKey: accessKey,
+              secretKey: secretKey,
+              packaging: {
+                hls: {
+                  lifecycle: {
+                    vod: {}
+                  }
+                }
+              }
+            }
+          },
+          enabled: true,
+          updateMask: [ 'address', 'enabled' ]
+        } );
+        destination = dresponse.destination;
+        return;
+      }
+    }
+
+    let dresponse = await this.api.LiveApi().destination?.createDestination( {
+      collectionId: this.collection?.collectionId,
+      projectId: this.project?.projectId,
+      metadata: {
+        name: name
+      },
+      address: {
+        s3Storage: {
+          region: region,
+          bucket: bucket,
+          prefix: prefix,
+          accessKey: accessKey,
+          secretKey: secretKey,
+          packaging: {
+            hls: {
+              lifecycle: {
+                vod: {}
+              }
+            }
+          }
+        }
+      },
+      enabled: true,
+    } );
+    this.project?.destinations.push( dresponse.destination );
   }
 
   async getOrCreateDestination ( name: string, url: string, key: string ) {

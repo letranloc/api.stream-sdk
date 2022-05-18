@@ -134,7 +134,7 @@ public enum EventSubType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(14);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(15);
   }
 
   private static final EventSubType[] VALUES = values();

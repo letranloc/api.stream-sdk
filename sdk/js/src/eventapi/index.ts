@@ -421,36 +421,39 @@ export class EventApi extends ApiClient {
     for ( const handler of ( this.eventHandlers[ name as string ] ?? [] ) ) {
       if ( name === 'event' && payload.event ) {
         if ( payload.sessionId === this.sessionId && handler.ignoreSessionEvents && !handler.allowedSessionEvents.includes( payload.event.name ) ) {
-          this.log.trace( "ignorning event from self: " + payload.event.name );
+          this.log.trace( "ignorning user event from self: " + payload.event.name + ", payload.sessionId=" + payload.sessionId + ", this.sessionId" );
           continue;
         }
 
         if ( handler.name && !isMatch( payload.event.name, handler.name ) ) {
           continue;
         }
+
+        if ( this.eventLogCallback ) {
+          let eventService: string | undefined = undefined;
+          let eventType = payload.event.name;
+          let eventSubType: string | undefined = undefined;
+
+          // apistream:live:EVENT_TYPE_PROJECT:EVENT_SUB_TYPE_UPDATE
+          if ( payload.event.name.startsWith( EventApi.APISTREAM_EVENT_PREFIX ) ) {
+            let parts = payload.event.name.split( ':' );
+            if ( parts.length == 4 ) {
+              eventService = parts[ 1 ];
+              eventType = parts[ 2 ];
+              eventSubType = parts[ 3 ];
+            }
+            this.eventLogCallback( eventService, eventType, eventSubType, payload );
+          }
+        }
+
       } else {
         if ( payload.sessionId === this.sessionId && handler.ignoreSessionEvents ) {
-          this.log.trace( "ignorning event from self" );
+          this.log.trace( "ignorning event from self: " + payload.event.name + ", payload.sessionId=" + payload.sessionId + ", this.sessionId" );
           continue;
         }
       }
 
-      if ( this.eventLogCallback && name === 'event' && payload.event ) {
-        let eventService: string | undefined = undefined;
-        let eventType = payload.event.name;
-        let eventSubType: string | undefined = undefined;
-
-        // apistream:live:EVENT_TYPE_PROJECT:EVENT_SUB_TYPE_UPDATE
-        if ( payload.event.name.startsWith( EventApi.APISTREAM_EVENT_PREFIX ) ) {
-          let parts = payload.event.name.split( ':' );
-          if ( parts.length == 4 ) {
-            eventService = parts[ 1 ];
-            eventType = parts[ 2 ];
-            eventSubType = parts[ 3 ];
-          }
-          this.eventLogCallback( eventService, eventType, eventSubType, payload );
-        }
-      }
+      this.log.trace( "processing event: payload.sessionId=" + payload.sessionId + ", this.sessionId" );
 
       handler.handler( payload ? payload[ name ] as any : undefined, { isFromCurrentSession: payload.sessionId === this.sessionId } );
     }

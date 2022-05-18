@@ -221,7 +221,7 @@ public enum Region
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(10);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(11);
   }
 
   private static final Region[] VALUES = values();

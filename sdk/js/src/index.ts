@@ -253,7 +253,7 @@ export class ApiStream {
    */
   public async load ( accessToken?: string ): Promise<ApiStream.GuestProject | null> {
     // not specified, check if it is in the query params
-    if ( accessToken == undefined ) {
+    if ( ( accessToken == undefined ) && ( typeof window != 'undefined' ) ) {
       let queryParameters = this.parseQuery();
       if ( queryParameters.get( ApiStream.ACCESS_TOKEN_QUERY_PARAM ) != null ) {
         accessToken = queryParameters.get( ApiStream.ACCESS_TOKEN_QUERY_PARAM );

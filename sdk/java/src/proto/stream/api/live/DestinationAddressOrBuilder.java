@@ -65,5 +65,32 @@ public interface DestinationAddressOrBuilder extends
    */
   stream.api.live.DestinationAgoraPushAddressOrBuilder getAgoraOrBuilder();
 
+  /**
+   * <pre>
+   * s3 storage addressing
+   * </pre>
+   *
+   * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+   * @return Whether the s3Storage field is set.
+   */
+  boolean hasS3Storage();
+  /**
+   * <pre>
+   * s3 storage addressing
+   * </pre>
+   *
+   * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+   * @return The s3Storage.
+   */
+  stream.api.live.S3StorageAddress getS3Storage();
+  /**
+   * <pre>
+   * s3 storage addressing
+   * </pre>
+   *
+   * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+   */
+  stream.api.live.S3StorageAddressOrBuilder getS3StorageOrBuilder();
+
   public stream.api.live.DestinationAddress.TypeCase getTypeCase();
 }

@@ -23,6 +23,10 @@ export function IsFulfilled<T> ( input: PromiseSettledResult<T> ): input is Prom
   return input.status === 'fulfilled';
 }
 
+export function Sleep ( ms: number ): Promise<unknown> {
+  return new Promise( resolve => setTimeout( resolve, ms ) );
+}
+
 export function GetDirection ( buttonGroupMap: Map<string, ButtonGroupConfig>, buttonGroupName: string, insertName: string ): 'in' | 'out' {
   if ( ( buttonGroupMap.get( buttonGroupName ).reactValue as string[] ).includes( insertName ) )
     return 'out';

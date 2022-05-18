@@ -492,6 +492,88 @@ export function projectBroadcastPhaseToNumber(
   }
 }
 
+export enum S3ACL {
+  S3ACL_UNSPECIFIED = "S3ACL_UNSPECIFIED",
+  S3ACL_PRIVATE = "S3ACL_PRIVATE",
+  S3ACL_PUBLIC_READ = "S3ACL_PUBLIC_READ",
+  S3ACL_PUBLIC_READ_WRITE = "S3ACL_PUBLIC_READ_WRITE",
+  S3ACL_AUTHENTICATED_READ = "S3ACL_AUTHENTICATED_READ",
+  S3ACL_BUCKET_OWNER_READ = "S3ACL_BUCKET_OWNER_READ",
+  S3ACL_BUCKET_OWNER_FULL_CONTROL = "S3ACL_BUCKET_OWNER_FULL_CONTROL",
+}
+
+export function s3ACLFromJSON(object: any): S3ACL {
+  switch (object) {
+    case 0:
+    case "S3ACL_UNSPECIFIED":
+      return S3ACL.S3ACL_UNSPECIFIED;
+    case 1:
+    case "S3ACL_PRIVATE":
+      return S3ACL.S3ACL_PRIVATE;
+    case 2:
+    case "S3ACL_PUBLIC_READ":
+      return S3ACL.S3ACL_PUBLIC_READ;
+    case 3:
+    case "S3ACL_PUBLIC_READ_WRITE":
+      return S3ACL.S3ACL_PUBLIC_READ_WRITE;
+    case 4:
+    case "S3ACL_AUTHENTICATED_READ":
+      return S3ACL.S3ACL_AUTHENTICATED_READ;
+    case 5:
+    case "S3ACL_BUCKET_OWNER_READ":
+      return S3ACL.S3ACL_BUCKET_OWNER_READ;
+    case 6:
+    case "S3ACL_BUCKET_OWNER_FULL_CONTROL":
+      return S3ACL.S3ACL_BUCKET_OWNER_FULL_CONTROL;
+    default:
+      throw new globalThis.Error(
+        "Unrecognized enum value " + object + " for enum S3ACL"
+      );
+  }
+}
+
+export function s3ACLToJSON(object: S3ACL): string {
+  switch (object) {
+    case S3ACL.S3ACL_UNSPECIFIED:
+      return "S3ACL_UNSPECIFIED";
+    case S3ACL.S3ACL_PRIVATE:
+      return "S3ACL_PRIVATE";
+    case S3ACL.S3ACL_PUBLIC_READ:
+      return "S3ACL_PUBLIC_READ";
+    case S3ACL.S3ACL_PUBLIC_READ_WRITE:
+      return "S3ACL_PUBLIC_READ_WRITE";
+    case S3ACL.S3ACL_AUTHENTICATED_READ:
+      return "S3ACL_AUTHENTICATED_READ";
+    case S3ACL.S3ACL_BUCKET_OWNER_READ:
+      return "S3ACL_BUCKET_OWNER_READ";
+    case S3ACL.S3ACL_BUCKET_OWNER_FULL_CONTROL:
+      return "S3ACL_BUCKET_OWNER_FULL_CONTROL";
+    default:
+      return "UNKNOWN";
+  }
+}
+
+export function s3ACLToNumber(object: S3ACL): number {
+  switch (object) {
+    case S3ACL.S3ACL_UNSPECIFIED:
+      return 0;
+    case S3ACL.S3ACL_PRIVATE:
+      return 1;
+    case S3ACL.S3ACL_PUBLIC_READ:
+      return 2;
+    case S3ACL.S3ACL_PUBLIC_READ_WRITE:
+      return 3;
+    case S3ACL.S3ACL_AUTHENTICATED_READ:
+      return 4;
+    case S3ACL.S3ACL_BUCKET_OWNER_READ:
+      return 5;
+    case S3ACL.S3ACL_BUCKET_OWNER_FULL_CONTROL:
+      return 6;
+    default:
+      return 0;
+  }
+}
+
 /** boolean logic for trigger */
 export enum SourceTriggerAction {
   SOURCE_TRIGGER_ACTION_UNSPECIFIED = "SOURCE_TRIGGER_ACTION_UNSPECIFIED",
@@ -1130,12 +1212,73 @@ export interface DestinationAgoraPushAddress {
   userId: string;
 }
 
+/** live hls lifecycle management */
+export interface HlsLifecycleLive {
+  /** number of entries to advertise in playlist file */
+  playlistCount?: number | undefined;
+  /** number of files to keep on disk */
+  fileCount?: number | undefined;
+}
+
+/** vod hls lifecycle management */
+export interface HlsLifecycleVod {
+  /** max duration of the recording in ms (0 is indefinite) */
+  maxDuration?: number | undefined;
+}
+
+/** hls lifecycle management */
+export interface HlsLifecycle {
+  /** lifecycle of vod */
+  vod: HlsLifecycleVod | undefined;
+  /** lifecycle of live */
+  live: HlsLifecycleLive | undefined;
+}
+
+/** hls packaging options */
+export interface HlsPackaging {
+  /** lifecycle of hls segments */
+  lifecycle: HlsLifecycle | undefined;
+  /** duration of segments in ms */
+  segmentDuration?: number | undefined;
+}
+
+/** packaging options for object storage */
+export interface ObjectStoragePackaging {
+  /** hls format */
+  hls: HlsPackaging | undefined;
+}
+
+export interface S3StorageAddress {
+  /** cloud region */
+  region: string;
+  /** cloud bucket */
+  bucket: string;
+  /** cloud bucket prefix */
+  prefix?: string | undefined;
+  /** cloud access key */
+  accessKey: string;
+  /** cloud secret key */
+  secretKey: string;
+  /** token based auth */
+  token?: string | undefined;
+  /** token duration in ms */
+  tokenDuration?: number | undefined;
+  /** access control list */
+  acl?: S3ACL | undefined;
+  /** endpoint for non aws s3 destinations */
+  endpoint?: string | undefined;
+  /** the format of the files to be written */
+  packaging: ObjectStoragePackaging | undefined;
+}
+
 /** destination address (select one) */
 export interface DestinationAddress {
   /** rtmp push addressing */
   rtmpPush: DestinationRtmpPushAddress | undefined;
   /** Agora addressing */
   agora: DestinationAgoraPushAddress | undefined;
+  /** s3 storage addressing */
+  s3Storage: S3StorageAddress | undefined;
 }
 
 /** triggers to indicate what actions to take on the project for a given Source */
@@ -3136,8 +3279,497 @@ export const DestinationAgoraPushAddress = {
   },
 };
 
+function createBaseHlsLifecycleLive(): HlsLifecycleLive {
+  return { playlistCount: undefined, fileCount: undefined };
+}
+
+export const HlsLifecycleLive = {
+  encode(
+    message: HlsLifecycleLive,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
+    if (message.playlistCount !== undefined) {
+      writer.uint32(8).int32(message.playlistCount);
+    }
+    if (message.fileCount !== undefined) {
+      writer.uint32(16).int32(message.fileCount);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): HlsLifecycleLive {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseHlsLifecycleLive();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.playlistCount = reader.int32();
+          break;
+        case 2:
+          message.fileCount = reader.int32();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): HlsLifecycleLive {
+    return {
+      playlistCount: isSet(object.playlistCount)
+        ? Number(object.playlistCount)
+        : undefined,
+      fileCount: isSet(object.fileCount) ? Number(object.fileCount) : undefined,
+    };
+  },
+
+  toJSON(message: HlsLifecycleLive): unknown {
+    const obj: any = {};
+    message.playlistCount !== undefined &&
+      (obj.playlistCount = Math.round(message.playlistCount));
+    message.fileCount !== undefined &&
+      (obj.fileCount = Math.round(message.fileCount));
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<HlsLifecycleLive>): HlsLifecycleLive {
+    const message = createBaseHlsLifecycleLive();
+    message.playlistCount = object.playlistCount ?? undefined;
+    message.fileCount = object.fileCount ?? undefined;
+    return message;
+  },
+};
+
+function createBaseHlsLifecycleVod(): HlsLifecycleVod {
+  return { maxDuration: undefined };
+}
+
+export const HlsLifecycleVod = {
+  encode(
+    message: HlsLifecycleVod,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
+    if (message.maxDuration !== undefined) {
+      writer.uint32(8).int32(message.maxDuration);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): HlsLifecycleVod {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseHlsLifecycleVod();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.maxDuration = reader.int32();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): HlsLifecycleVod {
+    return {
+      maxDuration: isSet(object.maxDuration)
+        ? Number(object.maxDuration)
+        : undefined,
+    };
+  },
+
+  toJSON(message: HlsLifecycleVod): unknown {
+    const obj: any = {};
+    message.maxDuration !== undefined &&
+      (obj.maxDuration = Math.round(message.maxDuration));
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<HlsLifecycleVod>): HlsLifecycleVod {
+    const message = createBaseHlsLifecycleVod();
+    message.maxDuration = object.maxDuration ?? undefined;
+    return message;
+  },
+};
+
+function createBaseHlsLifecycle(): HlsLifecycle {
+  return { vod: undefined, live: undefined };
+}
+
+export const HlsLifecycle = {
+  encode(
+    message: HlsLifecycle,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
+    if (message.vod !== undefined) {
+      HlsLifecycleVod.encode(message.vod, writer.uint32(10).fork()).ldelim();
+    }
+    if (message.live !== undefined) {
+      HlsLifecycleLive.encode(message.live, writer.uint32(18).fork()).ldelim();
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): HlsLifecycle {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseHlsLifecycle();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.vod = HlsLifecycleVod.decode(reader, reader.uint32());
+          break;
+        case 2:
+          message.live = HlsLifecycleLive.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): HlsLifecycle {
+    return {
+      vod: isSet(object.vod) ? HlsLifecycleVod.fromJSON(object.vod) : undefined,
+      live: isSet(object.live)
+        ? HlsLifecycleLive.fromJSON(object.live)
+        : undefined,
+    };
+  },
+
+  toJSON(message: HlsLifecycle): unknown {
+    const obj: any = {};
+    message.vod !== undefined &&
+      (obj.vod = message.vod ? HlsLifecycleVod.toJSON(message.vod) : undefined);
+    message.live !== undefined &&
+      (obj.live = message.live
+        ? HlsLifecycleLive.toJSON(message.live)
+        : undefined);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<HlsLifecycle>): HlsLifecycle {
+    const message = createBaseHlsLifecycle();
+    message.vod =
+      object.vod !== undefined && object.vod !== null
+        ? HlsLifecycleVod.fromPartial(object.vod)
+        : undefined;
+    message.live =
+      object.live !== undefined && object.live !== null
+        ? HlsLifecycleLive.fromPartial(object.live)
+        : undefined;
+    return message;
+  },
+};
+
+function createBaseHlsPackaging(): HlsPackaging {
+  return { lifecycle: undefined, segmentDuration: undefined };
+}
+
+export const HlsPackaging = {
+  encode(
+    message: HlsPackaging,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
+    if (message.lifecycle !== undefined) {
+      HlsLifecycle.encode(message.lifecycle, writer.uint32(10).fork()).ldelim();
+    }
+    if (message.segmentDuration !== undefined) {
+      writer.uint32(16).int32(message.segmentDuration);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): HlsPackaging {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseHlsPackaging();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.lifecycle = HlsLifecycle.decode(reader, reader.uint32());
+          break;
+        case 2:
+          message.segmentDuration = reader.int32();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): HlsPackaging {
+    return {
+      lifecycle: isSet(object.lifecycle)
+        ? HlsLifecycle.fromJSON(object.lifecycle)
+        : undefined,
+      segmentDuration: isSet(object.segmentDuration)
+        ? Number(object.segmentDuration)
+        : undefined,
+    };
+  },
+
+  toJSON(message: HlsPackaging): unknown {
+    const obj: any = {};
+    message.lifecycle !== undefined &&
+      (obj.lifecycle = message.lifecycle
+        ? HlsLifecycle.toJSON(message.lifecycle)
+        : undefined);
+    message.segmentDuration !== undefined &&
+      (obj.segmentDuration = Math.round(message.segmentDuration));
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<HlsPackaging>): HlsPackaging {
+    const message = createBaseHlsPackaging();
+    message.lifecycle =
+      object.lifecycle !== undefined && object.lifecycle !== null
+        ? HlsLifecycle.fromPartial(object.lifecycle)
+        : undefined;
+    message.segmentDuration = object.segmentDuration ?? undefined;
+    return message;
+  },
+};
+
+function createBaseObjectStoragePackaging(): ObjectStoragePackaging {
+  return { hls: undefined };
+}
+
+export const ObjectStoragePackaging = {
+  encode(
+    message: ObjectStoragePackaging,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
+    if (message.hls !== undefined) {
+      HlsPackaging.encode(message.hls, writer.uint32(10).fork()).ldelim();
+    }
+    return writer;
+  },
+
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): ObjectStoragePackaging {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseObjectStoragePackaging();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.hls = HlsPackaging.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): ObjectStoragePackaging {
+    return {
+      hls: isSet(object.hls) ? HlsPackaging.fromJSON(object.hls) : undefined,
+    };
+  },
+
+  toJSON(message: ObjectStoragePackaging): unknown {
+    const obj: any = {};
+    message.hls !== undefined &&
+      (obj.hls = message.hls ? HlsPackaging.toJSON(message.hls) : undefined);
+    return obj;
+  },
+
+  fromPartial(
+    object: DeepPartial<ObjectStoragePackaging>
+  ): ObjectStoragePackaging {
+    const message = createBaseObjectStoragePackaging();
+    message.hls =
+      object.hls !== undefined && object.hls !== null
+        ? HlsPackaging.fromPartial(object.hls)
+        : undefined;
+    return message;
+  },
+};
+
+function createBaseS3StorageAddress(): S3StorageAddress {
+  return {
+    region: "",
+    bucket: "",
+    prefix: undefined,
+    accessKey: "",
+    secretKey: "",
+    token: undefined,
+    tokenDuration: undefined,
+    acl: undefined,
+    endpoint: undefined,
+    packaging: undefined,
+  };
+}
+
+export const S3StorageAddress = {
+  encode(
+    message: S3StorageAddress,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
+    if (message.region !== "") {
+      writer.uint32(10).string(message.region);
+    }
+    if (message.bucket !== "") {
+      writer.uint32(18).string(message.bucket);
+    }
+    if (message.prefix !== undefined) {
+      writer.uint32(26).string(message.prefix);
+    }
+    if (message.accessKey !== "") {
+      writer.uint32(34).string(message.accessKey);
+    }
+    if (message.secretKey !== "") {
+      writer.uint32(42).string(message.secretKey);
+    }
+    if (message.token !== undefined) {
+      writer.uint32(50).string(message.token);
+    }
+    if (message.tokenDuration !== undefined) {
+      writer.uint32(56).int32(message.tokenDuration);
+    }
+    if (message.acl !== undefined) {
+      writer.uint32(64).int32(s3ACLToNumber(message.acl));
+    }
+    if (message.endpoint !== undefined) {
+      writer.uint32(74).string(message.endpoint);
+    }
+    if (message.packaging !== undefined) {
+      ObjectStoragePackaging.encode(
+        message.packaging,
+        writer.uint32(82).fork()
+      ).ldelim();
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): S3StorageAddress {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseS3StorageAddress();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.region = reader.string();
+          break;
+        case 2:
+          message.bucket = reader.string();
+          break;
+        case 3:
+          message.prefix = reader.string();
+          break;
+        case 4:
+          message.accessKey = reader.string();
+          break;
+        case 5:
+          message.secretKey = reader.string();
+          break;
+        case 6:
+          message.token = reader.string();
+          break;
+        case 7:
+          message.tokenDuration = reader.int32();
+          break;
+        case 8:
+          message.acl = s3ACLFromJSON(reader.int32());
+          break;
+        case 9:
+          message.endpoint = reader.string();
+          break;
+        case 10:
+          message.packaging = ObjectStoragePackaging.decode(
+            reader,
+            reader.uint32()
+          );
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): S3StorageAddress {
+    return {
+      region: isSet(object.region) ? String(object.region) : "",
+      bucket: isSet(object.bucket) ? String(object.bucket) : "",
+      prefix: isSet(object.prefix) ? String(object.prefix) : undefined,
+      accessKey: isSet(object.accessKey) ? String(object.accessKey) : "",
+      secretKey: isSet(object.secretKey) ? String(object.secretKey) : "",
+      token: isSet(object.token) ? String(object.token) : undefined,
+      tokenDuration: isSet(object.tokenDuration)
+        ? Number(object.tokenDuration)
+        : undefined,
+      acl: isSet(object.acl) ? s3ACLFromJSON(object.acl) : undefined,
+      endpoint: isSet(object.endpoint) ? String(object.endpoint) : undefined,
+      packaging: isSet(object.packaging)
+        ? ObjectStoragePackaging.fromJSON(object.packaging)
+        : undefined,
+    };
+  },
+
+  toJSON(message: S3StorageAddress): unknown {
+    const obj: any = {};
+    message.region !== undefined && (obj.region = message.region);
+    message.bucket !== undefined && (obj.bucket = message.bucket);
+    message.prefix !== undefined && (obj.prefix = message.prefix);
+    message.accessKey !== undefined && (obj.accessKey = message.accessKey);
+    message.secretKey !== undefined && (obj.secretKey = message.secretKey);
+    message.token !== undefined && (obj.token = message.token);
+    message.tokenDuration !== undefined &&
+      (obj.tokenDuration = Math.round(message.tokenDuration));
+    message.acl !== undefined &&
+      (obj.acl =
+        message.acl !== undefined ? s3ACLToJSON(message.acl) : undefined);
+    message.endpoint !== undefined && (obj.endpoint = message.endpoint);
+    message.packaging !== undefined &&
+      (obj.packaging = message.packaging
+        ? ObjectStoragePackaging.toJSON(message.packaging)
+        : undefined);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<S3StorageAddress>): S3StorageAddress {
+    const message = createBaseS3StorageAddress();
+    message.region = object.region ?? "";
+    message.bucket = object.bucket ?? "";
+    message.prefix = object.prefix ?? undefined;
+    message.accessKey = object.accessKey ?? "";
+    message.secretKey = object.secretKey ?? "";
+    message.token = object.token ?? undefined;
+    message.tokenDuration = object.tokenDuration ?? undefined;
+    message.acl = object.acl ?? undefined;
+    message.endpoint = object.endpoint ?? undefined;
+    message.packaging =
+      object.packaging !== undefined && object.packaging !== null
+        ? ObjectStoragePackaging.fromPartial(object.packaging)
+        : undefined;
+    return message;
+  },
+};
+
 function createBaseDestinationAddress(): DestinationAddress {
-  return { rtmpPush: undefined, agora: undefined };
+  return { rtmpPush: undefined, agora: undefined, s3Storage: undefined };
 }
 
 export const DestinationAddress = {
@@ -3155,6 +3787,12 @@ export const DestinationAddress = {
       DestinationAgoraPushAddress.encode(
         message.agora,
         writer.uint32(18).fork()
+      ).ldelim();
+    }
+    if (message.s3Storage !== undefined) {
+      S3StorageAddress.encode(
+        message.s3Storage,
+        writer.uint32(26).fork()
       ).ldelim();
     }
     return writer;
@@ -3179,6 +3817,9 @@ export const DestinationAddress = {
             reader.uint32()
           );
           break;
+        case 3:
+          message.s3Storage = S3StorageAddress.decode(reader, reader.uint32());
+          break;
         default:
           reader.skipType(tag & 7);
           break;
@@ -3195,6 +3836,9 @@ export const DestinationAddress = {
       agora: isSet(object.agora)
         ? DestinationAgoraPushAddress.fromJSON(object.agora)
         : undefined,
+      s3Storage: isSet(object.s3Storage)
+        ? S3StorageAddress.fromJSON(object.s3Storage)
+        : undefined,
     };
   },
 
@@ -3208,6 +3852,10 @@ export const DestinationAddress = {
       (obj.agora = message.agora
         ? DestinationAgoraPushAddress.toJSON(message.agora)
         : undefined);
+    message.s3Storage !== undefined &&
+      (obj.s3Storage = message.s3Storage
+        ? S3StorageAddress.toJSON(message.s3Storage)
+        : undefined);
     return obj;
   },
 
@@ -3220,6 +3868,10 @@ export const DestinationAddress = {
     message.agora =
       object.agora !== undefined && object.agora !== null
         ? DestinationAgoraPushAddress.fromPartial(object.agora)
+        : undefined;
+    message.s3Storage =
+      object.s3Storage !== undefined && object.s3Storage !== null
+        ? S3StorageAddress.fromPartial(object.s3Storage)
         : undefined;
     return message;
   },
@@ -12811,7 +13463,8 @@ export interface CollectionService {
   /**
    * Get Collection
    *
-   * Get an existing collection of related projects and collection live sources
+   * Get an existing collection of related projects and collection live
+   * sources
    */
   GetCollection(request: GetCollectionRequest): Promise<GetCollectionResponse>;
   /**
@@ -12943,7 +13596,8 @@ export const CollectionServiceDefinition = {
     /**
      * Get Collection
      *
-     * Get an existing collection of related projects and collection live sources
+     * Get an existing collection of related projects and collection live
+     * sources
      */
     getCollection: {
       name: "GetCollection",

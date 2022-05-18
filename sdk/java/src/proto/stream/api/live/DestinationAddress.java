@@ -84,6 +84,20 @@ private static final long serialVersionUID = 0L;
             typeCase_ = 2;
             break;
           }
+          case 26: {
+            stream.api.live.S3StorageAddress.Builder subBuilder = null;
+            if (typeCase_ == 3) {
+              subBuilder = ((stream.api.live.S3StorageAddress) type_).toBuilder();
+            }
+            type_ =
+                input.readMessage(stream.api.live.S3StorageAddress.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((stream.api.live.S3StorageAddress) type_);
+              type_ = subBuilder.buildPartial();
+            }
+            typeCase_ = 3;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -123,6 +137,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     RTMP_PUSH(1),
     AGORA(2),
+    S3_STORAGE(3),
     TYPE_NOT_SET(0);
     private final int value;
     private TypeCase(int value) {
@@ -142,6 +157,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return RTMP_PUSH;
         case 2: return AGORA;
+        case 3: return S3_STORAGE;
         case 0: return TYPE_NOT_SET;
         default: return null;
       }
@@ -243,6 +259,49 @@ private static final long serialVersionUID = 0L;
     return stream.api.live.DestinationAgoraPushAddress.getDefaultInstance();
   }
 
+  public static final int S3_STORAGE_FIELD_NUMBER = 3;
+  /**
+   * <pre>
+   * s3 storage addressing
+   * </pre>
+   *
+   * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+   * @return Whether the s3Storage field is set.
+   */
+  @java.lang.Override
+  public boolean hasS3Storage() {
+    return typeCase_ == 3;
+  }
+  /**
+   * <pre>
+   * s3 storage addressing
+   * </pre>
+   *
+   * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+   * @return The s3Storage.
+   */
+  @java.lang.Override
+  public stream.api.live.S3StorageAddress getS3Storage() {
+    if (typeCase_ == 3) {
+       return (stream.api.live.S3StorageAddress) type_;
+    }
+    return stream.api.live.S3StorageAddress.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * s3 storage addressing
+   * </pre>
+   *
+   * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+   */
+  @java.lang.Override
+  public stream.api.live.S3StorageAddressOrBuilder getS3StorageOrBuilder() {
+    if (typeCase_ == 3) {
+       return (stream.api.live.S3StorageAddress) type_;
+    }
+    return stream.api.live.S3StorageAddress.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -263,6 +322,9 @@ private static final long serialVersionUID = 0L;
     if (typeCase_ == 2) {
       output.writeMessage(2, (stream.api.live.DestinationAgoraPushAddress) type_);
     }
+    if (typeCase_ == 3) {
+      output.writeMessage(3, (stream.api.live.S3StorageAddress) type_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -279,6 +341,10 @@ private static final long serialVersionUID = 0L;
     if (typeCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (stream.api.live.DestinationAgoraPushAddress) type_);
+    }
+    if (typeCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (stream.api.live.S3StorageAddress) type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -305,6 +371,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgora()
             .equals(other.getAgora())) return false;
         break;
+      case 3:
+        if (!getS3Storage()
+            .equals(other.getS3Storage())) return false;
+        break;
       case 0:
       default:
     }
@@ -327,6 +397,10 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + AGORA_FIELD_NUMBER;
         hash = (53 * hash) + getAgora().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + S3_STORAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getS3Storage().hashCode();
         break;
       case 0:
       default:
@@ -510,6 +584,13 @@ private static final long serialVersionUID = 0L;
           result.type_ = agoraBuilder_.build();
         }
       }
+      if (typeCase_ == 3) {
+        if (s3StorageBuilder_ == null) {
+          result.type_ = type_;
+        } else {
+          result.type_ = s3StorageBuilder_.build();
+        }
+      }
       result.typeCase_ = typeCase_;
       onBuilt();
       return result;
@@ -566,6 +647,10 @@ private static final long serialVersionUID = 0L;
         }
         case AGORA: {
           mergeAgora(other.getAgora());
+          break;
+        }
+        case S3_STORAGE: {
+          mergeS3Storage(other.getS3Storage());
           break;
         }
         case TYPE_NOT_SET: {
@@ -968,6 +1053,183 @@ private static final long serialVersionUID = 0L;
       typeCase_ = 2;
       onChanged();;
       return agoraBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        stream.api.live.S3StorageAddress, stream.api.live.S3StorageAddress.Builder, stream.api.live.S3StorageAddressOrBuilder> s3StorageBuilder_;
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     * @return Whether the s3Storage field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3Storage() {
+      return typeCase_ == 3;
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     * @return The s3Storage.
+     */
+    @java.lang.Override
+    public stream.api.live.S3StorageAddress getS3Storage() {
+      if (s3StorageBuilder_ == null) {
+        if (typeCase_ == 3) {
+          return (stream.api.live.S3StorageAddress) type_;
+        }
+        return stream.api.live.S3StorageAddress.getDefaultInstance();
+      } else {
+        if (typeCase_ == 3) {
+          return s3StorageBuilder_.getMessage();
+        }
+        return stream.api.live.S3StorageAddress.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    public Builder setS3Storage(stream.api.live.S3StorageAddress value) {
+      if (s3StorageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        type_ = value;
+        onChanged();
+      } else {
+        s3StorageBuilder_.setMessage(value);
+      }
+      typeCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    public Builder setS3Storage(
+        stream.api.live.S3StorageAddress.Builder builderForValue) {
+      if (s3StorageBuilder_ == null) {
+        type_ = builderForValue.build();
+        onChanged();
+      } else {
+        s3StorageBuilder_.setMessage(builderForValue.build());
+      }
+      typeCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    public Builder mergeS3Storage(stream.api.live.S3StorageAddress value) {
+      if (s3StorageBuilder_ == null) {
+        if (typeCase_ == 3 &&
+            type_ != stream.api.live.S3StorageAddress.getDefaultInstance()) {
+          type_ = stream.api.live.S3StorageAddress.newBuilder((stream.api.live.S3StorageAddress) type_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          type_ = value;
+        }
+        onChanged();
+      } else {
+        if (typeCase_ == 3) {
+          s3StorageBuilder_.mergeFrom(value);
+        }
+        s3StorageBuilder_.setMessage(value);
+      }
+      typeCase_ = 3;
+      return this;
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    public Builder clearS3Storage() {
+      if (s3StorageBuilder_ == null) {
+        if (typeCase_ == 3) {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+        }
+      } else {
+        if (typeCase_ == 3) {
+          typeCase_ = 0;
+          type_ = null;
+        }
+        s3StorageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    public stream.api.live.S3StorageAddress.Builder getS3StorageBuilder() {
+      return getS3StorageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    @java.lang.Override
+    public stream.api.live.S3StorageAddressOrBuilder getS3StorageOrBuilder() {
+      if ((typeCase_ == 3) && (s3StorageBuilder_ != null)) {
+        return s3StorageBuilder_.getMessageOrBuilder();
+      } else {
+        if (typeCase_ == 3) {
+          return (stream.api.live.S3StorageAddress) type_;
+        }
+        return stream.api.live.S3StorageAddress.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * s3 storage addressing
+     * </pre>
+     *
+     * <code>.live.v21.S3StorageAddress s3_storage = 3 [json_name = "s3Storage"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        stream.api.live.S3StorageAddress, stream.api.live.S3StorageAddress.Builder, stream.api.live.S3StorageAddressOrBuilder> 
+        getS3StorageFieldBuilder() {
+      if (s3StorageBuilder_ == null) {
+        if (!(typeCase_ == 3)) {
+          type_ = stream.api.live.S3StorageAddress.getDefaultInstance();
+        }
+        s3StorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            stream.api.live.S3StorageAddress, stream.api.live.S3StorageAddress.Builder, stream.api.live.S3StorageAddressOrBuilder>(
+                (stream.api.live.S3StorageAddress) type_,
+                getParentForChildren(),
+                isClean());
+        type_ = null;
+      }
+      typeCase_ = 3;
+      onChanged();;
+      return s3StorageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

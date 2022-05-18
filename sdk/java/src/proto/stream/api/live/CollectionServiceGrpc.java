@@ -244,7 +244,8 @@ public final class CollectionServiceGrpc {
     /**
      * <pre>
      * Get Collection
-     * Get an existing collection of related projects and collection live sources
+     * Get an existing collection of related projects and collection live
+     * sources
      * </pre>
      */
     public void getCollection(stream.api.live.GetCollectionRequest request,
@@ -359,7 +360,8 @@ public final class CollectionServiceGrpc {
     /**
      * <pre>
      * Get Collection
-     * Get an existing collection of related projects and collection live sources
+     * Get an existing collection of related projects and collection live
+     * sources
      * </pre>
      */
     public void getCollection(stream.api.live.GetCollectionRequest request,
@@ -437,7 +439,8 @@ public final class CollectionServiceGrpc {
     /**
      * <pre>
      * Get Collection
-     * Get an existing collection of related projects and collection live sources
+     * Get an existing collection of related projects and collection live
+     * sources
      * </pre>
      */
     public stream.api.live.GetCollectionResponse getCollection(stream.api.live.GetCollectionRequest request) {
@@ -512,7 +515,8 @@ public final class CollectionServiceGrpc {
     /**
      * <pre>
      * Get Collection
-     * Get an existing collection of related projects and collection live sources
+     * Get an existing collection of related projects and collection live
+     * sources
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<stream.api.live.GetCollectionResponse> getCollection(

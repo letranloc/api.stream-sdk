@@ -11,6 +11,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineDotProps from '@mui/lab/TimelineDot';
 import type { } from '@mui/lab/themeAugmentation';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Accordion from '@mui/material/Accordion';;
@@ -22,7 +23,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface CodeBlock {
-  color: string,
+  color: 'inherit' | 'grey' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning',
   api: string, sub1: string, sub2: string, clientHeader: string, clientBody: any, serverHeader: string, serverBody: any;
 }
 type MyCallback = ( chatHistory: CodeBlock[] ) => void;

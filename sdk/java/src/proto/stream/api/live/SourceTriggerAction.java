@@ -110,7 +110,7 @@ public enum SourceTriggerAction
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(9);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(10);
   }
 
   private static final SourceTriggerAction[] VALUES = values();

@@ -102,7 +102,7 @@ public enum ConnectState
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(13);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(14);
   }
 
   private static final ConnectState[] VALUES = values();

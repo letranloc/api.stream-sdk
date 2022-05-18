@@ -116,7 +116,7 @@ public enum EventType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(15);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(16);
   }
 
   private static final EventType[] VALUES = values();

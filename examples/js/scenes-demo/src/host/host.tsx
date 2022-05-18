@@ -21,15 +21,15 @@ import { ApiLogger, ApiLogCallback, EventLogCallback } from '../log';
 import { ExternalSources } from '../external';
 import { Scene } from '../scene';
 import { Login } from '../login';
-import { ButtonGroupConfig, CreateButtonGroupState, IsFulfilled } from '../shared/utils';
+import { ButtonGroupConfig, CreateButtonGroupState, IsFulfilled, Sleep } from '../shared/utils';
 
 //const DEBUG_DEV_SERVER = 'https://live.stream.horse/live/v2';
 const DEBUG_DEV_SERVER = 'http://127.0.0.1:7070';
 
 const API_KEY: string | undefined = undefined;
+const ENV: 'dev' | 'stage' | 'prod' = 'prod';
 
 const Project = ( props: { broadcastKit: BroadcastKit; } ) => {
-  // const renderContainer = useRef();
 
   const [ isLive, setIsLive ] = useState( false );
 
@@ -220,7 +220,6 @@ async function setupProject ( broadcastKit: BroadcastKit ): Promise<string> {
   // create/fetch a project and collection to interact with.
   await broadcastKit.getOrCreateCollection();
   let project = await broadcastKit.getOrCreateProject( true );
-  await broadcastKit.getOrCreateDestination( "primary", "rtmp://ingest.stream.horse/test", broadcastKit.getServiceUserId() );
 
   let createLiveSource: Promise<BroadcastKit.Camera>[] = [];
   createLiveSource.push( broadcastKit.getOrCreateLiveSource( "cam1", "rtmp://ingest.stream.horse/vod/BigBuckBunny.mp4" ) );
@@ -229,6 +228,9 @@ async function setupProject ( broadcastKit: BroadcastKit ): Promise<string> {
   createLiveSource.push( broadcastKit.getOrCreateLiveSource( "cam4" ) );
   const results = await Promise.allSettled( createLiveSource );
   const createLiveSourceSuccess = results.filter( IsFulfilled );
+
+  await broadcastKit.getOrCreateDestination( "primary", "rtmp://ingest.stream.horse/test", broadcastKit.getServiceUserId() );
+  //await broadcastKit.getOrCreateRecording( "recording", "us-west-2", "bucket", "prefix", "accessKey", "secretKey" );
 
   let scenes: SceneState[] = [ { name: 'mix1', defaultBackgroundSource: 'cam1' }, { name: 'mix2', defaultBackgroundSource: 'cam2' } ];
 
@@ -287,7 +289,7 @@ export const HostView = () => {
         break;
     }
 
-    let bk = new BroadcastKit( rendering, { env: 'stage', logLevel: 'Trace', apiLogCallback: ApiLogCallback, eventLogCallback: EventLogCallback } );
+    let bk = new BroadcastKit( rendering, { env: ENV, logLevel: 'Trace', apiLogCallback: ApiLogCallback, eventLogCallback: EventLogCallback } );
     bk
       .load( token )
       .then( async () => {

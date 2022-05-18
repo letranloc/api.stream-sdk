@@ -147,7 +147,7 @@ public enum Role
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(11);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(12);
   }
 
   private static final Role[] VALUES = values();

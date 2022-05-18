@@ -102,7 +102,7 @@ public enum ProjectBroadcastError
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return stream.api.live.Api.getDescriptor().getEnumTypes().get(12);
+    return stream.api.live.Api.getDescriptor().getEnumTypes().get(13);
   }
 
   private static final ProjectBroadcastError[] VALUES = values();
