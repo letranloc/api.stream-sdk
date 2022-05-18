@@ -450,9 +450,9 @@ export class EventApi extends ApiClient {
           }
           this.eventLogCallback( eventService, eventType, eventSubType, payload );
         }
-
-        handler.handler( payload ? payload[ name ] as any : undefined, { isFromCurrentSession: payload.sessionId === this.sessionId } );
       }
+
+      handler.handler( payload ? payload[ name ] as any : undefined, { isFromCurrentSession: payload.sessionId === this.sessionId } );
     }
   }
 
