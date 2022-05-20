@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { BroadcastKit } from '../broadcastkit/index';
 
-import { LiveApiModel } from "@api.stream/sdk";
+import { LiveApiModel, ApiStream } from "@api.stream/sdk";
 
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
@@ -27,7 +27,7 @@ import { ButtonGroupConfig, CreateButtonGroupState, IsFulfilled, Sleep } from '.
 const DEBUG_DEV_SERVER = 'http://127.0.0.1:7070';
 
 const API_KEY: string | undefined = undefined;
-const ENV: 'dev' | 'stage' | 'prod' = 'prod';
+let ENV: ApiStream.Environment = 'prod';
 
 const Project = ( props: { broadcastKit: BroadcastKit; } ) => {
 
@@ -218,8 +218,8 @@ async function buildScene ( broadcastKit: BroadcastKit, scene: SceneState, liveS
 
 async function setupProject ( broadcastKit: BroadcastKit ): Promise<string> {
   // create/fetch a project and collection to interact with.
-  await broadcastKit.getOrCreateCollection();
-  let project = await broadcastKit.getOrCreateProject( true );
+  await broadcastKit.getOrCreateCollection( 'demo' );
+  let project = await broadcastKit.getOrCreateProject( 'demo', true );
 
   let createLiveSource: Promise<BroadcastKit.Camera>[] = [];
   createLiveSource.push( broadcastKit.getOrCreateLiveSource( "cam1", "rtmp://ingest.stream.horse/vod/BigBuckBunny.mp4" ) );
@@ -306,8 +306,20 @@ export const HostView = () => {
   }, [ token ] );
 
   if ( !token ) {
+
+    let liveURL = "";
+    switch ( ENV ) {
+      case 'dev':
+      case 'stage':
+        liveURL = 'https://live.stream.horse/live/v2';
+        break;
+      case 'prod':
+        liveURL = 'https://live.api.stream/live/v2';
+        break;
+    }
+
     return (
-      <Login apiKey={API_KEY}
+      <Login apiKey={API_KEY} liveURL={liveURL}
         onLogin={( { token, quality } ) => {
           setToken( token );
           localStorage.setItem( 'quality', quality );
@@ -322,4 +334,3 @@ export const HostView = () => {
       return <div>Loading...</div>;
   }
 };
-

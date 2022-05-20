@@ -71,7 +71,7 @@ export const Scene = ( props: { broadcastKit: BroadcastKit; scene: BroadcastKit.
               onChange={buttonGroupMap.get( props.scene.name + ".selectInsert" ).handleChange}
             >
               {props.broadcastKit.getInserts( props.scene ).map( ( insert, i ) => {
-                return < ToggleButton key={insert.name} value={insert.name} >{insert.name}</ToggleButton>;
+                return < ToggleButton key={props.scene.name + ".insert.source." + insert.name} value={insert.name} >{insert.name}</ToggleButton>;
               } )}
             </ToggleButtonGroup>
           </CardContent>
@@ -91,7 +91,7 @@ export const Scene = ( props: { broadcastKit: BroadcastKit; scene: BroadcastKit.
               onChange={buttonGroupMap.get( props.scene.name + ".insertTransition" ).handleChange}
             >
               {props.broadcastKit.getInsertTransitions().map( ( transition, i ) => {
-                return < ToggleButton key={transition} value={transition} >{transition}</ToggleButton>;
+                return < ToggleButton key={props.scene.name + ".insert.transition." + transition} value={transition} >{transition}</ToggleButton>;
               } )}
             </ToggleButtonGroup>
           </CardContent>
@@ -118,7 +118,7 @@ export const Scene = ( props: { broadcastKit: BroadcastKit; scene: BroadcastKit.
               onChange={buttonGroupMap.get( props.scene.name + ".selectBackground" ).handleChange}
             >
               {props.broadcastKit.getBackgrounds( props.scene ).map( ( background, i ) => {
-                return < ToggleButton key={background.name} value={background.name} >{background.name}</ToggleButton>;
+                return < ToggleButton key={props.scene.name + ".background.source." + background.name} value={background.name} >{background.name}</ToggleButton>;
               } )}
             </ToggleButtonGroup>
           </CardContent>
@@ -138,7 +138,7 @@ export const Scene = ( props: { broadcastKit: BroadcastKit; scene: BroadcastKit.
               onChange={buttonGroupMap.get( props.scene.name + ".backgroundTransition" ).handleChange}
             >
               {props.broadcastKit.getBackgroundTransitions().map( ( transition, i ) => {
-                return < ToggleButton key={transition} value={transition} >{transition}</ToggleButton>;
+                return < ToggleButton key={props.scene.name + ".background.transition." + transition} value={transition} >{transition}</ToggleButton>;
               } )}
             </ToggleButtonGroup>
           </CardContent></Card>
@@ -163,7 +163,7 @@ export const Scene = ( props: { broadcastKit: BroadcastKit; scene: BroadcastKit.
               onChange={buttonGroupMap.get( props.scene.name + ".selectAudio" ).handleChange}
             >
               {props.broadcastKit.getAudioSources( props.scene ).map( ( background, i ) => {
-                return < ToggleButton key={background.name} value={background.name} >{background.name}</ToggleButton>;
+                return < ToggleButton key={props.scene.name + ".audio.source." + background.name} value={background.name} >{background.name}</ToggleButton>;
               } )}
             </ToggleButtonGroup>
           </CardContent>

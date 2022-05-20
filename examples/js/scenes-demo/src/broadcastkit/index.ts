@@ -176,46 +176,42 @@ export class BroadcastKit {
   };
 
   //Find or create to a collection
-  async getOrCreateCollection () {
+  async getOrCreateCollection ( name: string ) {
     // Find the first collection under this authentication scope.
-    let collection = await this.api.LiveApi().collection.getCollections( {} )
-      .then( resp => {
-        return resp.collections[ 0 ];
-      } );
-
-    // Create the collection if it doesn't exist.
-    if ( !collection ) {
-      collection = await this.api.LiveApi().collection?.createCollection( {} )
-        .then( response => response.collection );
+    let collectionsResponse = await this.api.LiveApi().collection.getCollections( {} );
+    const existingCollection = collectionsResponse.collections.find( collection => collection.metadata?.[ 'name' ] === name );
+    if ( existingCollection ) {
+      this.collection = existingCollection;
+    } else {
+      // Create the collection if it doesn't exist.
+      let collectionResponse = await this.api.LiveApi().collection?.createCollection( {} );
+      this.collection = collectionResponse.collection;
     }
 
     // Subscribe to any collection events via the EventsAPI
     await this.api.LiveApi().subscribeToCollection( this.collection?.collectionId as string );
 
-    this.collection = collection;
-
-    return collection;
+    return this.collection;
   }
 
   /**
    * Find or create a project.
    */
-  async getOrCreateProject ( debug: boolean = false ) {
-    // Use the first project if we've already loaded the scene.
-    if ( this.collection?.projects?.length ) {
-      const response = await this.api.LiveApi().project?.getProject( { collectionId: this.collection.collectionId, projectId: this.collection?.projects[ 0 ].projectId, status: false } );
+  async getOrCreateProject ( name: string, debug: boolean = false ) {
 
+    const existingProject = this.collection.projects.find( project => project.metadata?.[ 'name' ] === name );
+    if ( existingProject ) {
       // update to latest rendering properties
       const response2 = await this.api.LiveApi().project?.updateProject( {
         collectionId: this.collection.collectionId,
-        projectId: this.collection?.projects[ 0 ].projectId,
+        projectId: existingProject.projectId,
         rendering: this.rendering,
         composition: {
           scene: { debug: debug }
         },
         updateMask: [ "rendering", "composition.scene.debug" ]
       } );
-      this.project = response2.project;
+      this.project = existingProject;
     }
     else {
       // Create a new project
@@ -267,14 +263,14 @@ export class BroadcastKit {
     const rootLayer = response.layers.find( layer => layer.type === 'root' );
 
     for ( let source of scene.sources ) {
-      let existingLayer = response.layers.find( layer => ( layer.metadata.name === source.name ) && ( layer.metadata.layer == source.layer ) );
+      let existingLayer = response.layers.find( layer => ( layer.metadata?.name === source.name ) && ( layer.metadata?.layer == source.layer ) );
       if ( existingLayer == undefined )
         layersToAdd.push( source.layerConfig );
       else
         source.layerId = existingLayer.id;
     }
     for ( let layer of response.layers ) {
-      let source = scene.sources.find( source => ( layer.metadata.name === source.name ) && ( layer.metadata.layer == source.layer ) );
+      let source = scene.sources.find( source => ( layer.metadata?.name === source.name ) && ( layer.metadata?.layer == source.layer ) );
       if ( ( source == undefined ) && ( layer.id != rootLayer.id ) )
         layersToDelete.push( layer );
     }

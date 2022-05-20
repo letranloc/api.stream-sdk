@@ -34,6 +34,7 @@ const storage = {
 
 export const Login = ( props: {
   apiKey: string | undefined,
+  liveURL: string,
   onLogin: ( {
     token,
     quality
@@ -53,9 +54,7 @@ export const Login = ( props: {
     // If this demo is running on API.stream, use captcha login
     if ( isLiveURL() && ( props.apiKey == undefined ) ) {
       const http = axios.create( {
-        baseURL: location.host.includes( 'localhost' )
-          ? 'https://live.stream.horse/live/v2'
-          : `https://${ location.host }/live/v2`,
+        baseURL: props.liveURL,
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json; charset=utf-8',
@@ -73,9 +72,7 @@ export const Login = ( props: {
     // as described here: https://www.api.stream/docs/api/auth/
     else {
       const http = axios.create( {
-        baseURL: location.host.includes( 'localhost' )
-          ? 'https://live.stream.horse/live/v2'
-          : `https://${ location.host }/live/v2`,
+        baseURL: props.liveURL,
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json; charset=utf-8',
