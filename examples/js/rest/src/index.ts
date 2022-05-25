@@ -6,8 +6,8 @@
 import axios, { AxiosResponse } from 'axios';
 import { nanoid } from 'nanoid';
 
-const APISTREAM_API_KEY = 'eabVa681yGa2KtIPAZx85'; // CHANGEME
-const APISTREAM_SERVER = 'http://127.0.0.1:7070';
+const APISTREAM_API_KEY = 'abc123'; // CHANGEME
+const APISTREAM_SERVER = 'https://live.api.stream/live/v2';
 
 async function authenticate (): Promise<string> {
   const http = axios.create( {
@@ -49,8 +49,8 @@ async function createCollectionAndProject () {
   let projectRes = await http.post( `/collection/${ collectionRes.data.collection.collectionId }/project`, {
     rendering: {
       video: {
-        width: 1080,
-        height: 1920
+        width: 1920,
+        height: 1080
       }
     }
   } );
