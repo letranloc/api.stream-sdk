@@ -194,6 +194,14 @@ export class BroadcastKit {
     return this.collection;
   }
 
+  async syncProject () {
+    let response = await this.api.LiveApi().project?.getProject( {
+      collectionId: this.collection.collectionId,
+      projectId: this.project.projectId
+    } );
+    this.project = response.project;
+  }
+
   /**
    * Find or create a project.
    */

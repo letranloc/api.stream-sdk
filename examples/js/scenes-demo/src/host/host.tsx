@@ -249,6 +249,8 @@ async function setupProject ( broadcastKit: BroadcastKit ): Promise<string> {
   await broadcastKit.getOrCreateDestination( "primary", "rtmp://ingest.stream.horse/test", broadcastKit.getServiceUserId() );
   //await broadcastKit.getOrCreateRecording( "recording", "us-west-2", "bucket", "prefix", "accessKey", "secretKey" );
 
+  await broadcastKit.syncProject();
+
   let scenes: SceneState[] = [ { name: 'mix1', defaultBackgroundSource: 'cam1' }, { name: 'mix2', defaultBackgroundSource: 'cam2' } ];
 
   let buildSceneResults: Promise<boolean>[] = [];
