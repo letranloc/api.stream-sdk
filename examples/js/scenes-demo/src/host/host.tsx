@@ -16,6 +16,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import type { } from '@mui/lab/themeAugmentation';
 import TextField from '@mui/material/TextField';
+import { styled } from '@mui/material/styles';
 
 import { ApiLogger, ApiLogCallback, EventLogCallback } from '../log';
 import { ExternalSources } from '../external';
@@ -27,7 +28,15 @@ import { ButtonGroupConfig, CreateButtonGroupState, IsFulfilled, Sleep } from '.
 const DEBUG_DEV_SERVER = 'http://127.0.0.1:7070';
 
 const API_KEY: string | undefined = undefined;
-let ENV: ApiStream.Environment = 'prod';
+let ENV: ApiStream.Environment = 'stage';
+
+const Root = styled( 'div' )( ( { theme } ) => ( {
+  width: '100%',
+  ...theme.typography.body2,
+  '& > :not(style) + :not(style)': {
+    marginTop: theme.spacing( 1 ),
+  },
+} ) );
 
 const Project = ( props: { broadcastKit: BroadcastKit; } ) => {
 
@@ -83,49 +92,57 @@ const Project = ( props: { broadcastKit: BroadcastKit; } ) => {
         spacing={2}
       >
         <Card variant="outlined">
-          <Stack
-            direction="row"
-            spacing={2}
-          >
-            <Card>
-              <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                  Scene
-                </Typography>
 
-                <ToggleButtonGroup
-                  orientation="vertical"
-                  color="primary"
-                  value={buttonGroupMap.get( "selectScene" ).reactValue}
-                  exclusive
-                  onChange={buttonGroupMap.get( "selectScene" ).handleChange}
-                >
-                  {props.broadcastKit.getScenes( true ).map( ( scene, i ) => {
-                    return < ToggleButton key={scene.name} value={scene.name} >{scene.name}</ToggleButton>;
-                  } )}
-                </ToggleButtonGroup>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                  Transition
-                </Typography>
+          <Root>
+            <Typography variant="h3" component="div" gutterBottom>
+              program
+            </Typography>
 
-                <ToggleButtonGroup
-                  orientation="vertical"
-                  color="primary"
-                  value={buttonGroupMap.get( "sceneTransition" ).reactValue}
-                  exclusive
-                  onChange={buttonGroupMap.get( "sceneTransition" ).handleChange}
-                >
-                  {props.broadcastKit.getSceneTransitions().map( ( transition, i ) => {
-                    return < ToggleButton key={transition} value={transition} >{transition}</ToggleButton>;
-                  } )}
-                </ToggleButtonGroup>
-              </CardContent>
-            </Card>
-          </Stack>
+
+            <Stack
+              direction="row"
+              spacing={2}
+            >
+              <Card>
+                <CardContent>
+                  <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                    Scene
+                  </Typography>
+
+                  <ToggleButtonGroup
+                    orientation="vertical"
+                    color="primary"
+                    value={buttonGroupMap.get( "selectScene" ).reactValue}
+                    exclusive
+                    onChange={buttonGroupMap.get( "selectScene" ).handleChange}
+                  >
+                    {props.broadcastKit.getScenes( true ).map( ( scene, i ) => {
+                      return < ToggleButton key={scene.name} value={scene.name} >{scene.name}</ToggleButton>;
+                    } )}
+                  </ToggleButtonGroup>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent>
+                  <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                    Transition
+                  </Typography>
+
+                  <ToggleButtonGroup
+                    orientation="vertical"
+                    color="primary"
+                    value={buttonGroupMap.get( "sceneTransition" ).reactValue}
+                    exclusive
+                    onChange={buttonGroupMap.get( "sceneTransition" ).handleChange}
+                  >
+                    {props.broadcastKit.getSceneTransitions().map( ( transition, i ) => {
+                      return < ToggleButton key={transition} value={transition} >{transition}</ToggleButton>;
+                    } )}
+                  </ToggleButtonGroup>
+                </CardContent>
+              </Card>
+            </Stack>
+          </Root>
         </Card>
 
         <Card variant="outlined">
@@ -306,6 +323,13 @@ export const HostView = () => {
   }, [ token ] );
 
   if ( !token ) {
+
+
+    if ( location.host.includes( 'live.api.stream' ) ) {
+      ENV = 'prod';
+    } else if ( location.host.includes( 'live.stream.horse' ) ) {
+      ENV = 'stage';
+    }
 
     let liveURL = "";
     switch ( ENV ) {
