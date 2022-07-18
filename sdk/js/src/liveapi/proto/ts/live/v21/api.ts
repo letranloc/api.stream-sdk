@@ -752,6 +752,7 @@ export enum Role {
   ROLE_VIEWER = "ROLE_VIEWER",
   ROLE_RENDERER = "ROLE_RENDERER",
   ROLE_PLATFORM = "ROLE_PLATFORM",
+  ROLE_IMPERSONATE = "ROLE_IMPERSONATE",
 }
 
 export function roleFromJSON(object: any): Role {
@@ -780,6 +781,9 @@ export function roleFromJSON(object: any): Role {
     case 7:
     case "ROLE_PLATFORM":
       return Role.ROLE_PLATFORM;
+    case 8:
+    case "ROLE_IMPERSONATE":
+      return Role.ROLE_IMPERSONATE;
     default:
       throw new globalThis.Error(
         "Unrecognized enum value " + object + " for enum Role"
@@ -805,6 +809,8 @@ export function roleToJSON(object: Role): string {
       return "ROLE_RENDERER";
     case Role.ROLE_PLATFORM:
       return "ROLE_PLATFORM";
+    case Role.ROLE_IMPERSONATE:
+      return "ROLE_IMPERSONATE";
     default:
       return "UNKNOWN";
   }
@@ -828,6 +834,8 @@ export function roleToNumber(object: Role): number {
       return 6;
     case Role.ROLE_PLATFORM:
       return 7;
+    case Role.ROLE_IMPERSONATE:
+      return 8;
     default:
       return 0;
   }
