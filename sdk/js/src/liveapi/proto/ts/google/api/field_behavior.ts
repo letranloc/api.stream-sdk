@@ -3,8 +3,6 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * -------------------------------------------------------------------------------------------- */
 /* eslint-disable */
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
 
 export const protobufPackage = "google.api";
 
@@ -93,9 +91,7 @@ export function fieldBehaviorFromJSON(object: any): FieldBehavior {
     case "NON_EMPTY_DEFAULT":
       return FieldBehavior.NON_EMPTY_DEFAULT;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum FieldBehavior"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum FieldBehavior");
   }
 }
 
@@ -118,7 +114,7 @@ export function fieldBehaviorToJSON(object: FieldBehavior): string {
     case FieldBehavior.NON_EMPTY_DEFAULT:
       return "NON_EMPTY_DEFAULT";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum FieldBehavior");
   }
 }
 
@@ -141,7 +137,7 @@ export function fieldBehaviorToNumber(object: FieldBehavior): number {
     case FieldBehavior.NON_EMPTY_DEFAULT:
       return 7;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum FieldBehavior");
   }
 }
 
@@ -149,14 +145,17 @@ declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
 var globalThis: any = (() => {
-  if (typeof globalThis !== "undefined") return globalThis;
-  if (typeof self !== "undefined") return self;
-  if (typeof window !== "undefined") return window;
-  if (typeof global !== "undefined") return global;
+  if (typeof globalThis !== "undefined") {
+    return globalThis;
+  }
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
   throw "Unable to locate global object";
 })();
-
-if (_m0.util.Long !== Long) {
-  _m0.util.Long = Long as any;
-  _m0.configure();
-}

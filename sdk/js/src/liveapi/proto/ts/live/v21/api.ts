@@ -3,17 +3,10 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * -------------------------------------------------------------------------------------------- */
 /* eslint-disable */
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
-import { Timestamp } from "../../google/protobuf/timestamp";
-import {
-  NullValue,
-  nullValueToNumber,
-  nullValueFromJSON,
-  nullValueToJSON,
-  Value,
-} from "../../google/protobuf/struct";
+import _m0 from "protobufjs/minimal";
 import { FieldMask } from "../../google/protobuf/field_mask";
+import { NullValue, nullValueFromJSON, nullValueToJSON, nullValueToNumber, Value } from "../../google/protobuf/struct";
+import { Timestamp } from "../../google/protobuf/timestamp";
 
 export const protobufPackage = "live.v21";
 
@@ -32,9 +25,7 @@ export function imageFormatFromJSON(object: any): ImageFormat {
     case "IMAGE_FORMAT_JPEG":
       return ImageFormat.IMAGE_FORMAT_JPEG;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum ImageFormat"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ImageFormat");
   }
 }
 
@@ -45,7 +36,7 @@ export function imageFormatToJSON(object: ImageFormat): string {
     case ImageFormat.IMAGE_FORMAT_JPEG:
       return "IMAGE_FORMAT_JPEG";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ImageFormat");
   }
 }
 
@@ -56,7 +47,7 @@ export function imageFormatToNumber(object: ImageFormat): number {
     case ImageFormat.IMAGE_FORMAT_JPEG:
       return 1;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ImageFormat");
   }
 }
 
@@ -75,9 +66,7 @@ export function videoColorSpaceFromJSON(object: any): VideoColorSpace {
     case "VIDEO_COLOR_SPACE_YUV420":
       return VideoColorSpace.VIDEO_COLOR_SPACE_YUV420;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum VideoColorSpace"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoColorSpace");
   }
 }
 
@@ -88,7 +77,7 @@ export function videoColorSpaceToJSON(object: VideoColorSpace): string {
     case VideoColorSpace.VIDEO_COLOR_SPACE_YUV420:
       return "VIDEO_COLOR_SPACE_YUV420";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoColorSpace");
   }
 }
 
@@ -99,7 +88,7 @@ export function videoColorSpaceToNumber(object: VideoColorSpace): number {
     case VideoColorSpace.VIDEO_COLOR_SPACE_YUV420:
       return 1;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoColorSpace");
   }
 }
 
@@ -118,9 +107,7 @@ export function audioChannelLayoutFromJSON(object: any): AudioChannelLayout {
     case "AUDIO_CHANNEL_LAYOUT_STEREO":
       return AudioChannelLayout.AUDIO_CHANNEL_LAYOUT_STEREO;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum AudioChannelLayout"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum AudioChannelLayout");
   }
 }
 
@@ -131,7 +118,7 @@ export function audioChannelLayoutToJSON(object: AudioChannelLayout): string {
     case AudioChannelLayout.AUDIO_CHANNEL_LAYOUT_STEREO:
       return "AUDIO_CHANNEL_LAYOUT_STEREO";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum AudioChannelLayout");
   }
 }
 
@@ -142,7 +129,7 @@ export function audioChannelLayoutToNumber(object: AudioChannelLayout): number {
     case AudioChannelLayout.AUDIO_CHANNEL_LAYOUT_STEREO:
       return 1;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum AudioChannelLayout");
   }
 }
 
@@ -165,9 +152,7 @@ export function renderingQualityFromJSON(object: any): RenderingQuality {
     case "RENDERING_QUALITY_HIGH":
       return RenderingQuality.RENDERING_QUALITY_HIGH;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum RenderingQuality"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum RenderingQuality");
   }
 }
 
@@ -180,7 +165,7 @@ export function renderingQualityToJSON(object: RenderingQuality): string {
     case RenderingQuality.RENDERING_QUALITY_HIGH:
       return "RENDERING_QUALITY_HIGH";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum RenderingQuality");
   }
 }
 
@@ -193,7 +178,7 @@ export function renderingQualityToNumber(object: RenderingQuality): number {
     case RenderingQuality.RENDERING_QUALITY_HIGH:
       return 2;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum RenderingQuality");
   }
 }
 
@@ -212,9 +197,7 @@ export function videoCodecFromJSON(object: any): VideoCodec {
     case "VIDEO_CODEC_H264":
       return VideoCodec.VIDEO_CODEC_H264;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum VideoCodec"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodec");
   }
 }
 
@@ -225,7 +208,7 @@ export function videoCodecToJSON(object: VideoCodec): string {
     case VideoCodec.VIDEO_CODEC_H264:
       return "VIDEO_CODEC_H264";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodec");
   }
 }
 
@@ -236,7 +219,7 @@ export function videoCodecToNumber(object: VideoCodec): number {
     case VideoCodec.VIDEO_CODEC_H264:
       return 1;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodec");
   }
 }
 
@@ -263,9 +246,7 @@ export function videoCodecProfileFromJSON(object: any): VideoCodecProfile {
     case "VIDEO_CODEC_PROFILE_HIGH":
       return VideoCodecProfile.VIDEO_CODEC_PROFILE_HIGH;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum VideoCodecProfile"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodecProfile");
   }
 }
 
@@ -280,7 +261,7 @@ export function videoCodecProfileToJSON(object: VideoCodecProfile): string {
     case VideoCodecProfile.VIDEO_CODEC_PROFILE_HIGH:
       return "VIDEO_CODEC_PROFILE_HIGH";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodecProfile");
   }
 }
 
@@ -295,7 +276,7 @@ export function videoCodecProfileToNumber(object: VideoCodecProfile): number {
     case VideoCodecProfile.VIDEO_CODEC_PROFILE_HIGH:
       return 4;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodecProfile");
   }
 }
 
@@ -314,9 +295,7 @@ export function audioCodecFromJSON(object: any): AudioCodec {
     case "AUDIO_CODEC_AAC":
       return AudioCodec.AUDIO_CODEC_AAC;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum AudioCodec"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum AudioCodec");
   }
 }
 
@@ -327,7 +306,7 @@ export function audioCodecToJSON(object: AudioCodec): string {
     case AudioCodec.AUDIO_CODEC_AAC:
       return "AUDIO_CODEC_AAC";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum AudioCodec");
   }
 }
 
@@ -338,7 +317,7 @@ export function audioCodecToNumber(object: AudioCodec): number {
     case AudioCodec.AUDIO_CODEC_AAC:
       return 1;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum AudioCodec");
   }
 }
 
@@ -349,9 +328,7 @@ export enum VideoCodecRateControlMode {
   VIDEO_CODEC_RATE_CONTROL_MODE_CBR = "VIDEO_CODEC_RATE_CONTROL_MODE_CBR",
 }
 
-export function videoCodecRateControlModeFromJSON(
-  object: any
-): VideoCodecRateControlMode {
+export function videoCodecRateControlModeFromJSON(object: any): VideoCodecRateControlMode {
   switch (object) {
     case 0:
     case "VIDEO_CODEC_RATE_CONTROL_MODE_UNSPECIFIED":
@@ -360,37 +337,29 @@ export function videoCodecRateControlModeFromJSON(
     case "VIDEO_CODEC_RATE_CONTROL_MODE_CBR":
       return VideoCodecRateControlMode.VIDEO_CODEC_RATE_CONTROL_MODE_CBR;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " +
-          object +
-          " for enum VideoCodecRateControlMode"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodecRateControlMode");
   }
 }
 
-export function videoCodecRateControlModeToJSON(
-  object: VideoCodecRateControlMode
-): string {
+export function videoCodecRateControlModeToJSON(object: VideoCodecRateControlMode): string {
   switch (object) {
     case VideoCodecRateControlMode.VIDEO_CODEC_RATE_CONTROL_MODE_UNSPECIFIED:
       return "VIDEO_CODEC_RATE_CONTROL_MODE_UNSPECIFIED";
     case VideoCodecRateControlMode.VIDEO_CODEC_RATE_CONTROL_MODE_CBR:
       return "VIDEO_CODEC_RATE_CONTROL_MODE_CBR";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodecRateControlMode");
   }
 }
 
-export function videoCodecRateControlModeToNumber(
-  object: VideoCodecRateControlMode
-): number {
+export function videoCodecRateControlModeToNumber(object: VideoCodecRateControlMode): number {
   switch (object) {
     case VideoCodecRateControlMode.VIDEO_CODEC_RATE_CONTROL_MODE_UNSPECIFIED:
       return 0;
     case VideoCodecRateControlMode.VIDEO_CODEC_RATE_CONTROL_MODE_CBR:
       return 1;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum VideoCodecRateControlMode");
   }
 }
 
@@ -407,9 +376,7 @@ export enum ProjectBroadcastPhase {
   PROJECT_BROADCAST_PHASE_ARCHIVED = "PROJECT_BROADCAST_PHASE_ARCHIVED",
 }
 
-export function projectBroadcastPhaseFromJSON(
-  object: any
-): ProjectBroadcastPhase {
+export function projectBroadcastPhaseFromJSON(object: any): ProjectBroadcastPhase {
   switch (object) {
     case 0:
     case "PROJECT_BROADCAST_PHASE_UNSPECIFIED":
@@ -436,15 +403,11 @@ export function projectBroadcastPhaseFromJSON(
     case "PROJECT_BROADCAST_PHASE_ARCHIVED":
       return ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_ARCHIVED;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum ProjectBroadcastPhase"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ProjectBroadcastPhase");
   }
 }
 
-export function projectBroadcastPhaseToJSON(
-  object: ProjectBroadcastPhase
-): string {
+export function projectBroadcastPhaseToJSON(object: ProjectBroadcastPhase): string {
   switch (object) {
     case ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED:
       return "PROJECT_BROADCAST_PHASE_UNSPECIFIED";
@@ -463,13 +426,11 @@ export function projectBroadcastPhaseToJSON(
     case ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_ARCHIVED:
       return "PROJECT_BROADCAST_PHASE_ARCHIVED";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ProjectBroadcastPhase");
   }
 }
 
-export function projectBroadcastPhaseToNumber(
-  object: ProjectBroadcastPhase
-): number {
+export function projectBroadcastPhaseToNumber(object: ProjectBroadcastPhase): number {
   switch (object) {
     case ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED:
       return 0;
@@ -488,7 +449,7 @@ export function projectBroadcastPhaseToNumber(
     case ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_ARCHIVED:
       return 7;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ProjectBroadcastPhase");
   }
 }
 
@@ -526,9 +487,7 @@ export function s3ACLFromJSON(object: any): S3ACL {
     case "S3ACL_BUCKET_OWNER_FULL_CONTROL":
       return S3ACL.S3ACL_BUCKET_OWNER_FULL_CONTROL;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum S3ACL"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum S3ACL");
   }
 }
 
@@ -549,7 +508,7 @@ export function s3ACLToJSON(object: S3ACL): string {
     case S3ACL.S3ACL_BUCKET_OWNER_FULL_CONTROL:
       return "S3ACL_BUCKET_OWNER_FULL_CONTROL";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum S3ACL");
   }
 }
 
@@ -570,7 +529,7 @@ export function s3ACLToNumber(object: S3ACL): number {
     case S3ACL.S3ACL_BUCKET_OWNER_FULL_CONTROL:
       return 6;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum S3ACL");
   }
 }
 
@@ -594,9 +553,7 @@ export function sourceTriggerActionFromJSON(object: any): SourceTriggerAction {
     case "SOURCE_TRIGGER_ACTION_OR":
       return SourceTriggerAction.SOURCE_TRIGGER_ACTION_OR;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum SourceTriggerAction"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum SourceTriggerAction");
   }
 }
 
@@ -609,13 +566,11 @@ export function sourceTriggerActionToJSON(object: SourceTriggerAction): string {
     case SourceTriggerAction.SOURCE_TRIGGER_ACTION_OR:
       return "SOURCE_TRIGGER_ACTION_OR";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum SourceTriggerAction");
   }
 }
 
-export function sourceTriggerActionToNumber(
-  object: SourceTriggerAction
-): number {
+export function sourceTriggerActionToNumber(object: SourceTriggerAction): number {
   switch (object) {
     case SourceTriggerAction.SOURCE_TRIGGER_ACTION_UNSPECIFIED:
       return 0;
@@ -624,7 +579,7 @@ export function sourceTriggerActionToNumber(
     case SourceTriggerAction.SOURCE_TRIGGER_ACTION_OR:
       return 3;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum SourceTriggerAction");
   }
 }
 
@@ -682,9 +637,7 @@ export function regionFromJSON(object: any): Region {
     case "REGION_EU_WEST_1":
       return Region.REGION_EU_WEST_1;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum Region"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum Region");
   }
 }
 
@@ -711,7 +664,7 @@ export function regionToJSON(object: Region): string {
     case Region.REGION_EU_WEST_1:
       return "REGION_EU_WEST_1";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum Region");
   }
 }
 
@@ -738,7 +691,7 @@ export function regionToNumber(object: Region): number {
     case Region.REGION_EU_WEST_1:
       return 31;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum Region");
   }
 }
 
@@ -785,9 +738,7 @@ export function roleFromJSON(object: any): Role {
     case "ROLE_IMPERSONATE":
       return Role.ROLE_IMPERSONATE;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum Role"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum Role");
   }
 }
 
@@ -812,7 +763,7 @@ export function roleToJSON(object: Role): string {
     case Role.ROLE_IMPERSONATE:
       return "ROLE_IMPERSONATE";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum Role");
   }
 }
 
@@ -837,7 +788,7 @@ export function roleToNumber(object: Role): number {
     case Role.ROLE_IMPERSONATE:
       return 8;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum Role");
   }
 }
 
@@ -848,9 +799,7 @@ export enum ProjectBroadcastError {
   PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED = "PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED",
 }
 
-export function projectBroadcastErrorFromJSON(
-  object: any
-): ProjectBroadcastError {
+export function projectBroadcastErrorFromJSON(object: any): ProjectBroadcastError {
   switch (object) {
     case 0:
     case "PROJECT_BROADCAST_ERROR_UNSPECIFIED":
@@ -862,15 +811,11 @@ export function projectBroadcastErrorFromJSON(
     case "PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED":
       return ProjectBroadcastError.PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum ProjectBroadcastError"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ProjectBroadcastError");
   }
 }
 
-export function projectBroadcastErrorToJSON(
-  object: ProjectBroadcastError
-): string {
+export function projectBroadcastErrorToJSON(object: ProjectBroadcastError): string {
   switch (object) {
     case ProjectBroadcastError.PROJECT_BROADCAST_ERROR_UNSPECIFIED:
       return "PROJECT_BROADCAST_ERROR_UNSPECIFIED";
@@ -879,13 +824,11 @@ export function projectBroadcastErrorToJSON(
     case ProjectBroadcastError.PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED:
       return "PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ProjectBroadcastError");
   }
 }
 
-export function projectBroadcastErrorToNumber(
-  object: ProjectBroadcastError
-): number {
+export function projectBroadcastErrorToNumber(object: ProjectBroadcastError): number {
   switch (object) {
     case ProjectBroadcastError.PROJECT_BROADCAST_ERROR_UNSPECIFIED:
       return 0;
@@ -894,7 +837,7 @@ export function projectBroadcastErrorToNumber(
     case ProjectBroadcastError.PROJECT_BROADCAST_ERROR_DURATION_EXCEEDED:
       return 2;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ProjectBroadcastError");
   }
 }
 
@@ -917,9 +860,7 @@ export function connectStateFromJSON(object: any): ConnectState {
     case "CONNECT_STATE_DISCONNECTED":
       return ConnectState.CONNECT_STATE_DISCONNECTED;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum ConnectState"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ConnectState");
   }
 }
 
@@ -932,7 +873,7 @@ export function connectStateToJSON(object: ConnectState): string {
     case ConnectState.CONNECT_STATE_DISCONNECTED:
       return "CONNECT_STATE_DISCONNECTED";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ConnectState");
   }
 }
 
@@ -945,7 +886,7 @@ export function connectStateToNumber(object: ConnectState): number {
     case ConnectState.CONNECT_STATE_DISCONNECTED:
       return 2;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ConnectState");
   }
 }
 
@@ -983,9 +924,7 @@ export function eventSubTypeFromJSON(object: any): EventSubType {
     case "EVENT_SUB_TYPE_STATE":
       return EventSubType.EVENT_SUB_TYPE_STATE;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum EventSubType"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EventSubType");
   }
 }
 
@@ -1006,7 +945,7 @@ export function eventSubTypeToJSON(object: EventSubType): string {
     case EventSubType.EVENT_SUB_TYPE_STATE:
       return "EVENT_SUB_TYPE_STATE";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EventSubType");
   }
 }
 
@@ -1027,7 +966,7 @@ export function eventSubTypeToNumber(object: EventSubType): number {
     case EventSubType.EVENT_SUB_TYPE_STATE:
       return 6;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EventSubType");
   }
 }
 
@@ -1057,9 +996,7 @@ export function eventTypeFromJSON(object: any): EventType {
     case "EVENT_TYPE_DESTINATION":
       return EventType.EVENT_TYPE_DESTINATION;
     default:
-      throw new globalThis.Error(
-        "Unrecognized enum value " + object + " for enum EventType"
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EventType");
   }
 }
 
@@ -1076,7 +1013,7 @@ export function eventTypeToJSON(object: EventType): string {
     case EventType.EVENT_TYPE_DESTINATION:
       return "EVENT_TYPE_DESTINATION";
     default:
-      return "UNKNOWN";
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EventType");
   }
 }
 
@@ -1093,18 +1030,24 @@ export function eventTypeToNumber(object: EventType): number {
     case EventType.EVENT_TYPE_DESTINATION:
       return 5;
     default:
-      return 0;
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EventType");
   }
 }
 
 /** composition video parameters */
 export interface VideoRendering {
   /** canvas height (pixels) */
-  height?: number | undefined;
+  height?:
+    | number
+    | undefined;
   /** canvas width (pixels) */
-  width?: number | undefined;
+  width?:
+    | number
+    | undefined;
   /** canvas frame rate (frames/s) */
-  framerate?: number | undefined;
+  framerate?:
+    | number
+    | undefined;
   /** rendering color space */
   colorSpace?: VideoColorSpace | undefined;
 }
@@ -1118,22 +1061,34 @@ export interface AudioRendering {
 /** composition parameters */
 export interface Rendering {
   /** composition video parameters */
-  video?: VideoRendering | undefined;
+  video?:
+    | VideoRendering
+    | undefined;
   /** composition audio parameters */
-  audio?: AudioRendering | undefined;
+  audio?:
+    | AudioRendering
+    | undefined;
   /** rendering quality */
-  quality?: RenderingQuality | undefined;
+  quality?:
+    | RenderingQuality
+    | undefined;
   /** target end-to-end latency (in ms) */
-  targetLatency?: number | undefined;
+  targetLatency?:
+    | number
+    | undefined;
   /** estimated composition complexity (where 0 is nominal complexity) */
   complexity?: number | undefined;
 }
 
 /** video encoding CBR rate control params */
 export interface VideoCodecRateControl {
-  mode?: VideoCodecRateControlMode | undefined;
+  mode?:
+    | VideoCodecRateControlMode
+    | undefined;
   /** video encoding target bitrate (bits/s) */
-  targetBitrate?: number | undefined;
+  targetBitrate?:
+    | number
+    | undefined;
   /** maximum video encoding key frame interval (frames) */
   maxKeyFrameInterval?: number | undefined;
 }
@@ -1141,9 +1096,13 @@ export interface VideoCodecRateControl {
 /** encoding video parameters */
 export interface VideoEncoding {
   /** video encoding codec */
-  codec?: VideoCodec | undefined;
+  codec?:
+    | VideoCodec
+    | undefined;
   /** video encoding rate control */
-  rateControl?: VideoCodecRateControl | undefined;
+  rateControl?:
+    | VideoCodecRateControl
+    | undefined;
   /** video encoding codec profile */
   profile?: VideoCodecProfile | undefined;
 }
@@ -1157,7 +1116,9 @@ export interface AudioEncoding {
 /** the parameters of the encoding */
 export interface Encoding {
   /** the video parameters of the encoding */
-  video?: VideoEncoding | undefined;
+  video?:
+    | VideoEncoding
+    | undefined;
   /** the audio parameters of the encoding */
   audio?: AudioEncoding | undefined;
 }
@@ -1165,11 +1126,17 @@ export interface Encoding {
 /** rtmp push source address */
 export interface SourceRtmpPushAddress {
   /** enable source rtmp push address */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** assigned rtmp stream key */
-  key?: string | undefined;
+  key?:
+    | string
+    | undefined;
   /** assigned rtmp destination url */
-  url?: string | undefined;
+  url?:
+    | string
+    | undefined;
   /** base_url without stream key */
   baseUrl?: string | undefined;
 }
@@ -1177,11 +1144,17 @@ export interface SourceRtmpPushAddress {
 /** srt push addressing */
 export interface SrtPushAddress {
   /** enable source srt push address */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** assigned srt streamid */
-  streamId?: string | undefined;
+  streamId?:
+    | string
+    | undefined;
   /** assigned srt destination url */
-  url?: string | undefined;
+  url?:
+    | string
+    | undefined;
   /** base_url without streamid */
   baseUrl?: string | undefined;
 }
@@ -1195,9 +1168,13 @@ export interface RtmpPullAddress {
 /** live source address (select one) */
 export interface SourceAddress {
   /** rtmp push addressing */
-  rtmpPush: SourceRtmpPushAddress | undefined;
+  rtmpPush:
+    | SourceRtmpPushAddress
+    | undefined;
   /** the srt address to publish to */
-  srtPush: SrtPushAddress | undefined;
+  srtPush:
+    | SrtPushAddress
+    | undefined;
   /** the rtmp address to pull from */
   rtmpPull: RtmpPullAddress | undefined;
 }
@@ -1205,7 +1182,9 @@ export interface SourceAddress {
 /** rtmp push destination address */
 export interface DestinationRtmpPushAddress {
   /** rtmp stream key */
-  key?: string | undefined;
+  key?:
+    | string
+    | undefined;
   /** rtmp destination url */
   url: string;
 }
@@ -1223,7 +1202,9 @@ export interface DestinationAgoraPushAddress {
 /** live hls lifecycle management */
 export interface HlsLifecycleLive {
   /** number of entries to advertise in playlist file */
-  playlistCount?: number | undefined;
+  playlistCount?:
+    | number
+    | undefined;
   /** number of files to keep on disk */
   fileCount?: number | undefined;
 }
@@ -1237,7 +1218,9 @@ export interface HlsLifecycleVod {
 /** hls lifecycle management */
 export interface HlsLifecycle {
   /** lifecycle of vod */
-  vod: HlsLifecycleVod | undefined;
+  vod:
+    | HlsLifecycleVod
+    | undefined;
   /** lifecycle of live */
   live: HlsLifecycleLive | undefined;
 }
@@ -1245,7 +1228,9 @@ export interface HlsLifecycle {
 /** hls packaging options */
 export interface HlsPackaging {
   /** lifecycle of hls segments */
-  lifecycle: HlsLifecycle | undefined;
+  lifecycle:
+    | HlsLifecycle
+    | undefined;
   /** duration of segments in ms */
   segmentDuration?: number | undefined;
 }
@@ -1262,19 +1247,29 @@ export interface S3StorageAddress {
   /** cloud bucket */
   bucket: string;
   /** cloud bucket prefix */
-  prefix?: string | undefined;
+  prefix?:
+    | string
+    | undefined;
   /** cloud access key */
   accessKey: string;
   /** cloud secret key */
   secretKey: string;
   /** token based auth */
-  token?: string | undefined;
+  token?:
+    | string
+    | undefined;
   /** token duration in ms */
-  tokenDuration?: number | undefined;
+  tokenDuration?:
+    | number
+    | undefined;
   /** access control list */
-  acl?: S3ACL | undefined;
+  acl?:
+    | S3ACL
+    | undefined;
   /** endpoint for non aws s3 destinations */
-  endpoint?: string | undefined;
+  endpoint?:
+    | string
+    | undefined;
   /** the format of the files to be written */
   packaging: ObjectStoragePackaging | undefined;
 }
@@ -1282,9 +1277,13 @@ export interface S3StorageAddress {
 /** destination address (select one) */
 export interface DestinationAddress {
   /** rtmp push addressing */
-  rtmpPush: DestinationRtmpPushAddress | undefined;
+  rtmpPush:
+    | DestinationRtmpPushAddress
+    | undefined;
   /** Agora addressing */
-  agora: DestinationAgoraPushAddress | undefined;
+  agora:
+    | DestinationAgoraPushAddress
+    | undefined;
   /** s3 storage addressing */
   s3Storage: S3StorageAddress | undefined;
 }
@@ -1294,7 +1293,9 @@ export interface SourceTrigger {
   /** the id of the source */
   sourceId: string;
   /** source should trigger project(s) to start */
-  start?: SourceTriggerAction | undefined;
+  start?:
+    | SourceTriggerAction
+    | undefined;
   /** source should trigger project(s) to stop */
   stop?: SourceTriggerAction | undefined;
 }
@@ -1314,7 +1315,9 @@ export interface ProjectTrigger {
 /** request hls preview */
 export interface PreviewHlsPullAddress {
   /** request hls preview */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** hls manifest url */
   url?: string | undefined;
 }
@@ -1322,9 +1325,13 @@ export interface PreviewHlsPullAddress {
 /** webrtc addressing parameters */
 export interface PreviewWebRtcAddress {
   /** request rtmp preview */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** the name this source will use in the webrtc room */
-  displayName?: string | undefined;
+  displayName?:
+    | string
+    | undefined;
   /** the id this source was assigned in the webrtc room */
   participantId?: string | undefined;
 }
@@ -1341,15 +1348,20 @@ export interface PreviewAddress {
 
 /** compose using the studiosdk renderer */
 export interface StudioSdkComposition {
-  /** the url to pass to the studiosdk */
-  rendererUrl?: string | undefined;
+  /** the page to render studio kit with. If set, this takes priority over `version` */
+  rendererUrl?:
+    | string
+    | undefined;
+  /** the version of the studio kit renderer to use. Ignored if renderer_url is set */
   version?: string | undefined;
 }
 
 /** compose scenes using the browser-based compositor */
 export interface SceneComposition {
   /** the url to pass to the studiosdk */
-  rendererUrl?: string | undefined;
+  rendererUrl?:
+    | string
+    | undefined;
   /** the active "scene" to render */
   selectedLayoutId?: string | undefined;
   debug?: boolean | undefined;
@@ -1363,9 +1375,13 @@ export interface ExternalComposition {
 /** composition source for project (select one) */
 export interface Composition {
   /** compose using an external renderer */
-  external: ExternalComposition | undefined;
+  external:
+    | ExternalComposition
+    | undefined;
   /** compose using the studiosdk renderer */
-  studioSdk: StudioSdkComposition | undefined;
+  studioSdk:
+    | StudioSdkComposition
+    | undefined;
   /** compose scenes using the browser-based compositor */
   scene: SceneComposition | undefined;
 }
@@ -1402,17 +1418,27 @@ export interface ProjectBroadcastStatus {
   collectionId: string;
   /** project which owns the broadcast */
   projectId: string;
-  broadcastId?: string | undefined;
+  broadcastId?:
+    | string
+    | undefined;
   /** broadcast duration (ms) */
-  duration?: number | undefined;
+  duration?:
+    | number
+    | undefined;
   /** broadcast start timestamp (ISO8601 UTC) */
-  start?: string | undefined;
+  start?:
+    | string
+    | undefined;
   /** broadcast stop timestamp (ISO8601 UTC) */
-  stop?: string | undefined;
+  stop?:
+    | string
+    | undefined;
   /** broadcast phase */
   phase: ProjectBroadcastPhase;
   /** region broadcast is located */
-  region?: Region | undefined;
+  region?:
+    | Region
+    | undefined;
   /** datacenter broadcast is located */
   datacenter?: string | undefined;
 }
@@ -1424,9 +1450,13 @@ export interface Source {
   /** collection source id */
   sourceId: string;
   /** arbitrary metadata associated with this collection source */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** preview addresses */
-  preview?: PreviewAddress | undefined;
+  preview?:
+    | PreviewAddress
+    | undefined;
   /** source address */
   address: SourceAddress | undefined;
 }
@@ -1440,11 +1470,17 @@ export interface Destination {
   /** destination id */
   destinationId: string;
   /** arbitrary metadata associated with this destination */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** is output stream enabled? */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** address of the destination */
-  address: DestinationAddress | undefined;
+  address:
+    | DestinationAddress
+    | undefined;
   /** timeout (ms) to wait before resetting a connection */
   timeout?: number | undefined;
 }
@@ -1456,25 +1492,39 @@ export interface Project {
   /** project id */
   projectId: string;
   /** arbitrary metadata associated with this project */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** composition parameters */
-  rendering: Rendering | undefined;
+  rendering:
+    | Rendering
+    | undefined;
   /** encoding parameters */
-  encoding: Encoding | undefined;
+  encoding:
+    | Encoding
+    | undefined;
   /** collection live sources added to this project */
   sources: Source[];
   /** destinations associated with this project */
   destinations: Destination[];
   /** composition/layout source of the broadcast */
-  composition: Composition | undefined;
+  composition:
+    | Composition
+    | undefined;
   /** maximum duration (ms) of project broadcasts */
-  maxDuration?: number | undefined;
+  maxDuration?:
+    | number
+    | undefined;
   /** configuration for webrtc services (if requested) */
-  webrtc?: WebRtc | undefined;
+  webrtc?:
+    | WebRtc
+    | undefined;
   /** external triggers to start and stop this broadcast */
   triggers: ProjectTrigger[];
   /** optional optimal location to start broadcast */
-  location?: LatLong | undefined;
+  location?:
+    | LatLong
+    | undefined;
   /** guest codes associated with this project */
   guestCodes: GuestCode[];
 }
@@ -1484,7 +1534,9 @@ export interface Collection {
   /** collection id */
   collectionId: string;
   /** arbitrary metadata associated with this collection */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** projects owned by this collection */
   projects: Project[];
   /** collection live sources owned by this collection */
@@ -1504,7 +1556,9 @@ export interface GetCollectionRequest {
   /** collection id */
   collectionId: string;
   /** optionally populate projects */
-  populateProjects?: boolean | undefined;
+  populateProjects?:
+    | boolean
+    | undefined;
   /** optionally populate sources */
   populateSources?: boolean | undefined;
 }
@@ -1517,7 +1571,9 @@ export interface UpdateCollectionRequest {
   /** collection id */
   collectionId: string;
   /** fields to update */
-  updateMask: string[] | undefined;
+  updateMask:
+    | string[]
+    | undefined;
   /** arbitrary metadata to associate with this collection */
   metadata?: any | undefined;
 }
@@ -1543,7 +1599,8 @@ export interface DeleteCollectionResponse {
   projectIdsStopped: string[];
 }
 
-export interface GetCollectionsRequest {}
+export interface GetCollectionsRequest {
+}
 
 export interface GetCollectionsResponse {
   /** all collections owned by this user */
@@ -1554,17 +1611,29 @@ export interface CreateProjectRequest {
   /** collection which will own this project */
   collectionId: string;
   /** arbitrary metadata to associate with this project */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** composition parameters */
-  rendering?: Rendering | undefined;
+  rendering?:
+    | Rendering
+    | undefined;
   /** encoding parameters */
-  encoding?: Encoding | undefined;
+  encoding?:
+    | Encoding
+    | undefined;
   /** composition/layout source of the broadcast */
-  composition: Composition | undefined;
+  composition:
+    | Composition
+    | undefined;
   /** maximum duration of project broadcasts (ms) */
-  maxDuration?: number | undefined;
+  maxDuration?:
+    | number
+    | undefined;
   /** request webrtc services */
-  webrtc?: WebRtc | undefined;
+  webrtc?:
+    | WebRtc
+    | undefined;
   /** optimal broadcast location (for routing and delay) */
   location?: LatLong | undefined;
 }
@@ -1579,26 +1648,42 @@ export interface UpdateProjectRequest {
   /** project id */
   projectId: string;
   /** fields to update */
-  updateMask: string[] | undefined;
+  updateMask:
+    | string[]
+    | undefined;
   /** arbitrary metadata to associate with this project */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** composition parameters */
-  rendering?: Rendering | undefined;
+  rendering?:
+    | Rendering
+    | undefined;
   /** encoding parameters */
-  encoding?: Encoding | undefined;
+  encoding?:
+    | Encoding
+    | undefined;
   /** composition/layout source of the broadcast */
-  composition?: Composition | undefined;
+  composition?:
+    | Composition
+    | undefined;
   /** maximum duration of project broadcasts (ms) */
-  maxDuration?: number | undefined;
+  maxDuration?:
+    | number
+    | undefined;
   /** configuration for webrtc services (if requested) */
-  webrtc?: WebRtc | undefined;
+  webrtc?:
+    | WebRtc
+    | undefined;
   /** optimal broadcast location (for routing and delay) */
   location?: LatLong | undefined;
 }
 
 export interface UpdateProjectResponse {
   /** updated project */
-  project: Project | undefined;
+  project:
+    | Project
+    | undefined;
   /** indicates whether the broadcast was updated as a function of this request */
   broadcastUpdated: boolean;
 }
@@ -1642,7 +1727,8 @@ export interface StopProjectBroadcastRequest {
   webrtcStop?: boolean | undefined;
 }
 
-export interface StopProjectBroadcastResponse {}
+export interface StopProjectBroadcastResponse {
+}
 
 export interface GetProjectRequest {
   /** collection which owns the project */
@@ -1655,7 +1741,9 @@ export interface GetProjectRequest {
 
 export interface GetProjectResponse {
   /** the request project */
-  project: Project | undefined;
+  project:
+    | Project
+    | undefined;
   /** the status of the project broadcast (if requested) */
   status?: ProjectBroadcastStatus | undefined;
 }
@@ -1695,7 +1783,8 @@ export interface StartProjectWebRtcRequest {
   projectId: string;
 }
 
-export interface StartProjectWebRtcResponse {}
+export interface StartProjectWebRtcResponse {
+}
 
 export interface StopProjectWebRtcRequest {
   /** collection which owns the project */
@@ -1704,7 +1793,8 @@ export interface StopProjectWebRtcRequest {
   projectId: string;
 }
 
-export interface StopProjectWebRtcResponse {}
+export interface StopProjectWebRtcResponse {
+}
 
 export interface CreateDestinationRequest {
   /** collection which owns the project which owns the destination */
@@ -1712,11 +1802,17 @@ export interface CreateDestinationRequest {
   /** project which will own this destination */
   projectId: string;
   /** arbitrary metadata associated with this destination */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** destination address (select one) */
-  address: DestinationAddress | undefined;
+  address:
+    | DestinationAddress
+    | undefined;
   /** enable or disable this destination */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** timeout (in milliseconds) to wait before resetting a connection */
   timeout?: number | undefined;
 }
@@ -1764,20 +1860,30 @@ export interface UpdateDestinationRequest {
   /** destination id */
   destinationId: string;
   /** fields to update (default updates any non-null field) */
-  updateMask: string[] | undefined;
+  updateMask:
+    | string[]
+    | undefined;
   /** arbitrary metadata associated with this destination */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** destination address (select one) */
-  address?: DestinationAddress | undefined;
+  address?:
+    | DestinationAddress
+    | undefined;
   /** enable or disable this destination */
-  enabled?: boolean | undefined;
+  enabled?:
+    | boolean
+    | undefined;
   /** timeout (in milliseconds) to wait before resetting a connection */
   timeout?: number | undefined;
 }
 
 export interface UpdateDestinationResponse {
   /** updated destination */
-  destination: Destination | undefined;
+  destination:
+    | Destination
+    | undefined;
   /** indicates whether the broadcast was updated as a function of this request */
   broadcastUpdated: boolean;
 }
@@ -1786,9 +1892,13 @@ export interface CreateSourceRequest {
   /** collection which will own this collection live source */
   collectionId: string;
   /** arbitrary metadata to associate with this collection live source */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** type of collection live source */
-  address: SourceAddress | undefined;
+  address:
+    | SourceAddress
+    | undefined;
   /** enable real-time previews */
   preview?: PreviewAddress | undefined;
 }
@@ -1824,7 +1934,9 @@ export interface AddSourceToProjectRequest {
 
 export interface AddSourceToProjectResponse {
   /** updated project */
-  project: Project | undefined;
+  project:
+    | Project
+    | undefined;
   /** indicates whether the broadcast was updated as a function of this request */
   broadcastUpdated: boolean;
 }
@@ -1837,7 +1949,9 @@ export interface UpdateSourceInProjectRequest {
   /** live source id */
   sourceId: string;
   /** fields to update (default updates any non-null field) */
-  updateMask: string[] | undefined;
+  updateMask:
+    | string[]
+    | undefined;
   /** allow this source to trigger a project broadcast */
   trigger?: SourceTrigger | undefined;
 }
@@ -1873,18 +1987,26 @@ export interface UpdateSourceRequest {
   /** source id */
   sourceId: string;
   /** fields to update (default updates any non-null field) */
-  updateMask: string[] | undefined;
+  updateMask:
+    | string[]
+    | undefined;
   /** arbitrary metadata to associate with this source */
-  metadata?: any | undefined;
+  metadata?:
+    | any
+    | undefined;
   /** type of collection live source */
-  address?: SourceAddress | undefined;
+  address?:
+    | SourceAddress
+    | undefined;
   /** enable real-time previews */
   preview?: PreviewAddress | undefined;
 }
 
 export interface UpdateSourceResponse {
   /** updated source */
-  source: Source | undefined;
+  source:
+    | Source
+    | undefined;
   /** indicates whether the broadcast was updated as a function of this request */
   broadcastUpdated: boolean;
 }
@@ -1902,7 +2024,9 @@ export interface RemoveSourceFromProjectRequest {
 
 export interface RemoveSourceFromProjectResponse {
   /** updated project */
-  project: Project | undefined;
+  project:
+    | Project
+    | undefined;
   /** indicates whether the broadcast was updated as a function of this request */
   broadcastUpdated: boolean;
 }
@@ -1914,9 +2038,13 @@ export interface CreateAccessTokenRequest {
    * * this should be an opaque GUID with no spaces
    */
   serviceUserId: string;
-  displayName?: string | undefined;
+  displayName?:
+    | string
+    | undefined;
   /** the requested role */
-  role?: Role | undefined;
+  role?:
+    | Role
+    | undefined;
   /** requested duration of token before it expires (ms) */
   maxDuration?: number | undefined;
 }
@@ -1955,20 +2083,32 @@ export interface CreateGuestAccessTokenRequest {
   /** id of the project this token is allowed to access */
   projectId: string;
   /** requested duration (ms) of token before it expires */
-  maxDuration?: number | undefined;
+  maxDuration?:
+    | number
+    | undefined;
   /** the requested role of the guest */
   role: Role;
   /** the type of token */
-  token: GuestAccessToken | undefined;
+  token:
+    | GuestAccessToken
+    | undefined;
   /** request a shortened url */
-  url?: string | undefined;
+  url?:
+    | string
+    | undefined;
+  /** Optinally create a guest code to resolve this access token. if URL is true, this is always true. */
+  createGuestCode?: boolean | undefined;
 }
 
 export interface CreateGuestAccessTokenResponse {
   /** access token for guest to be used in subsequent API calls */
   accessToken: string;
   /** the shortened url */
-  url?: string | undefined;
+  url?:
+    | string
+    | undefined;
+  /** the guest code details if created. */
+  guestCode?: IssuedGuestCode | undefined;
 }
 
 export interface CreateWebRtcAccessTokenRequest {
@@ -1985,9 +2125,11 @@ export interface CreateWebRtcAccessTokenResponse {
   webrtcAccess: WebRtcAccess | undefined;
 }
 
-export interface RefreshAccessTokenRequest {}
+export interface RefreshAccessTokenRequest {
+}
 
-export interface RefreshAccessTokenResponse {}
+export interface RefreshAccessTokenResponse {
+}
 
 export interface GuestCode {
   /** collection which owns the project */
@@ -1999,7 +2141,36 @@ export interface GuestCode {
   /** the short url */
   url: string;
   /** auto-delete after time */
-  autoDelete: string | undefined;
+  autoDelete:
+    | string
+    | undefined;
+  /** the access token assigned. */
+  accessToken: string;
+}
+
+export interface IssuedGuestCode {
+  /** id of the collection this token is allowed to access */
+  collectionId: string;
+  /** id of the project this token is allowed to access */
+  projectId: string;
+  /** requested duration (ms) of token before it expires */
+  maxDuration?:
+    | number
+    | undefined;
+  /** the requested role of the guest */
+  role: Role;
+  /** the type of token */
+  token:
+    | GuestAccessToken
+    | undefined;
+  /** request a shortened url */
+  url?:
+    | string
+    | undefined;
+  /** the short identifier of the guest code */
+  code: string;
+  /** the full access token associated with the guest code. */
+  accessToken: string;
 }
 
 export interface GuestCodeRedirectRequest {
@@ -2009,7 +2180,66 @@ export interface GuestCodeRedirectRequest {
   code: string;
 }
 
-export interface GuestCodeRedirectResponse {}
+export interface GuestCodeRedirectResponse {
+}
+
+export interface UseGuestCodeRequest {
+  /** optional service id to validate the guest code against */
+  serviceId?:
+    | string
+    | undefined;
+  /** the short url code */
+  code: string;
+}
+
+export interface UseGuestCodeResponse {
+  /** id of the collection this token is allowed to access */
+  collectionId: string;
+  /** id of the project this token is allowed to access */
+  projectId: string;
+  /** the role of the token */
+  role: Role;
+  /** The access token associated with the guest code. */
+  accessToken: string;
+  /** The URL the user can be forwarded to. */
+  url?: string | undefined;
+}
+
+export interface GetGuestCodeRequest {
+  /** the short url code */
+  code: string;
+}
+
+export interface GetGuestCodeResponse {
+  /** the guest token details. */
+  guestCode: IssuedGuestCode | undefined;
+}
+
+export interface GetGuestCodesRequest {
+  /** id of the collection to filter by */
+  collectionId?:
+    | string
+    | undefined;
+  /** id of the project to filter by */
+  projectId?:
+    | string
+    | undefined;
+  /** role to filter by */
+  role?: Role | undefined;
+}
+
+export interface GetGuestCodesResponse {
+  /** matching guest tokens */
+  guestCodes: IssuedGuestCode[];
+}
+
+export interface DeleteGuestCodeRequest {
+  /** the short url code */
+  code: string;
+}
+
+export interface DeleteGuestCodeResponse {
+}
 
 export interface JsonWebKey {
   alg: string;
@@ -2020,14 +2250,16 @@ export interface JsonWebKey {
   n: string;
 }
 
-export interface GetJsonWebKeySetRequest {}
+export interface GetJsonWebKeySetRequest {
+}
 
 export interface GetJsonWebKeySetResponse {
   /** public keys used to sign access tokens */
   keys: JsonWebKey[];
 }
 
-export interface GetTestTokenRequest {}
+export interface GetTestTokenRequest {
+}
 
 export interface GetTestTokenResponse {
   /** a dummy access key (with no grants) */
@@ -2231,19 +2463,11 @@ export interface LiveEvent {
 }
 
 function createBaseVideoRendering(): VideoRendering {
-  return {
-    height: undefined,
-    width: undefined,
-    framerate: undefined,
-    colorSpace: undefined,
-  };
+  return { height: undefined, width: undefined, framerate: undefined, colorSpace: undefined };
 }
 
 export const VideoRendering = {
-  encode(
-    message: VideoRendering,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: VideoRendering, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.height !== undefined) {
       writer.uint32(8).uint32(message.height);
     }
@@ -2291,9 +2515,7 @@ export const VideoRendering = {
       height: isSet(object.height) ? Number(object.height) : undefined,
       width: isSet(object.width) ? Number(object.width) : undefined,
       framerate: isSet(object.framerate) ? Number(object.framerate) : undefined,
-      colorSpace: isSet(object.colorSpace)
-        ? videoColorSpaceFromJSON(object.colorSpace)
-        : undefined,
+      colorSpace: isSet(object.colorSpace) ? videoColorSpaceFromJSON(object.colorSpace) : undefined,
     };
   },
 
@@ -2303,10 +2525,7 @@ export const VideoRendering = {
     message.width !== undefined && (obj.width = Math.round(message.width));
     message.framerate !== undefined && (obj.framerate = message.framerate);
     message.colorSpace !== undefined &&
-      (obj.colorSpace =
-        message.colorSpace !== undefined
-          ? videoColorSpaceToJSON(message.colorSpace)
-          : undefined);
+      (obj.colorSpace = message.colorSpace !== undefined ? videoColorSpaceToJSON(message.colorSpace) : undefined);
     return obj;
   },
 
@@ -2325,10 +2544,7 @@ function createBaseAudioRendering(): AudioRendering {
 }
 
 export const AudioRendering = {
-  encode(
-    message: AudioRendering,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: AudioRendering, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.channelLayout !== undefined) {
       writer.uint32(8).int32(audioChannelLayoutToNumber(message.channelLayout));
     }
@@ -2355,19 +2571,15 @@ export const AudioRendering = {
 
   fromJSON(object: any): AudioRendering {
     return {
-      channelLayout: isSet(object.channelLayout)
-        ? audioChannelLayoutFromJSON(object.channelLayout)
-        : undefined,
+      channelLayout: isSet(object.channelLayout) ? audioChannelLayoutFromJSON(object.channelLayout) : undefined,
     };
   },
 
   toJSON(message: AudioRendering): unknown {
     const obj: any = {};
-    message.channelLayout !== undefined &&
-      (obj.channelLayout =
-        message.channelLayout !== undefined
-          ? audioChannelLayoutToJSON(message.channelLayout)
-          : undefined);
+    message.channelLayout !== undefined && (obj.channelLayout = message.channelLayout !== undefined
+      ? audioChannelLayoutToJSON(message.channelLayout)
+      : undefined);
     return obj;
   },
 
@@ -2379,20 +2591,11 @@ export const AudioRendering = {
 };
 
 function createBaseRendering(): Rendering {
-  return {
-    video: undefined,
-    audio: undefined,
-    quality: undefined,
-    targetLatency: undefined,
-    complexity: undefined,
-  };
+  return { video: undefined, audio: undefined, quality: undefined, targetLatency: undefined, complexity: undefined };
 }
 
 export const Rendering = {
-  encode(
-    message: Rendering,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Rendering, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.video !== undefined) {
       VideoRendering.encode(message.video, writer.uint32(10).fork()).ldelim();
     }
@@ -2443,56 +2646,33 @@ export const Rendering = {
 
   fromJSON(object: any): Rendering {
     return {
-      video: isSet(object.video)
-        ? VideoRendering.fromJSON(object.video)
-        : undefined,
-      audio: isSet(object.audio)
-        ? AudioRendering.fromJSON(object.audio)
-        : undefined,
-      quality: isSet(object.quality)
-        ? renderingQualityFromJSON(object.quality)
-        : undefined,
-      targetLatency: isSet(object.targetLatency)
-        ? Number(object.targetLatency)
-        : undefined,
-      complexity: isSet(object.complexity)
-        ? Number(object.complexity)
-        : undefined,
+      video: isSet(object.video) ? VideoRendering.fromJSON(object.video) : undefined,
+      audio: isSet(object.audio) ? AudioRendering.fromJSON(object.audio) : undefined,
+      quality: isSet(object.quality) ? renderingQualityFromJSON(object.quality) : undefined,
+      targetLatency: isSet(object.targetLatency) ? Number(object.targetLatency) : undefined,
+      complexity: isSet(object.complexity) ? Number(object.complexity) : undefined,
     };
   },
 
   toJSON(message: Rendering): unknown {
     const obj: any = {};
-    message.video !== undefined &&
-      (obj.video = message.video
-        ? VideoRendering.toJSON(message.video)
-        : undefined);
-    message.audio !== undefined &&
-      (obj.audio = message.audio
-        ? AudioRendering.toJSON(message.audio)
-        : undefined);
+    message.video !== undefined && (obj.video = message.video ? VideoRendering.toJSON(message.video) : undefined);
+    message.audio !== undefined && (obj.audio = message.audio ? AudioRendering.toJSON(message.audio) : undefined);
     message.quality !== undefined &&
-      (obj.quality =
-        message.quality !== undefined
-          ? renderingQualityToJSON(message.quality)
-          : undefined);
-    message.targetLatency !== undefined &&
-      (obj.targetLatency = Math.round(message.targetLatency));
-    message.complexity !== undefined &&
-      (obj.complexity = Math.round(message.complexity));
+      (obj.quality = message.quality !== undefined ? renderingQualityToJSON(message.quality) : undefined);
+    message.targetLatency !== undefined && (obj.targetLatency = Math.round(message.targetLatency));
+    message.complexity !== undefined && (obj.complexity = Math.round(message.complexity));
     return obj;
   },
 
   fromPartial(object: DeepPartial<Rendering>): Rendering {
     const message = createBaseRendering();
-    message.video =
-      object.video !== undefined && object.video !== null
-        ? VideoRendering.fromPartial(object.video)
-        : undefined;
-    message.audio =
-      object.audio !== undefined && object.audio !== null
-        ? AudioRendering.fromPartial(object.audio)
-        : undefined;
+    message.video = (object.video !== undefined && object.video !== null)
+      ? VideoRendering.fromPartial(object.video)
+      : undefined;
+    message.audio = (object.audio !== undefined && object.audio !== null)
+      ? AudioRendering.fromPartial(object.audio)
+      : undefined;
     message.quality = object.quality ?? undefined;
     message.targetLatency = object.targetLatency ?? undefined;
     message.complexity = object.complexity ?? undefined;
@@ -2501,18 +2681,11 @@ export const Rendering = {
 };
 
 function createBaseVideoCodecRateControl(): VideoCodecRateControl {
-  return {
-    mode: undefined,
-    targetBitrate: undefined,
-    maxKeyFrameInterval: undefined,
-  };
+  return { mode: undefined, targetBitrate: undefined, maxKeyFrameInterval: undefined };
 }
 
 export const VideoCodecRateControl = {
-  encode(
-    message: VideoCodecRateControl,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: VideoCodecRateControl, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.mode !== undefined) {
       writer.uint32(8).int32(videoCodecRateControlModeToNumber(message.mode));
     }
@@ -2525,10 +2698,7 @@ export const VideoCodecRateControl = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): VideoCodecRateControl {
+  decode(input: _m0.Reader | Uint8Array, length?: number): VideoCodecRateControl {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseVideoCodecRateControl();
@@ -2554,35 +2724,22 @@ export const VideoCodecRateControl = {
 
   fromJSON(object: any): VideoCodecRateControl {
     return {
-      mode: isSet(object.mode)
-        ? videoCodecRateControlModeFromJSON(object.mode)
-        : undefined,
-      targetBitrate: isSet(object.targetBitrate)
-        ? Number(object.targetBitrate)
-        : undefined,
-      maxKeyFrameInterval: isSet(object.maxKeyFrameInterval)
-        ? Number(object.maxKeyFrameInterval)
-        : undefined,
+      mode: isSet(object.mode) ? videoCodecRateControlModeFromJSON(object.mode) : undefined,
+      targetBitrate: isSet(object.targetBitrate) ? Number(object.targetBitrate) : undefined,
+      maxKeyFrameInterval: isSet(object.maxKeyFrameInterval) ? Number(object.maxKeyFrameInterval) : undefined,
     };
   },
 
   toJSON(message: VideoCodecRateControl): unknown {
     const obj: any = {};
     message.mode !== undefined &&
-      (obj.mode =
-        message.mode !== undefined
-          ? videoCodecRateControlModeToJSON(message.mode)
-          : undefined);
-    message.targetBitrate !== undefined &&
-      (obj.targetBitrate = Math.round(message.targetBitrate));
-    message.maxKeyFrameInterval !== undefined &&
-      (obj.maxKeyFrameInterval = Math.round(message.maxKeyFrameInterval));
+      (obj.mode = message.mode !== undefined ? videoCodecRateControlModeToJSON(message.mode) : undefined);
+    message.targetBitrate !== undefined && (obj.targetBitrate = Math.round(message.targetBitrate));
+    message.maxKeyFrameInterval !== undefined && (obj.maxKeyFrameInterval = Math.round(message.maxKeyFrameInterval));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<VideoCodecRateControl>
-  ): VideoCodecRateControl {
+  fromPartial(object: DeepPartial<VideoCodecRateControl>): VideoCodecRateControl {
     const message = createBaseVideoCodecRateControl();
     message.mode = object.mode ?? undefined;
     message.targetBitrate = object.targetBitrate ?? undefined;
@@ -2596,18 +2753,12 @@ function createBaseVideoEncoding(): VideoEncoding {
 }
 
 export const VideoEncoding = {
-  encode(
-    message: VideoEncoding,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: VideoEncoding, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.codec !== undefined) {
       writer.uint32(8).int32(videoCodecToNumber(message.codec));
     }
     if (message.rateControl !== undefined) {
-      VideoCodecRateControl.encode(
-        message.rateControl,
-        writer.uint32(18).fork()
-      ).ldelim();
+      VideoCodecRateControl.encode(message.rateControl, writer.uint32(18).fork()).ldelim();
     }
     if (message.profile !== undefined) {
       writer.uint32(32).int32(videoCodecProfileToNumber(message.profile));
@@ -2626,10 +2777,7 @@ export const VideoEncoding = {
           message.codec = videoCodecFromJSON(reader.int32());
           break;
         case 2:
-          message.rateControl = VideoCodecRateControl.decode(
-            reader,
-            reader.uint32()
-          );
+          message.rateControl = VideoCodecRateControl.decode(reader, reader.uint32());
           break;
         case 4:
           message.profile = videoCodecProfileFromJSON(reader.int32());
@@ -2645,41 +2793,28 @@ export const VideoEncoding = {
   fromJSON(object: any): VideoEncoding {
     return {
       codec: isSet(object.codec) ? videoCodecFromJSON(object.codec) : undefined,
-      rateControl: isSet(object.rateControl)
-        ? VideoCodecRateControl.fromJSON(object.rateControl)
-        : undefined,
-      profile: isSet(object.profile)
-        ? videoCodecProfileFromJSON(object.profile)
-        : undefined,
+      rateControl: isSet(object.rateControl) ? VideoCodecRateControl.fromJSON(object.rateControl) : undefined,
+      profile: isSet(object.profile) ? videoCodecProfileFromJSON(object.profile) : undefined,
     };
   },
 
   toJSON(message: VideoEncoding): unknown {
     const obj: any = {};
     message.codec !== undefined &&
-      (obj.codec =
-        message.codec !== undefined
-          ? videoCodecToJSON(message.codec)
-          : undefined);
+      (obj.codec = message.codec !== undefined ? videoCodecToJSON(message.codec) : undefined);
     message.rateControl !== undefined &&
-      (obj.rateControl = message.rateControl
-        ? VideoCodecRateControl.toJSON(message.rateControl)
-        : undefined);
+      (obj.rateControl = message.rateControl ? VideoCodecRateControl.toJSON(message.rateControl) : undefined);
     message.profile !== undefined &&
-      (obj.profile =
-        message.profile !== undefined
-          ? videoCodecProfileToJSON(message.profile)
-          : undefined);
+      (obj.profile = message.profile !== undefined ? videoCodecProfileToJSON(message.profile) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<VideoEncoding>): VideoEncoding {
     const message = createBaseVideoEncoding();
     message.codec = object.codec ?? undefined;
-    message.rateControl =
-      object.rateControl !== undefined && object.rateControl !== null
-        ? VideoCodecRateControl.fromPartial(object.rateControl)
-        : undefined;
+    message.rateControl = (object.rateControl !== undefined && object.rateControl !== null)
+      ? VideoCodecRateControl.fromPartial(object.rateControl)
+      : undefined;
     message.profile = object.profile ?? undefined;
     return message;
   },
@@ -2690,10 +2825,7 @@ function createBaseAudioEncoding(): AudioEncoding {
 }
 
 export const AudioEncoding = {
-  encode(
-    message: AudioEncoding,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: AudioEncoding, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.codec !== undefined) {
       writer.uint32(8).int32(audioCodecToNumber(message.codec));
     }
@@ -2719,18 +2851,13 @@ export const AudioEncoding = {
   },
 
   fromJSON(object: any): AudioEncoding {
-    return {
-      codec: isSet(object.codec) ? audioCodecFromJSON(object.codec) : undefined,
-    };
+    return { codec: isSet(object.codec) ? audioCodecFromJSON(object.codec) : undefined };
   },
 
   toJSON(message: AudioEncoding): unknown {
     const obj: any = {};
     message.codec !== undefined &&
-      (obj.codec =
-        message.codec !== undefined
-          ? audioCodecToJSON(message.codec)
-          : undefined);
+      (obj.codec = message.codec !== undefined ? audioCodecToJSON(message.codec) : undefined);
     return obj;
   },
 
@@ -2746,10 +2873,7 @@ function createBaseEncoding(): Encoding {
 }
 
 export const Encoding = {
-  encode(
-    message: Encoding,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Encoding, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.video !== undefined) {
       VideoEncoding.encode(message.video, writer.uint32(10).fork()).ldelim();
     }
@@ -2782,56 +2906,36 @@ export const Encoding = {
 
   fromJSON(object: any): Encoding {
     return {
-      video: isSet(object.video)
-        ? VideoEncoding.fromJSON(object.video)
-        : undefined,
-      audio: isSet(object.audio)
-        ? AudioEncoding.fromJSON(object.audio)
-        : undefined,
+      video: isSet(object.video) ? VideoEncoding.fromJSON(object.video) : undefined,
+      audio: isSet(object.audio) ? AudioEncoding.fromJSON(object.audio) : undefined,
     };
   },
 
   toJSON(message: Encoding): unknown {
     const obj: any = {};
-    message.video !== undefined &&
-      (obj.video = message.video
-        ? VideoEncoding.toJSON(message.video)
-        : undefined);
-    message.audio !== undefined &&
-      (obj.audio = message.audio
-        ? AudioEncoding.toJSON(message.audio)
-        : undefined);
+    message.video !== undefined && (obj.video = message.video ? VideoEncoding.toJSON(message.video) : undefined);
+    message.audio !== undefined && (obj.audio = message.audio ? AudioEncoding.toJSON(message.audio) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<Encoding>): Encoding {
     const message = createBaseEncoding();
-    message.video =
-      object.video !== undefined && object.video !== null
-        ? VideoEncoding.fromPartial(object.video)
-        : undefined;
-    message.audio =
-      object.audio !== undefined && object.audio !== null
-        ? AudioEncoding.fromPartial(object.audio)
-        : undefined;
+    message.video = (object.video !== undefined && object.video !== null)
+      ? VideoEncoding.fromPartial(object.video)
+      : undefined;
+    message.audio = (object.audio !== undefined && object.audio !== null)
+      ? AudioEncoding.fromPartial(object.audio)
+      : undefined;
     return message;
   },
 };
 
 function createBaseSourceRtmpPushAddress(): SourceRtmpPushAddress {
-  return {
-    enabled: undefined,
-    key: undefined,
-    url: undefined,
-    baseUrl: undefined,
-  };
+  return { enabled: undefined, key: undefined, url: undefined, baseUrl: undefined };
 }
 
 export const SourceRtmpPushAddress = {
-  encode(
-    message: SourceRtmpPushAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceRtmpPushAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.enabled !== undefined) {
       writer.uint32(8).bool(message.enabled);
     }
@@ -2847,10 +2951,7 @@ export const SourceRtmpPushAddress = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): SourceRtmpPushAddress {
+  decode(input: _m0.Reader | Uint8Array, length?: number): SourceRtmpPushAddress {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseSourceRtmpPushAddress();
@@ -2895,9 +2996,7 @@ export const SourceRtmpPushAddress = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<SourceRtmpPushAddress>
-  ): SourceRtmpPushAddress {
+  fromPartial(object: DeepPartial<SourceRtmpPushAddress>): SourceRtmpPushAddress {
     const message = createBaseSourceRtmpPushAddress();
     message.enabled = object.enabled ?? undefined;
     message.key = object.key ?? undefined;
@@ -2908,19 +3007,11 @@ export const SourceRtmpPushAddress = {
 };
 
 function createBaseSrtPushAddress(): SrtPushAddress {
-  return {
-    enabled: undefined,
-    streamId: undefined,
-    url: undefined,
-    baseUrl: undefined,
-  };
+  return { enabled: undefined, streamId: undefined, url: undefined, baseUrl: undefined };
 }
 
 export const SrtPushAddress = {
-  encode(
-    message: SrtPushAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SrtPushAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.enabled !== undefined) {
       writer.uint32(8).bool(message.enabled);
     }
@@ -2996,10 +3087,7 @@ function createBaseRtmpPullAddress(): RtmpPullAddress {
 }
 
 export const RtmpPullAddress = {
-  encode(
-    message: RtmpPullAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: RtmpPullAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.url !== "") {
       writer.uint32(10).string(message.url);
     }
@@ -3025,9 +3113,7 @@ export const RtmpPullAddress = {
   },
 
   fromJSON(object: any): RtmpPullAddress {
-    return {
-      url: isSet(object.url) ? String(object.url) : "",
-    };
+    return { url: isSet(object.url) ? String(object.url) : "" };
   },
 
   toJSON(message: RtmpPullAddress): unknown {
@@ -3048,24 +3134,15 @@ function createBaseSourceAddress(): SourceAddress {
 }
 
 export const SourceAddress = {
-  encode(
-    message: SourceAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.rtmpPush !== undefined) {
-      SourceRtmpPushAddress.encode(
-        message.rtmpPush,
-        writer.uint32(10).fork()
-      ).ldelim();
+      SourceRtmpPushAddress.encode(message.rtmpPush, writer.uint32(10).fork()).ldelim();
     }
     if (message.srtPush !== undefined) {
       SrtPushAddress.encode(message.srtPush, writer.uint32(18).fork()).ldelim();
     }
     if (message.rtmpPull !== undefined) {
-      RtmpPullAddress.encode(
-        message.rtmpPull,
-        writer.uint32(26).fork()
-      ).ldelim();
+      RtmpPullAddress.encode(message.rtmpPull, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -3078,10 +3155,7 @@ export const SourceAddress = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.rtmpPush = SourceRtmpPushAddress.decode(
-            reader,
-            reader.uint32()
-          );
+          message.rtmpPush = SourceRtmpPushAddress.decode(reader, reader.uint32());
           break;
         case 2:
           message.srtPush = SrtPushAddress.decode(reader, reader.uint32());
@@ -3099,49 +3173,34 @@ export const SourceAddress = {
 
   fromJSON(object: any): SourceAddress {
     return {
-      rtmpPush: isSet(object.rtmpPush)
-        ? SourceRtmpPushAddress.fromJSON(object.rtmpPush)
-        : undefined,
-      srtPush: isSet(object.srtPush)
-        ? SrtPushAddress.fromJSON(object.srtPush)
-        : undefined,
-      rtmpPull: isSet(object.rtmpPull)
-        ? RtmpPullAddress.fromJSON(object.rtmpPull)
-        : undefined,
+      rtmpPush: isSet(object.rtmpPush) ? SourceRtmpPushAddress.fromJSON(object.rtmpPush) : undefined,
+      srtPush: isSet(object.srtPush) ? SrtPushAddress.fromJSON(object.srtPush) : undefined,
+      rtmpPull: isSet(object.rtmpPull) ? RtmpPullAddress.fromJSON(object.rtmpPull) : undefined,
     };
   },
 
   toJSON(message: SourceAddress): unknown {
     const obj: any = {};
     message.rtmpPush !== undefined &&
-      (obj.rtmpPush = message.rtmpPush
-        ? SourceRtmpPushAddress.toJSON(message.rtmpPush)
-        : undefined);
+      (obj.rtmpPush = message.rtmpPush ? SourceRtmpPushAddress.toJSON(message.rtmpPush) : undefined);
     message.srtPush !== undefined &&
-      (obj.srtPush = message.srtPush
-        ? SrtPushAddress.toJSON(message.srtPush)
-        : undefined);
+      (obj.srtPush = message.srtPush ? SrtPushAddress.toJSON(message.srtPush) : undefined);
     message.rtmpPull !== undefined &&
-      (obj.rtmpPull = message.rtmpPull
-        ? RtmpPullAddress.toJSON(message.rtmpPull)
-        : undefined);
+      (obj.rtmpPull = message.rtmpPull ? RtmpPullAddress.toJSON(message.rtmpPull) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<SourceAddress>): SourceAddress {
     const message = createBaseSourceAddress();
-    message.rtmpPush =
-      object.rtmpPush !== undefined && object.rtmpPush !== null
-        ? SourceRtmpPushAddress.fromPartial(object.rtmpPush)
-        : undefined;
-    message.srtPush =
-      object.srtPush !== undefined && object.srtPush !== null
-        ? SrtPushAddress.fromPartial(object.srtPush)
-        : undefined;
-    message.rtmpPull =
-      object.rtmpPull !== undefined && object.rtmpPull !== null
-        ? RtmpPullAddress.fromPartial(object.rtmpPull)
-        : undefined;
+    message.rtmpPush = (object.rtmpPush !== undefined && object.rtmpPush !== null)
+      ? SourceRtmpPushAddress.fromPartial(object.rtmpPush)
+      : undefined;
+    message.srtPush = (object.srtPush !== undefined && object.srtPush !== null)
+      ? SrtPushAddress.fromPartial(object.srtPush)
+      : undefined;
+    message.rtmpPull = (object.rtmpPull !== undefined && object.rtmpPull !== null)
+      ? RtmpPullAddress.fromPartial(object.rtmpPull)
+      : undefined;
     return message;
   },
 };
@@ -3151,10 +3210,7 @@ function createBaseDestinationRtmpPushAddress(): DestinationRtmpPushAddress {
 }
 
 export const DestinationRtmpPushAddress = {
-  encode(
-    message: DestinationRtmpPushAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationRtmpPushAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.key !== undefined) {
       writer.uint32(10).string(message.key);
     }
@@ -3164,10 +3220,7 @@ export const DestinationRtmpPushAddress = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DestinationRtmpPushAddress {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DestinationRtmpPushAddress {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDestinationRtmpPushAddress();
@@ -3202,9 +3255,7 @@ export const DestinationRtmpPushAddress = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DestinationRtmpPushAddress>
-  ): DestinationRtmpPushAddress {
+  fromPartial(object: DeepPartial<DestinationRtmpPushAddress>): DestinationRtmpPushAddress {
     const message = createBaseDestinationRtmpPushAddress();
     message.key = object.key ?? undefined;
     message.url = object.url ?? "";
@@ -3217,10 +3268,7 @@ function createBaseDestinationAgoraPushAddress(): DestinationAgoraPushAddress {
 }
 
 export const DestinationAgoraPushAddress = {
-  encode(
-    message: DestinationAgoraPushAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationAgoraPushAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.appId !== "") {
       writer.uint32(10).string(message.appId);
     }
@@ -3233,10 +3281,7 @@ export const DestinationAgoraPushAddress = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DestinationAgoraPushAddress {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DestinationAgoraPushAddress {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDestinationAgoraPushAddress();
@@ -3276,9 +3321,7 @@ export const DestinationAgoraPushAddress = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DestinationAgoraPushAddress>
-  ): DestinationAgoraPushAddress {
+  fromPartial(object: DeepPartial<DestinationAgoraPushAddress>): DestinationAgoraPushAddress {
     const message = createBaseDestinationAgoraPushAddress();
     message.appId = object.appId ?? "";
     message.channelId = object.channelId ?? "";
@@ -3292,10 +3335,7 @@ function createBaseHlsLifecycleLive(): HlsLifecycleLive {
 }
 
 export const HlsLifecycleLive = {
-  encode(
-    message: HlsLifecycleLive,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: HlsLifecycleLive, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.playlistCount !== undefined) {
       writer.uint32(8).int32(message.playlistCount);
     }
@@ -3328,19 +3368,15 @@ export const HlsLifecycleLive = {
 
   fromJSON(object: any): HlsLifecycleLive {
     return {
-      playlistCount: isSet(object.playlistCount)
-        ? Number(object.playlistCount)
-        : undefined,
+      playlistCount: isSet(object.playlistCount) ? Number(object.playlistCount) : undefined,
       fileCount: isSet(object.fileCount) ? Number(object.fileCount) : undefined,
     };
   },
 
   toJSON(message: HlsLifecycleLive): unknown {
     const obj: any = {};
-    message.playlistCount !== undefined &&
-      (obj.playlistCount = Math.round(message.playlistCount));
-    message.fileCount !== undefined &&
-      (obj.fileCount = Math.round(message.fileCount));
+    message.playlistCount !== undefined && (obj.playlistCount = Math.round(message.playlistCount));
+    message.fileCount !== undefined && (obj.fileCount = Math.round(message.fileCount));
     return obj;
   },
 
@@ -3357,10 +3393,7 @@ function createBaseHlsLifecycleVod(): HlsLifecycleVod {
 }
 
 export const HlsLifecycleVod = {
-  encode(
-    message: HlsLifecycleVod,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: HlsLifecycleVod, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.maxDuration !== undefined) {
       writer.uint32(8).int32(message.maxDuration);
     }
@@ -3386,17 +3419,12 @@ export const HlsLifecycleVod = {
   },
 
   fromJSON(object: any): HlsLifecycleVod {
-    return {
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
-    };
+    return { maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined };
   },
 
   toJSON(message: HlsLifecycleVod): unknown {
     const obj: any = {};
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
     return obj;
   },
 
@@ -3412,10 +3440,7 @@ function createBaseHlsLifecycle(): HlsLifecycle {
 }
 
 export const HlsLifecycle = {
-  encode(
-    message: HlsLifecycle,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: HlsLifecycle, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.vod !== undefined) {
       HlsLifecycleVod.encode(message.vod, writer.uint32(10).fork()).ldelim();
     }
@@ -3449,33 +3474,25 @@ export const HlsLifecycle = {
   fromJSON(object: any): HlsLifecycle {
     return {
       vod: isSet(object.vod) ? HlsLifecycleVod.fromJSON(object.vod) : undefined,
-      live: isSet(object.live)
-        ? HlsLifecycleLive.fromJSON(object.live)
-        : undefined,
+      live: isSet(object.live) ? HlsLifecycleLive.fromJSON(object.live) : undefined,
     };
   },
 
   toJSON(message: HlsLifecycle): unknown {
     const obj: any = {};
-    message.vod !== undefined &&
-      (obj.vod = message.vod ? HlsLifecycleVod.toJSON(message.vod) : undefined);
-    message.live !== undefined &&
-      (obj.live = message.live
-        ? HlsLifecycleLive.toJSON(message.live)
-        : undefined);
+    message.vod !== undefined && (obj.vod = message.vod ? HlsLifecycleVod.toJSON(message.vod) : undefined);
+    message.live !== undefined && (obj.live = message.live ? HlsLifecycleLive.toJSON(message.live) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<HlsLifecycle>): HlsLifecycle {
     const message = createBaseHlsLifecycle();
-    message.vod =
-      object.vod !== undefined && object.vod !== null
-        ? HlsLifecycleVod.fromPartial(object.vod)
-        : undefined;
-    message.live =
-      object.live !== undefined && object.live !== null
-        ? HlsLifecycleLive.fromPartial(object.live)
-        : undefined;
+    message.vod = (object.vod !== undefined && object.vod !== null)
+      ? HlsLifecycleVod.fromPartial(object.vod)
+      : undefined;
+    message.live = (object.live !== undefined && object.live !== null)
+      ? HlsLifecycleLive.fromPartial(object.live)
+      : undefined;
     return message;
   },
 };
@@ -3485,10 +3502,7 @@ function createBaseHlsPackaging(): HlsPackaging {
 }
 
 export const HlsPackaging = {
-  encode(
-    message: HlsPackaging,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: HlsPackaging, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.lifecycle !== undefined) {
       HlsLifecycle.encode(message.lifecycle, writer.uint32(10).fork()).ldelim();
     }
@@ -3521,32 +3535,24 @@ export const HlsPackaging = {
 
   fromJSON(object: any): HlsPackaging {
     return {
-      lifecycle: isSet(object.lifecycle)
-        ? HlsLifecycle.fromJSON(object.lifecycle)
-        : undefined,
-      segmentDuration: isSet(object.segmentDuration)
-        ? Number(object.segmentDuration)
-        : undefined,
+      lifecycle: isSet(object.lifecycle) ? HlsLifecycle.fromJSON(object.lifecycle) : undefined,
+      segmentDuration: isSet(object.segmentDuration) ? Number(object.segmentDuration) : undefined,
     };
   },
 
   toJSON(message: HlsPackaging): unknown {
     const obj: any = {};
     message.lifecycle !== undefined &&
-      (obj.lifecycle = message.lifecycle
-        ? HlsLifecycle.toJSON(message.lifecycle)
-        : undefined);
-    message.segmentDuration !== undefined &&
-      (obj.segmentDuration = Math.round(message.segmentDuration));
+      (obj.lifecycle = message.lifecycle ? HlsLifecycle.toJSON(message.lifecycle) : undefined);
+    message.segmentDuration !== undefined && (obj.segmentDuration = Math.round(message.segmentDuration));
     return obj;
   },
 
   fromPartial(object: DeepPartial<HlsPackaging>): HlsPackaging {
     const message = createBaseHlsPackaging();
-    message.lifecycle =
-      object.lifecycle !== undefined && object.lifecycle !== null
-        ? HlsLifecycle.fromPartial(object.lifecycle)
-        : undefined;
+    message.lifecycle = (object.lifecycle !== undefined && object.lifecycle !== null)
+      ? HlsLifecycle.fromPartial(object.lifecycle)
+      : undefined;
     message.segmentDuration = object.segmentDuration ?? undefined;
     return message;
   },
@@ -3557,20 +3563,14 @@ function createBaseObjectStoragePackaging(): ObjectStoragePackaging {
 }
 
 export const ObjectStoragePackaging = {
-  encode(
-    message: ObjectStoragePackaging,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ObjectStoragePackaging, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.hls !== undefined) {
       HlsPackaging.encode(message.hls, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): ObjectStoragePackaging {
+  decode(input: _m0.Reader | Uint8Array, length?: number): ObjectStoragePackaging {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseObjectStoragePackaging();
@@ -3589,26 +3589,18 @@ export const ObjectStoragePackaging = {
   },
 
   fromJSON(object: any): ObjectStoragePackaging {
-    return {
-      hls: isSet(object.hls) ? HlsPackaging.fromJSON(object.hls) : undefined,
-    };
+    return { hls: isSet(object.hls) ? HlsPackaging.fromJSON(object.hls) : undefined };
   },
 
   toJSON(message: ObjectStoragePackaging): unknown {
     const obj: any = {};
-    message.hls !== undefined &&
-      (obj.hls = message.hls ? HlsPackaging.toJSON(message.hls) : undefined);
+    message.hls !== undefined && (obj.hls = message.hls ? HlsPackaging.toJSON(message.hls) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<ObjectStoragePackaging>
-  ): ObjectStoragePackaging {
+  fromPartial(object: DeepPartial<ObjectStoragePackaging>): ObjectStoragePackaging {
     const message = createBaseObjectStoragePackaging();
-    message.hls =
-      object.hls !== undefined && object.hls !== null
-        ? HlsPackaging.fromPartial(object.hls)
-        : undefined;
+    message.hls = (object.hls !== undefined && object.hls !== null) ? HlsPackaging.fromPartial(object.hls) : undefined;
     return message;
   },
 };
@@ -3629,10 +3621,7 @@ function createBaseS3StorageAddress(): S3StorageAddress {
 }
 
 export const S3StorageAddress = {
-  encode(
-    message: S3StorageAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: S3StorageAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.region !== "") {
       writer.uint32(10).string(message.region);
     }
@@ -3661,10 +3650,7 @@ export const S3StorageAddress = {
       writer.uint32(74).string(message.endpoint);
     }
     if (message.packaging !== undefined) {
-      ObjectStoragePackaging.encode(
-        message.packaging,
-        writer.uint32(82).fork()
-      ).ldelim();
+      ObjectStoragePackaging.encode(message.packaging, writer.uint32(82).fork()).ldelim();
     }
     return writer;
   },
@@ -3704,10 +3690,7 @@ export const S3StorageAddress = {
           message.endpoint = reader.string();
           break;
         case 10:
-          message.packaging = ObjectStoragePackaging.decode(
-            reader,
-            reader.uint32()
-          );
+          message.packaging = ObjectStoragePackaging.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -3725,14 +3708,10 @@ export const S3StorageAddress = {
       accessKey: isSet(object.accessKey) ? String(object.accessKey) : "",
       secretKey: isSet(object.secretKey) ? String(object.secretKey) : "",
       token: isSet(object.token) ? String(object.token) : undefined,
-      tokenDuration: isSet(object.tokenDuration)
-        ? Number(object.tokenDuration)
-        : undefined,
+      tokenDuration: isSet(object.tokenDuration) ? Number(object.tokenDuration) : undefined,
       acl: isSet(object.acl) ? s3ACLFromJSON(object.acl) : undefined,
       endpoint: isSet(object.endpoint) ? String(object.endpoint) : undefined,
-      packaging: isSet(object.packaging)
-        ? ObjectStoragePackaging.fromJSON(object.packaging)
-        : undefined,
+      packaging: isSet(object.packaging) ? ObjectStoragePackaging.fromJSON(object.packaging) : undefined,
     };
   },
 
@@ -3744,16 +3723,11 @@ export const S3StorageAddress = {
     message.accessKey !== undefined && (obj.accessKey = message.accessKey);
     message.secretKey !== undefined && (obj.secretKey = message.secretKey);
     message.token !== undefined && (obj.token = message.token);
-    message.tokenDuration !== undefined &&
-      (obj.tokenDuration = Math.round(message.tokenDuration));
-    message.acl !== undefined &&
-      (obj.acl =
-        message.acl !== undefined ? s3ACLToJSON(message.acl) : undefined);
+    message.tokenDuration !== undefined && (obj.tokenDuration = Math.round(message.tokenDuration));
+    message.acl !== undefined && (obj.acl = message.acl !== undefined ? s3ACLToJSON(message.acl) : undefined);
     message.endpoint !== undefined && (obj.endpoint = message.endpoint);
     message.packaging !== undefined &&
-      (obj.packaging = message.packaging
-        ? ObjectStoragePackaging.toJSON(message.packaging)
-        : undefined);
+      (obj.packaging = message.packaging ? ObjectStoragePackaging.toJSON(message.packaging) : undefined);
     return obj;
   },
 
@@ -3768,10 +3742,9 @@ export const S3StorageAddress = {
     message.tokenDuration = object.tokenDuration ?? undefined;
     message.acl = object.acl ?? undefined;
     message.endpoint = object.endpoint ?? undefined;
-    message.packaging =
-      object.packaging !== undefined && object.packaging !== null
-        ? ObjectStoragePackaging.fromPartial(object.packaging)
-        : undefined;
+    message.packaging = (object.packaging !== undefined && object.packaging !== null)
+      ? ObjectStoragePackaging.fromPartial(object.packaging)
+      : undefined;
     return message;
   },
 };
@@ -3781,27 +3754,15 @@ function createBaseDestinationAddress(): DestinationAddress {
 }
 
 export const DestinationAddress = {
-  encode(
-    message: DestinationAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.rtmpPush !== undefined) {
-      DestinationRtmpPushAddress.encode(
-        message.rtmpPush,
-        writer.uint32(10).fork()
-      ).ldelim();
+      DestinationRtmpPushAddress.encode(message.rtmpPush, writer.uint32(10).fork()).ldelim();
     }
     if (message.agora !== undefined) {
-      DestinationAgoraPushAddress.encode(
-        message.agora,
-        writer.uint32(18).fork()
-      ).ldelim();
+      DestinationAgoraPushAddress.encode(message.agora, writer.uint32(18).fork()).ldelim();
     }
     if (message.s3Storage !== undefined) {
-      S3StorageAddress.encode(
-        message.s3Storage,
-        writer.uint32(26).fork()
-      ).ldelim();
+      S3StorageAddress.encode(message.s3Storage, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -3814,16 +3775,10 @@ export const DestinationAddress = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.rtmpPush = DestinationRtmpPushAddress.decode(
-            reader,
-            reader.uint32()
-          );
+          message.rtmpPush = DestinationRtmpPushAddress.decode(reader, reader.uint32());
           break;
         case 2:
-          message.agora = DestinationAgoraPushAddress.decode(
-            reader,
-            reader.uint32()
-          );
+          message.agora = DestinationAgoraPushAddress.decode(reader, reader.uint32());
           break;
         case 3:
           message.s3Storage = S3StorageAddress.decode(reader, reader.uint32());
@@ -3838,49 +3793,34 @@ export const DestinationAddress = {
 
   fromJSON(object: any): DestinationAddress {
     return {
-      rtmpPush: isSet(object.rtmpPush)
-        ? DestinationRtmpPushAddress.fromJSON(object.rtmpPush)
-        : undefined,
-      agora: isSet(object.agora)
-        ? DestinationAgoraPushAddress.fromJSON(object.agora)
-        : undefined,
-      s3Storage: isSet(object.s3Storage)
-        ? S3StorageAddress.fromJSON(object.s3Storage)
-        : undefined,
+      rtmpPush: isSet(object.rtmpPush) ? DestinationRtmpPushAddress.fromJSON(object.rtmpPush) : undefined,
+      agora: isSet(object.agora) ? DestinationAgoraPushAddress.fromJSON(object.agora) : undefined,
+      s3Storage: isSet(object.s3Storage) ? S3StorageAddress.fromJSON(object.s3Storage) : undefined,
     };
   },
 
   toJSON(message: DestinationAddress): unknown {
     const obj: any = {};
     message.rtmpPush !== undefined &&
-      (obj.rtmpPush = message.rtmpPush
-        ? DestinationRtmpPushAddress.toJSON(message.rtmpPush)
-        : undefined);
+      (obj.rtmpPush = message.rtmpPush ? DestinationRtmpPushAddress.toJSON(message.rtmpPush) : undefined);
     message.agora !== undefined &&
-      (obj.agora = message.agora
-        ? DestinationAgoraPushAddress.toJSON(message.agora)
-        : undefined);
+      (obj.agora = message.agora ? DestinationAgoraPushAddress.toJSON(message.agora) : undefined);
     message.s3Storage !== undefined &&
-      (obj.s3Storage = message.s3Storage
-        ? S3StorageAddress.toJSON(message.s3Storage)
-        : undefined);
+      (obj.s3Storage = message.s3Storage ? S3StorageAddress.toJSON(message.s3Storage) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<DestinationAddress>): DestinationAddress {
     const message = createBaseDestinationAddress();
-    message.rtmpPush =
-      object.rtmpPush !== undefined && object.rtmpPush !== null
-        ? DestinationRtmpPushAddress.fromPartial(object.rtmpPush)
-        : undefined;
-    message.agora =
-      object.agora !== undefined && object.agora !== null
-        ? DestinationAgoraPushAddress.fromPartial(object.agora)
-        : undefined;
-    message.s3Storage =
-      object.s3Storage !== undefined && object.s3Storage !== null
-        ? S3StorageAddress.fromPartial(object.s3Storage)
-        : undefined;
+    message.rtmpPush = (object.rtmpPush !== undefined && object.rtmpPush !== null)
+      ? DestinationRtmpPushAddress.fromPartial(object.rtmpPush)
+      : undefined;
+    message.agora = (object.agora !== undefined && object.agora !== null)
+      ? DestinationAgoraPushAddress.fromPartial(object.agora)
+      : undefined;
+    message.s3Storage = (object.s3Storage !== undefined && object.s3Storage !== null)
+      ? S3StorageAddress.fromPartial(object.s3Storage)
+      : undefined;
     return message;
   },
 };
@@ -3890,10 +3830,7 @@ function createBaseSourceTrigger(): SourceTrigger {
 }
 
 export const SourceTrigger = {
-  encode(
-    message: SourceTrigger,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceTrigger, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.sourceId !== "") {
       writer.uint32(10).string(message.sourceId);
     }
@@ -3933,12 +3870,8 @@ export const SourceTrigger = {
   fromJSON(object: any): SourceTrigger {
     return {
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
-      start: isSet(object.start)
-        ? sourceTriggerActionFromJSON(object.start)
-        : undefined,
-      stop: isSet(object.stop)
-        ? sourceTriggerActionFromJSON(object.stop)
-        : undefined,
+      start: isSet(object.start) ? sourceTriggerActionFromJSON(object.start) : undefined,
+      stop: isSet(object.stop) ? sourceTriggerActionFromJSON(object.stop) : undefined,
     };
   },
 
@@ -3946,15 +3879,9 @@ export const SourceTrigger = {
     const obj: any = {};
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.start !== undefined &&
-      (obj.start =
-        message.start !== undefined
-          ? sourceTriggerActionToJSON(message.start)
-          : undefined);
+      (obj.start = message.start !== undefined ? sourceTriggerActionToJSON(message.start) : undefined);
     message.stop !== undefined &&
-      (obj.stop =
-        message.stop !== undefined
-          ? sourceTriggerActionToJSON(message.stop)
-          : undefined);
+      (obj.stop = message.stop !== undefined ? sourceTriggerActionToJSON(message.stop) : undefined);
     return obj;
   },
 
@@ -3972,10 +3899,7 @@ function createBaseWebRtcTrigger(): WebRtcTrigger {
 }
 
 export const WebRtcTrigger = {
-  encode(
-    message: WebRtcTrigger,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: WebRtcTrigger, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.stop !== undefined) {
       writer.uint32(24).int32(sourceTriggerActionToNumber(message.stop));
     }
@@ -4001,20 +3925,13 @@ export const WebRtcTrigger = {
   },
 
   fromJSON(object: any): WebRtcTrigger {
-    return {
-      stop: isSet(object.stop)
-        ? sourceTriggerActionFromJSON(object.stop)
-        : undefined,
-    };
+    return { stop: isSet(object.stop) ? sourceTriggerActionFromJSON(object.stop) : undefined };
   },
 
   toJSON(message: WebRtcTrigger): unknown {
     const obj: any = {};
     message.stop !== undefined &&
-      (obj.stop =
-        message.stop !== undefined
-          ? sourceTriggerActionToJSON(message.stop)
-          : undefined);
+      (obj.stop = message.stop !== undefined ? sourceTriggerActionToJSON(message.stop) : undefined);
     return obj;
   },
 
@@ -4030,10 +3947,7 @@ function createBaseProjectTrigger(): ProjectTrigger {
 }
 
 export const ProjectTrigger = {
-  encode(
-    message: ProjectTrigger,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectTrigger, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.source !== undefined) {
       SourceTrigger.encode(message.source, writer.uint32(10).fork()).ldelim();
     }
@@ -4059,28 +3973,20 @@ export const ProjectTrigger = {
   },
 
   fromJSON(object: any): ProjectTrigger {
-    return {
-      source: isSet(object.source)
-        ? SourceTrigger.fromJSON(object.source)
-        : undefined,
-    };
+    return { source: isSet(object.source) ? SourceTrigger.fromJSON(object.source) : undefined };
   },
 
   toJSON(message: ProjectTrigger): unknown {
     const obj: any = {};
-    message.source !== undefined &&
-      (obj.source = message.source
-        ? SourceTrigger.toJSON(message.source)
-        : undefined);
+    message.source !== undefined && (obj.source = message.source ? SourceTrigger.toJSON(message.source) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<ProjectTrigger>): ProjectTrigger {
     const message = createBaseProjectTrigger();
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? SourceTrigger.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? SourceTrigger.fromPartial(object.source)
+      : undefined;
     return message;
   },
 };
@@ -4090,10 +3996,7 @@ function createBasePreviewHlsPullAddress(): PreviewHlsPullAddress {
 }
 
 export const PreviewHlsPullAddress = {
-  encode(
-    message: PreviewHlsPullAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: PreviewHlsPullAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.enabled !== undefined) {
       writer.uint32(8).bool(message.enabled);
     }
@@ -4103,10 +4006,7 @@ export const PreviewHlsPullAddress = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): PreviewHlsPullAddress {
+  decode(input: _m0.Reader | Uint8Array, length?: number): PreviewHlsPullAddress {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePreviewHlsPullAddress();
@@ -4141,9 +4041,7 @@ export const PreviewHlsPullAddress = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<PreviewHlsPullAddress>
-  ): PreviewHlsPullAddress {
+  fromPartial(object: DeepPartial<PreviewHlsPullAddress>): PreviewHlsPullAddress {
     const message = createBasePreviewHlsPullAddress();
     message.enabled = object.enabled ?? undefined;
     message.url = object.url ?? undefined;
@@ -4152,18 +4050,11 @@ export const PreviewHlsPullAddress = {
 };
 
 function createBasePreviewWebRtcAddress(): PreviewWebRtcAddress {
-  return {
-    enabled: undefined,
-    displayName: undefined,
-    participantId: undefined,
-  };
+  return { enabled: undefined, displayName: undefined, participantId: undefined };
 }
 
 export const PreviewWebRtcAddress = {
-  encode(
-    message: PreviewWebRtcAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: PreviewWebRtcAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.enabled !== undefined) {
       writer.uint32(8).bool(message.enabled);
     }
@@ -4176,10 +4067,7 @@ export const PreviewWebRtcAddress = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): PreviewWebRtcAddress {
+  decode(input: _m0.Reader | Uint8Array, length?: number): PreviewWebRtcAddress {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePreviewWebRtcAddress();
@@ -4206,22 +4094,16 @@ export const PreviewWebRtcAddress = {
   fromJSON(object: any): PreviewWebRtcAddress {
     return {
       enabled: isSet(object.enabled) ? Boolean(object.enabled) : undefined,
-      displayName: isSet(object.displayName)
-        ? String(object.displayName)
-        : undefined,
-      participantId: isSet(object.participantId)
-        ? String(object.participantId)
-        : undefined,
+      displayName: isSet(object.displayName) ? String(object.displayName) : undefined,
+      participantId: isSet(object.participantId) ? String(object.participantId) : undefined,
     };
   },
 
   toJSON(message: PreviewWebRtcAddress): unknown {
     const obj: any = {};
     message.enabled !== undefined && (obj.enabled = message.enabled);
-    message.displayName !== undefined &&
-      (obj.displayName = message.displayName);
-    message.participantId !== undefined &&
-      (obj.participantId = message.participantId);
+    message.displayName !== undefined && (obj.displayName = message.displayName);
+    message.participantId !== undefined && (obj.participantId = message.participantId);
     return obj;
   },
 
@@ -4239,15 +4121,9 @@ function createBasePreviewAddress(): PreviewAddress {
 }
 
 export const PreviewAddress = {
-  encode(
-    message: PreviewAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: PreviewAddress, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.webrtc !== undefined) {
-      PreviewWebRtcAddress.encode(
-        message.webrtc,
-        writer.uint32(18).fork()
-      ).ldelim();
+      PreviewWebRtcAddress.encode(message.webrtc, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -4271,28 +4147,21 @@ export const PreviewAddress = {
   },
 
   fromJSON(object: any): PreviewAddress {
-    return {
-      webrtc: isSet(object.webrtc)
-        ? PreviewWebRtcAddress.fromJSON(object.webrtc)
-        : undefined,
-    };
+    return { webrtc: isSet(object.webrtc) ? PreviewWebRtcAddress.fromJSON(object.webrtc) : undefined };
   },
 
   toJSON(message: PreviewAddress): unknown {
     const obj: any = {};
     message.webrtc !== undefined &&
-      (obj.webrtc = message.webrtc
-        ? PreviewWebRtcAddress.toJSON(message.webrtc)
-        : undefined);
+      (obj.webrtc = message.webrtc ? PreviewWebRtcAddress.toJSON(message.webrtc) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<PreviewAddress>): PreviewAddress {
     const message = createBasePreviewAddress();
-    message.webrtc =
-      object.webrtc !== undefined && object.webrtc !== null
-        ? PreviewWebRtcAddress.fromPartial(object.webrtc)
-        : undefined;
+    message.webrtc = (object.webrtc !== undefined && object.webrtc !== null)
+      ? PreviewWebRtcAddress.fromPartial(object.webrtc)
+      : undefined;
     return message;
   },
 };
@@ -4302,10 +4171,7 @@ function createBaseStudioSdkComposition(): StudioSdkComposition {
 }
 
 export const StudioSdkComposition = {
-  encode(
-    message: StudioSdkComposition,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: StudioSdkComposition, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.rendererUrl !== undefined) {
       writer.uint32(10).string(message.rendererUrl);
     }
@@ -4315,10 +4181,7 @@ export const StudioSdkComposition = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StudioSdkComposition {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StudioSdkComposition {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStudioSdkComposition();
@@ -4341,17 +4204,14 @@ export const StudioSdkComposition = {
 
   fromJSON(object: any): StudioSdkComposition {
     return {
-      rendererUrl: isSet(object.rendererUrl)
-        ? String(object.rendererUrl)
-        : undefined,
+      rendererUrl: isSet(object.rendererUrl) ? String(object.rendererUrl) : undefined,
       version: isSet(object.version) ? String(object.version) : undefined,
     };
   },
 
   toJSON(message: StudioSdkComposition): unknown {
     const obj: any = {};
-    message.rendererUrl !== undefined &&
-      (obj.rendererUrl = message.rendererUrl);
+    message.rendererUrl !== undefined && (obj.rendererUrl = message.rendererUrl);
     message.version !== undefined && (obj.version = message.version);
     return obj;
   },
@@ -4365,18 +4225,11 @@ export const StudioSdkComposition = {
 };
 
 function createBaseSceneComposition(): SceneComposition {
-  return {
-    rendererUrl: undefined,
-    selectedLayoutId: undefined,
-    debug: undefined,
-  };
+  return { rendererUrl: undefined, selectedLayoutId: undefined, debug: undefined };
 }
 
 export const SceneComposition = {
-  encode(
-    message: SceneComposition,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SceneComposition, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.rendererUrl !== undefined) {
       writer.uint32(10).string(message.rendererUrl);
     }
@@ -4415,22 +4268,16 @@ export const SceneComposition = {
 
   fromJSON(object: any): SceneComposition {
     return {
-      rendererUrl: isSet(object.rendererUrl)
-        ? String(object.rendererUrl)
-        : undefined,
-      selectedLayoutId: isSet(object.selectedLayoutId)
-        ? String(object.selectedLayoutId)
-        : undefined,
+      rendererUrl: isSet(object.rendererUrl) ? String(object.rendererUrl) : undefined,
+      selectedLayoutId: isSet(object.selectedLayoutId) ? String(object.selectedLayoutId) : undefined,
       debug: isSet(object.debug) ? Boolean(object.debug) : undefined,
     };
   },
 
   toJSON(message: SceneComposition): unknown {
     const obj: any = {};
-    message.rendererUrl !== undefined &&
-      (obj.rendererUrl = message.rendererUrl);
-    message.selectedLayoutId !== undefined &&
-      (obj.selectedLayoutId = message.selectedLayoutId);
+    message.rendererUrl !== undefined && (obj.rendererUrl = message.rendererUrl);
+    message.selectedLayoutId !== undefined && (obj.selectedLayoutId = message.selectedLayoutId);
     message.debug !== undefined && (obj.debug = message.debug);
     return obj;
   },
@@ -4449,10 +4296,7 @@ function createBaseExternalComposition(): ExternalComposition {
 }
 
 export const ExternalComposition = {
-  encode(
-    message: ExternalComposition,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ExternalComposition, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.url !== "") {
       writer.uint32(10).string(message.url);
     }
@@ -4478,9 +4322,7 @@ export const ExternalComposition = {
   },
 
   fromJSON(object: any): ExternalComposition {
-    return {
-      url: isSet(object.url) ? String(object.url) : "",
-    };
+    return { url: isSet(object.url) ? String(object.url) : "" };
   },
 
   toJSON(message: ExternalComposition): unknown {
@@ -4501,21 +4343,12 @@ function createBaseComposition(): Composition {
 }
 
 export const Composition = {
-  encode(
-    message: Composition,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Composition, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.external !== undefined) {
-      ExternalComposition.encode(
-        message.external,
-        writer.uint32(10).fork()
-      ).ldelim();
+      ExternalComposition.encode(message.external, writer.uint32(10).fork()).ldelim();
     }
     if (message.studioSdk !== undefined) {
-      StudioSdkComposition.encode(
-        message.studioSdk,
-        writer.uint32(18).fork()
-      ).ldelim();
+      StudioSdkComposition.encode(message.studioSdk, writer.uint32(18).fork()).ldelim();
     }
     if (message.scene !== undefined) {
       SceneComposition.encode(message.scene, writer.uint32(34).fork()).ldelim();
@@ -4531,16 +4364,10 @@ export const Composition = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.external = ExternalComposition.decode(
-            reader,
-            reader.uint32()
-          );
+          message.external = ExternalComposition.decode(reader, reader.uint32());
           break;
         case 2:
-          message.studioSdk = StudioSdkComposition.decode(
-            reader,
-            reader.uint32()
-          );
+          message.studioSdk = StudioSdkComposition.decode(reader, reader.uint32());
           break;
         case 4:
           message.scene = SceneComposition.decode(reader, reader.uint32());
@@ -4555,49 +4382,33 @@ export const Composition = {
 
   fromJSON(object: any): Composition {
     return {
-      external: isSet(object.external)
-        ? ExternalComposition.fromJSON(object.external)
-        : undefined,
-      studioSdk: isSet(object.studioSdk)
-        ? StudioSdkComposition.fromJSON(object.studioSdk)
-        : undefined,
-      scene: isSet(object.scene)
-        ? SceneComposition.fromJSON(object.scene)
-        : undefined,
+      external: isSet(object.external) ? ExternalComposition.fromJSON(object.external) : undefined,
+      studioSdk: isSet(object.studioSdk) ? StudioSdkComposition.fromJSON(object.studioSdk) : undefined,
+      scene: isSet(object.scene) ? SceneComposition.fromJSON(object.scene) : undefined,
     };
   },
 
   toJSON(message: Composition): unknown {
     const obj: any = {};
     message.external !== undefined &&
-      (obj.external = message.external
-        ? ExternalComposition.toJSON(message.external)
-        : undefined);
+      (obj.external = message.external ? ExternalComposition.toJSON(message.external) : undefined);
     message.studioSdk !== undefined &&
-      (obj.studioSdk = message.studioSdk
-        ? StudioSdkComposition.toJSON(message.studioSdk)
-        : undefined);
-    message.scene !== undefined &&
-      (obj.scene = message.scene
-        ? SceneComposition.toJSON(message.scene)
-        : undefined);
+      (obj.studioSdk = message.studioSdk ? StudioSdkComposition.toJSON(message.studioSdk) : undefined);
+    message.scene !== undefined && (obj.scene = message.scene ? SceneComposition.toJSON(message.scene) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<Composition>): Composition {
     const message = createBaseComposition();
-    message.external =
-      object.external !== undefined && object.external !== null
-        ? ExternalComposition.fromPartial(object.external)
-        : undefined;
-    message.studioSdk =
-      object.studioSdk !== undefined && object.studioSdk !== null
-        ? StudioSdkComposition.fromPartial(object.studioSdk)
-        : undefined;
-    message.scene =
-      object.scene !== undefined && object.scene !== null
-        ? SceneComposition.fromPartial(object.scene)
-        : undefined;
+    message.external = (object.external !== undefined && object.external !== null)
+      ? ExternalComposition.fromPartial(object.external)
+      : undefined;
+    message.studioSdk = (object.studioSdk !== undefined && object.studioSdk !== null)
+      ? StudioSdkComposition.fromPartial(object.studioSdk)
+      : undefined;
+    message.scene = (object.scene !== undefined && object.scene !== null)
+      ? SceneComposition.fromPartial(object.scene)
+      : undefined;
     return message;
   },
 };
@@ -4607,10 +4418,7 @@ function createBaseHostedWebRtc(): HostedWebRtc {
 }
 
 export const HostedWebRtc = {
-  encode(
-    message: HostedWebRtc,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: HostedWebRtc, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.enabled !== undefined) {
       writer.uint32(8).bool(message.enabled);
     }
@@ -4636,9 +4444,7 @@ export const HostedWebRtc = {
   },
 
   fromJSON(object: any): HostedWebRtc {
-    return {
-      enabled: isSet(object.enabled) ? Boolean(object.enabled) : undefined,
-    };
+    return { enabled: isSet(object.enabled) ? Boolean(object.enabled) : undefined };
   },
 
   toJSON(message: HostedWebRtc): unknown {
@@ -4659,10 +4465,7 @@ function createBaseWebRtc(): WebRtc {
 }
 
 export const WebRtc = {
-  encode(
-    message: WebRtc,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: WebRtc, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.hosted !== undefined) {
       HostedWebRtc.encode(message.hosted, writer.uint32(10).fork()).ldelim();
     }
@@ -4688,28 +4491,20 @@ export const WebRtc = {
   },
 
   fromJSON(object: any): WebRtc {
-    return {
-      hosted: isSet(object.hosted)
-        ? HostedWebRtc.fromJSON(object.hosted)
-        : undefined,
-    };
+    return { hosted: isSet(object.hosted) ? HostedWebRtc.fromJSON(object.hosted) : undefined };
   },
 
   toJSON(message: WebRtc): unknown {
     const obj: any = {};
-    message.hosted !== undefined &&
-      (obj.hosted = message.hosted
-        ? HostedWebRtc.toJSON(message.hosted)
-        : undefined);
+    message.hosted !== undefined && (obj.hosted = message.hosted ? HostedWebRtc.toJSON(message.hosted) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<WebRtc>): WebRtc {
     const message = createBaseWebRtc();
-    message.hosted =
-      object.hosted !== undefined && object.hosted !== null
-        ? HostedWebRtc.fromPartial(object.hosted)
-        : undefined;
+    message.hosted = (object.hosted !== undefined && object.hosted !== null)
+      ? HostedWebRtc.fromPartial(object.hosted)
+      : undefined;
     return message;
   },
 };
@@ -4719,10 +4514,7 @@ function createBaseWebRtcAccess(): WebRtcAccess {
 }
 
 export const WebRtcAccess = {
-  encode(
-    message: WebRtcAccess,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: WebRtcAccess, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.accessToken !== "") {
       writer.uint32(10).string(message.accessToken);
     }
@@ -4756,18 +4548,14 @@ export const WebRtcAccess = {
   fromJSON(object: any): WebRtcAccess {
     return {
       accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
-      participantId: isSet(object.participantId)
-        ? String(object.participantId)
-        : undefined,
+      participantId: isSet(object.participantId) ? String(object.participantId) : undefined,
     };
   },
 
   toJSON(message: WebRtcAccess): unknown {
     const obj: any = {};
-    message.accessToken !== undefined &&
-      (obj.accessToken = message.accessToken);
-    message.participantId !== undefined &&
-      (obj.participantId = message.participantId);
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
+    message.participantId !== undefined && (obj.participantId = message.participantId);
     return obj;
   },
 
@@ -4784,10 +4572,7 @@ function createBaseLatLong(): LatLong {
 }
 
 export const LatLong = {
-  encode(
-    message: LatLong,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: LatLong, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.latitude !== 0) {
       writer.uint32(9).double(message.latitude);
     }
@@ -4855,10 +4640,7 @@ function createBaseProjectBroadcastStatus(): ProjectBroadcastStatus {
 }
 
 export const ProjectBroadcastStatus = {
-  encode(
-    message: ProjectBroadcastStatus,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectBroadcastStatus, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -4872,21 +4654,12 @@ export const ProjectBroadcastStatus = {
       writer.uint32(32).uint32(message.duration);
     }
     if (message.start !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.start),
-        writer.uint32(42).fork()
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.start), writer.uint32(42).fork()).ldelim();
     }
     if (message.stop !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.stop),
-        writer.uint32(50).fork()
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.stop), writer.uint32(50).fork()).ldelim();
     }
-    if (
-      message.phase !==
-      ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED
-    ) {
+    if (message.phase !== ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED) {
       writer.uint32(56).int32(projectBroadcastPhaseToNumber(message.phase));
     }
     if (message.region !== undefined) {
@@ -4898,10 +4671,7 @@ export const ProjectBroadcastStatus = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): ProjectBroadcastStatus {
+  decode(input: _m0.Reader | Uint8Array, length?: number): ProjectBroadcastStatus {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseProjectBroadcastStatus();
@@ -4921,14 +4691,10 @@ export const ProjectBroadcastStatus = {
           message.duration = reader.uint32();
           break;
         case 5:
-          message.start = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32())
-          );
+          message.start = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 6:
-          message.stop = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32())
-          );
+          message.stop = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 7:
           message.phase = projectBroadcastPhaseFromJSON(reader.int32());
@@ -4949,13 +4715,9 @@ export const ProjectBroadcastStatus = {
 
   fromJSON(object: any): ProjectBroadcastStatus {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      broadcastId: isSet(object.broadcastId)
-        ? String(object.broadcastId)
-        : undefined,
+      broadcastId: isSet(object.broadcastId) ? String(object.broadcastId) : undefined,
       duration: isSet(object.duration) ? Number(object.duration) : undefined,
       start: isSet(object.start) ? String(object.start) : undefined,
       stop: isSet(object.stop) ? String(object.stop) : undefined,
@@ -4963,37 +4725,26 @@ export const ProjectBroadcastStatus = {
         ? projectBroadcastPhaseFromJSON(object.phase)
         : ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED,
       region: isSet(object.region) ? regionFromJSON(object.region) : undefined,
-      datacenter: isSet(object.datacenter)
-        ? String(object.datacenter)
-        : undefined,
+      datacenter: isSet(object.datacenter) ? String(object.datacenter) : undefined,
     };
   },
 
   toJSON(message: ProjectBroadcastStatus): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.broadcastId !== undefined &&
-      (obj.broadcastId = message.broadcastId);
-    message.duration !== undefined &&
-      (obj.duration = Math.round(message.duration));
+    message.broadcastId !== undefined && (obj.broadcastId = message.broadcastId);
+    message.duration !== undefined && (obj.duration = Math.round(message.duration));
     message.start !== undefined && (obj.start = message.start);
     message.stop !== undefined && (obj.stop = message.stop);
-    message.phase !== undefined &&
-      (obj.phase = projectBroadcastPhaseToJSON(message.phase));
+    message.phase !== undefined && (obj.phase = projectBroadcastPhaseToJSON(message.phase));
     message.region !== undefined &&
-      (obj.region =
-        message.region !== undefined
-          ? regionToJSON(message.region)
-          : undefined);
+      (obj.region = message.region !== undefined ? regionToJSON(message.region) : undefined);
     message.datacenter !== undefined && (obj.datacenter = message.datacenter);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<ProjectBroadcastStatus>
-  ): ProjectBroadcastStatus {
+  fromPartial(object: DeepPartial<ProjectBroadcastStatus>): ProjectBroadcastStatus {
     const message = createBaseProjectBroadcastStatus();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -5001,8 +4752,7 @@ export const ProjectBroadcastStatus = {
     message.duration = object.duration ?? undefined;
     message.start = object.start ?? undefined;
     message.stop = object.stop ?? undefined;
-    message.phase =
-      object.phase ?? ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED;
+    message.phase = object.phase ?? ProjectBroadcastPhase.PROJECT_BROADCAST_PHASE_UNSPECIFIED;
     message.region = object.region ?? undefined;
     message.datacenter = object.datacenter ?? undefined;
     return message;
@@ -5010,20 +4760,11 @@ export const ProjectBroadcastStatus = {
 };
 
 function createBaseSource(): Source {
-  return {
-    collectionId: "",
-    sourceId: "",
-    metadata: undefined,
-    preview: undefined,
-    address: undefined,
-  };
+  return { collectionId: "", sourceId: "", metadata: undefined, preview: undefined, address: undefined };
 }
 
 export const Source = {
-  encode(
-    message: Source,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Source, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -5031,10 +4772,7 @@ export const Source = {
       writer.uint32(18).string(message.sourceId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(26).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(26).fork()).ldelim();
     }
     if (message.preview !== undefined) {
       PreviewAddress.encode(message.preview, writer.uint32(34).fork()).ldelim();
@@ -5059,9 +4797,7 @@ export const Source = {
           message.sourceId = reader.string();
           break;
         case 3:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 4:
           message.preview = PreviewAddress.decode(reader, reader.uint32());
@@ -5079,34 +4815,23 @@ export const Source = {
 
   fromJSON(object: any): Source {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      preview: isSet(object.preview)
-        ? PreviewAddress.fromJSON(object.preview)
-        : undefined,
-      address: isSet(object.address)
-        ? SourceAddress.fromJSON(object.address)
-        : undefined,
+      preview: isSet(object.preview) ? PreviewAddress.fromJSON(object.preview) : undefined,
+      address: isSet(object.address) ? SourceAddress.fromJSON(object.address) : undefined,
     };
   },
 
   toJSON(message: Source): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.preview !== undefined &&
-      (obj.preview = message.preview
-        ? PreviewAddress.toJSON(message.preview)
-        : undefined);
+      (obj.preview = message.preview ? PreviewAddress.toJSON(message.preview) : undefined);
     message.address !== undefined &&
-      (obj.address = message.address
-        ? SourceAddress.toJSON(message.address)
-        : undefined);
+      (obj.address = message.address ? SourceAddress.toJSON(message.address) : undefined);
     return obj;
   },
 
@@ -5115,14 +4840,12 @@ export const Source = {
     message.collectionId = object.collectionId ?? "";
     message.sourceId = object.sourceId ?? "";
     message.metadata = object.metadata ?? undefined;
-    message.preview =
-      object.preview !== undefined && object.preview !== null
-        ? PreviewAddress.fromPartial(object.preview)
-        : undefined;
-    message.address =
-      object.address !== undefined && object.address !== null
-        ? SourceAddress.fromPartial(object.address)
-        : undefined;
+    message.preview = (object.preview !== undefined && object.preview !== null)
+      ? PreviewAddress.fromPartial(object.preview)
+      : undefined;
+    message.address = (object.address !== undefined && object.address !== null)
+      ? SourceAddress.fromPartial(object.address)
+      : undefined;
     return message;
   },
 };
@@ -5140,10 +4863,7 @@ function createBaseDestination(): Destination {
 }
 
 export const Destination = {
-  encode(
-    message: Destination,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Destination, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -5154,19 +4874,13 @@ export const Destination = {
       writer.uint32(26).string(message.destinationId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(34).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(34).fork()).ldelim();
     }
     if (message.enabled !== undefined) {
       writer.uint32(40).bool(message.enabled);
     }
     if (message.address !== undefined) {
-      DestinationAddress.encode(
-        message.address,
-        writer.uint32(50).fork()
-      ).ldelim();
+      DestinationAddress.encode(message.address, writer.uint32(50).fork()).ldelim();
     }
     if (message.timeout !== undefined) {
       writer.uint32(56).uint32(message.timeout);
@@ -5191,9 +4905,7 @@ export const Destination = {
           message.destinationId = reader.string();
           break;
         case 4:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 5:
           message.enabled = reader.bool();
@@ -5214,37 +4926,26 @@ export const Destination = {
 
   fromJSON(object: any): Destination {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
       enabled: isSet(object.enabled) ? Boolean(object.enabled) : undefined,
-      address: isSet(object.address)
-        ? DestinationAddress.fromJSON(object.address)
-        : undefined,
+      address: isSet(object.address) ? DestinationAddress.fromJSON(object.address) : undefined,
       timeout: isSet(object.timeout) ? Number(object.timeout) : undefined,
     };
   },
 
   toJSON(message: Destination): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.enabled !== undefined && (obj.enabled = message.enabled);
     message.address !== undefined &&
-      (obj.address = message.address
-        ? DestinationAddress.toJSON(message.address)
-        : undefined);
-    message.timeout !== undefined &&
-      (obj.timeout = Math.round(message.timeout));
+      (obj.address = message.address ? DestinationAddress.toJSON(message.address) : undefined);
+    message.timeout !== undefined && (obj.timeout = Math.round(message.timeout));
     return obj;
   },
 
@@ -5255,10 +4956,9 @@ export const Destination = {
     message.destinationId = object.destinationId ?? "";
     message.metadata = object.metadata ?? undefined;
     message.enabled = object.enabled ?? undefined;
-    message.address =
-      object.address !== undefined && object.address !== null
-        ? DestinationAddress.fromPartial(object.address)
-        : undefined;
+    message.address = (object.address !== undefined && object.address !== null)
+      ? DestinationAddress.fromPartial(object.address)
+      : undefined;
     message.timeout = object.timeout ?? undefined;
     return message;
   },
@@ -5283,10 +4983,7 @@ function createBaseProject(): Project {
 }
 
 export const Project = {
-  encode(
-    message: Project,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Project, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -5294,10 +4991,7 @@ export const Project = {
       writer.uint32(18).string(message.projectId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(26).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(26).fork()).ldelim();
     }
     if (message.rendering !== undefined) {
       Rendering.encode(message.rendering, writer.uint32(34).fork()).ldelim();
@@ -5312,10 +5006,7 @@ export const Project = {
       Destination.encode(v!, writer.uint32(58).fork()).ldelim();
     }
     if (message.composition !== undefined) {
-      Composition.encode(
-        message.composition,
-        writer.uint32(66).fork()
-      ).ldelim();
+      Composition.encode(message.composition, writer.uint32(66).fork()).ldelim();
     }
     if (message.maxDuration !== undefined) {
       writer.uint32(72).uint32(message.maxDuration);
@@ -5349,9 +5040,7 @@ export const Project = {
           message.projectId = reader.string();
           break;
         case 3:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 4:
           message.rendering = Rendering.decode(reader, reader.uint32());
@@ -5363,9 +5052,7 @@ export const Project = {
           message.sources.push(Source.decode(reader, reader.uint32()));
           break;
         case 7:
-          message.destinations.push(
-            Destination.decode(reader, reader.uint32())
-          );
+          message.destinations.push(Destination.decode(reader, reader.uint32()));
           break;
         case 8:
           message.composition = Composition.decode(reader, reader.uint32());
@@ -5395,93 +5082,54 @@ export const Project = {
 
   fromJSON(object: any): Project {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      rendering: isSet(object.rendering)
-        ? Rendering.fromJSON(object.rendering)
-        : undefined,
-      encoding: isSet(object.encoding)
-        ? Encoding.fromJSON(object.encoding)
-        : undefined,
-      sources: Array.isArray(object?.sources)
-        ? object.sources.map((e: any) => Source.fromJSON(e))
-        : [],
+      rendering: isSet(object.rendering) ? Rendering.fromJSON(object.rendering) : undefined,
+      encoding: isSet(object.encoding) ? Encoding.fromJSON(object.encoding) : undefined,
+      sources: Array.isArray(object?.sources) ? object.sources.map((e: any) => Source.fromJSON(e)) : [],
       destinations: Array.isArray(object?.destinations)
         ? object.destinations.map((e: any) => Destination.fromJSON(e))
         : [],
-      composition: isSet(object.composition)
-        ? Composition.fromJSON(object.composition)
-        : undefined,
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
+      composition: isSet(object.composition) ? Composition.fromJSON(object.composition) : undefined,
+      maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined,
       webrtc: isSet(object.webrtc) ? WebRtc.fromJSON(object.webrtc) : undefined,
-      triggers: Array.isArray(object?.triggers)
-        ? object.triggers.map((e: any) => ProjectTrigger.fromJSON(e))
-        : [],
-      location: isSet(object.location)
-        ? LatLong.fromJSON(object.location)
-        : undefined,
-      guestCodes: Array.isArray(object?.guestCodes)
-        ? object.guestCodes.map((e: any) => GuestCode.fromJSON(e))
-        : [],
+      triggers: Array.isArray(object?.triggers) ? object.triggers.map((e: any) => ProjectTrigger.fromJSON(e)) : [],
+      location: isSet(object.location) ? LatLong.fromJSON(object.location) : undefined,
+      guestCodes: Array.isArray(object?.guestCodes) ? object.guestCodes.map((e: any) => GuestCode.fromJSON(e)) : [],
     };
   },
 
   toJSON(message: Project): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.rendering !== undefined &&
-      (obj.rendering = message.rendering
-        ? Rendering.toJSON(message.rendering)
-        : undefined);
-    message.encoding !== undefined &&
-      (obj.encoding = message.encoding
-        ? Encoding.toJSON(message.encoding)
-        : undefined);
+      (obj.rendering = message.rendering ? Rendering.toJSON(message.rendering) : undefined);
+    message.encoding !== undefined && (obj.encoding = message.encoding ? Encoding.toJSON(message.encoding) : undefined);
     if (message.sources) {
-      obj.sources = message.sources.map((e) =>
-        e ? Source.toJSON(e) : undefined
-      );
+      obj.sources = message.sources.map((e) => e ? Source.toJSON(e) : undefined);
     } else {
       obj.sources = [];
     }
     if (message.destinations) {
-      obj.destinations = message.destinations.map((e) =>
-        e ? Destination.toJSON(e) : undefined
-      );
+      obj.destinations = message.destinations.map((e) => e ? Destination.toJSON(e) : undefined);
     } else {
       obj.destinations = [];
     }
     message.composition !== undefined &&
-      (obj.composition = message.composition
-        ? Composition.toJSON(message.composition)
-        : undefined);
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
-    message.webrtc !== undefined &&
-      (obj.webrtc = message.webrtc ? WebRtc.toJSON(message.webrtc) : undefined);
+      (obj.composition = message.composition ? Composition.toJSON(message.composition) : undefined);
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
+    message.webrtc !== undefined && (obj.webrtc = message.webrtc ? WebRtc.toJSON(message.webrtc) : undefined);
     if (message.triggers) {
-      obj.triggers = message.triggers.map((e) =>
-        e ? ProjectTrigger.toJSON(e) : undefined
-      );
+      obj.triggers = message.triggers.map((e) => e ? ProjectTrigger.toJSON(e) : undefined);
     } else {
       obj.triggers = [];
     }
-    message.location !== undefined &&
-      (obj.location = message.location
-        ? LatLong.toJSON(message.location)
-        : undefined);
+    message.location !== undefined && (obj.location = message.location ? LatLong.toJSON(message.location) : undefined);
     if (message.guestCodes) {
-      obj.guestCodes = message.guestCodes.map((e) =>
-        e ? GuestCode.toJSON(e) : undefined
-      );
+      obj.guestCodes = message.guestCodes.map((e) => e ? GuestCode.toJSON(e) : undefined);
     } else {
       obj.guestCodes = [];
     }
@@ -5493,34 +5141,26 @@ export const Project = {
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.metadata = object.metadata ?? undefined;
-    message.rendering =
-      object.rendering !== undefined && object.rendering !== null
-        ? Rendering.fromPartial(object.rendering)
-        : undefined;
-    message.encoding =
-      object.encoding !== undefined && object.encoding !== null
-        ? Encoding.fromPartial(object.encoding)
-        : undefined;
+    message.rendering = (object.rendering !== undefined && object.rendering !== null)
+      ? Rendering.fromPartial(object.rendering)
+      : undefined;
+    message.encoding = (object.encoding !== undefined && object.encoding !== null)
+      ? Encoding.fromPartial(object.encoding)
+      : undefined;
     message.sources = object.sources?.map((e) => Source.fromPartial(e)) || [];
-    message.destinations =
-      object.destinations?.map((e) => Destination.fromPartial(e)) || [];
-    message.composition =
-      object.composition !== undefined && object.composition !== null
-        ? Composition.fromPartial(object.composition)
-        : undefined;
+    message.destinations = object.destinations?.map((e) => Destination.fromPartial(e)) || [];
+    message.composition = (object.composition !== undefined && object.composition !== null)
+      ? Composition.fromPartial(object.composition)
+      : undefined;
     message.maxDuration = object.maxDuration ?? undefined;
-    message.webrtc =
-      object.webrtc !== undefined && object.webrtc !== null
-        ? WebRtc.fromPartial(object.webrtc)
-        : undefined;
-    message.triggers =
-      object.triggers?.map((e) => ProjectTrigger.fromPartial(e)) || [];
-    message.location =
-      object.location !== undefined && object.location !== null
-        ? LatLong.fromPartial(object.location)
-        : undefined;
-    message.guestCodes =
-      object.guestCodes?.map((e) => GuestCode.fromPartial(e)) || [];
+    message.webrtc = (object.webrtc !== undefined && object.webrtc !== null)
+      ? WebRtc.fromPartial(object.webrtc)
+      : undefined;
+    message.triggers = object.triggers?.map((e) => ProjectTrigger.fromPartial(e)) || [];
+    message.location = (object.location !== undefined && object.location !== null)
+      ? LatLong.fromPartial(object.location)
+      : undefined;
+    message.guestCodes = object.guestCodes?.map((e) => GuestCode.fromPartial(e)) || [];
     return message;
   },
 };
@@ -5530,18 +5170,12 @@ function createBaseCollection(): Collection {
 }
 
 export const Collection = {
-  encode(
-    message: Collection,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: Collection, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(18).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(18).fork()).ldelim();
     }
     for (const v of message.projects) {
       Project.encode(v!, writer.uint32(26).fork()).ldelim();
@@ -5563,9 +5197,7 @@ export const Collection = {
           message.collectionId = reader.string();
           break;
         case 2:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 3:
           message.projects.push(Project.decode(reader, reader.uint32()));
@@ -5583,35 +5215,24 @@ export const Collection = {
 
   fromJSON(object: any): Collection {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      projects: Array.isArray(object?.projects)
-        ? object.projects.map((e: any) => Project.fromJSON(e))
-        : [],
-      sources: Array.isArray(object?.sources)
-        ? object.sources.map((e: any) => Source.fromJSON(e))
-        : [],
+      projects: Array.isArray(object?.projects) ? object.projects.map((e: any) => Project.fromJSON(e)) : [],
+      sources: Array.isArray(object?.sources) ? object.sources.map((e: any) => Source.fromJSON(e)) : [],
     };
   },
 
   toJSON(message: Collection): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     if (message.projects) {
-      obj.projects = message.projects.map((e) =>
-        e ? Project.toJSON(e) : undefined
-      );
+      obj.projects = message.projects.map((e) => e ? Project.toJSON(e) : undefined);
     } else {
       obj.projects = [];
     }
     if (message.sources) {
-      obj.sources = message.sources.map((e) =>
-        e ? Source.toJSON(e) : undefined
-      );
+      obj.sources = message.sources.map((e) => e ? Source.toJSON(e) : undefined);
     } else {
       obj.sources = [];
     }
@@ -5622,8 +5243,7 @@ export const Collection = {
     const message = createBaseCollection();
     message.collectionId = object.collectionId ?? "";
     message.metadata = object.metadata ?? undefined;
-    message.projects =
-      object.projects?.map((e) => Project.fromPartial(e)) || [];
+    message.projects = object.projects?.map((e) => Project.fromPartial(e)) || [];
     message.sources = object.sources?.map((e) => Source.fromPartial(e)) || [];
     return message;
   },
@@ -5634,23 +5254,14 @@ function createBaseCreateCollectionRequest(): CreateCollectionRequest {
 }
 
 export const CreateCollectionRequest = {
-  encode(
-    message: CreateCollectionRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateCollectionRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(10).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateCollectionRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateCollectionRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateCollectionRequest();
@@ -5658,9 +5269,7 @@ export const CreateCollectionRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -5671,9 +5280,7 @@ export const CreateCollectionRequest = {
   },
 
   fromJSON(object: any): CreateCollectionRequest {
-    return {
-      metadata: isSet(object?.metadata) ? object.metadata : undefined,
-    };
+    return { metadata: isSet(object?.metadata) ? object.metadata : undefined };
   },
 
   toJSON(message: CreateCollectionRequest): unknown {
@@ -5682,9 +5289,7 @@ export const CreateCollectionRequest = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateCollectionRequest>
-  ): CreateCollectionRequest {
+  fromPartial(object: DeepPartial<CreateCollectionRequest>): CreateCollectionRequest {
     const message = createBaseCreateCollectionRequest();
     message.metadata = object.metadata ?? undefined;
     return message;
@@ -5696,20 +5301,14 @@ function createBaseCreateCollectionResponse(): CreateCollectionResponse {
 }
 
 export const CreateCollectionResponse = {
-  encode(
-    message: CreateCollectionResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateCollectionResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collection !== undefined) {
       Collection.encode(message.collection, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateCollectionResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateCollectionResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateCollectionResponse();
@@ -5728,47 +5327,31 @@ export const CreateCollectionResponse = {
   },
 
   fromJSON(object: any): CreateCollectionResponse {
-    return {
-      collection: isSet(object.collection)
-        ? Collection.fromJSON(object.collection)
-        : undefined,
-    };
+    return { collection: isSet(object.collection) ? Collection.fromJSON(object.collection) : undefined };
   },
 
   toJSON(message: CreateCollectionResponse): unknown {
     const obj: any = {};
     message.collection !== undefined &&
-      (obj.collection = message.collection
-        ? Collection.toJSON(message.collection)
-        : undefined);
+      (obj.collection = message.collection ? Collection.toJSON(message.collection) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateCollectionResponse>
-  ): CreateCollectionResponse {
+  fromPartial(object: DeepPartial<CreateCollectionResponse>): CreateCollectionResponse {
     const message = createBaseCreateCollectionResponse();
-    message.collection =
-      object.collection !== undefined && object.collection !== null
-        ? Collection.fromPartial(object.collection)
-        : undefined;
+    message.collection = (object.collection !== undefined && object.collection !== null)
+      ? Collection.fromPartial(object.collection)
+      : undefined;
     return message;
   },
 };
 
 function createBaseGetCollectionRequest(): GetCollectionRequest {
-  return {
-    collectionId: "",
-    populateProjects: undefined,
-    populateSources: undefined,
-  };
+  return { collectionId: "", populateProjects: undefined, populateSources: undefined };
 }
 
 export const GetCollectionRequest = {
-  encode(
-    message: GetCollectionRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetCollectionRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -5781,10 +5364,7 @@ export const GetCollectionRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetCollectionRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetCollectionRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetCollectionRequest();
@@ -5810,26 +5390,17 @@ export const GetCollectionRequest = {
 
   fromJSON(object: any): GetCollectionRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
-      populateProjects: isSet(object.populateProjects)
-        ? Boolean(object.populateProjects)
-        : undefined,
-      populateSources: isSet(object.populateSources)
-        ? Boolean(object.populateSources)
-        : undefined,
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
+      populateProjects: isSet(object.populateProjects) ? Boolean(object.populateProjects) : undefined,
+      populateSources: isSet(object.populateSources) ? Boolean(object.populateSources) : undefined,
     };
   },
 
   toJSON(message: GetCollectionRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
-    message.populateProjects !== undefined &&
-      (obj.populateProjects = message.populateProjects);
-    message.populateSources !== undefined &&
-      (obj.populateSources = message.populateSources);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
+    message.populateProjects !== undefined && (obj.populateProjects = message.populateProjects);
+    message.populateSources !== undefined && (obj.populateSources = message.populateSources);
     return obj;
   },
 
@@ -5847,20 +5418,14 @@ function createBaseGetCollectionResponse(): GetCollectionResponse {
 }
 
 export const GetCollectionResponse = {
-  encode(
-    message: GetCollectionResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetCollectionResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collection !== undefined) {
       Collection.encode(message.collection, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetCollectionResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetCollectionResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetCollectionResponse();
@@ -5879,30 +5444,21 @@ export const GetCollectionResponse = {
   },
 
   fromJSON(object: any): GetCollectionResponse {
-    return {
-      collection: isSet(object.collection)
-        ? Collection.fromJSON(object.collection)
-        : undefined,
-    };
+    return { collection: isSet(object.collection) ? Collection.fromJSON(object.collection) : undefined };
   },
 
   toJSON(message: GetCollectionResponse): unknown {
     const obj: any = {};
     message.collection !== undefined &&
-      (obj.collection = message.collection
-        ? Collection.toJSON(message.collection)
-        : undefined);
+      (obj.collection = message.collection ? Collection.toJSON(message.collection) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetCollectionResponse>
-  ): GetCollectionResponse {
+  fromPartial(object: DeepPartial<GetCollectionResponse>): GetCollectionResponse {
     const message = createBaseGetCollectionResponse();
-    message.collection =
-      object.collection !== undefined && object.collection !== null
-        ? Collection.fromPartial(object.collection)
-        : undefined;
+    message.collection = (object.collection !== undefined && object.collection !== null)
+      ? Collection.fromPartial(object.collection)
+      : undefined;
     return message;
   },
 };
@@ -5912,32 +5468,20 @@ function createBaseUpdateCollectionRequest(): UpdateCollectionRequest {
 }
 
 export const UpdateCollectionRequest = {
-  encode(
-    message: UpdateCollectionRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateCollectionRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
     if (message.updateMask !== undefined) {
-      FieldMask.encode(
-        FieldMask.wrap(message.updateMask),
-        writer.uint32(18).fork()
-      ).ldelim();
+      FieldMask.encode(FieldMask.wrap(message.updateMask), writer.uint32(18).fork()).ldelim();
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(26).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateCollectionRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateCollectionRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateCollectionRequest();
@@ -5948,14 +5492,10 @@ export const UpdateCollectionRequest = {
           message.collectionId = reader.string();
           break;
         case 2:
-          message.updateMask = FieldMask.unwrap(
-            FieldMask.decode(reader, reader.uint32())
-          );
+          message.updateMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -5967,29 +5507,21 @@ export const UpdateCollectionRequest = {
 
   fromJSON(object: any): UpdateCollectionRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
-      updateMask: isSet(object.updateMask)
-        ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask))
-        : undefined,
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
+      updateMask: isSet(object.updateMask) ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask)) : undefined,
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
     };
   },
 
   toJSON(message: UpdateCollectionRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
-    message.updateMask !== undefined &&
-      (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
+    message.updateMask !== undefined && (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
     message.metadata !== undefined && (obj.metadata = message.metadata);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateCollectionRequest>
-  ): UpdateCollectionRequest {
+  fromPartial(object: DeepPartial<UpdateCollectionRequest>): UpdateCollectionRequest {
     const message = createBaseUpdateCollectionRequest();
     message.collectionId = object.collectionId ?? "";
     message.updateMask = object.updateMask ?? undefined;
@@ -6003,20 +5535,14 @@ function createBaseUpdateCollectionResponse(): UpdateCollectionResponse {
 }
 
 export const UpdateCollectionResponse = {
-  encode(
-    message: UpdateCollectionResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateCollectionResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collection !== undefined) {
       Collection.encode(message.collection, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateCollectionResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateCollectionResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateCollectionResponse();
@@ -6035,30 +5561,21 @@ export const UpdateCollectionResponse = {
   },
 
   fromJSON(object: any): UpdateCollectionResponse {
-    return {
-      collection: isSet(object.collection)
-        ? Collection.fromJSON(object.collection)
-        : undefined,
-    };
+    return { collection: isSet(object.collection) ? Collection.fromJSON(object.collection) : undefined };
   },
 
   toJSON(message: UpdateCollectionResponse): unknown {
     const obj: any = {};
     message.collection !== undefined &&
-      (obj.collection = message.collection
-        ? Collection.toJSON(message.collection)
-        : undefined);
+      (obj.collection = message.collection ? Collection.toJSON(message.collection) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateCollectionResponse>
-  ): UpdateCollectionResponse {
+  fromPartial(object: DeepPartial<UpdateCollectionResponse>): UpdateCollectionResponse {
     const message = createBaseUpdateCollectionResponse();
-    message.collection =
-      object.collection !== undefined && object.collection !== null
-        ? Collection.fromPartial(object.collection)
-        : undefined;
+    message.collection = (object.collection !== undefined && object.collection !== null)
+      ? Collection.fromPartial(object.collection)
+      : undefined;
     return message;
   },
 };
@@ -6068,10 +5585,7 @@ function createBaseDeleteCollectionRequest(): DeleteCollectionRequest {
 }
 
 export const DeleteCollectionRequest = {
-  encode(
-    message: DeleteCollectionRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteCollectionRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -6081,10 +5595,7 @@ export const DeleteCollectionRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteCollectionRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteCollectionRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteCollectionRequest();
@@ -6107,24 +5618,19 @@ export const DeleteCollectionRequest = {
 
   fromJSON(object: any): DeleteCollectionRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       force: isSet(object.force) ? Boolean(object.force) : undefined,
     };
   },
 
   toJSON(message: DeleteCollectionRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.force !== undefined && (obj.force = message.force);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DeleteCollectionRequest>
-  ): DeleteCollectionRequest {
+  fromPartial(object: DeepPartial<DeleteCollectionRequest>): DeleteCollectionRequest {
     const message = createBaseDeleteCollectionRequest();
     message.collectionId = object.collectionId ?? "";
     message.force = object.force ?? undefined;
@@ -6137,10 +5643,7 @@ function createBaseDeleteCollectionResponse(): DeleteCollectionResponse {
 }
 
 export const DeleteCollectionResponse = {
-  encode(
-    message: DeleteCollectionResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteCollectionResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.sourcesDeleted !== 0) {
       writer.uint32(8).uint32(message.sourcesDeleted);
     }
@@ -6153,10 +5656,7 @@ export const DeleteCollectionResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteCollectionResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteCollectionResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteCollectionResponse();
@@ -6182,12 +5682,8 @@ export const DeleteCollectionResponse = {
 
   fromJSON(object: any): DeleteCollectionResponse {
     return {
-      sourcesDeleted: isSet(object.sourcesDeleted)
-        ? Number(object.sourcesDeleted)
-        : 0,
-      projectsDeleted: isSet(object.projectsDeleted)
-        ? Number(object.projectsDeleted)
-        : 0,
+      sourcesDeleted: isSet(object.sourcesDeleted) ? Number(object.sourcesDeleted) : 0,
+      projectsDeleted: isSet(object.projectsDeleted) ? Number(object.projectsDeleted) : 0,
       projectIdsStopped: Array.isArray(object?.projectIdsStopped)
         ? object.projectIdsStopped.map((e: any) => String(e))
         : [],
@@ -6196,10 +5692,8 @@ export const DeleteCollectionResponse = {
 
   toJSON(message: DeleteCollectionResponse): unknown {
     const obj: any = {};
-    message.sourcesDeleted !== undefined &&
-      (obj.sourcesDeleted = Math.round(message.sourcesDeleted));
-    message.projectsDeleted !== undefined &&
-      (obj.projectsDeleted = Math.round(message.projectsDeleted));
+    message.sourcesDeleted !== undefined && (obj.sourcesDeleted = Math.round(message.sourcesDeleted));
+    message.projectsDeleted !== undefined && (obj.projectsDeleted = Math.round(message.projectsDeleted));
     if (message.projectIdsStopped) {
       obj.projectIdsStopped = message.projectIdsStopped.map((e) => e);
     } else {
@@ -6208,9 +5702,7 @@ export const DeleteCollectionResponse = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DeleteCollectionResponse>
-  ): DeleteCollectionResponse {
+  fromPartial(object: DeepPartial<DeleteCollectionResponse>): DeleteCollectionResponse {
     const message = createBaseDeleteCollectionResponse();
     message.sourcesDeleted = object.sourcesDeleted ?? 0;
     message.projectsDeleted = object.projectsDeleted ?? 0;
@@ -6224,17 +5716,11 @@ function createBaseGetCollectionsRequest(): GetCollectionsRequest {
 }
 
 export const GetCollectionsRequest = {
-  encode(
-    _: GetCollectionsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: GetCollectionsRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetCollectionsRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetCollectionsRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetCollectionsRequest();
@@ -6269,20 +5755,14 @@ function createBaseGetCollectionsResponse(): GetCollectionsResponse {
 }
 
 export const GetCollectionsResponse = {
-  encode(
-    message: GetCollectionsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetCollectionsResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     for (const v of message.collections) {
       Collection.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetCollectionsResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetCollectionsResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetCollectionsResponse();
@@ -6302,30 +5782,23 @@ export const GetCollectionsResponse = {
 
   fromJSON(object: any): GetCollectionsResponse {
     return {
-      collections: Array.isArray(object?.collections)
-        ? object.collections.map((e: any) => Collection.fromJSON(e))
-        : [],
+      collections: Array.isArray(object?.collections) ? object.collections.map((e: any) => Collection.fromJSON(e)) : [],
     };
   },
 
   toJSON(message: GetCollectionsResponse): unknown {
     const obj: any = {};
     if (message.collections) {
-      obj.collections = message.collections.map((e) =>
-        e ? Collection.toJSON(e) : undefined
-      );
+      obj.collections = message.collections.map((e) => e ? Collection.toJSON(e) : undefined);
     } else {
       obj.collections = [];
     }
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetCollectionsResponse>
-  ): GetCollectionsResponse {
+  fromPartial(object: DeepPartial<GetCollectionsResponse>): GetCollectionsResponse {
     const message = createBaseGetCollectionsResponse();
-    message.collections =
-      object.collections?.map((e) => Collection.fromPartial(e)) || [];
+    message.collections = object.collections?.map((e) => Collection.fromPartial(e)) || [];
     return message;
   },
 };
@@ -6344,18 +5817,12 @@ function createBaseCreateProjectRequest(): CreateProjectRequest {
 }
 
 export const CreateProjectRequest = {
-  encode(
-    message: CreateProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(18).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(18).fork()).ldelim();
     }
     if (message.rendering !== undefined) {
       Rendering.encode(message.rendering, writer.uint32(26).fork()).ldelim();
@@ -6364,10 +5831,7 @@ export const CreateProjectRequest = {
       Encoding.encode(message.encoding, writer.uint32(34).fork()).ldelim();
     }
     if (message.composition !== undefined) {
-      Composition.encode(
-        message.composition,
-        writer.uint32(42).fork()
-      ).ldelim();
+      Composition.encode(message.composition, writer.uint32(42).fork()).ldelim();
     }
     if (message.maxDuration !== undefined) {
       writer.uint32(48).uint32(message.maxDuration);
@@ -6381,10 +5845,7 @@ export const CreateProjectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateProjectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateProjectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateProjectRequest();
@@ -6395,9 +5856,7 @@ export const CreateProjectRequest = {
           message.collectionId = reader.string();
           break;
         case 2:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 3:
           message.rendering = Rendering.decode(reader, reader.uint32());
@@ -6427,54 +5886,29 @@ export const CreateProjectRequest = {
 
   fromJSON(object: any): CreateProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      rendering: isSet(object.rendering)
-        ? Rendering.fromJSON(object.rendering)
-        : undefined,
-      encoding: isSet(object.encoding)
-        ? Encoding.fromJSON(object.encoding)
-        : undefined,
-      composition: isSet(object.composition)
-        ? Composition.fromJSON(object.composition)
-        : undefined,
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
+      rendering: isSet(object.rendering) ? Rendering.fromJSON(object.rendering) : undefined,
+      encoding: isSet(object.encoding) ? Encoding.fromJSON(object.encoding) : undefined,
+      composition: isSet(object.composition) ? Composition.fromJSON(object.composition) : undefined,
+      maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined,
       webrtc: isSet(object.webrtc) ? WebRtc.fromJSON(object.webrtc) : undefined,
-      location: isSet(object.location)
-        ? LatLong.fromJSON(object.location)
-        : undefined,
+      location: isSet(object.location) ? LatLong.fromJSON(object.location) : undefined,
     };
   },
 
   toJSON(message: CreateProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.rendering !== undefined &&
-      (obj.rendering = message.rendering
-        ? Rendering.toJSON(message.rendering)
-        : undefined);
-    message.encoding !== undefined &&
-      (obj.encoding = message.encoding
-        ? Encoding.toJSON(message.encoding)
-        : undefined);
+      (obj.rendering = message.rendering ? Rendering.toJSON(message.rendering) : undefined);
+    message.encoding !== undefined && (obj.encoding = message.encoding ? Encoding.toJSON(message.encoding) : undefined);
     message.composition !== undefined &&
-      (obj.composition = message.composition
-        ? Composition.toJSON(message.composition)
-        : undefined);
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
-    message.webrtc !== undefined &&
-      (obj.webrtc = message.webrtc ? WebRtc.toJSON(message.webrtc) : undefined);
-    message.location !== undefined &&
-      (obj.location = message.location
-        ? LatLong.toJSON(message.location)
-        : undefined);
+      (obj.composition = message.composition ? Composition.toJSON(message.composition) : undefined);
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
+    message.webrtc !== undefined && (obj.webrtc = message.webrtc ? WebRtc.toJSON(message.webrtc) : undefined);
+    message.location !== undefined && (obj.location = message.location ? LatLong.toJSON(message.location) : undefined);
     return obj;
   },
 
@@ -6482,27 +5916,22 @@ export const CreateProjectRequest = {
     const message = createBaseCreateProjectRequest();
     message.collectionId = object.collectionId ?? "";
     message.metadata = object.metadata ?? undefined;
-    message.rendering =
-      object.rendering !== undefined && object.rendering !== null
-        ? Rendering.fromPartial(object.rendering)
-        : undefined;
-    message.encoding =
-      object.encoding !== undefined && object.encoding !== null
-        ? Encoding.fromPartial(object.encoding)
-        : undefined;
-    message.composition =
-      object.composition !== undefined && object.composition !== null
-        ? Composition.fromPartial(object.composition)
-        : undefined;
+    message.rendering = (object.rendering !== undefined && object.rendering !== null)
+      ? Rendering.fromPartial(object.rendering)
+      : undefined;
+    message.encoding = (object.encoding !== undefined && object.encoding !== null)
+      ? Encoding.fromPartial(object.encoding)
+      : undefined;
+    message.composition = (object.composition !== undefined && object.composition !== null)
+      ? Composition.fromPartial(object.composition)
+      : undefined;
     message.maxDuration = object.maxDuration ?? undefined;
-    message.webrtc =
-      object.webrtc !== undefined && object.webrtc !== null
-        ? WebRtc.fromPartial(object.webrtc)
-        : undefined;
-    message.location =
-      object.location !== undefined && object.location !== null
-        ? LatLong.fromPartial(object.location)
-        : undefined;
+    message.webrtc = (object.webrtc !== undefined && object.webrtc !== null)
+      ? WebRtc.fromPartial(object.webrtc)
+      : undefined;
+    message.location = (object.location !== undefined && object.location !== null)
+      ? LatLong.fromPartial(object.location)
+      : undefined;
     return message;
   },
 };
@@ -6512,20 +5941,14 @@ function createBaseCreateProjectResponse(): CreateProjectResponse {
 }
 
 export const CreateProjectResponse = {
-  encode(
-    message: CreateProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.project !== undefined) {
       Project.encode(message.project, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateProjectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateProjectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateProjectResponse();
@@ -6544,30 +5967,20 @@ export const CreateProjectResponse = {
   },
 
   fromJSON(object: any): CreateProjectResponse {
-    return {
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
-    };
+    return { project: isSet(object.project) ? Project.fromJSON(object.project) : undefined };
   },
 
   toJSON(message: CreateProjectResponse): unknown {
     const obj: any = {};
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateProjectResponse>
-  ): CreateProjectResponse {
+  fromPartial(object: DeepPartial<CreateProjectResponse>): CreateProjectResponse {
     const message = createBaseCreateProjectResponse();
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     return message;
   },
 };
@@ -6588,10 +6001,7 @@ function createBaseUpdateProjectRequest(): UpdateProjectRequest {
 }
 
 export const UpdateProjectRequest = {
-  encode(
-    message: UpdateProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -6599,16 +6009,10 @@ export const UpdateProjectRequest = {
       writer.uint32(18).string(message.projectId);
     }
     if (message.updateMask !== undefined) {
-      FieldMask.encode(
-        FieldMask.wrap(message.updateMask),
-        writer.uint32(26).fork()
-      ).ldelim();
+      FieldMask.encode(FieldMask.wrap(message.updateMask), writer.uint32(26).fork()).ldelim();
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(34).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(34).fork()).ldelim();
     }
     if (message.rendering !== undefined) {
       Rendering.encode(message.rendering, writer.uint32(42).fork()).ldelim();
@@ -6617,10 +6021,7 @@ export const UpdateProjectRequest = {
       Encoding.encode(message.encoding, writer.uint32(50).fork()).ldelim();
     }
     if (message.composition !== undefined) {
-      Composition.encode(
-        message.composition,
-        writer.uint32(58).fork()
-      ).ldelim();
+      Composition.encode(message.composition, writer.uint32(58).fork()).ldelim();
     }
     if (message.maxDuration !== undefined) {
       writer.uint32(64).uint32(message.maxDuration);
@@ -6634,10 +6035,7 @@ export const UpdateProjectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateProjectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateProjectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateProjectRequest();
@@ -6651,14 +6049,10 @@ export const UpdateProjectRequest = {
           message.projectId = reader.string();
           break;
         case 3:
-          message.updateMask = FieldMask.unwrap(
-            FieldMask.decode(reader, reader.uint32())
-          );
+          message.updateMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
           break;
         case 4:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 5:
           message.rendering = Rendering.decode(reader, reader.uint32());
@@ -6688,61 +6082,33 @@ export const UpdateProjectRequest = {
 
   fromJSON(object: any): UpdateProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      updateMask: isSet(object.updateMask)
-        ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask))
-        : undefined,
+      updateMask: isSet(object.updateMask) ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask)) : undefined,
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      rendering: isSet(object.rendering)
-        ? Rendering.fromJSON(object.rendering)
-        : undefined,
-      encoding: isSet(object.encoding)
-        ? Encoding.fromJSON(object.encoding)
-        : undefined,
-      composition: isSet(object.composition)
-        ? Composition.fromJSON(object.composition)
-        : undefined,
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
+      rendering: isSet(object.rendering) ? Rendering.fromJSON(object.rendering) : undefined,
+      encoding: isSet(object.encoding) ? Encoding.fromJSON(object.encoding) : undefined,
+      composition: isSet(object.composition) ? Composition.fromJSON(object.composition) : undefined,
+      maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined,
       webrtc: isSet(object.webrtc) ? WebRtc.fromJSON(object.webrtc) : undefined,
-      location: isSet(object.location)
-        ? LatLong.fromJSON(object.location)
-        : undefined,
+      location: isSet(object.location) ? LatLong.fromJSON(object.location) : undefined,
     };
   },
 
   toJSON(message: UpdateProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.updateMask !== undefined &&
-      (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
+    message.updateMask !== undefined && (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.rendering !== undefined &&
-      (obj.rendering = message.rendering
-        ? Rendering.toJSON(message.rendering)
-        : undefined);
-    message.encoding !== undefined &&
-      (obj.encoding = message.encoding
-        ? Encoding.toJSON(message.encoding)
-        : undefined);
+      (obj.rendering = message.rendering ? Rendering.toJSON(message.rendering) : undefined);
+    message.encoding !== undefined && (obj.encoding = message.encoding ? Encoding.toJSON(message.encoding) : undefined);
     message.composition !== undefined &&
-      (obj.composition = message.composition
-        ? Composition.toJSON(message.composition)
-        : undefined);
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
-    message.webrtc !== undefined &&
-      (obj.webrtc = message.webrtc ? WebRtc.toJSON(message.webrtc) : undefined);
-    message.location !== undefined &&
-      (obj.location = message.location
-        ? LatLong.toJSON(message.location)
-        : undefined);
+      (obj.composition = message.composition ? Composition.toJSON(message.composition) : undefined);
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
+    message.webrtc !== undefined && (obj.webrtc = message.webrtc ? WebRtc.toJSON(message.webrtc) : undefined);
+    message.location !== undefined && (obj.location = message.location ? LatLong.toJSON(message.location) : undefined);
     return obj;
   },
 
@@ -6752,27 +6118,22 @@ export const UpdateProjectRequest = {
     message.projectId = object.projectId ?? "";
     message.updateMask = object.updateMask ?? undefined;
     message.metadata = object.metadata ?? undefined;
-    message.rendering =
-      object.rendering !== undefined && object.rendering !== null
-        ? Rendering.fromPartial(object.rendering)
-        : undefined;
-    message.encoding =
-      object.encoding !== undefined && object.encoding !== null
-        ? Encoding.fromPartial(object.encoding)
-        : undefined;
-    message.composition =
-      object.composition !== undefined && object.composition !== null
-        ? Composition.fromPartial(object.composition)
-        : undefined;
+    message.rendering = (object.rendering !== undefined && object.rendering !== null)
+      ? Rendering.fromPartial(object.rendering)
+      : undefined;
+    message.encoding = (object.encoding !== undefined && object.encoding !== null)
+      ? Encoding.fromPartial(object.encoding)
+      : undefined;
+    message.composition = (object.composition !== undefined && object.composition !== null)
+      ? Composition.fromPartial(object.composition)
+      : undefined;
     message.maxDuration = object.maxDuration ?? undefined;
-    message.webrtc =
-      object.webrtc !== undefined && object.webrtc !== null
-        ? WebRtc.fromPartial(object.webrtc)
-        : undefined;
-    message.location =
-      object.location !== undefined && object.location !== null
-        ? LatLong.fromPartial(object.location)
-        : undefined;
+    message.webrtc = (object.webrtc !== undefined && object.webrtc !== null)
+      ? WebRtc.fromPartial(object.webrtc)
+      : undefined;
+    message.location = (object.location !== undefined && object.location !== null)
+      ? LatLong.fromPartial(object.location)
+      : undefined;
     return message;
   },
 };
@@ -6782,10 +6143,7 @@ function createBaseUpdateProjectResponse(): UpdateProjectResponse {
 }
 
 export const UpdateProjectResponse = {
-  encode(
-    message: UpdateProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.project !== undefined) {
       Project.encode(message.project, writer.uint32(10).fork()).ldelim();
     }
@@ -6795,10 +6153,7 @@ export const UpdateProjectResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateProjectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateProjectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateProjectResponse();
@@ -6821,34 +6176,23 @@ export const UpdateProjectResponse = {
 
   fromJSON(object: any): UpdateProjectResponse {
     return {
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
-      broadcastUpdated: isSet(object.broadcastUpdated)
-        ? Boolean(object.broadcastUpdated)
-        : false,
+      project: isSet(object.project) ? Project.fromJSON(object.project) : undefined,
+      broadcastUpdated: isSet(object.broadcastUpdated) ? Boolean(object.broadcastUpdated) : false,
     };
   },
 
   toJSON(message: UpdateProjectResponse): unknown {
     const obj: any = {};
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
-    message.broadcastUpdated !== undefined &&
-      (obj.broadcastUpdated = message.broadcastUpdated);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
+    message.broadcastUpdated !== undefined && (obj.broadcastUpdated = message.broadcastUpdated);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateProjectResponse>
-  ): UpdateProjectResponse {
+  fromPartial(object: DeepPartial<UpdateProjectResponse>): UpdateProjectResponse {
     const message = createBaseUpdateProjectResponse();
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     message.broadcastUpdated = object.broadcastUpdated ?? false;
     return message;
   },
@@ -6859,10 +6203,7 @@ function createBaseDeleteProjectRequest(): DeleteProjectRequest {
 }
 
 export const DeleteProjectRequest = {
-  encode(
-    message: DeleteProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -6875,10 +6216,7 @@ export const DeleteProjectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteProjectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteProjectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteProjectRequest();
@@ -6904,9 +6242,7 @@ export const DeleteProjectRequest = {
 
   fromJSON(object: any): DeleteProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       force: isSet(object.force) ? Boolean(object.force) : undefined,
     };
@@ -6914,8 +6250,7 @@ export const DeleteProjectRequest = {
 
   toJSON(message: DeleteProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.force !== undefined && (obj.force = message.force);
     return obj;
@@ -6935,10 +6270,7 @@ function createBaseDeleteProjectResponse(): DeleteProjectResponse {
 }
 
 export const DeleteProjectResponse = {
-  encode(
-    message: DeleteProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.broadcastStopped === true) {
       writer.uint32(8).bool(message.broadcastStopped);
     }
@@ -6948,10 +6280,7 @@ export const DeleteProjectResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteProjectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteProjectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteProjectResponse();
@@ -6974,27 +6303,19 @@ export const DeleteProjectResponse = {
 
   fromJSON(object: any): DeleteProjectResponse {
     return {
-      broadcastStopped: isSet(object.broadcastStopped)
-        ? Boolean(object.broadcastStopped)
-        : false,
-      layoutsDeleted: isSet(object.layoutsDeleted)
-        ? Number(object.layoutsDeleted)
-        : 0,
+      broadcastStopped: isSet(object.broadcastStopped) ? Boolean(object.broadcastStopped) : false,
+      layoutsDeleted: isSet(object.layoutsDeleted) ? Number(object.layoutsDeleted) : 0,
     };
   },
 
   toJSON(message: DeleteProjectResponse): unknown {
     const obj: any = {};
-    message.broadcastStopped !== undefined &&
-      (obj.broadcastStopped = message.broadcastStopped);
-    message.layoutsDeleted !== undefined &&
-      (obj.layoutsDeleted = Math.round(message.layoutsDeleted));
+    message.broadcastStopped !== undefined && (obj.broadcastStopped = message.broadcastStopped);
+    message.layoutsDeleted !== undefined && (obj.layoutsDeleted = Math.round(message.layoutsDeleted));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DeleteProjectResponse>
-  ): DeleteProjectResponse {
+  fromPartial(object: DeepPartial<DeleteProjectResponse>): DeleteProjectResponse {
     const message = createBaseDeleteProjectResponse();
     message.broadcastStopped = object.broadcastStopped ?? false;
     message.layoutsDeleted = object.layoutsDeleted ?? 0;
@@ -7007,10 +6328,7 @@ function createBaseStartProjectBroadcastRequest(): StartProjectBroadcastRequest 
 }
 
 export const StartProjectBroadcastRequest = {
-  encode(
-    message: StartProjectBroadcastRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: StartProjectBroadcastRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7023,10 +6341,7 @@ export const StartProjectBroadcastRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StartProjectBroadcastRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StartProjectBroadcastRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStartProjectBroadcastRequest();
@@ -7052,29 +6367,21 @@ export const StartProjectBroadcastRequest = {
 
   fromJSON(object: any): StartProjectBroadcastRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      webrtcStart: isSet(object.webrtcStart)
-        ? Boolean(object.webrtcStart)
-        : undefined,
+      webrtcStart: isSet(object.webrtcStart) ? Boolean(object.webrtcStart) : undefined,
     };
   },
 
   toJSON(message: StartProjectBroadcastRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.webrtcStart !== undefined &&
-      (obj.webrtcStart = message.webrtcStart);
+    message.webrtcStart !== undefined && (obj.webrtcStart = message.webrtcStart);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<StartProjectBroadcastRequest>
-  ): StartProjectBroadcastRequest {
+  fromPartial(object: DeepPartial<StartProjectBroadcastRequest>): StartProjectBroadcastRequest {
     const message = createBaseStartProjectBroadcastRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -7088,20 +6395,14 @@ function createBaseStartProjectBroadcastResponse(): StartProjectBroadcastRespons
 }
 
 export const StartProjectBroadcastResponse = {
-  encode(
-    message: StartProjectBroadcastResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: StartProjectBroadcastResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.broadcastId !== "") {
       writer.uint32(10).string(message.broadcastId);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StartProjectBroadcastResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StartProjectBroadcastResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStartProjectBroadcastResponse();
@@ -7120,21 +6421,16 @@ export const StartProjectBroadcastResponse = {
   },
 
   fromJSON(object: any): StartProjectBroadcastResponse {
-    return {
-      broadcastId: isSet(object.broadcastId) ? String(object.broadcastId) : "",
-    };
+    return { broadcastId: isSet(object.broadcastId) ? String(object.broadcastId) : "" };
   },
 
   toJSON(message: StartProjectBroadcastResponse): unknown {
     const obj: any = {};
-    message.broadcastId !== undefined &&
-      (obj.broadcastId = message.broadcastId);
+    message.broadcastId !== undefined && (obj.broadcastId = message.broadcastId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<StartProjectBroadcastResponse>
-  ): StartProjectBroadcastResponse {
+  fromPartial(object: DeepPartial<StartProjectBroadcastResponse>): StartProjectBroadcastResponse {
     const message = createBaseStartProjectBroadcastResponse();
     message.broadcastId = object.broadcastId ?? "";
     return message;
@@ -7146,10 +6442,7 @@ function createBaseStopProjectBroadcastRequest(): StopProjectBroadcastRequest {
 }
 
 export const StopProjectBroadcastRequest = {
-  encode(
-    message: StopProjectBroadcastRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: StopProjectBroadcastRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7162,10 +6455,7 @@ export const StopProjectBroadcastRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StopProjectBroadcastRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StopProjectBroadcastRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStopProjectBroadcastRequest();
@@ -7191,28 +6481,21 @@ export const StopProjectBroadcastRequest = {
 
   fromJSON(object: any): StopProjectBroadcastRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      webrtcStop: isSet(object.webrtcStop)
-        ? Boolean(object.webrtcStop)
-        : undefined,
+      webrtcStop: isSet(object.webrtcStop) ? Boolean(object.webrtcStop) : undefined,
     };
   },
 
   toJSON(message: StopProjectBroadcastRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.webrtcStop !== undefined && (obj.webrtcStop = message.webrtcStop);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<StopProjectBroadcastRequest>
-  ): StopProjectBroadcastRequest {
+  fromPartial(object: DeepPartial<StopProjectBroadcastRequest>): StopProjectBroadcastRequest {
     const message = createBaseStopProjectBroadcastRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -7226,17 +6509,11 @@ function createBaseStopProjectBroadcastResponse(): StopProjectBroadcastResponse 
 }
 
 export const StopProjectBroadcastResponse = {
-  encode(
-    _: StopProjectBroadcastResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: StopProjectBroadcastResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StopProjectBroadcastResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StopProjectBroadcastResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStopProjectBroadcastResponse();
@@ -7260,9 +6537,7 @@ export const StopProjectBroadcastResponse = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<StopProjectBroadcastResponse>
-  ): StopProjectBroadcastResponse {
+  fromPartial(_: DeepPartial<StopProjectBroadcastResponse>): StopProjectBroadcastResponse {
     const message = createBaseStopProjectBroadcastResponse();
     return message;
   },
@@ -7273,10 +6548,7 @@ function createBaseGetProjectRequest(): GetProjectRequest {
 }
 
 export const GetProjectRequest = {
-  encode(
-    message: GetProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7315,9 +6587,7 @@ export const GetProjectRequest = {
 
   fromJSON(object: any): GetProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       status: isSet(object.status) ? Boolean(object.status) : undefined,
     };
@@ -7325,8 +6595,7 @@ export const GetProjectRequest = {
 
   toJSON(message: GetProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.status !== undefined && (obj.status = message.status);
     return obj;
@@ -7346,18 +6615,12 @@ function createBaseGetProjectResponse(): GetProjectResponse {
 }
 
 export const GetProjectResponse = {
-  encode(
-    message: GetProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.project !== undefined) {
       Project.encode(message.project, writer.uint32(10).fork()).ldelim();
     }
     if (message.status !== undefined) {
-      ProjectBroadcastStatus.encode(
-        message.status,
-        writer.uint32(18).fork()
-      ).ldelim();
+      ProjectBroadcastStatus.encode(message.status, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -7373,10 +6636,7 @@ export const GetProjectResponse = {
           message.project = Project.decode(reader, reader.uint32());
           break;
         case 2:
-          message.status = ProjectBroadcastStatus.decode(
-            reader,
-            reader.uint32()
-          );
+          message.status = ProjectBroadcastStatus.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -7388,38 +6648,27 @@ export const GetProjectResponse = {
 
   fromJSON(object: any): GetProjectResponse {
     return {
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
-      status: isSet(object.status)
-        ? ProjectBroadcastStatus.fromJSON(object.status)
-        : undefined,
+      project: isSet(object.project) ? Project.fromJSON(object.project) : undefined,
+      status: isSet(object.status) ? ProjectBroadcastStatus.fromJSON(object.status) : undefined,
     };
   },
 
   toJSON(message: GetProjectResponse): unknown {
     const obj: any = {};
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
     message.status !== undefined &&
-      (obj.status = message.status
-        ? ProjectBroadcastStatus.toJSON(message.status)
-        : undefined);
+      (obj.status = message.status ? ProjectBroadcastStatus.toJSON(message.status) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<GetProjectResponse>): GetProjectResponse {
     const message = createBaseGetProjectResponse();
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
-    message.status =
-      object.status !== undefined && object.status !== null
-        ? ProjectBroadcastStatus.fromPartial(object.status)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
+    message.status = (object.status !== undefined && object.status !== null)
+      ? ProjectBroadcastStatus.fromPartial(object.status)
+      : undefined;
     return message;
   },
 };
@@ -7429,10 +6678,7 @@ function createBaseGetProjectBroadcastSnapshotRequest(): GetProjectBroadcastSnap
 }
 
 export const GetProjectBroadcastSnapshotRequest = {
-  encode(
-    message: GetProjectBroadcastSnapshotRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetProjectBroadcastSnapshotRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7445,10 +6691,7 @@ export const GetProjectBroadcastSnapshotRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetProjectBroadcastSnapshotRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetProjectBroadcastSnapshotRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetProjectBroadcastSnapshotRequest();
@@ -7474,32 +6717,22 @@ export const GetProjectBroadcastSnapshotRequest = {
 
   fromJSON(object: any): GetProjectBroadcastSnapshotRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      format: isSet(object.format)
-        ? imageFormatFromJSON(object.format)
-        : undefined,
+      format: isSet(object.format) ? imageFormatFromJSON(object.format) : undefined,
     };
   },
 
   toJSON(message: GetProjectBroadcastSnapshotRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.format !== undefined &&
-      (obj.format =
-        message.format !== undefined
-          ? imageFormatToJSON(message.format)
-          : undefined);
+      (obj.format = message.format !== undefined ? imageFormatToJSON(message.format) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetProjectBroadcastSnapshotRequest>
-  ): GetProjectBroadcastSnapshotRequest {
+  fromPartial(object: DeepPartial<GetProjectBroadcastSnapshotRequest>): GetProjectBroadcastSnapshotRequest {
     const message = createBaseGetProjectBroadcastSnapshotRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -7509,17 +6742,11 @@ export const GetProjectBroadcastSnapshotRequest = {
 };
 
 function createBaseGetProjectBroadcastSnapshotResponse(): GetProjectBroadcastSnapshotResponse {
-  return {
-    format: ImageFormat.IMAGE_FORMAT_UNSPECIFIED,
-    image: new Uint8Array(),
-  };
+  return { format: ImageFormat.IMAGE_FORMAT_UNSPECIFIED, image: new Uint8Array() };
 }
 
 export const GetProjectBroadcastSnapshotResponse = {
-  encode(
-    message: GetProjectBroadcastSnapshotResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetProjectBroadcastSnapshotResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.format !== ImageFormat.IMAGE_FORMAT_UNSPECIFIED) {
       writer.uint32(8).int32(imageFormatToNumber(message.format));
     }
@@ -7529,10 +6756,7 @@ export const GetProjectBroadcastSnapshotResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetProjectBroadcastSnapshotResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetProjectBroadcastSnapshotResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetProjectBroadcastSnapshotResponse();
@@ -7555,29 +6779,20 @@ export const GetProjectBroadcastSnapshotResponse = {
 
   fromJSON(object: any): GetProjectBroadcastSnapshotResponse {
     return {
-      format: isSet(object.format)
-        ? imageFormatFromJSON(object.format)
-        : ImageFormat.IMAGE_FORMAT_UNSPECIFIED,
-      image: isSet(object.image)
-        ? bytesFromBase64(object.image)
-        : new Uint8Array(),
+      format: isSet(object.format) ? imageFormatFromJSON(object.format) : ImageFormat.IMAGE_FORMAT_UNSPECIFIED,
+      image: isSet(object.image) ? bytesFromBase64(object.image) : new Uint8Array(),
     };
   },
 
   toJSON(message: GetProjectBroadcastSnapshotResponse): unknown {
     const obj: any = {};
-    message.format !== undefined &&
-      (obj.format = imageFormatToJSON(message.format));
+    message.format !== undefined && (obj.format = imageFormatToJSON(message.format));
     message.image !== undefined &&
-      (obj.image = base64FromBytes(
-        message.image !== undefined ? message.image : new Uint8Array()
-      ));
+      (obj.image = base64FromBytes(message.image !== undefined ? message.image : new Uint8Array()));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetProjectBroadcastSnapshotResponse>
-  ): GetProjectBroadcastSnapshotResponse {
+  fromPartial(object: DeepPartial<GetProjectBroadcastSnapshotResponse>): GetProjectBroadcastSnapshotResponse {
     const message = createBaseGetProjectBroadcastSnapshotResponse();
     message.format = object.format ?? ImageFormat.IMAGE_FORMAT_UNSPECIFIED;
     message.image = object.image ?? new Uint8Array();
@@ -7590,10 +6805,7 @@ function createBaseGetProjectBroadcastStatusRequest(): GetProjectBroadcastStatus
 }
 
 export const GetProjectBroadcastStatusRequest = {
-  encode(
-    message: GetProjectBroadcastStatusRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetProjectBroadcastStatusRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7603,10 +6815,7 @@ export const GetProjectBroadcastStatusRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetProjectBroadcastStatusRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetProjectBroadcastStatusRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetProjectBroadcastStatusRequest();
@@ -7629,24 +6838,19 @@ export const GetProjectBroadcastStatusRequest = {
 
   fromJSON(object: any): GetProjectBroadcastStatusRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
     };
   },
 
   toJSON(message: GetProjectBroadcastStatusRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetProjectBroadcastStatusRequest>
-  ): GetProjectBroadcastStatusRequest {
+  fromPartial(object: DeepPartial<GetProjectBroadcastStatusRequest>): GetProjectBroadcastStatusRequest {
     const message = createBaseGetProjectBroadcastStatusRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -7659,23 +6863,14 @@ function createBaseGetProjectBroadcastStatusResponse(): GetProjectBroadcastStatu
 }
 
 export const GetProjectBroadcastStatusResponse = {
-  encode(
-    message: GetProjectBroadcastStatusResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetProjectBroadcastStatusResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.status !== undefined) {
-      ProjectBroadcastStatus.encode(
-        message.status,
-        writer.uint32(10).fork()
-      ).ldelim();
+      ProjectBroadcastStatus.encode(message.status, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetProjectBroadcastStatusResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetProjectBroadcastStatusResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetProjectBroadcastStatusResponse();
@@ -7683,10 +6878,7 @@ export const GetProjectBroadcastStatusResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.status = ProjectBroadcastStatus.decode(
-            reader,
-            reader.uint32()
-          );
+          message.status = ProjectBroadcastStatus.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -7697,30 +6889,21 @@ export const GetProjectBroadcastStatusResponse = {
   },
 
   fromJSON(object: any): GetProjectBroadcastStatusResponse {
-    return {
-      status: isSet(object.status)
-        ? ProjectBroadcastStatus.fromJSON(object.status)
-        : undefined,
-    };
+    return { status: isSet(object.status) ? ProjectBroadcastStatus.fromJSON(object.status) : undefined };
   },
 
   toJSON(message: GetProjectBroadcastStatusResponse): unknown {
     const obj: any = {};
     message.status !== undefined &&
-      (obj.status = message.status
-        ? ProjectBroadcastStatus.toJSON(message.status)
-        : undefined);
+      (obj.status = message.status ? ProjectBroadcastStatus.toJSON(message.status) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetProjectBroadcastStatusResponse>
-  ): GetProjectBroadcastStatusResponse {
+  fromPartial(object: DeepPartial<GetProjectBroadcastStatusResponse>): GetProjectBroadcastStatusResponse {
     const message = createBaseGetProjectBroadcastStatusResponse();
-    message.status =
-      object.status !== undefined && object.status !== null
-        ? ProjectBroadcastStatus.fromPartial(object.status)
-        : undefined;
+    message.status = (object.status !== undefined && object.status !== null)
+      ? ProjectBroadcastStatus.fromPartial(object.status)
+      : undefined;
     return message;
   },
 };
@@ -7730,10 +6913,7 @@ function createBaseStartProjectWebRtcRequest(): StartProjectWebRtcRequest {
 }
 
 export const StartProjectWebRtcRequest = {
-  encode(
-    message: StartProjectWebRtcRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: StartProjectWebRtcRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7743,10 +6923,7 @@ export const StartProjectWebRtcRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StartProjectWebRtcRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StartProjectWebRtcRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStartProjectWebRtcRequest();
@@ -7769,24 +6946,19 @@ export const StartProjectWebRtcRequest = {
 
   fromJSON(object: any): StartProjectWebRtcRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
     };
   },
 
   toJSON(message: StartProjectWebRtcRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<StartProjectWebRtcRequest>
-  ): StartProjectWebRtcRequest {
+  fromPartial(object: DeepPartial<StartProjectWebRtcRequest>): StartProjectWebRtcRequest {
     const message = createBaseStartProjectWebRtcRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -7799,17 +6971,11 @@ function createBaseStartProjectWebRtcResponse(): StartProjectWebRtcResponse {
 }
 
 export const StartProjectWebRtcResponse = {
-  encode(
-    _: StartProjectWebRtcResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: StartProjectWebRtcResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StartProjectWebRtcResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StartProjectWebRtcResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStartProjectWebRtcResponse();
@@ -7833,9 +6999,7 @@ export const StartProjectWebRtcResponse = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<StartProjectWebRtcResponse>
-  ): StartProjectWebRtcResponse {
+  fromPartial(_: DeepPartial<StartProjectWebRtcResponse>): StartProjectWebRtcResponse {
     const message = createBaseStartProjectWebRtcResponse();
     return message;
   },
@@ -7846,10 +7010,7 @@ function createBaseStopProjectWebRtcRequest(): StopProjectWebRtcRequest {
 }
 
 export const StopProjectWebRtcRequest = {
-  encode(
-    message: StopProjectWebRtcRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: StopProjectWebRtcRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7859,10 +7020,7 @@ export const StopProjectWebRtcRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StopProjectWebRtcRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StopProjectWebRtcRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStopProjectWebRtcRequest();
@@ -7885,24 +7043,19 @@ export const StopProjectWebRtcRequest = {
 
   fromJSON(object: any): StopProjectWebRtcRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
     };
   },
 
   toJSON(message: StopProjectWebRtcRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<StopProjectWebRtcRequest>
-  ): StopProjectWebRtcRequest {
+  fromPartial(object: DeepPartial<StopProjectWebRtcRequest>): StopProjectWebRtcRequest {
     const message = createBaseStopProjectWebRtcRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -7915,17 +7068,11 @@ function createBaseStopProjectWebRtcResponse(): StopProjectWebRtcResponse {
 }
 
 export const StopProjectWebRtcResponse = {
-  encode(
-    _: StopProjectWebRtcResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: StopProjectWebRtcResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): StopProjectWebRtcResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): StopProjectWebRtcResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStopProjectWebRtcResponse();
@@ -7949,9 +7096,7 @@ export const StopProjectWebRtcResponse = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<StopProjectWebRtcResponse>
-  ): StopProjectWebRtcResponse {
+  fromPartial(_: DeepPartial<StopProjectWebRtcResponse>): StopProjectWebRtcResponse {
     const message = createBaseStopProjectWebRtcResponse();
     return message;
   },
@@ -7969,10 +7114,7 @@ function createBaseCreateDestinationRequest(): CreateDestinationRequest {
 }
 
 export const CreateDestinationRequest = {
-  encode(
-    message: CreateDestinationRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateDestinationRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -7980,16 +7122,10 @@ export const CreateDestinationRequest = {
       writer.uint32(18).string(message.projectId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(26).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(26).fork()).ldelim();
     }
     if (message.address !== undefined) {
-      DestinationAddress.encode(
-        message.address,
-        writer.uint32(42).fork()
-      ).ldelim();
+      DestinationAddress.encode(message.address, writer.uint32(42).fork()).ldelim();
     }
     if (message.enabled !== undefined) {
       writer.uint32(48).bool(message.enabled);
@@ -8000,10 +7136,7 @@ export const CreateDestinationRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateDestinationRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateDestinationRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateDestinationRequest();
@@ -8017,9 +7150,7 @@ export const CreateDestinationRequest = {
           message.projectId = reader.string();
           break;
         case 3:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 5:
           message.address = DestinationAddress.decode(reader, reader.uint32());
@@ -8040,14 +7171,10 @@ export const CreateDestinationRequest = {
 
   fromJSON(object: any): CreateDestinationRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      address: isSet(object.address)
-        ? DestinationAddress.fromJSON(object.address)
-        : undefined,
+      address: isSet(object.address) ? DestinationAddress.fromJSON(object.address) : undefined,
       enabled: isSet(object.enabled) ? Boolean(object.enabled) : undefined,
       timeout: isSet(object.timeout) ? Number(object.timeout) : undefined,
     };
@@ -8055,31 +7182,24 @@ export const CreateDestinationRequest = {
 
   toJSON(message: CreateDestinationRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.address !== undefined &&
-      (obj.address = message.address
-        ? DestinationAddress.toJSON(message.address)
-        : undefined);
+      (obj.address = message.address ? DestinationAddress.toJSON(message.address) : undefined);
     message.enabled !== undefined && (obj.enabled = message.enabled);
-    message.timeout !== undefined &&
-      (obj.timeout = Math.round(message.timeout));
+    message.timeout !== undefined && (obj.timeout = Math.round(message.timeout));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateDestinationRequest>
-  ): CreateDestinationRequest {
+  fromPartial(object: DeepPartial<CreateDestinationRequest>): CreateDestinationRequest {
     const message = createBaseCreateDestinationRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.metadata = object.metadata ?? undefined;
-    message.address =
-      object.address !== undefined && object.address !== null
-        ? DestinationAddress.fromPartial(object.address)
-        : undefined;
+    message.address = (object.address !== undefined && object.address !== null)
+      ? DestinationAddress.fromPartial(object.address)
+      : undefined;
     message.enabled = object.enabled ?? undefined;
     message.timeout = object.timeout ?? undefined;
     return message;
@@ -8091,23 +7211,14 @@ function createBaseCreateDestinationResponse(): CreateDestinationResponse {
 }
 
 export const CreateDestinationResponse = {
-  encode(
-    message: CreateDestinationResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateDestinationResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.destination !== undefined) {
-      Destination.encode(
-        message.destination,
-        writer.uint32(10).fork()
-      ).ldelim();
+      Destination.encode(message.destination, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateDestinationResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateDestinationResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateDestinationResponse();
@@ -8126,30 +7237,21 @@ export const CreateDestinationResponse = {
   },
 
   fromJSON(object: any): CreateDestinationResponse {
-    return {
-      destination: isSet(object.destination)
-        ? Destination.fromJSON(object.destination)
-        : undefined,
-    };
+    return { destination: isSet(object.destination) ? Destination.fromJSON(object.destination) : undefined };
   },
 
   toJSON(message: CreateDestinationResponse): unknown {
     const obj: any = {};
     message.destination !== undefined &&
-      (obj.destination = message.destination
-        ? Destination.toJSON(message.destination)
-        : undefined);
+      (obj.destination = message.destination ? Destination.toJSON(message.destination) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateDestinationResponse>
-  ): CreateDestinationResponse {
+  fromPartial(object: DeepPartial<CreateDestinationResponse>): CreateDestinationResponse {
     const message = createBaseCreateDestinationResponse();
-    message.destination =
-      object.destination !== undefined && object.destination !== null
-        ? Destination.fromPartial(object.destination)
-        : undefined;
+    message.destination = (object.destination !== undefined && object.destination !== null)
+      ? Destination.fromPartial(object.destination)
+      : undefined;
     return message;
   },
 };
@@ -8159,10 +7261,7 @@ function createBaseGetDestinationRequest(): GetDestinationRequest {
 }
 
 export const GetDestinationRequest = {
-  encode(
-    message: GetDestinationRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetDestinationRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -8175,10 +7274,7 @@ export const GetDestinationRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetDestinationRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetDestinationRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetDestinationRequest();
@@ -8204,29 +7300,21 @@ export const GetDestinationRequest = {
 
   fromJSON(object: any): GetDestinationRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
     };
   },
 
   toJSON(message: GetDestinationRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetDestinationRequest>
-  ): GetDestinationRequest {
+  fromPartial(object: DeepPartial<GetDestinationRequest>): GetDestinationRequest {
     const message = createBaseGetDestinationRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -8240,23 +7328,14 @@ function createBaseGetDestinationResponse(): GetDestinationResponse {
 }
 
 export const GetDestinationResponse = {
-  encode(
-    message: GetDestinationResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetDestinationResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.destination !== undefined) {
-      Destination.encode(
-        message.destination,
-        writer.uint32(10).fork()
-      ).ldelim();
+      Destination.encode(message.destination, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetDestinationResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetDestinationResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetDestinationResponse();
@@ -8275,48 +7354,31 @@ export const GetDestinationResponse = {
   },
 
   fromJSON(object: any): GetDestinationResponse {
-    return {
-      destination: isSet(object.destination)
-        ? Destination.fromJSON(object.destination)
-        : undefined,
-    };
+    return { destination: isSet(object.destination) ? Destination.fromJSON(object.destination) : undefined };
   },
 
   toJSON(message: GetDestinationResponse): unknown {
     const obj: any = {};
     message.destination !== undefined &&
-      (obj.destination = message.destination
-        ? Destination.toJSON(message.destination)
-        : undefined);
+      (obj.destination = message.destination ? Destination.toJSON(message.destination) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetDestinationResponse>
-  ): GetDestinationResponse {
+  fromPartial(object: DeepPartial<GetDestinationResponse>): GetDestinationResponse {
     const message = createBaseGetDestinationResponse();
-    message.destination =
-      object.destination !== undefined && object.destination !== null
-        ? Destination.fromPartial(object.destination)
-        : undefined;
+    message.destination = (object.destination !== undefined && object.destination !== null)
+      ? Destination.fromPartial(object.destination)
+      : undefined;
     return message;
   },
 };
 
 function createBaseDeleteDestinationRequest(): DeleteDestinationRequest {
-  return {
-    collectionId: "",
-    projectId: "",
-    destinationId: "",
-    force: undefined,
-  };
+  return { collectionId: "", projectId: "", destinationId: "", force: undefined };
 }
 
 export const DeleteDestinationRequest = {
-  encode(
-    message: DeleteDestinationRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteDestinationRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -8332,10 +7394,7 @@ export const DeleteDestinationRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteDestinationRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteDestinationRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteDestinationRequest();
@@ -8364,31 +7423,23 @@ export const DeleteDestinationRequest = {
 
   fromJSON(object: any): DeleteDestinationRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
       force: isSet(object.force) ? Boolean(object.force) : undefined,
     };
   },
 
   toJSON(message: DeleteDestinationRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     message.force !== undefined && (obj.force = message.force);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DeleteDestinationRequest>
-  ): DeleteDestinationRequest {
+  fromPartial(object: DeepPartial<DeleteDestinationRequest>): DeleteDestinationRequest {
     const message = createBaseDeleteDestinationRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -8403,20 +7454,14 @@ function createBaseDeleteDestinationResponse(): DeleteDestinationResponse {
 }
 
 export const DeleteDestinationResponse = {
-  encode(
-    message: DeleteDestinationResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteDestinationResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.broadcastUpdated === true) {
       writer.uint32(8).bool(message.broadcastUpdated);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteDestinationResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteDestinationResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteDestinationResponse();
@@ -8435,23 +7480,16 @@ export const DeleteDestinationResponse = {
   },
 
   fromJSON(object: any): DeleteDestinationResponse {
-    return {
-      broadcastUpdated: isSet(object.broadcastUpdated)
-        ? Boolean(object.broadcastUpdated)
-        : false,
-    };
+    return { broadcastUpdated: isSet(object.broadcastUpdated) ? Boolean(object.broadcastUpdated) : false };
   },
 
   toJSON(message: DeleteDestinationResponse): unknown {
     const obj: any = {};
-    message.broadcastUpdated !== undefined &&
-      (obj.broadcastUpdated = message.broadcastUpdated);
+    message.broadcastUpdated !== undefined && (obj.broadcastUpdated = message.broadcastUpdated);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DeleteDestinationResponse>
-  ): DeleteDestinationResponse {
+  fromPartial(object: DeepPartial<DeleteDestinationResponse>): DeleteDestinationResponse {
     const message = createBaseDeleteDestinationResponse();
     message.broadcastUpdated = object.broadcastUpdated ?? false;
     return message;
@@ -8472,10 +7510,7 @@ function createBaseUpdateDestinationRequest(): UpdateDestinationRequest {
 }
 
 export const UpdateDestinationRequest = {
-  encode(
-    message: UpdateDestinationRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateDestinationRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -8486,22 +7521,13 @@ export const UpdateDestinationRequest = {
       writer.uint32(26).string(message.destinationId);
     }
     if (message.updateMask !== undefined) {
-      FieldMask.encode(
-        FieldMask.wrap(message.updateMask),
-        writer.uint32(34).fork()
-      ).ldelim();
+      FieldMask.encode(FieldMask.wrap(message.updateMask), writer.uint32(34).fork()).ldelim();
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(42).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(42).fork()).ldelim();
     }
     if (message.address !== undefined) {
-      DestinationAddress.encode(
-        message.address,
-        writer.uint32(50).fork()
-      ).ldelim();
+      DestinationAddress.encode(message.address, writer.uint32(50).fork()).ldelim();
     }
     if (message.enabled !== undefined) {
       writer.uint32(56).bool(message.enabled);
@@ -8512,10 +7538,7 @@ export const UpdateDestinationRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateDestinationRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateDestinationRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateDestinationRequest();
@@ -8532,14 +7555,10 @@ export const UpdateDestinationRequest = {
           message.destinationId = reader.string();
           break;
         case 4:
-          message.updateMask = FieldMask.unwrap(
-            FieldMask.decode(reader, reader.uint32())
-          );
+          message.updateMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
           break;
         case 5:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 6:
           message.address = DestinationAddress.decode(reader, reader.uint32());
@@ -8560,20 +7579,12 @@ export const UpdateDestinationRequest = {
 
   fromJSON(object: any): UpdateDestinationRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
-      updateMask: isSet(object.updateMask)
-        ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask))
-        : undefined,
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
+      updateMask: isSet(object.updateMask) ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask)) : undefined,
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      address: isSet(object.address)
-        ? DestinationAddress.fromJSON(object.address)
-        : undefined,
+      address: isSet(object.address) ? DestinationAddress.fromJSON(object.address) : undefined,
       enabled: isSet(object.enabled) ? Boolean(object.enabled) : undefined,
       timeout: isSet(object.timeout) ? Number(object.timeout) : undefined,
     };
@@ -8581,37 +7592,28 @@ export const UpdateDestinationRequest = {
 
   toJSON(message: UpdateDestinationRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
-    message.updateMask !== undefined &&
-      (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
+    message.updateMask !== undefined && (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.address !== undefined &&
-      (obj.address = message.address
-        ? DestinationAddress.toJSON(message.address)
-        : undefined);
+      (obj.address = message.address ? DestinationAddress.toJSON(message.address) : undefined);
     message.enabled !== undefined && (obj.enabled = message.enabled);
-    message.timeout !== undefined &&
-      (obj.timeout = Math.round(message.timeout));
+    message.timeout !== undefined && (obj.timeout = Math.round(message.timeout));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateDestinationRequest>
-  ): UpdateDestinationRequest {
+  fromPartial(object: DeepPartial<UpdateDestinationRequest>): UpdateDestinationRequest {
     const message = createBaseUpdateDestinationRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.destinationId = object.destinationId ?? "";
     message.updateMask = object.updateMask ?? undefined;
     message.metadata = object.metadata ?? undefined;
-    message.address =
-      object.address !== undefined && object.address !== null
-        ? DestinationAddress.fromPartial(object.address)
-        : undefined;
+    message.address = (object.address !== undefined && object.address !== null)
+      ? DestinationAddress.fromPartial(object.address)
+      : undefined;
     message.enabled = object.enabled ?? undefined;
     message.timeout = object.timeout ?? undefined;
     return message;
@@ -8623,15 +7625,9 @@ function createBaseUpdateDestinationResponse(): UpdateDestinationResponse {
 }
 
 export const UpdateDestinationResponse = {
-  encode(
-    message: UpdateDestinationResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateDestinationResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.destination !== undefined) {
-      Destination.encode(
-        message.destination,
-        writer.uint32(10).fork()
-      ).ldelim();
+      Destination.encode(message.destination, writer.uint32(10).fork()).ldelim();
     }
     if (message.broadcastUpdated === true) {
       writer.uint32(16).bool(message.broadcastUpdated);
@@ -8639,10 +7635,7 @@ export const UpdateDestinationResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateDestinationResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateDestinationResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateDestinationResponse();
@@ -8665,61 +7658,40 @@ export const UpdateDestinationResponse = {
 
   fromJSON(object: any): UpdateDestinationResponse {
     return {
-      destination: isSet(object.destination)
-        ? Destination.fromJSON(object.destination)
-        : undefined,
-      broadcastUpdated: isSet(object.broadcastUpdated)
-        ? Boolean(object.broadcastUpdated)
-        : false,
+      destination: isSet(object.destination) ? Destination.fromJSON(object.destination) : undefined,
+      broadcastUpdated: isSet(object.broadcastUpdated) ? Boolean(object.broadcastUpdated) : false,
     };
   },
 
   toJSON(message: UpdateDestinationResponse): unknown {
     const obj: any = {};
     message.destination !== undefined &&
-      (obj.destination = message.destination
-        ? Destination.toJSON(message.destination)
-        : undefined);
-    message.broadcastUpdated !== undefined &&
-      (obj.broadcastUpdated = message.broadcastUpdated);
+      (obj.destination = message.destination ? Destination.toJSON(message.destination) : undefined);
+    message.broadcastUpdated !== undefined && (obj.broadcastUpdated = message.broadcastUpdated);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateDestinationResponse>
-  ): UpdateDestinationResponse {
+  fromPartial(object: DeepPartial<UpdateDestinationResponse>): UpdateDestinationResponse {
     const message = createBaseUpdateDestinationResponse();
-    message.destination =
-      object.destination !== undefined && object.destination !== null
-        ? Destination.fromPartial(object.destination)
-        : undefined;
+    message.destination = (object.destination !== undefined && object.destination !== null)
+      ? Destination.fromPartial(object.destination)
+      : undefined;
     message.broadcastUpdated = object.broadcastUpdated ?? false;
     return message;
   },
 };
 
 function createBaseCreateSourceRequest(): CreateSourceRequest {
-  return {
-    collectionId: "",
-    metadata: undefined,
-    address: undefined,
-    preview: undefined,
-  };
+  return { collectionId: "", metadata: undefined, address: undefined, preview: undefined };
 }
 
 export const CreateSourceRequest = {
-  encode(
-    message: CreateSourceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateSourceRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(18).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(18).fork()).ldelim();
     }
     if (message.address !== undefined) {
       SourceAddress.encode(message.address, writer.uint32(26).fork()).ldelim();
@@ -8741,9 +7713,7 @@ export const CreateSourceRequest = {
           message.collectionId = reader.string();
           break;
         case 2:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 3:
           message.address = SourceAddress.decode(reader, reader.uint32());
@@ -8761,32 +7731,21 @@ export const CreateSourceRequest = {
 
   fromJSON(object: any): CreateSourceRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      address: isSet(object.address)
-        ? SourceAddress.fromJSON(object.address)
-        : undefined,
-      preview: isSet(object.preview)
-        ? PreviewAddress.fromJSON(object.preview)
-        : undefined,
+      address: isSet(object.address) ? SourceAddress.fromJSON(object.address) : undefined,
+      preview: isSet(object.preview) ? PreviewAddress.fromJSON(object.preview) : undefined,
     };
   },
 
   toJSON(message: CreateSourceRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.address !== undefined &&
-      (obj.address = message.address
-        ? SourceAddress.toJSON(message.address)
-        : undefined);
+      (obj.address = message.address ? SourceAddress.toJSON(message.address) : undefined);
     message.preview !== undefined &&
-      (obj.preview = message.preview
-        ? PreviewAddress.toJSON(message.preview)
-        : undefined);
+      (obj.preview = message.preview ? PreviewAddress.toJSON(message.preview) : undefined);
     return obj;
   },
 
@@ -8794,14 +7753,12 @@ export const CreateSourceRequest = {
     const message = createBaseCreateSourceRequest();
     message.collectionId = object.collectionId ?? "";
     message.metadata = object.metadata ?? undefined;
-    message.address =
-      object.address !== undefined && object.address !== null
-        ? SourceAddress.fromPartial(object.address)
-        : undefined;
-    message.preview =
-      object.preview !== undefined && object.preview !== null
-        ? PreviewAddress.fromPartial(object.preview)
-        : undefined;
+    message.address = (object.address !== undefined && object.address !== null)
+      ? SourceAddress.fromPartial(object.address)
+      : undefined;
+    message.preview = (object.preview !== undefined && object.preview !== null)
+      ? PreviewAddress.fromPartial(object.preview)
+      : undefined;
     return message;
   },
 };
@@ -8811,20 +7768,14 @@ function createBaseCreateSourceResponse(): CreateSourceResponse {
 }
 
 export const CreateSourceResponse = {
-  encode(
-    message: CreateSourceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateSourceResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.source !== undefined) {
       Source.encode(message.source, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateSourceResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateSourceResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateSourceResponse();
@@ -8843,24 +7794,20 @@ export const CreateSourceResponse = {
   },
 
   fromJSON(object: any): CreateSourceResponse {
-    return {
-      source: isSet(object.source) ? Source.fromJSON(object.source) : undefined,
-    };
+    return { source: isSet(object.source) ? Source.fromJSON(object.source) : undefined };
   },
 
   toJSON(message: CreateSourceResponse): unknown {
     const obj: any = {};
-    message.source !== undefined &&
-      (obj.source = message.source ? Source.toJSON(message.source) : undefined);
+    message.source !== undefined && (obj.source = message.source ? Source.toJSON(message.source) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<CreateSourceResponse>): CreateSourceResponse {
     const message = createBaseCreateSourceResponse();
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? Source.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? Source.fromPartial(object.source)
+      : undefined;
     return message;
   },
 };
@@ -8870,10 +7817,7 @@ function createBaseDeleteSourceRequest(): DeleteSourceRequest {
 }
 
 export const DeleteSourceRequest = {
-  encode(
-    message: DeleteSourceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteSourceRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -8912,9 +7856,7 @@ export const DeleteSourceRequest = {
 
   fromJSON(object: any): DeleteSourceRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
       force: isSet(object.force) ? Boolean(object.force) : undefined,
     };
@@ -8922,8 +7864,7 @@ export const DeleteSourceRequest = {
 
   toJSON(message: DeleteSourceRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.force !== undefined && (obj.force = message.force);
     return obj;
@@ -8943,20 +7884,14 @@ function createBaseDeleteSourceResponse(): DeleteSourceResponse {
 }
 
 export const DeleteSourceResponse = {
-  encode(
-    message: DeleteSourceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DeleteSourceResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     for (const v of message.projectIdsUpdated) {
       writer.uint32(26).string(v!);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DeleteSourceResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteSourceResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDeleteSourceResponse();
@@ -9004,10 +7939,7 @@ function createBaseAddSourceToProjectRequest(): AddSourceToProjectRequest {
 }
 
 export const AddSourceToProjectRequest = {
-  encode(
-    message: AddSourceToProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: AddSourceToProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -9023,10 +7955,7 @@ export const AddSourceToProjectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): AddSourceToProjectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): AddSourceToProjectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAddSourceToProjectRequest();
@@ -9055,41 +7984,31 @@ export const AddSourceToProjectRequest = {
 
   fromJSON(object: any): AddSourceToProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
-      trigger: isSet(object.trigger)
-        ? SourceTrigger.fromJSON(object.trigger)
-        : undefined,
+      trigger: isSet(object.trigger) ? SourceTrigger.fromJSON(object.trigger) : undefined,
     };
   },
 
   toJSON(message: AddSourceToProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.trigger !== undefined &&
-      (obj.trigger = message.trigger
-        ? SourceTrigger.toJSON(message.trigger)
-        : undefined);
+      (obj.trigger = message.trigger ? SourceTrigger.toJSON(message.trigger) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<AddSourceToProjectRequest>
-  ): AddSourceToProjectRequest {
+  fromPartial(object: DeepPartial<AddSourceToProjectRequest>): AddSourceToProjectRequest {
     const message = createBaseAddSourceToProjectRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.sourceId = object.sourceId ?? "";
-    message.trigger =
-      object.trigger !== undefined && object.trigger !== null
-        ? SourceTrigger.fromPartial(object.trigger)
-        : undefined;
+    message.trigger = (object.trigger !== undefined && object.trigger !== null)
+      ? SourceTrigger.fromPartial(object.trigger)
+      : undefined;
     return message;
   },
 };
@@ -9099,10 +8018,7 @@ function createBaseAddSourceToProjectResponse(): AddSourceToProjectResponse {
 }
 
 export const AddSourceToProjectResponse = {
-  encode(
-    message: AddSourceToProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: AddSourceToProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.project !== undefined) {
       Project.encode(message.project, writer.uint32(10).fork()).ldelim();
     }
@@ -9112,10 +8028,7 @@ export const AddSourceToProjectResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): AddSourceToProjectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): AddSourceToProjectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAddSourceToProjectResponse();
@@ -9138,54 +8051,34 @@ export const AddSourceToProjectResponse = {
 
   fromJSON(object: any): AddSourceToProjectResponse {
     return {
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
-      broadcastUpdated: isSet(object.broadcastUpdated)
-        ? Boolean(object.broadcastUpdated)
-        : false,
+      project: isSet(object.project) ? Project.fromJSON(object.project) : undefined,
+      broadcastUpdated: isSet(object.broadcastUpdated) ? Boolean(object.broadcastUpdated) : false,
     };
   },
 
   toJSON(message: AddSourceToProjectResponse): unknown {
     const obj: any = {};
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
-    message.broadcastUpdated !== undefined &&
-      (obj.broadcastUpdated = message.broadcastUpdated);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
+    message.broadcastUpdated !== undefined && (obj.broadcastUpdated = message.broadcastUpdated);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<AddSourceToProjectResponse>
-  ): AddSourceToProjectResponse {
+  fromPartial(object: DeepPartial<AddSourceToProjectResponse>): AddSourceToProjectResponse {
     const message = createBaseAddSourceToProjectResponse();
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     message.broadcastUpdated = object.broadcastUpdated ?? false;
     return message;
   },
 };
 
 function createBaseUpdateSourceInProjectRequest(): UpdateSourceInProjectRequest {
-  return {
-    collectionId: "",
-    projectId: "",
-    sourceId: "",
-    updateMask: undefined,
-    trigger: undefined,
-  };
+  return { collectionId: "", projectId: "", sourceId: "", updateMask: undefined, trigger: undefined };
 }
 
 export const UpdateSourceInProjectRequest = {
-  encode(
-    message: UpdateSourceInProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateSourceInProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -9196,10 +8089,7 @@ export const UpdateSourceInProjectRequest = {
       writer.uint32(26).string(message.sourceId);
     }
     if (message.updateMask !== undefined) {
-      FieldMask.encode(
-        FieldMask.wrap(message.updateMask),
-        writer.uint32(34).fork()
-      ).ldelim();
+      FieldMask.encode(FieldMask.wrap(message.updateMask), writer.uint32(34).fork()).ldelim();
     }
     if (message.trigger !== undefined) {
       SourceTrigger.encode(message.trigger, writer.uint32(42).fork()).ldelim();
@@ -9207,10 +8097,7 @@ export const UpdateSourceInProjectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateSourceInProjectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateSourceInProjectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateSourceInProjectRequest();
@@ -9227,9 +8114,7 @@ export const UpdateSourceInProjectRequest = {
           message.sourceId = reader.string();
           break;
         case 4:
-          message.updateMask = FieldMask.unwrap(
-            FieldMask.decode(reader, reader.uint32())
-          );
+          message.updateMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
           break;
         case 5:
           message.trigger = SourceTrigger.decode(reader, reader.uint32());
@@ -9244,47 +8129,34 @@ export const UpdateSourceInProjectRequest = {
 
   fromJSON(object: any): UpdateSourceInProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
-      updateMask: isSet(object.updateMask)
-        ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask))
-        : undefined,
-      trigger: isSet(object.trigger)
-        ? SourceTrigger.fromJSON(object.trigger)
-        : undefined,
+      updateMask: isSet(object.updateMask) ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask)) : undefined,
+      trigger: isSet(object.trigger) ? SourceTrigger.fromJSON(object.trigger) : undefined,
     };
   },
 
   toJSON(message: UpdateSourceInProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
-    message.updateMask !== undefined &&
-      (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
+    message.updateMask !== undefined && (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
     message.trigger !== undefined &&
-      (obj.trigger = message.trigger
-        ? SourceTrigger.toJSON(message.trigger)
-        : undefined);
+      (obj.trigger = message.trigger ? SourceTrigger.toJSON(message.trigger) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateSourceInProjectRequest>
-  ): UpdateSourceInProjectRequest {
+  fromPartial(object: DeepPartial<UpdateSourceInProjectRequest>): UpdateSourceInProjectRequest {
     const message = createBaseUpdateSourceInProjectRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.sourceId = object.sourceId ?? "";
     message.updateMask = object.updateMask ?? undefined;
-    message.trigger =
-      object.trigger !== undefined && object.trigger !== null
-        ? SourceTrigger.fromPartial(object.trigger)
-        : undefined;
+    message.trigger = (object.trigger !== undefined && object.trigger !== null)
+      ? SourceTrigger.fromPartial(object.trigger)
+      : undefined;
     return message;
   },
 };
@@ -9294,20 +8166,14 @@ function createBaseUpdateSourceInProjectResponse(): UpdateSourceInProjectRespons
 }
 
 export const UpdateSourceInProjectResponse = {
-  encode(
-    message: UpdateSourceInProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateSourceInProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.project !== undefined) {
       Project.encode(message.project, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateSourceInProjectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateSourceInProjectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateSourceInProjectResponse();
@@ -9326,30 +8192,20 @@ export const UpdateSourceInProjectResponse = {
   },
 
   fromJSON(object: any): UpdateSourceInProjectResponse {
-    return {
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
-    };
+    return { project: isSet(object.project) ? Project.fromJSON(object.project) : undefined };
   },
 
   toJSON(message: UpdateSourceInProjectResponse): unknown {
     const obj: any = {};
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<UpdateSourceInProjectResponse>
-  ): UpdateSourceInProjectResponse {
+  fromPartial(object: DeepPartial<UpdateSourceInProjectResponse>): UpdateSourceInProjectResponse {
     const message = createBaseUpdateSourceInProjectResponse();
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     return message;
   },
 };
@@ -9359,10 +8215,7 @@ function createBaseGetSourceRequest(): GetSourceRequest {
 }
 
 export const GetSourceRequest = {
-  encode(
-    message: GetSourceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetSourceRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -9395,17 +8248,14 @@ export const GetSourceRequest = {
 
   fromJSON(object: any): GetSourceRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
     };
   },
 
   toJSON(message: GetSourceRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     return obj;
   },
@@ -9423,10 +8273,7 @@ function createBaseGetSourceResponse(): GetSourceResponse {
 }
 
 export const GetSourceResponse = {
-  encode(
-    message: GetSourceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetSourceResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.source !== undefined) {
       Source.encode(message.source, writer.uint32(10).fork()).ldelim();
     }
@@ -9452,24 +8299,20 @@ export const GetSourceResponse = {
   },
 
   fromJSON(object: any): GetSourceResponse {
-    return {
-      source: isSet(object.source) ? Source.fromJSON(object.source) : undefined,
-    };
+    return { source: isSet(object.source) ? Source.fromJSON(object.source) : undefined };
   },
 
   toJSON(message: GetSourceResponse): unknown {
     const obj: any = {};
-    message.source !== undefined &&
-      (obj.source = message.source ? Source.toJSON(message.source) : undefined);
+    message.source !== undefined && (obj.source = message.source ? Source.toJSON(message.source) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<GetSourceResponse>): GetSourceResponse {
     const message = createBaseGetSourceResponse();
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? Source.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? Source.fromPartial(object.source)
+      : undefined;
     return message;
   },
 };
@@ -9479,10 +8322,7 @@ function createBaseGetSourcesRequest(): GetSourcesRequest {
 }
 
 export const GetSourcesRequest = {
-  encode(
-    message: GetSourcesRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetSourcesRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -9508,17 +8348,12 @@ export const GetSourcesRequest = {
   },
 
   fromJSON(object: any): GetSourcesRequest {
-    return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
-    };
+    return { collectionId: isSet(object.collectionId) ? String(object.collectionId) : "" };
   },
 
   toJSON(message: GetSourcesRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     return obj;
   },
 
@@ -9534,10 +8369,7 @@ function createBaseGetSourcesResponse(): GetSourcesResponse {
 }
 
 export const GetSourcesResponse = {
-  encode(
-    message: GetSourcesResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetSourcesResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     for (const v of message.sources) {
       Source.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -9563,19 +8395,13 @@ export const GetSourcesResponse = {
   },
 
   fromJSON(object: any): GetSourcesResponse {
-    return {
-      sources: Array.isArray(object?.sources)
-        ? object.sources.map((e: any) => Source.fromJSON(e))
-        : [],
-    };
+    return { sources: Array.isArray(object?.sources) ? object.sources.map((e: any) => Source.fromJSON(e)) : [] };
   },
 
   toJSON(message: GetSourcesResponse): unknown {
     const obj: any = {};
     if (message.sources) {
-      obj.sources = message.sources.map((e) =>
-        e ? Source.toJSON(e) : undefined
-      );
+      obj.sources = message.sources.map((e) => e ? Source.toJSON(e) : undefined);
     } else {
       obj.sources = [];
     }
@@ -9601,10 +8427,7 @@ function createBaseUpdateSourceRequest(): UpdateSourceRequest {
 }
 
 export const UpdateSourceRequest = {
-  encode(
-    message: UpdateSourceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateSourceRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -9612,16 +8435,10 @@ export const UpdateSourceRequest = {
       writer.uint32(26).string(message.sourceId);
     }
     if (message.updateMask !== undefined) {
-      FieldMask.encode(
-        FieldMask.wrap(message.updateMask),
-        writer.uint32(34).fork()
-      ).ldelim();
+      FieldMask.encode(FieldMask.wrap(message.updateMask), writer.uint32(34).fork()).ldelim();
     }
     if (message.metadata !== undefined) {
-      Value.encode(
-        Value.wrap(message.metadata),
-        writer.uint32(42).fork()
-      ).ldelim();
+      Value.encode(Value.wrap(message.metadata), writer.uint32(42).fork()).ldelim();
     }
     if (message.address !== undefined) {
       SourceAddress.encode(message.address, writer.uint32(50).fork()).ldelim();
@@ -9646,14 +8463,10 @@ export const UpdateSourceRequest = {
           message.sourceId = reader.string();
           break;
         case 4:
-          message.updateMask = FieldMask.unwrap(
-            FieldMask.decode(reader, reader.uint32())
-          );
+          message.updateMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
           break;
         case 5:
-          message.metadata = Value.unwrap(
-            Value.decode(reader, reader.uint32())
-          );
+          message.metadata = Value.unwrap(Value.decode(reader, reader.uint32()));
           break;
         case 6:
           message.address = SourceAddress.decode(reader, reader.uint32());
@@ -9671,39 +8484,25 @@ export const UpdateSourceRequest = {
 
   fromJSON(object: any): UpdateSourceRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
-      updateMask: isSet(object.updateMask)
-        ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask))
-        : undefined,
+      updateMask: isSet(object.updateMask) ? FieldMask.unwrap(FieldMask.fromJSON(object.updateMask)) : undefined,
       metadata: isSet(object?.metadata) ? object.metadata : undefined,
-      address: isSet(object.address)
-        ? SourceAddress.fromJSON(object.address)
-        : undefined,
-      preview: isSet(object.preview)
-        ? PreviewAddress.fromJSON(object.preview)
-        : undefined,
+      address: isSet(object.address) ? SourceAddress.fromJSON(object.address) : undefined,
+      preview: isSet(object.preview) ? PreviewAddress.fromJSON(object.preview) : undefined,
     };
   },
 
   toJSON(message: UpdateSourceRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
-    message.updateMask !== undefined &&
-      (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
+    message.updateMask !== undefined && (obj.updateMask = FieldMask.toJSON(FieldMask.wrap(message.updateMask)));
     message.metadata !== undefined && (obj.metadata = message.metadata);
     message.address !== undefined &&
-      (obj.address = message.address
-        ? SourceAddress.toJSON(message.address)
-        : undefined);
+      (obj.address = message.address ? SourceAddress.toJSON(message.address) : undefined);
     message.preview !== undefined &&
-      (obj.preview = message.preview
-        ? PreviewAddress.toJSON(message.preview)
-        : undefined);
+      (obj.preview = message.preview ? PreviewAddress.toJSON(message.preview) : undefined);
     return obj;
   },
 
@@ -9713,14 +8512,12 @@ export const UpdateSourceRequest = {
     message.sourceId = object.sourceId ?? "";
     message.updateMask = object.updateMask ?? undefined;
     message.metadata = object.metadata ?? undefined;
-    message.address =
-      object.address !== undefined && object.address !== null
-        ? SourceAddress.fromPartial(object.address)
-        : undefined;
-    message.preview =
-      object.preview !== undefined && object.preview !== null
-        ? PreviewAddress.fromPartial(object.preview)
-        : undefined;
+    message.address = (object.address !== undefined && object.address !== null)
+      ? SourceAddress.fromPartial(object.address)
+      : undefined;
+    message.preview = (object.preview !== undefined && object.preview !== null)
+      ? PreviewAddress.fromPartial(object.preview)
+      : undefined;
     return message;
   },
 };
@@ -9730,10 +8527,7 @@ function createBaseUpdateSourceResponse(): UpdateSourceResponse {
 }
 
 export const UpdateSourceResponse = {
-  encode(
-    message: UpdateSourceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: UpdateSourceResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.source !== undefined) {
       Source.encode(message.source, writer.uint32(10).fork()).ldelim();
     }
@@ -9743,10 +8537,7 @@ export const UpdateSourceResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): UpdateSourceResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): UpdateSourceResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUpdateSourceResponse();
@@ -9770,27 +8561,22 @@ export const UpdateSourceResponse = {
   fromJSON(object: any): UpdateSourceResponse {
     return {
       source: isSet(object.source) ? Source.fromJSON(object.source) : undefined,
-      broadcastUpdated: isSet(object.broadcastUpdated)
-        ? Boolean(object.broadcastUpdated)
-        : false,
+      broadcastUpdated: isSet(object.broadcastUpdated) ? Boolean(object.broadcastUpdated) : false,
     };
   },
 
   toJSON(message: UpdateSourceResponse): unknown {
     const obj: any = {};
-    message.source !== undefined &&
-      (obj.source = message.source ? Source.toJSON(message.source) : undefined);
-    message.broadcastUpdated !== undefined &&
-      (obj.broadcastUpdated = message.broadcastUpdated);
+    message.source !== undefined && (obj.source = message.source ? Source.toJSON(message.source) : undefined);
+    message.broadcastUpdated !== undefined && (obj.broadcastUpdated = message.broadcastUpdated);
     return obj;
   },
 
   fromPartial(object: DeepPartial<UpdateSourceResponse>): UpdateSourceResponse {
     const message = createBaseUpdateSourceResponse();
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? Source.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? Source.fromPartial(object.source)
+      : undefined;
     message.broadcastUpdated = object.broadcastUpdated ?? false;
     return message;
   },
@@ -9801,10 +8587,7 @@ function createBaseRemoveSourceFromProjectRequest(): RemoveSourceFromProjectRequ
 }
 
 export const RemoveSourceFromProjectRequest = {
-  encode(
-    message: RemoveSourceFromProjectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: RemoveSourceFromProjectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -9820,10 +8603,7 @@ export const RemoveSourceFromProjectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): RemoveSourceFromProjectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): RemoveSourceFromProjectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRemoveSourceFromProjectRequest();
@@ -9852,9 +8632,7 @@ export const RemoveSourceFromProjectRequest = {
 
   fromJSON(object: any): RemoveSourceFromProjectRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
       force: isSet(object.force) ? Boolean(object.force) : undefined,
@@ -9863,17 +8641,14 @@ export const RemoveSourceFromProjectRequest = {
 
   toJSON(message: RemoveSourceFromProjectRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.force !== undefined && (obj.force = message.force);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<RemoveSourceFromProjectRequest>
-  ): RemoveSourceFromProjectRequest {
+  fromPartial(object: DeepPartial<RemoveSourceFromProjectRequest>): RemoveSourceFromProjectRequest {
     const message = createBaseRemoveSourceFromProjectRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -9888,10 +8663,7 @@ function createBaseRemoveSourceFromProjectResponse(): RemoveSourceFromProjectRes
 }
 
 export const RemoveSourceFromProjectResponse = {
-  encode(
-    message: RemoveSourceFromProjectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: RemoveSourceFromProjectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.project !== undefined) {
       Project.encode(message.project, writer.uint32(10).fork()).ldelim();
     }
@@ -9901,10 +8673,7 @@ export const RemoveSourceFromProjectResponse = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): RemoveSourceFromProjectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): RemoveSourceFromProjectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRemoveSourceFromProjectResponse();
@@ -9927,53 +8696,34 @@ export const RemoveSourceFromProjectResponse = {
 
   fromJSON(object: any): RemoveSourceFromProjectResponse {
     return {
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
-      broadcastUpdated: isSet(object.broadcastUpdated)
-        ? Boolean(object.broadcastUpdated)
-        : false,
+      project: isSet(object.project) ? Project.fromJSON(object.project) : undefined,
+      broadcastUpdated: isSet(object.broadcastUpdated) ? Boolean(object.broadcastUpdated) : false,
     };
   },
 
   toJSON(message: RemoveSourceFromProjectResponse): unknown {
     const obj: any = {};
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
-    message.broadcastUpdated !== undefined &&
-      (obj.broadcastUpdated = message.broadcastUpdated);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
+    message.broadcastUpdated !== undefined && (obj.broadcastUpdated = message.broadcastUpdated);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<RemoveSourceFromProjectResponse>
-  ): RemoveSourceFromProjectResponse {
+  fromPartial(object: DeepPartial<RemoveSourceFromProjectResponse>): RemoveSourceFromProjectResponse {
     const message = createBaseRemoveSourceFromProjectResponse();
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     message.broadcastUpdated = object.broadcastUpdated ?? false;
     return message;
   },
 };
 
 function createBaseCreateAccessTokenRequest(): CreateAccessTokenRequest {
-  return {
-    serviceUserId: "",
-    displayName: undefined,
-    role: undefined,
-    maxDuration: undefined,
-  };
+  return { serviceUserId: "", displayName: undefined, role: undefined, maxDuration: undefined };
 }
 
 export const CreateAccessTokenRequest = {
-  encode(
-    message: CreateAccessTokenRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateAccessTokenRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.serviceUserId !== "") {
       writer.uint32(10).string(message.serviceUserId);
     }
@@ -9989,10 +8739,7 @@ export const CreateAccessTokenRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateAccessTokenRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateAccessTokenRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateAccessTokenRequest();
@@ -10021,36 +8768,23 @@ export const CreateAccessTokenRequest = {
 
   fromJSON(object: any): CreateAccessTokenRequest {
     return {
-      serviceUserId: isSet(object.serviceUserId)
-        ? String(object.serviceUserId)
-        : "",
-      displayName: isSet(object.displayName)
-        ? String(object.displayName)
-        : undefined,
+      serviceUserId: isSet(object.serviceUserId) ? String(object.serviceUserId) : "",
+      displayName: isSet(object.displayName) ? String(object.displayName) : undefined,
       role: isSet(object.role) ? roleFromJSON(object.role) : undefined,
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
+      maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined,
     };
   },
 
   toJSON(message: CreateAccessTokenRequest): unknown {
     const obj: any = {};
-    message.serviceUserId !== undefined &&
-      (obj.serviceUserId = message.serviceUserId);
-    message.displayName !== undefined &&
-      (obj.displayName = message.displayName);
-    message.role !== undefined &&
-      (obj.role =
-        message.role !== undefined ? roleToJSON(message.role) : undefined);
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
+    message.serviceUserId !== undefined && (obj.serviceUserId = message.serviceUserId);
+    message.displayName !== undefined && (obj.displayName = message.displayName);
+    message.role !== undefined && (obj.role = message.role !== undefined ? roleToJSON(message.role) : undefined);
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateAccessTokenRequest>
-  ): CreateAccessTokenRequest {
+  fromPartial(object: DeepPartial<CreateAccessTokenRequest>): CreateAccessTokenRequest {
     const message = createBaseCreateAccessTokenRequest();
     message.serviceUserId = object.serviceUserId ?? "";
     message.displayName = object.displayName ?? undefined;
@@ -10065,20 +8799,14 @@ function createBaseCreateAccessTokenResponse(): CreateAccessTokenResponse {
 }
 
 export const CreateAccessTokenResponse = {
-  encode(
-    message: CreateAccessTokenResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateAccessTokenResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.accessToken !== "") {
       writer.uint32(10).string(message.accessToken);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateAccessTokenResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateAccessTokenResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateAccessTokenResponse();
@@ -10097,21 +8825,16 @@ export const CreateAccessTokenResponse = {
   },
 
   fromJSON(object: any): CreateAccessTokenResponse {
-    return {
-      accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
-    };
+    return { accessToken: isSet(object.accessToken) ? String(object.accessToken) : "" };
   },
 
   toJSON(message: CreateAccessTokenResponse): unknown {
     const obj: any = {};
-    message.accessToken !== undefined &&
-      (obj.accessToken = message.accessToken);
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateAccessTokenResponse>
-  ): CreateAccessTokenResponse {
+  fromPartial(object: DeepPartial<CreateAccessTokenResponse>): CreateAccessTokenResponse {
     const message = createBaseCreateAccessTokenResponse();
     message.accessToken = object.accessToken ?? "";
     return message;
@@ -10123,10 +8846,7 @@ function createBaseGuestAccessTokenDirect(): GuestAccessTokenDirect {
 }
 
 export const GuestAccessTokenDirect = {
-  encode(
-    message: GuestAccessTokenDirect,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GuestAccessTokenDirect, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.displayName !== "") {
       writer.uint32(10).string(message.displayName);
     }
@@ -10136,10 +8856,7 @@ export const GuestAccessTokenDirect = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GuestAccessTokenDirect {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GuestAccessTokenDirect {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGuestAccessTokenDirect();
@@ -10163,24 +8880,18 @@ export const GuestAccessTokenDirect = {
   fromJSON(object: any): GuestAccessTokenDirect {
     return {
       displayName: isSet(object.displayName) ? String(object.displayName) : "",
-      serviceUserId: isSet(object.serviceUserId)
-        ? String(object.serviceUserId)
-        : undefined,
+      serviceUserId: isSet(object.serviceUserId) ? String(object.serviceUserId) : undefined,
     };
   },
 
   toJSON(message: GuestAccessTokenDirect): unknown {
     const obj: any = {};
-    message.displayName !== undefined &&
-      (obj.displayName = message.displayName);
-    message.serviceUserId !== undefined &&
-      (obj.serviceUserId = message.serviceUserId);
+    message.displayName !== undefined && (obj.displayName = message.displayName);
+    message.serviceUserId !== undefined && (obj.serviceUserId = message.serviceUserId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GuestAccessTokenDirect>
-  ): GuestAccessTokenDirect {
+  fromPartial(object: DeepPartial<GuestAccessTokenDirect>): GuestAccessTokenDirect {
     const message = createBaseGuestAccessTokenDirect();
     message.displayName = object.displayName ?? "";
     message.serviceUserId = object.serviceUserId ?? undefined;
@@ -10193,20 +8904,14 @@ function createBaseGuestAccessTokenExchange(): GuestAccessTokenExchange {
 }
 
 export const GuestAccessTokenExchange = {
-  encode(
-    message: GuestAccessTokenExchange,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GuestAccessTokenExchange, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.maxDuration !== undefined) {
       writer.uint32(8).uint32(message.maxDuration);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GuestAccessTokenExchange {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GuestAccessTokenExchange {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGuestAccessTokenExchange();
@@ -10225,23 +8930,16 @@ export const GuestAccessTokenExchange = {
   },
 
   fromJSON(object: any): GuestAccessTokenExchange {
-    return {
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
-    };
+    return { maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined };
   },
 
   toJSON(message: GuestAccessTokenExchange): unknown {
     const obj: any = {};
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GuestAccessTokenExchange>
-  ): GuestAccessTokenExchange {
+  fromPartial(object: DeepPartial<GuestAccessTokenExchange>): GuestAccessTokenExchange {
     const message = createBaseGuestAccessTokenExchange();
     message.maxDuration = object.maxDuration ?? undefined;
     return message;
@@ -10253,21 +8951,12 @@ function createBaseGuestAccessToken(): GuestAccessToken {
 }
 
 export const GuestAccessToken = {
-  encode(
-    message: GuestAccessToken,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GuestAccessToken, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.direct !== undefined) {
-      GuestAccessTokenDirect.encode(
-        message.direct,
-        writer.uint32(10).fork()
-      ).ldelim();
+      GuestAccessTokenDirect.encode(message.direct, writer.uint32(10).fork()).ldelim();
     }
     if (message.exchange !== undefined) {
-      GuestAccessTokenExchange.encode(
-        message.exchange,
-        writer.uint32(18).fork()
-      ).ldelim();
+      GuestAccessTokenExchange.encode(message.exchange, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -10280,16 +8969,10 @@ export const GuestAccessToken = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.direct = GuestAccessTokenDirect.decode(
-            reader,
-            reader.uint32()
-          );
+          message.direct = GuestAccessTokenDirect.decode(reader, reader.uint32());
           break;
         case 2:
-          message.exchange = GuestAccessTokenExchange.decode(
-            reader,
-            reader.uint32()
-          );
+          message.exchange = GuestAccessTokenExchange.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -10301,38 +8984,28 @@ export const GuestAccessToken = {
 
   fromJSON(object: any): GuestAccessToken {
     return {
-      direct: isSet(object.direct)
-        ? GuestAccessTokenDirect.fromJSON(object.direct)
-        : undefined,
-      exchange: isSet(object.exchange)
-        ? GuestAccessTokenExchange.fromJSON(object.exchange)
-        : undefined,
+      direct: isSet(object.direct) ? GuestAccessTokenDirect.fromJSON(object.direct) : undefined,
+      exchange: isSet(object.exchange) ? GuestAccessTokenExchange.fromJSON(object.exchange) : undefined,
     };
   },
 
   toJSON(message: GuestAccessToken): unknown {
     const obj: any = {};
     message.direct !== undefined &&
-      (obj.direct = message.direct
-        ? GuestAccessTokenDirect.toJSON(message.direct)
-        : undefined);
+      (obj.direct = message.direct ? GuestAccessTokenDirect.toJSON(message.direct) : undefined);
     message.exchange !== undefined &&
-      (obj.exchange = message.exchange
-        ? GuestAccessTokenExchange.toJSON(message.exchange)
-        : undefined);
+      (obj.exchange = message.exchange ? GuestAccessTokenExchange.toJSON(message.exchange) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<GuestAccessToken>): GuestAccessToken {
     const message = createBaseGuestAccessToken();
-    message.direct =
-      object.direct !== undefined && object.direct !== null
-        ? GuestAccessTokenDirect.fromPartial(object.direct)
-        : undefined;
-    message.exchange =
-      object.exchange !== undefined && object.exchange !== null
-        ? GuestAccessTokenExchange.fromPartial(object.exchange)
-        : undefined;
+    message.direct = (object.direct !== undefined && object.direct !== null)
+      ? GuestAccessTokenDirect.fromPartial(object.direct)
+      : undefined;
+    message.exchange = (object.exchange !== undefined && object.exchange !== null)
+      ? GuestAccessTokenExchange.fromPartial(object.exchange)
+      : undefined;
     return message;
   },
 };
@@ -10345,14 +9018,12 @@ function createBaseCreateGuestAccessTokenRequest(): CreateGuestAccessTokenReques
     role: Role.ROLE_UNSPECIFIED,
     token: undefined,
     url: undefined,
+    createGuestCode: undefined,
   };
 }
 
 export const CreateGuestAccessTokenRequest = {
-  encode(
-    message: CreateGuestAccessTokenRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateGuestAccessTokenRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -10371,13 +9042,13 @@ export const CreateGuestAccessTokenRequest = {
     if (message.url !== undefined) {
       writer.uint32(50).string(message.url);
     }
+    if (message.createGuestCode !== undefined) {
+      writer.uint32(56).bool(message.createGuestCode);
+    }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateGuestAccessTokenRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateGuestAccessTokenRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateGuestAccessTokenRequest();
@@ -10402,6 +9073,9 @@ export const CreateGuestAccessTokenRequest = {
         case 6:
           message.url = reader.string();
           break;
+        case 7:
+          message.createGuestCode = reader.bool();
+          break;
         default:
           reader.skipType(tag & 7);
           break;
@@ -10412,78 +9086,62 @@ export const CreateGuestAccessTokenRequest = {
 
   fromJSON(object: any): CreateGuestAccessTokenRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      maxDuration: isSet(object.maxDuration)
-        ? Number(object.maxDuration)
-        : undefined,
-      role: isSet(object.role)
-        ? roleFromJSON(object.role)
-        : Role.ROLE_UNSPECIFIED,
-      token: isSet(object.token)
-        ? GuestAccessToken.fromJSON(object.token)
-        : undefined,
+      maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined,
+      role: isSet(object.role) ? roleFromJSON(object.role) : Role.ROLE_UNSPECIFIED,
+      token: isSet(object.token) ? GuestAccessToken.fromJSON(object.token) : undefined,
       url: isSet(object.url) ? String(object.url) : undefined,
+      createGuestCode: isSet(object.createGuestCode) ? Boolean(object.createGuestCode) : undefined,
     };
   },
 
   toJSON(message: CreateGuestAccessTokenRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.maxDuration !== undefined &&
-      (obj.maxDuration = Math.round(message.maxDuration));
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
     message.role !== undefined && (obj.role = roleToJSON(message.role));
-    message.token !== undefined &&
-      (obj.token = message.token
-        ? GuestAccessToken.toJSON(message.token)
-        : undefined);
+    message.token !== undefined && (obj.token = message.token ? GuestAccessToken.toJSON(message.token) : undefined);
     message.url !== undefined && (obj.url = message.url);
+    message.createGuestCode !== undefined && (obj.createGuestCode = message.createGuestCode);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateGuestAccessTokenRequest>
-  ): CreateGuestAccessTokenRequest {
+  fromPartial(object: DeepPartial<CreateGuestAccessTokenRequest>): CreateGuestAccessTokenRequest {
     const message = createBaseCreateGuestAccessTokenRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.maxDuration = object.maxDuration ?? undefined;
     message.role = object.role ?? Role.ROLE_UNSPECIFIED;
-    message.token =
-      object.token !== undefined && object.token !== null
-        ? GuestAccessToken.fromPartial(object.token)
-        : undefined;
+    message.token = (object.token !== undefined && object.token !== null)
+      ? GuestAccessToken.fromPartial(object.token)
+      : undefined;
     message.url = object.url ?? undefined;
+    message.createGuestCode = object.createGuestCode ?? undefined;
     return message;
   },
 };
 
 function createBaseCreateGuestAccessTokenResponse(): CreateGuestAccessTokenResponse {
-  return { accessToken: "", url: undefined };
+  return { accessToken: "", url: undefined, guestCode: undefined };
 }
 
 export const CreateGuestAccessTokenResponse = {
-  encode(
-    message: CreateGuestAccessTokenResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateGuestAccessTokenResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.accessToken !== "") {
       writer.uint32(10).string(message.accessToken);
     }
     if (message.url !== undefined) {
       writer.uint32(18).string(message.url);
     }
+    if (message.guestCode !== undefined) {
+      IssuedGuestCode.encode(message.guestCode, writer.uint32(26).fork()).ldelim();
+    }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateGuestAccessTokenResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateGuestAccessTokenResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateGuestAccessTokenResponse();
@@ -10495,6 +9153,9 @@ export const CreateGuestAccessTokenResponse = {
           break;
         case 2:
           message.url = reader.string();
+          break;
+        case 3:
+          message.guestCode = IssuedGuestCode.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -10508,23 +9169,26 @@ export const CreateGuestAccessTokenResponse = {
     return {
       accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
       url: isSet(object.url) ? String(object.url) : undefined,
+      guestCode: isSet(object.guestCode) ? IssuedGuestCode.fromJSON(object.guestCode) : undefined,
     };
   },
 
   toJSON(message: CreateGuestAccessTokenResponse): unknown {
     const obj: any = {};
-    message.accessToken !== undefined &&
-      (obj.accessToken = message.accessToken);
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
     message.url !== undefined && (obj.url = message.url);
+    message.guestCode !== undefined &&
+      (obj.guestCode = message.guestCode ? IssuedGuestCode.toJSON(message.guestCode) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateGuestAccessTokenResponse>
-  ): CreateGuestAccessTokenResponse {
+  fromPartial(object: DeepPartial<CreateGuestAccessTokenResponse>): CreateGuestAccessTokenResponse {
     const message = createBaseCreateGuestAccessTokenResponse();
     message.accessToken = object.accessToken ?? "";
     message.url = object.url ?? undefined;
+    message.guestCode = (object.guestCode !== undefined && object.guestCode !== null)
+      ? IssuedGuestCode.fromPartial(object.guestCode)
+      : undefined;
     return message;
   },
 };
@@ -10534,10 +9198,7 @@ function createBaseCreateWebRtcAccessTokenRequest(): CreateWebRtcAccessTokenRequ
 }
 
 export const CreateWebRtcAccessTokenRequest = {
-  encode(
-    message: CreateWebRtcAccessTokenRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateWebRtcAccessTokenRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -10550,10 +9211,7 @@ export const CreateWebRtcAccessTokenRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateWebRtcAccessTokenRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateWebRtcAccessTokenRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateWebRtcAccessTokenRequest();
@@ -10579,9 +9237,7 @@ export const CreateWebRtcAccessTokenRequest = {
 
   fromJSON(object: any): CreateWebRtcAccessTokenRequest {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       displayName: isSet(object.displayName) ? String(object.displayName) : "",
     };
@@ -10589,17 +9245,13 @@ export const CreateWebRtcAccessTokenRequest = {
 
   toJSON(message: CreateWebRtcAccessTokenRequest): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.displayName !== undefined &&
-      (obj.displayName = message.displayName);
+    message.displayName !== undefined && (obj.displayName = message.displayName);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateWebRtcAccessTokenRequest>
-  ): CreateWebRtcAccessTokenRequest {
+  fromPartial(object: DeepPartial<CreateWebRtcAccessTokenRequest>): CreateWebRtcAccessTokenRequest {
     const message = createBaseCreateWebRtcAccessTokenRequest();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -10613,23 +9265,14 @@ function createBaseCreateWebRtcAccessTokenResponse(): CreateWebRtcAccessTokenRes
 }
 
 export const CreateWebRtcAccessTokenResponse = {
-  encode(
-    message: CreateWebRtcAccessTokenResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CreateWebRtcAccessTokenResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.webrtcAccess !== undefined) {
-      WebRtcAccess.encode(
-        message.webrtcAccess,
-        writer.uint32(18).fork()
-      ).ldelim();
+      WebRtcAccess.encode(message.webrtcAccess, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CreateWebRtcAccessTokenResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CreateWebRtcAccessTokenResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCreateWebRtcAccessTokenResponse();
@@ -10648,30 +9291,21 @@ export const CreateWebRtcAccessTokenResponse = {
   },
 
   fromJSON(object: any): CreateWebRtcAccessTokenResponse {
-    return {
-      webrtcAccess: isSet(object.webrtcAccess)
-        ? WebRtcAccess.fromJSON(object.webrtcAccess)
-        : undefined,
-    };
+    return { webrtcAccess: isSet(object.webrtcAccess) ? WebRtcAccess.fromJSON(object.webrtcAccess) : undefined };
   },
 
   toJSON(message: CreateWebRtcAccessTokenResponse): unknown {
     const obj: any = {};
     message.webrtcAccess !== undefined &&
-      (obj.webrtcAccess = message.webrtcAccess
-        ? WebRtcAccess.toJSON(message.webrtcAccess)
-        : undefined);
+      (obj.webrtcAccess = message.webrtcAccess ? WebRtcAccess.toJSON(message.webrtcAccess) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CreateWebRtcAccessTokenResponse>
-  ): CreateWebRtcAccessTokenResponse {
+  fromPartial(object: DeepPartial<CreateWebRtcAccessTokenResponse>): CreateWebRtcAccessTokenResponse {
     const message = createBaseCreateWebRtcAccessTokenResponse();
-    message.webrtcAccess =
-      object.webrtcAccess !== undefined && object.webrtcAccess !== null
-        ? WebRtcAccess.fromPartial(object.webrtcAccess)
-        : undefined;
+    message.webrtcAccess = (object.webrtcAccess !== undefined && object.webrtcAccess !== null)
+      ? WebRtcAccess.fromPartial(object.webrtcAccess)
+      : undefined;
     return message;
   },
 };
@@ -10681,17 +9315,11 @@ function createBaseRefreshAccessTokenRequest(): RefreshAccessTokenRequest {
 }
 
 export const RefreshAccessTokenRequest = {
-  encode(
-    _: RefreshAccessTokenRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: RefreshAccessTokenRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): RefreshAccessTokenRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): RefreshAccessTokenRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRefreshAccessTokenRequest();
@@ -10715,9 +9343,7 @@ export const RefreshAccessTokenRequest = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<RefreshAccessTokenRequest>
-  ): RefreshAccessTokenRequest {
+  fromPartial(_: DeepPartial<RefreshAccessTokenRequest>): RefreshAccessTokenRequest {
     const message = createBaseRefreshAccessTokenRequest();
     return message;
   },
@@ -10728,17 +9354,11 @@ function createBaseRefreshAccessTokenResponse(): RefreshAccessTokenResponse {
 }
 
 export const RefreshAccessTokenResponse = {
-  encode(
-    _: RefreshAccessTokenResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: RefreshAccessTokenResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): RefreshAccessTokenResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): RefreshAccessTokenResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseRefreshAccessTokenResponse();
@@ -10762,29 +9382,18 @@ export const RefreshAccessTokenResponse = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<RefreshAccessTokenResponse>
-  ): RefreshAccessTokenResponse {
+  fromPartial(_: DeepPartial<RefreshAccessTokenResponse>): RefreshAccessTokenResponse {
     const message = createBaseRefreshAccessTokenResponse();
     return message;
   },
 };
 
 function createBaseGuestCode(): GuestCode {
-  return {
-    collectionId: "",
-    projectId: "",
-    code: "",
-    url: "",
-    autoDelete: undefined,
-  };
+  return { collectionId: "", projectId: "", code: "", url: "", autoDelete: undefined, accessToken: "" };
 }
 
 export const GuestCode = {
-  encode(
-    message: GuestCode,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GuestCode, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -10798,10 +9407,10 @@ export const GuestCode = {
       writer.uint32(34).string(message.url);
     }
     if (message.autoDelete !== undefined) {
-      Timestamp.encode(
-        toTimestamp(message.autoDelete),
-        writer.uint32(42).fork()
-      ).ldelim();
+      Timestamp.encode(toTimestamp(message.autoDelete), writer.uint32(42).fork()).ldelim();
+    }
+    if (message.accessToken !== "") {
+      writer.uint32(50).string(message.accessToken);
     }
     return writer;
   },
@@ -10826,9 +9435,10 @@ export const GuestCode = {
           message.url = reader.string();
           break;
         case 5:
-          message.autoDelete = fromTimestamp(
-            Timestamp.decode(reader, reader.uint32())
-          );
+          message.autoDelete = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          break;
+        case 6:
+          message.accessToken = reader.string();
           break;
         default:
           reader.skipType(tag & 7);
@@ -10840,26 +9450,23 @@ export const GuestCode = {
 
   fromJSON(object: any): GuestCode {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       code: isSet(object.code) ? String(object.code) : "",
       url: isSet(object.url) ? String(object.url) : "",
-      autoDelete: isSet(object.autoDelete)
-        ? String(object.autoDelete)
-        : undefined,
+      autoDelete: isSet(object.autoDelete) ? String(object.autoDelete) : undefined,
+      accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
     };
   },
 
   toJSON(message: GuestCode): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.code !== undefined && (obj.code = message.code);
     message.url !== undefined && (obj.url = message.url);
     message.autoDelete !== undefined && (obj.autoDelete = message.autoDelete);
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
     return obj;
   },
 
@@ -10870,6 +9477,130 @@ export const GuestCode = {
     message.code = object.code ?? "";
     message.url = object.url ?? "";
     message.autoDelete = object.autoDelete ?? undefined;
+    message.accessToken = object.accessToken ?? "";
+    return message;
+  },
+};
+
+function createBaseIssuedGuestCode(): IssuedGuestCode {
+  return {
+    collectionId: "",
+    projectId: "",
+    maxDuration: undefined,
+    role: Role.ROLE_UNSPECIFIED,
+    token: undefined,
+    url: undefined,
+    code: "",
+    accessToken: "",
+  };
+}
+
+export const IssuedGuestCode = {
+  encode(message: IssuedGuestCode, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.collectionId !== "") {
+      writer.uint32(10).string(message.collectionId);
+    }
+    if (message.projectId !== "") {
+      writer.uint32(18).string(message.projectId);
+    }
+    if (message.maxDuration !== undefined) {
+      writer.uint32(24).uint32(message.maxDuration);
+    }
+    if (message.role !== Role.ROLE_UNSPECIFIED) {
+      writer.uint32(32).int32(roleToNumber(message.role));
+    }
+    if (message.token !== undefined) {
+      GuestAccessToken.encode(message.token, writer.uint32(42).fork()).ldelim();
+    }
+    if (message.url !== undefined) {
+      writer.uint32(50).string(message.url);
+    }
+    if (message.code !== "") {
+      writer.uint32(58).string(message.code);
+    }
+    if (message.accessToken !== "") {
+      writer.uint32(66).string(message.accessToken);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): IssuedGuestCode {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseIssuedGuestCode();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.collectionId = reader.string();
+          break;
+        case 2:
+          message.projectId = reader.string();
+          break;
+        case 3:
+          message.maxDuration = reader.uint32();
+          break;
+        case 4:
+          message.role = roleFromJSON(reader.int32());
+          break;
+        case 5:
+          message.token = GuestAccessToken.decode(reader, reader.uint32());
+          break;
+        case 6:
+          message.url = reader.string();
+          break;
+        case 7:
+          message.code = reader.string();
+          break;
+        case 8:
+          message.accessToken = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): IssuedGuestCode {
+    return {
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
+      projectId: isSet(object.projectId) ? String(object.projectId) : "",
+      maxDuration: isSet(object.maxDuration) ? Number(object.maxDuration) : undefined,
+      role: isSet(object.role) ? roleFromJSON(object.role) : Role.ROLE_UNSPECIFIED,
+      token: isSet(object.token) ? GuestAccessToken.fromJSON(object.token) : undefined,
+      url: isSet(object.url) ? String(object.url) : undefined,
+      code: isSet(object.code) ? String(object.code) : "",
+      accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
+    };
+  },
+
+  toJSON(message: IssuedGuestCode): unknown {
+    const obj: any = {};
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
+    message.projectId !== undefined && (obj.projectId = message.projectId);
+    message.maxDuration !== undefined && (obj.maxDuration = Math.round(message.maxDuration));
+    message.role !== undefined && (obj.role = roleToJSON(message.role));
+    message.token !== undefined && (obj.token = message.token ? GuestAccessToken.toJSON(message.token) : undefined);
+    message.url !== undefined && (obj.url = message.url);
+    message.code !== undefined && (obj.code = message.code);
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<IssuedGuestCode>): IssuedGuestCode {
+    const message = createBaseIssuedGuestCode();
+    message.collectionId = object.collectionId ?? "";
+    message.projectId = object.projectId ?? "";
+    message.maxDuration = object.maxDuration ?? undefined;
+    message.role = object.role ?? Role.ROLE_UNSPECIFIED;
+    message.token = (object.token !== undefined && object.token !== null)
+      ? GuestAccessToken.fromPartial(object.token)
+      : undefined;
+    message.url = object.url ?? undefined;
+    message.code = object.code ?? "";
+    message.accessToken = object.accessToken ?? "";
     return message;
   },
 };
@@ -10879,10 +9610,7 @@ function createBaseGuestCodeRedirectRequest(): GuestCodeRedirectRequest {
 }
 
 export const GuestCodeRedirectRequest = {
-  encode(
-    message: GuestCodeRedirectRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GuestCodeRedirectRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.serviceId !== "") {
       writer.uint32(10).string(message.serviceId);
     }
@@ -10892,10 +9620,7 @@ export const GuestCodeRedirectRequest = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GuestCodeRedirectRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GuestCodeRedirectRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGuestCodeRedirectRequest();
@@ -10930,9 +9655,7 @@ export const GuestCodeRedirectRequest = {
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GuestCodeRedirectRequest>
-  ): GuestCodeRedirectRequest {
+  fromPartial(object: DeepPartial<GuestCodeRedirectRequest>): GuestCodeRedirectRequest {
     const message = createBaseGuestCodeRedirectRequest();
     message.serviceId = object.serviceId ?? "";
     message.code = object.code ?? "";
@@ -10945,17 +9668,11 @@ function createBaseGuestCodeRedirectResponse(): GuestCodeRedirectResponse {
 }
 
 export const GuestCodeRedirectResponse = {
-  encode(
-    _: GuestCodeRedirectResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: GuestCodeRedirectResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GuestCodeRedirectResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GuestCodeRedirectResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGuestCodeRedirectResponse();
@@ -10979,10 +9696,456 @@ export const GuestCodeRedirectResponse = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<GuestCodeRedirectResponse>
-  ): GuestCodeRedirectResponse {
+  fromPartial(_: DeepPartial<GuestCodeRedirectResponse>): GuestCodeRedirectResponse {
     const message = createBaseGuestCodeRedirectResponse();
+    return message;
+  },
+};
+
+function createBaseUseGuestCodeRequest(): UseGuestCodeRequest {
+  return { serviceId: undefined, code: "" };
+}
+
+export const UseGuestCodeRequest = {
+  encode(message: UseGuestCodeRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.serviceId !== undefined) {
+      writer.uint32(10).string(message.serviceId);
+    }
+    if (message.code !== "") {
+      writer.uint32(18).string(message.code);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): UseGuestCodeRequest {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseUseGuestCodeRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.serviceId = reader.string();
+          break;
+        case 2:
+          message.code = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): UseGuestCodeRequest {
+    return {
+      serviceId: isSet(object.serviceId) ? String(object.serviceId) : undefined,
+      code: isSet(object.code) ? String(object.code) : "",
+    };
+  },
+
+  toJSON(message: UseGuestCodeRequest): unknown {
+    const obj: any = {};
+    message.serviceId !== undefined && (obj.serviceId = message.serviceId);
+    message.code !== undefined && (obj.code = message.code);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<UseGuestCodeRequest>): UseGuestCodeRequest {
+    const message = createBaseUseGuestCodeRequest();
+    message.serviceId = object.serviceId ?? undefined;
+    message.code = object.code ?? "";
+    return message;
+  },
+};
+
+function createBaseUseGuestCodeResponse(): UseGuestCodeResponse {
+  return { collectionId: "", projectId: "", role: Role.ROLE_UNSPECIFIED, accessToken: "", url: undefined };
+}
+
+export const UseGuestCodeResponse = {
+  encode(message: UseGuestCodeResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.collectionId !== "") {
+      writer.uint32(10).string(message.collectionId);
+    }
+    if (message.projectId !== "") {
+      writer.uint32(18).string(message.projectId);
+    }
+    if (message.role !== Role.ROLE_UNSPECIFIED) {
+      writer.uint32(24).int32(roleToNumber(message.role));
+    }
+    if (message.accessToken !== "") {
+      writer.uint32(34).string(message.accessToken);
+    }
+    if (message.url !== undefined) {
+      writer.uint32(42).string(message.url);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): UseGuestCodeResponse {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseUseGuestCodeResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.collectionId = reader.string();
+          break;
+        case 2:
+          message.projectId = reader.string();
+          break;
+        case 3:
+          message.role = roleFromJSON(reader.int32());
+          break;
+        case 4:
+          message.accessToken = reader.string();
+          break;
+        case 5:
+          message.url = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): UseGuestCodeResponse {
+    return {
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
+      projectId: isSet(object.projectId) ? String(object.projectId) : "",
+      role: isSet(object.role) ? roleFromJSON(object.role) : Role.ROLE_UNSPECIFIED,
+      accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
+      url: isSet(object.url) ? String(object.url) : undefined,
+    };
+  },
+
+  toJSON(message: UseGuestCodeResponse): unknown {
+    const obj: any = {};
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
+    message.projectId !== undefined && (obj.projectId = message.projectId);
+    message.role !== undefined && (obj.role = roleToJSON(message.role));
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
+    message.url !== undefined && (obj.url = message.url);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<UseGuestCodeResponse>): UseGuestCodeResponse {
+    const message = createBaseUseGuestCodeResponse();
+    message.collectionId = object.collectionId ?? "";
+    message.projectId = object.projectId ?? "";
+    message.role = object.role ?? Role.ROLE_UNSPECIFIED;
+    message.accessToken = object.accessToken ?? "";
+    message.url = object.url ?? undefined;
+    return message;
+  },
+};
+
+function createBaseGetGuestCodeRequest(): GetGuestCodeRequest {
+  return { code: "" };
+}
+
+export const GetGuestCodeRequest = {
+  encode(message: GetGuestCodeRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.code !== "") {
+      writer.uint32(10).string(message.code);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetGuestCodeRequest {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseGetGuestCodeRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.code = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): GetGuestCodeRequest {
+    return { code: isSet(object.code) ? String(object.code) : "" };
+  },
+
+  toJSON(message: GetGuestCodeRequest): unknown {
+    const obj: any = {};
+    message.code !== undefined && (obj.code = message.code);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<GetGuestCodeRequest>): GetGuestCodeRequest {
+    const message = createBaseGetGuestCodeRequest();
+    message.code = object.code ?? "";
+    return message;
+  },
+};
+
+function createBaseGetGuestCodeResponse(): GetGuestCodeResponse {
+  return { guestCode: undefined };
+}
+
+export const GetGuestCodeResponse = {
+  encode(message: GetGuestCodeResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.guestCode !== undefined) {
+      IssuedGuestCode.encode(message.guestCode, writer.uint32(10).fork()).ldelim();
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetGuestCodeResponse {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseGetGuestCodeResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.guestCode = IssuedGuestCode.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): GetGuestCodeResponse {
+    return { guestCode: isSet(object.guestCode) ? IssuedGuestCode.fromJSON(object.guestCode) : undefined };
+  },
+
+  toJSON(message: GetGuestCodeResponse): unknown {
+    const obj: any = {};
+    message.guestCode !== undefined &&
+      (obj.guestCode = message.guestCode ? IssuedGuestCode.toJSON(message.guestCode) : undefined);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<GetGuestCodeResponse>): GetGuestCodeResponse {
+    const message = createBaseGetGuestCodeResponse();
+    message.guestCode = (object.guestCode !== undefined && object.guestCode !== null)
+      ? IssuedGuestCode.fromPartial(object.guestCode)
+      : undefined;
+    return message;
+  },
+};
+
+function createBaseGetGuestCodesRequest(): GetGuestCodesRequest {
+  return { collectionId: undefined, projectId: undefined, role: undefined };
+}
+
+export const GetGuestCodesRequest = {
+  encode(message: GetGuestCodesRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.collectionId !== undefined) {
+      writer.uint32(10).string(message.collectionId);
+    }
+    if (message.projectId !== undefined) {
+      writer.uint32(18).string(message.projectId);
+    }
+    if (message.role !== undefined) {
+      writer.uint32(24).int32(roleToNumber(message.role));
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetGuestCodesRequest {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseGetGuestCodesRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.collectionId = reader.string();
+          break;
+        case 2:
+          message.projectId = reader.string();
+          break;
+        case 3:
+          message.role = roleFromJSON(reader.int32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): GetGuestCodesRequest {
+    return {
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : undefined,
+      projectId: isSet(object.projectId) ? String(object.projectId) : undefined,
+      role: isSet(object.role) ? roleFromJSON(object.role) : undefined,
+    };
+  },
+
+  toJSON(message: GetGuestCodesRequest): unknown {
+    const obj: any = {};
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
+    message.projectId !== undefined && (obj.projectId = message.projectId);
+    message.role !== undefined && (obj.role = message.role !== undefined ? roleToJSON(message.role) : undefined);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<GetGuestCodesRequest>): GetGuestCodesRequest {
+    const message = createBaseGetGuestCodesRequest();
+    message.collectionId = object.collectionId ?? undefined;
+    message.projectId = object.projectId ?? undefined;
+    message.role = object.role ?? undefined;
+    return message;
+  },
+};
+
+function createBaseGetGuestCodesResponse(): GetGuestCodesResponse {
+  return { guestCodes: [] };
+}
+
+export const GetGuestCodesResponse = {
+  encode(message: GetGuestCodesResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    for (const v of message.guestCodes) {
+      IssuedGuestCode.encode(v!, writer.uint32(10).fork()).ldelim();
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetGuestCodesResponse {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseGetGuestCodesResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.guestCodes.push(IssuedGuestCode.decode(reader, reader.uint32()));
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): GetGuestCodesResponse {
+    return {
+      guestCodes: Array.isArray(object?.guestCodes)
+        ? object.guestCodes.map((e: any) => IssuedGuestCode.fromJSON(e))
+        : [],
+    };
+  },
+
+  toJSON(message: GetGuestCodesResponse): unknown {
+    const obj: any = {};
+    if (message.guestCodes) {
+      obj.guestCodes = message.guestCodes.map((e) => e ? IssuedGuestCode.toJSON(e) : undefined);
+    } else {
+      obj.guestCodes = [];
+    }
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<GetGuestCodesResponse>): GetGuestCodesResponse {
+    const message = createBaseGetGuestCodesResponse();
+    message.guestCodes = object.guestCodes?.map((e) => IssuedGuestCode.fromPartial(e)) || [];
+    return message;
+  },
+};
+
+function createBaseDeleteGuestCodeRequest(): DeleteGuestCodeRequest {
+  return { code: "" };
+}
+
+export const DeleteGuestCodeRequest = {
+  encode(message: DeleteGuestCodeRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    if (message.code !== "") {
+      writer.uint32(10).string(message.code);
+    }
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteGuestCodeRequest {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseDeleteGuestCodeRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.code = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): DeleteGuestCodeRequest {
+    return { code: isSet(object.code) ? String(object.code) : "" };
+  },
+
+  toJSON(message: DeleteGuestCodeRequest): unknown {
+    const obj: any = {};
+    message.code !== undefined && (obj.code = message.code);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<DeleteGuestCodeRequest>): DeleteGuestCodeRequest {
+    const message = createBaseDeleteGuestCodeRequest();
+    message.code = object.code ?? "";
+    return message;
+  },
+};
+
+function createBaseDeleteGuestCodeResponse(): DeleteGuestCodeResponse {
+  return {};
+}
+
+export const DeleteGuestCodeResponse = {
+  encode(_: DeleteGuestCodeResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+    return writer;
+  },
+
+  decode(input: _m0.Reader | Uint8Array, length?: number): DeleteGuestCodeResponse {
+    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseDeleteGuestCodeResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(_: any): DeleteGuestCodeResponse {
+    return {};
+  },
+
+  toJSON(_: DeleteGuestCodeResponse): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  fromPartial(_: DeepPartial<DeleteGuestCodeResponse>): DeleteGuestCodeResponse {
+    const message = createBaseDeleteGuestCodeResponse();
     return message;
   },
 };
@@ -10992,10 +10155,7 @@ function createBaseJsonWebKey(): JsonWebKey {
 }
 
 export const JsonWebKey = {
-  encode(
-    message: JsonWebKey,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: JsonWebKey, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.alg !== "") {
       writer.uint32(10).string(message.alg);
     }
@@ -11089,17 +10249,11 @@ function createBaseGetJsonWebKeySetRequest(): GetJsonWebKeySetRequest {
 }
 
 export const GetJsonWebKeySetRequest = {
-  encode(
-    _: GetJsonWebKeySetRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: GetJsonWebKeySetRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetJsonWebKeySetRequest {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetJsonWebKeySetRequest {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetJsonWebKeySetRequest();
@@ -11123,9 +10277,7 @@ export const GetJsonWebKeySetRequest = {
     return obj;
   },
 
-  fromPartial(
-    _: DeepPartial<GetJsonWebKeySetRequest>
-  ): GetJsonWebKeySetRequest {
+  fromPartial(_: DeepPartial<GetJsonWebKeySetRequest>): GetJsonWebKeySetRequest {
     const message = createBaseGetJsonWebKeySetRequest();
     return message;
   },
@@ -11136,20 +10288,14 @@ function createBaseGetJsonWebKeySetResponse(): GetJsonWebKeySetResponse {
 }
 
 export const GetJsonWebKeySetResponse = {
-  encode(
-    message: GetJsonWebKeySetResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetJsonWebKeySetResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     for (const v of message.keys) {
       JsonWebKey.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetJsonWebKeySetResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetJsonWebKeySetResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetJsonWebKeySetResponse();
@@ -11168,28 +10314,20 @@ export const GetJsonWebKeySetResponse = {
   },
 
   fromJSON(object: any): GetJsonWebKeySetResponse {
-    return {
-      keys: Array.isArray(object?.keys)
-        ? object.keys.map((e: any) => JsonWebKey.fromJSON(e))
-        : [],
-    };
+    return { keys: Array.isArray(object?.keys) ? object.keys.map((e: any) => JsonWebKey.fromJSON(e)) : [] };
   },
 
   toJSON(message: GetJsonWebKeySetResponse): unknown {
     const obj: any = {};
     if (message.keys) {
-      obj.keys = message.keys.map((e) =>
-        e ? JsonWebKey.toJSON(e) : undefined
-      );
+      obj.keys = message.keys.map((e) => e ? JsonWebKey.toJSON(e) : undefined);
     } else {
       obj.keys = [];
     }
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<GetJsonWebKeySetResponse>
-  ): GetJsonWebKeySetResponse {
+  fromPartial(object: DeepPartial<GetJsonWebKeySetResponse>): GetJsonWebKeySetResponse {
     const message = createBaseGetJsonWebKeySetResponse();
     message.keys = object.keys?.map((e) => JsonWebKey.fromPartial(e)) || [];
     return message;
@@ -11201,10 +10339,7 @@ function createBaseGetTestTokenRequest(): GetTestTokenRequest {
 }
 
 export const GetTestTokenRequest = {
-  encode(
-    _: GetTestTokenRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(_: GetTestTokenRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     return writer;
   },
 
@@ -11243,20 +10378,14 @@ function createBaseGetTestTokenResponse(): GetTestTokenResponse {
 }
 
 export const GetTestTokenResponse = {
-  encode(
-    message: GetTestTokenResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: GetTestTokenResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.accessToken !== "") {
       writer.uint32(10).string(message.accessToken);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): GetTestTokenResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): GetTestTokenResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGetTestTokenResponse();
@@ -11275,15 +10404,12 @@ export const GetTestTokenResponse = {
   },
 
   fromJSON(object: any): GetTestTokenResponse {
-    return {
-      accessToken: isSet(object.accessToken) ? String(object.accessToken) : "",
-    };
+    return { accessToken: isSet(object.accessToken) ? String(object.accessToken) : "" };
   },
 
   toJSON(message: GetTestTokenResponse): unknown {
     const obj: any = {};
-    message.accessToken !== undefined &&
-      (obj.accessToken = message.accessToken);
+    message.accessToken !== undefined && (obj.accessToken = message.accessToken);
     return obj;
   },
 
@@ -11295,19 +10421,11 @@ export const GetTestTokenResponse = {
 };
 
 function createBaseDestinationCreateEvent(): DestinationCreateEvent {
-  return {
-    collectionId: "",
-    projectId: "",
-    destinationId: "",
-    destination: undefined,
-  };
+  return { collectionId: "", projectId: "", destinationId: "", destination: undefined };
 }
 
 export const DestinationCreateEvent = {
-  encode(
-    message: DestinationCreateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationCreateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11318,18 +10436,12 @@ export const DestinationCreateEvent = {
       writer.uint32(26).string(message.destinationId);
     }
     if (message.destination !== undefined) {
-      Destination.encode(
-        message.destination,
-        writer.uint32(34).fork()
-      ).ldelim();
+      Destination.encode(message.destination, writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DestinationCreateEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DestinationCreateEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDestinationCreateEvent();
@@ -11358,44 +10470,31 @@ export const DestinationCreateEvent = {
 
   fromJSON(object: any): DestinationCreateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
-      destination: isSet(object.destination)
-        ? Destination.fromJSON(object.destination)
-        : undefined,
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
+      destination: isSet(object.destination) ? Destination.fromJSON(object.destination) : undefined,
     };
   },
 
   toJSON(message: DestinationCreateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     message.destination !== undefined &&
-      (obj.destination = message.destination
-        ? Destination.toJSON(message.destination)
-        : undefined);
+      (obj.destination = message.destination ? Destination.toJSON(message.destination) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DestinationCreateEvent>
-  ): DestinationCreateEvent {
+  fromPartial(object: DeepPartial<DestinationCreateEvent>): DestinationCreateEvent {
     const message = createBaseDestinationCreateEvent();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.destinationId = object.destinationId ?? "";
-    message.destination =
-      object.destination !== undefined && object.destination !== null
-        ? Destination.fromPartial(object.destination)
-        : undefined;
+    message.destination = (object.destination !== undefined && object.destination !== null)
+      ? Destination.fromPartial(object.destination)
+      : undefined;
     return message;
   },
 };
@@ -11405,10 +10504,7 @@ function createBaseDestinationDeleteEvent(): DestinationDeleteEvent {
 }
 
 export const DestinationDeleteEvent = {
-  encode(
-    message: DestinationDeleteEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationDeleteEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11421,10 +10517,7 @@ export const DestinationDeleteEvent = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DestinationDeleteEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DestinationDeleteEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDestinationDeleteEvent();
@@ -11450,29 +10543,21 @@ export const DestinationDeleteEvent = {
 
   fromJSON(object: any): DestinationDeleteEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
     };
   },
 
   toJSON(message: DestinationDeleteEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DestinationDeleteEvent>
-  ): DestinationDeleteEvent {
+  fromPartial(object: DeepPartial<DestinationDeleteEvent>): DestinationDeleteEvent {
     const message = createBaseDestinationDeleteEvent();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -11482,20 +10567,11 @@ export const DestinationDeleteEvent = {
 };
 
 function createBaseDestinationUpdateEvent(): DestinationUpdateEvent {
-  return {
-    collectionId: "",
-    projectId: "",
-    destinationId: "",
-    updateMask: [],
-    destination: undefined,
-  };
+  return { collectionId: "", projectId: "", destinationId: "", updateMask: [], destination: undefined };
 }
 
 export const DestinationUpdateEvent = {
-  encode(
-    message: DestinationUpdateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationUpdateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11509,18 +10585,12 @@ export const DestinationUpdateEvent = {
       writer.uint32(34).string(v!);
     }
     if (message.destination !== undefined) {
-      Destination.encode(
-        message.destination,
-        writer.uint32(42).fork()
-      ).ldelim();
+      Destination.encode(message.destination, writer.uint32(42).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DestinationUpdateEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DestinationUpdateEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDestinationUpdateEvent();
@@ -11552,71 +10622,48 @@ export const DestinationUpdateEvent = {
 
   fromJSON(object: any): DestinationUpdateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
-      updateMask: Array.isArray(object?.updateMask)
-        ? object.updateMask.map((e: any) => String(e))
-        : [],
-      destination: isSet(object.destination)
-        ? Destination.fromJSON(object.destination)
-        : undefined,
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
+      updateMask: Array.isArray(object?.updateMask) ? object.updateMask.map((e: any) => String(e)) : [],
+      destination: isSet(object.destination) ? Destination.fromJSON(object.destination) : undefined,
     };
   },
 
   toJSON(message: DestinationUpdateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     if (message.updateMask) {
       obj.updateMask = message.updateMask.map((e) => e);
     } else {
       obj.updateMask = [];
     }
     message.destination !== undefined &&
-      (obj.destination = message.destination
-        ? Destination.toJSON(message.destination)
-        : undefined);
+      (obj.destination = message.destination ? Destination.toJSON(message.destination) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DestinationUpdateEvent>
-  ): DestinationUpdateEvent {
+  fromPartial(object: DeepPartial<DestinationUpdateEvent>): DestinationUpdateEvent {
     const message = createBaseDestinationUpdateEvent();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.destinationId = object.destinationId ?? "";
     message.updateMask = object.updateMask?.map((e) => e) || [];
-    message.destination =
-      object.destination !== undefined && object.destination !== null
-        ? Destination.fromPartial(object.destination)
-        : undefined;
+    message.destination = (object.destination !== undefined && object.destination !== null)
+      ? Destination.fromPartial(object.destination)
+      : undefined;
     return message;
   },
 };
 
 function createBaseDestinationStateEvent(): DestinationStateEvent {
-  return {
-    collectionId: "",
-    projectId: "",
-    destinationId: "",
-    connect: undefined,
-  };
+  return { collectionId: "", projectId: "", destinationId: "", connect: undefined };
 }
 
 export const DestinationStateEvent = {
-  encode(
-    message: DestinationStateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationStateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11632,10 +10679,7 @@ export const DestinationStateEvent = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): DestinationStateEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): DestinationStateEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseDestinationStateEvent();
@@ -11664,37 +10708,24 @@ export const DestinationStateEvent = {
 
   fromJSON(object: any): DestinationStateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      destinationId: isSet(object.destinationId)
-        ? String(object.destinationId)
-        : "",
-      connect: isSet(object.connect)
-        ? connectStateFromJSON(object.connect)
-        : undefined,
+      destinationId: isSet(object.destinationId) ? String(object.destinationId) : "",
+      connect: isSet(object.connect) ? connectStateFromJSON(object.connect) : undefined,
     };
   },
 
   toJSON(message: DestinationStateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.destinationId !== undefined &&
-      (obj.destinationId = message.destinationId);
+    message.destinationId !== undefined && (obj.destinationId = message.destinationId);
     message.connect !== undefined &&
-      (obj.connect =
-        message.connect !== undefined
-          ? connectStateToJSON(message.connect)
-          : undefined);
+      (obj.connect = message.connect !== undefined ? connectStateToJSON(message.connect) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<DestinationStateEvent>
-  ): DestinationStateEvent {
+  fromPartial(object: DeepPartial<DestinationStateEvent>): DestinationStateEvent {
     const message = createBaseDestinationStateEvent();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -11709,10 +10740,7 @@ function createBaseProjectCreateEvent(): ProjectCreateEvent {
 }
 
 export const ProjectCreateEvent = {
-  encode(
-    message: ProjectCreateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectCreateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11751,25 +10779,17 @@ export const ProjectCreateEvent = {
 
   fromJSON(object: any): ProjectCreateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
+      project: isSet(object.project) ? Project.fromJSON(object.project) : undefined,
     };
   },
 
   toJSON(message: ProjectCreateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
     return obj;
   },
 
@@ -11777,10 +10797,9 @@ export const ProjectCreateEvent = {
     const message = createBaseProjectCreateEvent();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     return message;
   },
 };
@@ -11790,10 +10809,7 @@ function createBaseProjectDeleteEvent(): ProjectDeleteEvent {
 }
 
 export const ProjectDeleteEvent = {
-  encode(
-    message: ProjectDeleteEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectDeleteEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11826,17 +10842,14 @@ export const ProjectDeleteEvent = {
 
   fromJSON(object: any): ProjectDeleteEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
     };
   },
 
   toJSON(message: ProjectDeleteEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     return obj;
   },
@@ -11850,19 +10863,11 @@ export const ProjectDeleteEvent = {
 };
 
 function createBaseProjectUpdateEvent(): ProjectUpdateEvent {
-  return {
-    collectionId: "",
-    projectId: "",
-    updateMask: [],
-    project: undefined,
-  };
+  return { collectionId: "", projectId: "", updateMask: [], project: undefined };
 }
 
 export const ProjectUpdateEvent = {
-  encode(
-    message: ProjectUpdateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectUpdateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11907,33 +10912,23 @@ export const ProjectUpdateEvent = {
 
   fromJSON(object: any): ProjectUpdateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
-      updateMask: Array.isArray(object?.updateMask)
-        ? object.updateMask.map((e: any) => String(e))
-        : [],
-      project: isSet(object.project)
-        ? Project.fromJSON(object.project)
-        : undefined,
+      updateMask: Array.isArray(object?.updateMask) ? object.updateMask.map((e: any) => String(e)) : [],
+      project: isSet(object.project) ? Project.fromJSON(object.project) : undefined,
     };
   },
 
   toJSON(message: ProjectUpdateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     if (message.updateMask) {
       obj.updateMask = message.updateMask.map((e) => e);
     } else {
       obj.updateMask = [];
     }
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? Project.toJSON(message.project)
-        : undefined);
+    message.project !== undefined && (obj.project = message.project ? Project.toJSON(message.project) : undefined);
     return obj;
   },
 
@@ -11942,29 +10937,19 @@ export const ProjectUpdateEvent = {
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
     message.updateMask = object.updateMask?.map((e) => e) || [];
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? Project.fromPartial(object.project)
-        : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? Project.fromPartial(object.project)
+      : undefined;
     return message;
   },
 };
 
 function createBaseProjectBroadcastStateEvent(): ProjectBroadcastStateEvent {
-  return {
-    collectionId: "",
-    projectId: "",
-    broadcastId: "",
-    phase: undefined,
-    error: undefined,
-  };
+  return { collectionId: "", projectId: "", broadcastId: "", phase: undefined, error: undefined };
 }
 
 export const ProjectBroadcastStateEvent = {
-  encode(
-    message: ProjectBroadcastStateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectBroadcastStateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -11983,10 +10968,7 @@ export const ProjectBroadcastStateEvent = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): ProjectBroadcastStateEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): ProjectBroadcastStateEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseProjectBroadcastStateEvent();
@@ -12018,43 +11000,27 @@ export const ProjectBroadcastStateEvent = {
 
   fromJSON(object: any): ProjectBroadcastStateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       broadcastId: isSet(object.broadcastId) ? String(object.broadcastId) : "",
-      phase: isSet(object.phase)
-        ? projectBroadcastPhaseFromJSON(object.phase)
-        : undefined,
-      error: isSet(object.error)
-        ? projectBroadcastErrorFromJSON(object.error)
-        : undefined,
+      phase: isSet(object.phase) ? projectBroadcastPhaseFromJSON(object.phase) : undefined,
+      error: isSet(object.error) ? projectBroadcastErrorFromJSON(object.error) : undefined,
     };
   },
 
   toJSON(message: ProjectBroadcastStateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.broadcastId !== undefined &&
-      (obj.broadcastId = message.broadcastId);
+    message.broadcastId !== undefined && (obj.broadcastId = message.broadcastId);
     message.phase !== undefined &&
-      (obj.phase =
-        message.phase !== undefined
-          ? projectBroadcastPhaseToJSON(message.phase)
-          : undefined);
+      (obj.phase = message.phase !== undefined ? projectBroadcastPhaseToJSON(message.phase) : undefined);
     message.error !== undefined &&
-      (obj.error =
-        message.error !== undefined
-          ? projectBroadcastErrorToJSON(message.error)
-          : undefined);
+      (obj.error = message.error !== undefined ? projectBroadcastErrorToJSON(message.error) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<ProjectBroadcastStateEvent>
-  ): ProjectBroadcastStateEvent {
+  fromPartial(object: DeepPartial<ProjectBroadcastStateEvent>): ProjectBroadcastStateEvent {
     const message = createBaseProjectBroadcastStateEvent();
     message.collectionId = object.collectionId ?? "";
     message.projectId = object.projectId ?? "";
@@ -12070,10 +11036,7 @@ function createBaseCollectionCreateEvent(): CollectionCreateEvent {
 }
 
 export const CollectionCreateEvent = {
-  encode(
-    message: CollectionCreateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CollectionCreateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12083,10 +11046,7 @@ export const CollectionCreateEvent = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CollectionCreateEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CollectionCreateEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCollectionCreateEvent();
@@ -12109,35 +11069,25 @@ export const CollectionCreateEvent = {
 
   fromJSON(object: any): CollectionCreateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
-      collection: isSet(object.collection)
-        ? Collection.fromJSON(object.collection)
-        : undefined,
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
+      collection: isSet(object.collection) ? Collection.fromJSON(object.collection) : undefined,
     };
   },
 
   toJSON(message: CollectionCreateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.collection !== undefined &&
-      (obj.collection = message.collection
-        ? Collection.toJSON(message.collection)
-        : undefined);
+      (obj.collection = message.collection ? Collection.toJSON(message.collection) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CollectionCreateEvent>
-  ): CollectionCreateEvent {
+  fromPartial(object: DeepPartial<CollectionCreateEvent>): CollectionCreateEvent {
     const message = createBaseCollectionCreateEvent();
     message.collectionId = object.collectionId ?? "";
-    message.collection =
-      object.collection !== undefined && object.collection !== null
-        ? Collection.fromPartial(object.collection)
-        : undefined;
+    message.collection = (object.collection !== undefined && object.collection !== null)
+      ? Collection.fromPartial(object.collection)
+      : undefined;
     return message;
   },
 };
@@ -12147,20 +11097,14 @@ function createBaseCollectionDeleteEvent(): CollectionDeleteEvent {
 }
 
 export const CollectionDeleteEvent = {
-  encode(
-    message: CollectionDeleteEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CollectionDeleteEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CollectionDeleteEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CollectionDeleteEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCollectionDeleteEvent();
@@ -12179,23 +11123,16 @@ export const CollectionDeleteEvent = {
   },
 
   fromJSON(object: any): CollectionDeleteEvent {
-    return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
-    };
+    return { collectionId: isSet(object.collectionId) ? String(object.collectionId) : "" };
   },
 
   toJSON(message: CollectionDeleteEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CollectionDeleteEvent>
-  ): CollectionDeleteEvent {
+  fromPartial(object: DeepPartial<CollectionDeleteEvent>): CollectionDeleteEvent {
     const message = createBaseCollectionDeleteEvent();
     message.collectionId = object.collectionId ?? "";
     return message;
@@ -12207,10 +11144,7 @@ function createBaseCollectionUpdateEvent(): CollectionUpdateEvent {
 }
 
 export const CollectionUpdateEvent = {
-  encode(
-    message: CollectionUpdateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CollectionUpdateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12223,10 +11157,7 @@ export const CollectionUpdateEvent = {
     return writer;
   },
 
-  decode(
-    input: _m0.Reader | Uint8Array,
-    length?: number
-  ): CollectionUpdateEvent {
+  decode(input: _m0.Reader | Uint8Array, length?: number): CollectionUpdateEvent {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseCollectionUpdateEvent();
@@ -12252,44 +11183,32 @@ export const CollectionUpdateEvent = {
 
   fromJSON(object: any): CollectionUpdateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
-      updateMask: Array.isArray(object?.updateMask)
-        ? object.updateMask.map((e: any) => String(e))
-        : [],
-      collection: isSet(object.collection)
-        ? Collection.fromJSON(object.collection)
-        : undefined,
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
+      updateMask: Array.isArray(object?.updateMask) ? object.updateMask.map((e: any) => String(e)) : [],
+      collection: isSet(object.collection) ? Collection.fromJSON(object.collection) : undefined,
     };
   },
 
   toJSON(message: CollectionUpdateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     if (message.updateMask) {
       obj.updateMask = message.updateMask.map((e) => e);
     } else {
       obj.updateMask = [];
     }
     message.collection !== undefined &&
-      (obj.collection = message.collection
-        ? Collection.toJSON(message.collection)
-        : undefined);
+      (obj.collection = message.collection ? Collection.toJSON(message.collection) : undefined);
     return obj;
   },
 
-  fromPartial(
-    object: DeepPartial<CollectionUpdateEvent>
-  ): CollectionUpdateEvent {
+  fromPartial(object: DeepPartial<CollectionUpdateEvent>): CollectionUpdateEvent {
     const message = createBaseCollectionUpdateEvent();
     message.collectionId = object.collectionId ?? "";
     message.updateMask = object.updateMask?.map((e) => e) || [];
-    message.collection =
-      object.collection !== undefined && object.collection !== null
-        ? Collection.fromPartial(object.collection)
-        : undefined;
+    message.collection = (object.collection !== undefined && object.collection !== null)
+      ? Collection.fromPartial(object.collection)
+      : undefined;
     return message;
   },
 };
@@ -12299,10 +11218,7 @@ function createBaseSourceCreateEvent(): SourceCreateEvent {
 }
 
 export const SourceCreateEvent = {
-  encode(
-    message: SourceCreateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceCreateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12341,9 +11257,7 @@ export const SourceCreateEvent = {
 
   fromJSON(object: any): SourceCreateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
       source: isSet(object.source) ? Source.fromJSON(object.source) : undefined,
     };
@@ -12351,11 +11265,9 @@ export const SourceCreateEvent = {
 
   toJSON(message: SourceCreateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
-    message.source !== undefined &&
-      (obj.source = message.source ? Source.toJSON(message.source) : undefined);
+    message.source !== undefined && (obj.source = message.source ? Source.toJSON(message.source) : undefined);
     return obj;
   },
 
@@ -12363,10 +11275,9 @@ export const SourceCreateEvent = {
     const message = createBaseSourceCreateEvent();
     message.collectionId = object.collectionId ?? "";
     message.sourceId = object.sourceId ?? "";
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? Source.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? Source.fromPartial(object.source)
+      : undefined;
     return message;
   },
 };
@@ -12376,10 +11287,7 @@ function createBaseSourceDeleteEvent(): SourceDeleteEvent {
 }
 
 export const SourceDeleteEvent = {
-  encode(
-    message: SourceDeleteEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceDeleteEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12412,17 +11320,14 @@ export const SourceDeleteEvent = {
 
   fromJSON(object: any): SourceDeleteEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
     };
   },
 
   toJSON(message: SourceDeleteEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     return obj;
   },
@@ -12440,10 +11345,7 @@ function createBaseSourceUpdateEvent(): SourceUpdateEvent {
 }
 
 export const SourceUpdateEvent = {
-  encode(
-    message: SourceUpdateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceUpdateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12488,29 +11390,23 @@ export const SourceUpdateEvent = {
 
   fromJSON(object: any): SourceUpdateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
-      updateMask: Array.isArray(object?.updateMask)
-        ? object.updateMask.map((e: any) => String(e))
-        : [],
+      updateMask: Array.isArray(object?.updateMask) ? object.updateMask.map((e: any) => String(e)) : [],
       source: isSet(object.source) ? Source.fromJSON(object.source) : undefined,
     };
   },
 
   toJSON(message: SourceUpdateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     if (message.updateMask) {
       obj.updateMask = message.updateMask.map((e) => e);
     } else {
       obj.updateMask = [];
     }
-    message.source !== undefined &&
-      (obj.source = message.source ? Source.toJSON(message.source) : undefined);
+    message.source !== undefined && (obj.source = message.source ? Source.toJSON(message.source) : undefined);
     return obj;
   },
 
@@ -12519,10 +11415,9 @@ export const SourceUpdateEvent = {
     message.collectionId = object.collectionId ?? "";
     message.sourceId = object.sourceId ?? "";
     message.updateMask = object.updateMask?.map((e) => e) || [];
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? Source.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? Source.fromPartial(object.source)
+      : undefined;
     return message;
   },
 };
@@ -12532,10 +11427,7 @@ function createBaseSourceAddEvent(): SourceAddEvent {
 }
 
 export const SourceAddEvent = {
-  encode(
-    message: SourceAddEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceAddEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12580,9 +11472,7 @@ export const SourceAddEvent = {
 
   fromJSON(object: any): SourceAddEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       source: isSet(object.source) ? Source.fromJSON(object.source) : undefined,
@@ -12591,12 +11481,10 @@ export const SourceAddEvent = {
 
   toJSON(message: SourceAddEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
-    message.source !== undefined &&
-      (obj.source = message.source ? Source.toJSON(message.source) : undefined);
+    message.source !== undefined && (obj.source = message.source ? Source.toJSON(message.source) : undefined);
     return obj;
   },
 
@@ -12605,10 +11493,9 @@ export const SourceAddEvent = {
     message.collectionId = object.collectionId ?? "";
     message.sourceId = object.sourceId ?? "";
     message.projectId = object.projectId ?? "";
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? Source.fromPartial(object.source)
-        : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? Source.fromPartial(object.source)
+      : undefined;
     return message;
   },
 };
@@ -12618,10 +11505,7 @@ function createBaseSourceRemoveEvent(): SourceRemoveEvent {
 }
 
 export const SourceRemoveEvent = {
-  encode(
-    message: SourceRemoveEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceRemoveEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12660,9 +11544,7 @@ export const SourceRemoveEvent = {
 
   fromJSON(object: any): SourceRemoveEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
     };
@@ -12670,8 +11552,7 @@ export const SourceRemoveEvent = {
 
   toJSON(message: SourceRemoveEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     return obj;
@@ -12691,10 +11572,7 @@ function createBaseSourceStateEvent(): SourceStateEvent {
 }
 
 export const SourceStateEvent = {
-  encode(
-    message: SourceStateEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceStateEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collectionId !== "") {
       writer.uint32(10).string(message.collectionId);
     }
@@ -12739,28 +11617,20 @@ export const SourceStateEvent = {
 
   fromJSON(object: any): SourceStateEvent {
     return {
-      collectionId: isSet(object.collectionId)
-        ? String(object.collectionId)
-        : "",
+      collectionId: isSet(object.collectionId) ? String(object.collectionId) : "",
       projectId: isSet(object.projectId) ? String(object.projectId) : "",
       sourceId: isSet(object.sourceId) ? String(object.sourceId) : "",
-      connect: isSet(object.connect)
-        ? connectStateFromJSON(object.connect)
-        : undefined,
+      connect: isSet(object.connect) ? connectStateFromJSON(object.connect) : undefined,
     };
   },
 
   toJSON(message: SourceStateEvent): unknown {
     const obj: any = {};
-    message.collectionId !== undefined &&
-      (obj.collectionId = message.collectionId);
+    message.collectionId !== undefined && (obj.collectionId = message.collectionId);
     message.projectId !== undefined && (obj.projectId = message.projectId);
     message.sourceId !== undefined && (obj.sourceId = message.sourceId);
     message.connect !== undefined &&
-      (obj.connect =
-        message.connect !== undefined
-          ? connectStateToJSON(message.connect)
-          : undefined);
+      (obj.connect = message.connect !== undefined ? connectStateToJSON(message.connect) : undefined);
     return obj;
   },
 
@@ -12779,27 +11649,15 @@ function createBaseCollectionEvent(): CollectionEvent {
 }
 
 export const CollectionEvent = {
-  encode(
-    message: CollectionEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: CollectionEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.create !== undefined) {
-      CollectionCreateEvent.encode(
-        message.create,
-        writer.uint32(10).fork()
-      ).ldelim();
+      CollectionCreateEvent.encode(message.create, writer.uint32(10).fork()).ldelim();
     }
     if (message.update !== undefined) {
-      CollectionUpdateEvent.encode(
-        message.update,
-        writer.uint32(18).fork()
-      ).ldelim();
+      CollectionUpdateEvent.encode(message.update, writer.uint32(18).fork()).ldelim();
     }
     if (message.delete !== undefined) {
-      CollectionDeleteEvent.encode(
-        message.delete,
-        writer.uint32(26).fork()
-      ).ldelim();
+      CollectionDeleteEvent.encode(message.delete, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -12812,22 +11670,13 @@ export const CollectionEvent = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.create = CollectionCreateEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.create = CollectionCreateEvent.decode(reader, reader.uint32());
           break;
         case 2:
-          message.update = CollectionUpdateEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.update = CollectionUpdateEvent.decode(reader, reader.uint32());
           break;
         case 3:
-          message.delete = CollectionDeleteEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.delete = CollectionDeleteEvent.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -12839,90 +11688,55 @@ export const CollectionEvent = {
 
   fromJSON(object: any): CollectionEvent {
     return {
-      create: isSet(object.create)
-        ? CollectionCreateEvent.fromJSON(object.create)
-        : undefined,
-      update: isSet(object.update)
-        ? CollectionUpdateEvent.fromJSON(object.update)
-        : undefined,
-      delete: isSet(object.delete)
-        ? CollectionDeleteEvent.fromJSON(object.delete)
-        : undefined,
+      create: isSet(object.create) ? CollectionCreateEvent.fromJSON(object.create) : undefined,
+      update: isSet(object.update) ? CollectionUpdateEvent.fromJSON(object.update) : undefined,
+      delete: isSet(object.delete) ? CollectionDeleteEvent.fromJSON(object.delete) : undefined,
     };
   },
 
   toJSON(message: CollectionEvent): unknown {
     const obj: any = {};
     message.create !== undefined &&
-      (obj.create = message.create
-        ? CollectionCreateEvent.toJSON(message.create)
-        : undefined);
+      (obj.create = message.create ? CollectionCreateEvent.toJSON(message.create) : undefined);
     message.update !== undefined &&
-      (obj.update = message.update
-        ? CollectionUpdateEvent.toJSON(message.update)
-        : undefined);
+      (obj.update = message.update ? CollectionUpdateEvent.toJSON(message.update) : undefined);
     message.delete !== undefined &&
-      (obj.delete = message.delete
-        ? CollectionDeleteEvent.toJSON(message.delete)
-        : undefined);
+      (obj.delete = message.delete ? CollectionDeleteEvent.toJSON(message.delete) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<CollectionEvent>): CollectionEvent {
     const message = createBaseCollectionEvent();
-    message.create =
-      object.create !== undefined && object.create !== null
-        ? CollectionCreateEvent.fromPartial(object.create)
-        : undefined;
-    message.update =
-      object.update !== undefined && object.update !== null
-        ? CollectionUpdateEvent.fromPartial(object.update)
-        : undefined;
-    message.delete =
-      object.delete !== undefined && object.delete !== null
-        ? CollectionDeleteEvent.fromPartial(object.delete)
-        : undefined;
+    message.create = (object.create !== undefined && object.create !== null)
+      ? CollectionCreateEvent.fromPartial(object.create)
+      : undefined;
+    message.update = (object.update !== undefined && object.update !== null)
+      ? CollectionUpdateEvent.fromPartial(object.update)
+      : undefined;
+    message.delete = (object.delete !== undefined && object.delete !== null)
+      ? CollectionDeleteEvent.fromPartial(object.delete)
+      : undefined;
     return message;
   },
 };
 
 function createBaseDestinationEvent(): DestinationEvent {
-  return {
-    create: undefined,
-    update: undefined,
-    delete: undefined,
-    state: undefined,
-  };
+  return { create: undefined, update: undefined, delete: undefined, state: undefined };
 }
 
 export const DestinationEvent = {
-  encode(
-    message: DestinationEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: DestinationEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.create !== undefined) {
-      DestinationCreateEvent.encode(
-        message.create,
-        writer.uint32(10).fork()
-      ).ldelim();
+      DestinationCreateEvent.encode(message.create, writer.uint32(10).fork()).ldelim();
     }
     if (message.update !== undefined) {
-      DestinationUpdateEvent.encode(
-        message.update,
-        writer.uint32(18).fork()
-      ).ldelim();
+      DestinationUpdateEvent.encode(message.update, writer.uint32(18).fork()).ldelim();
     }
     if (message.delete !== undefined) {
-      DestinationDeleteEvent.encode(
-        message.delete,
-        writer.uint32(26).fork()
-      ).ldelim();
+      DestinationDeleteEvent.encode(message.delete, writer.uint32(26).fork()).ldelim();
     }
     if (message.state !== undefined) {
-      DestinationStateEvent.encode(
-        message.state,
-        writer.uint32(34).fork()
-      ).ldelim();
+      DestinationStateEvent.encode(message.state, writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
@@ -12935,22 +11749,13 @@ export const DestinationEvent = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.create = DestinationCreateEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.create = DestinationCreateEvent.decode(reader, reader.uint32());
           break;
         case 2:
-          message.update = DestinationUpdateEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.update = DestinationUpdateEvent.decode(reader, reader.uint32());
           break;
         case 3:
-          message.delete = DestinationDeleteEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.delete = DestinationDeleteEvent.decode(reader, reader.uint32());
           break;
         case 4:
           message.state = DestinationStateEvent.decode(reader, reader.uint32());
@@ -12965,101 +11770,61 @@ export const DestinationEvent = {
 
   fromJSON(object: any): DestinationEvent {
     return {
-      create: isSet(object.create)
-        ? DestinationCreateEvent.fromJSON(object.create)
-        : undefined,
-      update: isSet(object.update)
-        ? DestinationUpdateEvent.fromJSON(object.update)
-        : undefined,
-      delete: isSet(object.delete)
-        ? DestinationDeleteEvent.fromJSON(object.delete)
-        : undefined,
-      state: isSet(object.state)
-        ? DestinationStateEvent.fromJSON(object.state)
-        : undefined,
+      create: isSet(object.create) ? DestinationCreateEvent.fromJSON(object.create) : undefined,
+      update: isSet(object.update) ? DestinationUpdateEvent.fromJSON(object.update) : undefined,
+      delete: isSet(object.delete) ? DestinationDeleteEvent.fromJSON(object.delete) : undefined,
+      state: isSet(object.state) ? DestinationStateEvent.fromJSON(object.state) : undefined,
     };
   },
 
   toJSON(message: DestinationEvent): unknown {
     const obj: any = {};
     message.create !== undefined &&
-      (obj.create = message.create
-        ? DestinationCreateEvent.toJSON(message.create)
-        : undefined);
+      (obj.create = message.create ? DestinationCreateEvent.toJSON(message.create) : undefined);
     message.update !== undefined &&
-      (obj.update = message.update
-        ? DestinationUpdateEvent.toJSON(message.update)
-        : undefined);
+      (obj.update = message.update ? DestinationUpdateEvent.toJSON(message.update) : undefined);
     message.delete !== undefined &&
-      (obj.delete = message.delete
-        ? DestinationDeleteEvent.toJSON(message.delete)
-        : undefined);
+      (obj.delete = message.delete ? DestinationDeleteEvent.toJSON(message.delete) : undefined);
     message.state !== undefined &&
-      (obj.state = message.state
-        ? DestinationStateEvent.toJSON(message.state)
-        : undefined);
+      (obj.state = message.state ? DestinationStateEvent.toJSON(message.state) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<DestinationEvent>): DestinationEvent {
     const message = createBaseDestinationEvent();
-    message.create =
-      object.create !== undefined && object.create !== null
-        ? DestinationCreateEvent.fromPartial(object.create)
-        : undefined;
-    message.update =
-      object.update !== undefined && object.update !== null
-        ? DestinationUpdateEvent.fromPartial(object.update)
-        : undefined;
-    message.delete =
-      object.delete !== undefined && object.delete !== null
-        ? DestinationDeleteEvent.fromPartial(object.delete)
-        : undefined;
-    message.state =
-      object.state !== undefined && object.state !== null
-        ? DestinationStateEvent.fromPartial(object.state)
-        : undefined;
+    message.create = (object.create !== undefined && object.create !== null)
+      ? DestinationCreateEvent.fromPartial(object.create)
+      : undefined;
+    message.update = (object.update !== undefined && object.update !== null)
+      ? DestinationUpdateEvent.fromPartial(object.update)
+      : undefined;
+    message.delete = (object.delete !== undefined && object.delete !== null)
+      ? DestinationDeleteEvent.fromPartial(object.delete)
+      : undefined;
+    message.state = (object.state !== undefined && object.state !== null)
+      ? DestinationStateEvent.fromPartial(object.state)
+      : undefined;
     return message;
   },
 };
 
 function createBaseProjectEvent(): ProjectEvent {
-  return {
-    create: undefined,
-    update: undefined,
-    delete: undefined,
-    state: undefined,
-  };
+  return { create: undefined, update: undefined, delete: undefined, state: undefined };
 }
 
 export const ProjectEvent = {
-  encode(
-    message: ProjectEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: ProjectEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.create !== undefined) {
-      ProjectCreateEvent.encode(
-        message.create,
-        writer.uint32(10).fork()
-      ).ldelim();
+      ProjectCreateEvent.encode(message.create, writer.uint32(10).fork()).ldelim();
     }
     if (message.update !== undefined) {
-      ProjectUpdateEvent.encode(
-        message.update,
-        writer.uint32(18).fork()
-      ).ldelim();
+      ProjectUpdateEvent.encode(message.update, writer.uint32(18).fork()).ldelim();
     }
     if (message.delete !== undefined) {
-      ProjectDeleteEvent.encode(
-        message.delete,
-        writer.uint32(26).fork()
-      ).ldelim();
+      ProjectDeleteEvent.encode(message.delete, writer.uint32(26).fork()).ldelim();
     }
     if (message.state !== undefined) {
-      ProjectBroadcastStateEvent.encode(
-        message.state,
-        writer.uint32(34).fork()
-      ).ldelim();
+      ProjectBroadcastStateEvent.encode(message.state, writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
@@ -13081,10 +11846,7 @@ export const ProjectEvent = {
           message.delete = ProjectDeleteEvent.decode(reader, reader.uint32());
           break;
         case 4:
-          message.state = ProjectBroadcastStateEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.state = ProjectBroadcastStateEvent.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -13096,60 +11858,40 @@ export const ProjectEvent = {
 
   fromJSON(object: any): ProjectEvent {
     return {
-      create: isSet(object.create)
-        ? ProjectCreateEvent.fromJSON(object.create)
-        : undefined,
-      update: isSet(object.update)
-        ? ProjectUpdateEvent.fromJSON(object.update)
-        : undefined,
-      delete: isSet(object.delete)
-        ? ProjectDeleteEvent.fromJSON(object.delete)
-        : undefined,
-      state: isSet(object.state)
-        ? ProjectBroadcastStateEvent.fromJSON(object.state)
-        : undefined,
+      create: isSet(object.create) ? ProjectCreateEvent.fromJSON(object.create) : undefined,
+      update: isSet(object.update) ? ProjectUpdateEvent.fromJSON(object.update) : undefined,
+      delete: isSet(object.delete) ? ProjectDeleteEvent.fromJSON(object.delete) : undefined,
+      state: isSet(object.state) ? ProjectBroadcastStateEvent.fromJSON(object.state) : undefined,
     };
   },
 
   toJSON(message: ProjectEvent): unknown {
     const obj: any = {};
     message.create !== undefined &&
-      (obj.create = message.create
-        ? ProjectCreateEvent.toJSON(message.create)
-        : undefined);
+      (obj.create = message.create ? ProjectCreateEvent.toJSON(message.create) : undefined);
     message.update !== undefined &&
-      (obj.update = message.update
-        ? ProjectUpdateEvent.toJSON(message.update)
-        : undefined);
+      (obj.update = message.update ? ProjectUpdateEvent.toJSON(message.update) : undefined);
     message.delete !== undefined &&
-      (obj.delete = message.delete
-        ? ProjectDeleteEvent.toJSON(message.delete)
-        : undefined);
+      (obj.delete = message.delete ? ProjectDeleteEvent.toJSON(message.delete) : undefined);
     message.state !== undefined &&
-      (obj.state = message.state
-        ? ProjectBroadcastStateEvent.toJSON(message.state)
-        : undefined);
+      (obj.state = message.state ? ProjectBroadcastStateEvent.toJSON(message.state) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<ProjectEvent>): ProjectEvent {
     const message = createBaseProjectEvent();
-    message.create =
-      object.create !== undefined && object.create !== null
-        ? ProjectCreateEvent.fromPartial(object.create)
-        : undefined;
-    message.update =
-      object.update !== undefined && object.update !== null
-        ? ProjectUpdateEvent.fromPartial(object.update)
-        : undefined;
-    message.delete =
-      object.delete !== undefined && object.delete !== null
-        ? ProjectDeleteEvent.fromPartial(object.delete)
-        : undefined;
-    message.state =
-      object.state !== undefined && object.state !== null
-        ? ProjectBroadcastStateEvent.fromPartial(object.state)
-        : undefined;
+    message.create = (object.create !== undefined && object.create !== null)
+      ? ProjectCreateEvent.fromPartial(object.create)
+      : undefined;
+    message.update = (object.update !== undefined && object.update !== null)
+      ? ProjectUpdateEvent.fromPartial(object.update)
+      : undefined;
+    message.delete = (object.delete !== undefined && object.delete !== null)
+      ? ProjectDeleteEvent.fromPartial(object.delete)
+      : undefined;
+    message.state = (object.state !== undefined && object.state !== null)
+      ? ProjectBroadcastStateEvent.fromPartial(object.state)
+      : undefined;
     return message;
   },
 };
@@ -13166,36 +11908,21 @@ function createBaseSourceEvent(): SourceEvent {
 }
 
 export const SourceEvent = {
-  encode(
-    message: SourceEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: SourceEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.create !== undefined) {
-      SourceCreateEvent.encode(
-        message.create,
-        writer.uint32(10).fork()
-      ).ldelim();
+      SourceCreateEvent.encode(message.create, writer.uint32(10).fork()).ldelim();
     }
     if (message.update !== undefined) {
-      SourceUpdateEvent.encode(
-        message.update,
-        writer.uint32(18).fork()
-      ).ldelim();
+      SourceUpdateEvent.encode(message.update, writer.uint32(18).fork()).ldelim();
     }
     if (message.delete !== undefined) {
-      SourceDeleteEvent.encode(
-        message.delete,
-        writer.uint32(26).fork()
-      ).ldelim();
+      SourceDeleteEvent.encode(message.delete, writer.uint32(26).fork()).ldelim();
     }
     if (message.add !== undefined) {
       SourceAddEvent.encode(message.add, writer.uint32(34).fork()).ldelim();
     }
     if (message.remove !== undefined) {
-      SourceDeleteEvent.encode(
-        message.remove,
-        writer.uint32(42).fork()
-      ).ldelim();
+      SourceDeleteEvent.encode(message.remove, writer.uint32(42).fork()).ldelim();
     }
     if (message.state !== undefined) {
       SourceStateEvent.encode(message.state, writer.uint32(50).fork()).ldelim();
@@ -13238,78 +11965,50 @@ export const SourceEvent = {
 
   fromJSON(object: any): SourceEvent {
     return {
-      create: isSet(object.create)
-        ? SourceCreateEvent.fromJSON(object.create)
-        : undefined,
-      update: isSet(object.update)
-        ? SourceUpdateEvent.fromJSON(object.update)
-        : undefined,
-      delete: isSet(object.delete)
-        ? SourceDeleteEvent.fromJSON(object.delete)
-        : undefined,
+      create: isSet(object.create) ? SourceCreateEvent.fromJSON(object.create) : undefined,
+      update: isSet(object.update) ? SourceUpdateEvent.fromJSON(object.update) : undefined,
+      delete: isSet(object.delete) ? SourceDeleteEvent.fromJSON(object.delete) : undefined,
       add: isSet(object.add) ? SourceAddEvent.fromJSON(object.add) : undefined,
-      remove: isSet(object.remove)
-        ? SourceDeleteEvent.fromJSON(object.remove)
-        : undefined,
-      state: isSet(object.state)
-        ? SourceStateEvent.fromJSON(object.state)
-        : undefined,
+      remove: isSet(object.remove) ? SourceDeleteEvent.fromJSON(object.remove) : undefined,
+      state: isSet(object.state) ? SourceStateEvent.fromJSON(object.state) : undefined,
     };
   },
 
   toJSON(message: SourceEvent): unknown {
     const obj: any = {};
     message.create !== undefined &&
-      (obj.create = message.create
-        ? SourceCreateEvent.toJSON(message.create)
-        : undefined);
+      (obj.create = message.create ? SourceCreateEvent.toJSON(message.create) : undefined);
     message.update !== undefined &&
-      (obj.update = message.update
-        ? SourceUpdateEvent.toJSON(message.update)
-        : undefined);
+      (obj.update = message.update ? SourceUpdateEvent.toJSON(message.update) : undefined);
     message.delete !== undefined &&
-      (obj.delete = message.delete
-        ? SourceDeleteEvent.toJSON(message.delete)
-        : undefined);
-    message.add !== undefined &&
-      (obj.add = message.add ? SourceAddEvent.toJSON(message.add) : undefined);
+      (obj.delete = message.delete ? SourceDeleteEvent.toJSON(message.delete) : undefined);
+    message.add !== undefined && (obj.add = message.add ? SourceAddEvent.toJSON(message.add) : undefined);
     message.remove !== undefined &&
-      (obj.remove = message.remove
-        ? SourceDeleteEvent.toJSON(message.remove)
-        : undefined);
-    message.state !== undefined &&
-      (obj.state = message.state
-        ? SourceStateEvent.toJSON(message.state)
-        : undefined);
+      (obj.remove = message.remove ? SourceDeleteEvent.toJSON(message.remove) : undefined);
+    message.state !== undefined && (obj.state = message.state ? SourceStateEvent.toJSON(message.state) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<SourceEvent>): SourceEvent {
     const message = createBaseSourceEvent();
-    message.create =
-      object.create !== undefined && object.create !== null
-        ? SourceCreateEvent.fromPartial(object.create)
-        : undefined;
-    message.update =
-      object.update !== undefined && object.update !== null
-        ? SourceUpdateEvent.fromPartial(object.update)
-        : undefined;
-    message.delete =
-      object.delete !== undefined && object.delete !== null
-        ? SourceDeleteEvent.fromPartial(object.delete)
-        : undefined;
-    message.add =
-      object.add !== undefined && object.add !== null
-        ? SourceAddEvent.fromPartial(object.add)
-        : undefined;
-    message.remove =
-      object.remove !== undefined && object.remove !== null
-        ? SourceDeleteEvent.fromPartial(object.remove)
-        : undefined;
-    message.state =
-      object.state !== undefined && object.state !== null
-        ? SourceStateEvent.fromPartial(object.state)
-        : undefined;
+    message.create = (object.create !== undefined && object.create !== null)
+      ? SourceCreateEvent.fromPartial(object.create)
+      : undefined;
+    message.update = (object.update !== undefined && object.update !== null)
+      ? SourceUpdateEvent.fromPartial(object.update)
+      : undefined;
+    message.delete = (object.delete !== undefined && object.delete !== null)
+      ? SourceDeleteEvent.fromPartial(object.delete)
+      : undefined;
+    message.add = (object.add !== undefined && object.add !== null)
+      ? SourceAddEvent.fromPartial(object.add)
+      : undefined;
+    message.remove = (object.remove !== undefined && object.remove !== null)
+      ? SourceDeleteEvent.fromPartial(object.remove)
+      : undefined;
+    message.state = (object.state !== undefined && object.state !== null)
+      ? SourceStateEvent.fromPartial(object.state)
+      : undefined;
     return message;
   },
 };
@@ -13325,21 +12024,12 @@ function createBaseLiveEvent(): LiveEvent {
 }
 
 export const LiveEvent = {
-  encode(
-    message: LiveEvent,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: LiveEvent, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.collection !== undefined) {
-      CollectionEvent.encode(
-        message.collection,
-        writer.uint32(10).fork()
-      ).ldelim();
+      CollectionEvent.encode(message.collection, writer.uint32(10).fork()).ldelim();
     }
     if (message.destination !== undefined) {
-      DestinationEvent.encode(
-        message.destination,
-        writer.uint32(18).fork()
-      ).ldelim();
+      DestinationEvent.encode(message.destination, writer.uint32(18).fork()).ldelim();
     }
     if (message.project !== undefined) {
       ProjectEvent.encode(message.project, writer.uint32(26).fork()).ldelim();
@@ -13364,10 +12054,7 @@ export const LiveEvent = {
           message.collection = CollectionEvent.decode(reader, reader.uint32());
           break;
         case 2:
-          message.destination = DestinationEvent.decode(
-            reader,
-            reader.uint32()
-          );
+          message.destination = DestinationEvent.decode(reader, reader.uint32());
           break;
         case 3:
           message.project = ProjectEvent.decode(reader, reader.uint32());
@@ -13388,68 +12075,41 @@ export const LiveEvent = {
 
   fromJSON(object: any): LiveEvent {
     return {
-      collection: isSet(object.collection)
-        ? CollectionEvent.fromJSON(object.collection)
-        : undefined,
-      destination: isSet(object.destination)
-        ? DestinationEvent.fromJSON(object.destination)
-        : undefined,
-      project: isSet(object.project)
-        ? ProjectEvent.fromJSON(object.project)
-        : undefined,
-      source: isSet(object.source)
-        ? SourceEvent.fromJSON(object.source)
-        : undefined,
-      unspecified: isSet(object.unspecified)
-        ? nullValueFromJSON(object.unspecified)
-        : undefined,
+      collection: isSet(object.collection) ? CollectionEvent.fromJSON(object.collection) : undefined,
+      destination: isSet(object.destination) ? DestinationEvent.fromJSON(object.destination) : undefined,
+      project: isSet(object.project) ? ProjectEvent.fromJSON(object.project) : undefined,
+      source: isSet(object.source) ? SourceEvent.fromJSON(object.source) : undefined,
+      unspecified: isSet(object.unspecified) ? nullValueFromJSON(object.unspecified) : undefined,
     };
   },
 
   toJSON(message: LiveEvent): unknown {
     const obj: any = {};
     message.collection !== undefined &&
-      (obj.collection = message.collection
-        ? CollectionEvent.toJSON(message.collection)
-        : undefined);
+      (obj.collection = message.collection ? CollectionEvent.toJSON(message.collection) : undefined);
     message.destination !== undefined &&
-      (obj.destination = message.destination
-        ? DestinationEvent.toJSON(message.destination)
-        : undefined);
-    message.project !== undefined &&
-      (obj.project = message.project
-        ? ProjectEvent.toJSON(message.project)
-        : undefined);
-    message.source !== undefined &&
-      (obj.source = message.source
-        ? SourceEvent.toJSON(message.source)
-        : undefined);
+      (obj.destination = message.destination ? DestinationEvent.toJSON(message.destination) : undefined);
+    message.project !== undefined && (obj.project = message.project ? ProjectEvent.toJSON(message.project) : undefined);
+    message.source !== undefined && (obj.source = message.source ? SourceEvent.toJSON(message.source) : undefined);
     message.unspecified !== undefined &&
-      (obj.unspecified =
-        message.unspecified !== undefined
-          ? nullValueToJSON(message.unspecified)
-          : undefined);
+      (obj.unspecified = message.unspecified !== undefined ? nullValueToJSON(message.unspecified) : undefined);
     return obj;
   },
 
   fromPartial(object: DeepPartial<LiveEvent>): LiveEvent {
     const message = createBaseLiveEvent();
-    message.collection =
-      object.collection !== undefined && object.collection !== null
-        ? CollectionEvent.fromPartial(object.collection)
-        : undefined;
-    message.destination =
-      object.destination !== undefined && object.destination !== null
-        ? DestinationEvent.fromPartial(object.destination)
-        : undefined;
-    message.project =
-      object.project !== undefined && object.project !== null
-        ? ProjectEvent.fromPartial(object.project)
-        : undefined;
-    message.source =
-      object.source !== undefined && object.source !== null
-        ? SourceEvent.fromPartial(object.source)
-        : undefined;
+    message.collection = (object.collection !== undefined && object.collection !== null)
+      ? CollectionEvent.fromPartial(object.collection)
+      : undefined;
+    message.destination = (object.destination !== undefined && object.destination !== null)
+      ? DestinationEvent.fromPartial(object.destination)
+      : undefined;
+    message.project = (object.project !== undefined && object.project !== null)
+      ? ProjectEvent.fromPartial(object.project)
+      : undefined;
+    message.source = (object.source !== undefined && object.source !== null)
+      ? SourceEvent.fromPartial(object.source)
+      : undefined;
     message.unspecified = object.unspecified ?? undefined;
     return message;
   },
@@ -13465,9 +12125,7 @@ export interface CollectionService {
    *
    * Create a new collection of related projects and collection live sources
    */
-  CreateCollection(
-    request: CreateCollectionRequest
-  ): Promise<CreateCollectionResponse>;
+  CreateCollection(request: CreateCollectionRequest): Promise<CreateCollectionResponse>;
   /**
    * Get Collection
    *
@@ -13480,30 +12138,26 @@ export interface CollectionService {
    *
    * Get all collections owned by the user
    */
-  GetCollections(
-    request: GetCollectionsRequest
-  ): Promise<GetCollectionsResponse>;
+  GetCollections(request: GetCollectionsRequest): Promise<GetCollectionsResponse>;
   /**
    * Update Collection
    *
    * Update select collection document data
    */
-  UpdateCollection(
-    request: UpdateCollectionRequest
-  ): Promise<UpdateCollectionResponse>;
+  UpdateCollection(request: UpdateCollectionRequest): Promise<UpdateCollectionResponse>;
   /**
    * Delete Collection
    *
    * Delete a collection of related projects and collection live sources
    */
-  DeleteCollection(
-    request: DeleteCollectionRequest
-  ): Promise<DeleteCollectionResponse>;
+  DeleteCollection(request: DeleteCollectionRequest): Promise<DeleteCollectionResponse>;
 }
 
 export class CollectionServiceClientImpl implements CollectionService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.CollectionService";
     this.rpc = rpc;
     this.CreateCollection = this.CreateCollection.bind(this);
     this.GetCollection = this.GetCollection.bind(this);
@@ -13511,72 +12165,34 @@ export class CollectionServiceClientImpl implements CollectionService {
     this.UpdateCollection = this.UpdateCollection.bind(this);
     this.DeleteCollection = this.DeleteCollection.bind(this);
   }
-  CreateCollection(
-    request: CreateCollectionRequest
-  ): Promise<CreateCollectionResponse> {
+  CreateCollection(request: CreateCollectionRequest): Promise<CreateCollectionResponse> {
     const data = CreateCollectionRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.CollectionService",
-      "CreateCollection",
-      data
-    );
-    return promise.then((data) =>
-      CreateCollectionResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateCollection", data);
+    return promise.then((data) => CreateCollectionResponse.decode(new _m0.Reader(data)));
   }
 
   GetCollection(request: GetCollectionRequest): Promise<GetCollectionResponse> {
     const data = GetCollectionRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.CollectionService",
-      "GetCollection",
-      data
-    );
-    return promise.then((data) =>
-      GetCollectionResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetCollection", data);
+    return promise.then((data) => GetCollectionResponse.decode(new _m0.Reader(data)));
   }
 
-  GetCollections(
-    request: GetCollectionsRequest
-  ): Promise<GetCollectionsResponse> {
+  GetCollections(request: GetCollectionsRequest): Promise<GetCollectionsResponse> {
     const data = GetCollectionsRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.CollectionService",
-      "GetCollections",
-      data
-    );
-    return promise.then((data) =>
-      GetCollectionsResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetCollections", data);
+    return promise.then((data) => GetCollectionsResponse.decode(new _m0.Reader(data)));
   }
 
-  UpdateCollection(
-    request: UpdateCollectionRequest
-  ): Promise<UpdateCollectionResponse> {
+  UpdateCollection(request: UpdateCollectionRequest): Promise<UpdateCollectionResponse> {
     const data = UpdateCollectionRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.CollectionService",
-      "UpdateCollection",
-      data
-    );
-    return promise.then((data) =>
-      UpdateCollectionResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "UpdateCollection", data);
+    return promise.then((data) => UpdateCollectionResponse.decode(new _m0.Reader(data)));
   }
 
-  DeleteCollection(
-    request: DeleteCollectionRequest
-  ): Promise<DeleteCollectionResponse> {
+  DeleteCollection(request: DeleteCollectionRequest): Promise<DeleteCollectionResponse> {
     const data = DeleteCollectionRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.CollectionService",
-      "DeleteCollection",
-      data
-    );
-    return promise.then((data) =>
-      DeleteCollectionResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "DeleteCollection", data);
+    return promise.then((data) => DeleteCollectionResponse.decode(new _m0.Reader(data)));
   }
 }
 
@@ -13584,6 +12200,7 @@ export class CollectionServiceClientImpl implements CollectionService {
  * The Collection Service operates on collections, which contain projects and
  * collection live sources used in projects.
  */
+export type CollectionServiceDefinition = typeof CollectionServiceDefinition;
 export const CollectionServiceDefinition = {
   name: "CollectionService",
   fullName: "live.v21.CollectionService",
@@ -13688,54 +12305,46 @@ export interface ProjectService {
    *
    * Start broadcasting a project
    */
-  StartProjectBroadcast(
-    request: StartProjectBroadcastRequest
-  ): Promise<StartProjectBroadcastResponse>;
+  StartProjectBroadcast(request: StartProjectBroadcastRequest): Promise<StartProjectBroadcastResponse>;
   /**
    * Stop Broadcast
    *
    * Stop broadcasting a project
    */
-  StopProjectBroadcast(
-    request: StopProjectBroadcastRequest
-  ): Promise<StopProjectBroadcastResponse>;
+  StopProjectBroadcast(request: StopProjectBroadcastRequest): Promise<StopProjectBroadcastResponse>;
   /**
    * Start WebRTC
    *
    * Start WebRTC services
    */
-  StartProjectWebRtc(
-    request: StartProjectWebRtcRequest
-  ): Promise<StartProjectWebRtcResponse>;
+  StartProjectWebRtc(request: StartProjectWebRtcRequest): Promise<StartProjectWebRtcResponse>;
   /**
    * Stop WebRTC
    *
    * Stop WebRTC services
    */
-  StopProjectWebRtc(
-    request: StopProjectWebRtcRequest
-  ): Promise<StopProjectWebRtcResponse>;
+  StopProjectWebRtc(request: StopProjectWebRtcRequest): Promise<StopProjectWebRtcResponse>;
   /**
    * Get Snapshot
    *
    * Get a snapshot of the current output frame of the broadcast
    */
   GetProjectBroadcastSnapshot(
-    request: GetProjectBroadcastSnapshotRequest
+    request: GetProjectBroadcastSnapshotRequest,
   ): Promise<GetProjectBroadcastSnapshotResponse>;
   /**
    * Get Broadcast Status
    *
    * Get the broadcast status of the project
    */
-  GetProjectBroadcastStatus(
-    request: GetProjectBroadcastStatusRequest
-  ): Promise<GetProjectBroadcastStatusResponse>;
+  GetProjectBroadcastStatus(request: GetProjectBroadcastStatusRequest): Promise<GetProjectBroadcastStatusResponse>;
 }
 
 export class ProjectServiceClientImpl implements ProjectService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.ProjectService";
     this.rpc = rpc;
     this.CreateProject = this.CreateProject.bind(this);
     this.GetProject = this.GetProject.bind(this);
@@ -13745,144 +12354,74 @@ export class ProjectServiceClientImpl implements ProjectService {
     this.StopProjectBroadcast = this.StopProjectBroadcast.bind(this);
     this.StartProjectWebRtc = this.StartProjectWebRtc.bind(this);
     this.StopProjectWebRtc = this.StopProjectWebRtc.bind(this);
-    this.GetProjectBroadcastSnapshot =
-      this.GetProjectBroadcastSnapshot.bind(this);
+    this.GetProjectBroadcastSnapshot = this.GetProjectBroadcastSnapshot.bind(this);
     this.GetProjectBroadcastStatus = this.GetProjectBroadcastStatus.bind(this);
   }
   CreateProject(request: CreateProjectRequest): Promise<CreateProjectResponse> {
     const data = CreateProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "CreateProject",
-      data
-    );
-    return promise.then((data) =>
-      CreateProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateProject", data);
+    return promise.then((data) => CreateProjectResponse.decode(new _m0.Reader(data)));
   }
 
   GetProject(request: GetProjectRequest): Promise<GetProjectResponse> {
     const data = GetProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "GetProject",
-      data
-    );
-    return promise.then((data) =>
-      GetProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetProject", data);
+    return promise.then((data) => GetProjectResponse.decode(new _m0.Reader(data)));
   }
 
   DeleteProject(request: DeleteProjectRequest): Promise<DeleteProjectResponse> {
     const data = DeleteProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "DeleteProject",
-      data
-    );
-    return promise.then((data) =>
-      DeleteProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "DeleteProject", data);
+    return promise.then((data) => DeleteProjectResponse.decode(new _m0.Reader(data)));
   }
 
   UpdateProject(request: UpdateProjectRequest): Promise<UpdateProjectResponse> {
     const data = UpdateProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "UpdateProject",
-      data
-    );
-    return promise.then((data) =>
-      UpdateProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "UpdateProject", data);
+    return promise.then((data) => UpdateProjectResponse.decode(new _m0.Reader(data)));
   }
 
-  StartProjectBroadcast(
-    request: StartProjectBroadcastRequest
-  ): Promise<StartProjectBroadcastResponse> {
+  StartProjectBroadcast(request: StartProjectBroadcastRequest): Promise<StartProjectBroadcastResponse> {
     const data = StartProjectBroadcastRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "StartProjectBroadcast",
-      data
-    );
-    return promise.then((data) =>
-      StartProjectBroadcastResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "StartProjectBroadcast", data);
+    return promise.then((data) => StartProjectBroadcastResponse.decode(new _m0.Reader(data)));
   }
 
-  StopProjectBroadcast(
-    request: StopProjectBroadcastRequest
-  ): Promise<StopProjectBroadcastResponse> {
+  StopProjectBroadcast(request: StopProjectBroadcastRequest): Promise<StopProjectBroadcastResponse> {
     const data = StopProjectBroadcastRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "StopProjectBroadcast",
-      data
-    );
-    return promise.then((data) =>
-      StopProjectBroadcastResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "StopProjectBroadcast", data);
+    return promise.then((data) => StopProjectBroadcastResponse.decode(new _m0.Reader(data)));
   }
 
-  StartProjectWebRtc(
-    request: StartProjectWebRtcRequest
-  ): Promise<StartProjectWebRtcResponse> {
+  StartProjectWebRtc(request: StartProjectWebRtcRequest): Promise<StartProjectWebRtcResponse> {
     const data = StartProjectWebRtcRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "StartProjectWebRtc",
-      data
-    );
-    return promise.then((data) =>
-      StartProjectWebRtcResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "StartProjectWebRtc", data);
+    return promise.then((data) => StartProjectWebRtcResponse.decode(new _m0.Reader(data)));
   }
 
-  StopProjectWebRtc(
-    request: StopProjectWebRtcRequest
-  ): Promise<StopProjectWebRtcResponse> {
+  StopProjectWebRtc(request: StopProjectWebRtcRequest): Promise<StopProjectWebRtcResponse> {
     const data = StopProjectWebRtcRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "StopProjectWebRtc",
-      data
-    );
-    return promise.then((data) =>
-      StopProjectWebRtcResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "StopProjectWebRtc", data);
+    return promise.then((data) => StopProjectWebRtcResponse.decode(new _m0.Reader(data)));
   }
 
   GetProjectBroadcastSnapshot(
-    request: GetProjectBroadcastSnapshotRequest
+    request: GetProjectBroadcastSnapshotRequest,
   ): Promise<GetProjectBroadcastSnapshotResponse> {
     const data = GetProjectBroadcastSnapshotRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "GetProjectBroadcastSnapshot",
-      data
-    );
-    return promise.then((data) =>
-      GetProjectBroadcastSnapshotResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetProjectBroadcastSnapshot", data);
+    return promise.then((data) => GetProjectBroadcastSnapshotResponse.decode(new _m0.Reader(data)));
   }
 
-  GetProjectBroadcastStatus(
-    request: GetProjectBroadcastStatusRequest
-  ): Promise<GetProjectBroadcastStatusResponse> {
+  GetProjectBroadcastStatus(request: GetProjectBroadcastStatusRequest): Promise<GetProjectBroadcastStatusResponse> {
     const data = GetProjectBroadcastStatusRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.ProjectService",
-      "GetProjectBroadcastStatus",
-      data
-    );
-    return promise.then((data) =>
-      GetProjectBroadcastStatusResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetProjectBroadcastStatus", data);
+    return promise.then((data) => GetProjectBroadcastStatusResponse.decode(new _m0.Reader(data)));
   }
 }
 
 /** The Project Service operates on a Project. */
+export type ProjectServiceDefinition = typeof ProjectServiceDefinition;
 export const ProjectServiceDefinition = {
   name: "ProjectService",
   fullName: "live.v21.ProjectService",
@@ -14031,98 +12570,60 @@ export interface DestinationService {
    *
    * Create a new Destination
    */
-  CreateDestination(
-    request: CreateDestinationRequest
-  ): Promise<CreateDestinationResponse>;
+  CreateDestination(request: CreateDestinationRequest): Promise<CreateDestinationResponse>;
   /**
    * Get Destination
    *
    * Get an existing Destination.
    */
-  GetDestination(
-    request: GetDestinationRequest
-  ): Promise<GetDestinationResponse>;
+  GetDestination(request: GetDestinationRequest): Promise<GetDestinationResponse>;
   /**
    * Update Destination
    *
    * Update a destination
    */
-  UpdateDestination(
-    request: UpdateDestinationRequest
-  ): Promise<UpdateDestinationResponse>;
+  UpdateDestination(request: UpdateDestinationRequest): Promise<UpdateDestinationResponse>;
   /**
    * Delete Destination
    *
    * Delete a destination
    */
-  DeleteDestination(
-    request: DeleteDestinationRequest
-  ): Promise<DeleteDestinationResponse>;
+  DeleteDestination(request: DeleteDestinationRequest): Promise<DeleteDestinationResponse>;
 }
 
 export class DestinationServiceClientImpl implements DestinationService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.DestinationService";
     this.rpc = rpc;
     this.CreateDestination = this.CreateDestination.bind(this);
     this.GetDestination = this.GetDestination.bind(this);
     this.UpdateDestination = this.UpdateDestination.bind(this);
     this.DeleteDestination = this.DeleteDestination.bind(this);
   }
-  CreateDestination(
-    request: CreateDestinationRequest
-  ): Promise<CreateDestinationResponse> {
+  CreateDestination(request: CreateDestinationRequest): Promise<CreateDestinationResponse> {
     const data = CreateDestinationRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.DestinationService",
-      "CreateDestination",
-      data
-    );
-    return promise.then((data) =>
-      CreateDestinationResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateDestination", data);
+    return promise.then((data) => CreateDestinationResponse.decode(new _m0.Reader(data)));
   }
 
-  GetDestination(
-    request: GetDestinationRequest
-  ): Promise<GetDestinationResponse> {
+  GetDestination(request: GetDestinationRequest): Promise<GetDestinationResponse> {
     const data = GetDestinationRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.DestinationService",
-      "GetDestination",
-      data
-    );
-    return promise.then((data) =>
-      GetDestinationResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetDestination", data);
+    return promise.then((data) => GetDestinationResponse.decode(new _m0.Reader(data)));
   }
 
-  UpdateDestination(
-    request: UpdateDestinationRequest
-  ): Promise<UpdateDestinationResponse> {
+  UpdateDestination(request: UpdateDestinationRequest): Promise<UpdateDestinationResponse> {
     const data = UpdateDestinationRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.DestinationService",
-      "UpdateDestination",
-      data
-    );
-    return promise.then((data) =>
-      UpdateDestinationResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "UpdateDestination", data);
+    return promise.then((data) => UpdateDestinationResponse.decode(new _m0.Reader(data)));
   }
 
-  DeleteDestination(
-    request: DeleteDestinationRequest
-  ): Promise<DeleteDestinationResponse> {
+  DeleteDestination(request: DeleteDestinationRequest): Promise<DeleteDestinationResponse> {
     const data = DeleteDestinationRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.DestinationService",
-      "DeleteDestination",
-      data
-    );
-    return promise.then((data) =>
-      DeleteDestinationResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "DeleteDestination", data);
+    return promise.then((data) => DeleteDestinationResponse.decode(new _m0.Reader(data)));
   }
 }
 
@@ -14131,6 +12632,7 @@ export class DestinationServiceClientImpl implements DestinationService {
  * designate where a Broadcast associated with a Project is distributed
  * downstream.
  */
+export type DestinationServiceDefinition = typeof DestinationServiceDefinition;
 export const DestinationServiceDefinition = {
   name: "DestinationService",
   fullName: "live.v21.DestinationService",
@@ -14217,9 +12719,7 @@ export interface SourceService {
    *
    * Update attributes of the Source.
    */
-  UpdateSourceInProject(
-    request: UpdateSourceInProjectRequest
-  ): Promise<UpdateSourceInProjectResponse>;
+  UpdateSourceInProject(request: UpdateSourceInProjectRequest): Promise<UpdateSourceInProjectResponse>;
   /**
    * Get Source
    *
@@ -14237,22 +12737,20 @@ export interface SourceService {
    *
    * Add a source to a project
    */
-  AddSourceToProject(
-    request: AddSourceToProjectRequest
-  ): Promise<AddSourceToProjectResponse>;
+  AddSourceToProject(request: AddSourceToProjectRequest): Promise<AddSourceToProjectResponse>;
   /**
    * Delete Source From Project
    *
    * Removes a source from a project.
    */
-  RemoveSourceFromProject(
-    request: RemoveSourceFromProjectRequest
-  ): Promise<RemoveSourceFromProjectResponse>;
+  RemoveSourceFromProject(request: RemoveSourceFromProjectRequest): Promise<RemoveSourceFromProjectResponse>;
 }
 
 export class SourceServiceClientImpl implements SourceService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.SourceService";
     this.rpc = rpc;
     this.CreateSource = this.CreateSource.bind(this);
     this.DeleteSource = this.DeleteSource.bind(this);
@@ -14265,108 +12763,55 @@ export class SourceServiceClientImpl implements SourceService {
   }
   CreateSource(request: CreateSourceRequest): Promise<CreateSourceResponse> {
     const data = CreateSourceRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "CreateSource",
-      data
-    );
-    return promise.then((data) =>
-      CreateSourceResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateSource", data);
+    return promise.then((data) => CreateSourceResponse.decode(new _m0.Reader(data)));
   }
 
   DeleteSource(request: DeleteSourceRequest): Promise<DeleteSourceResponse> {
     const data = DeleteSourceRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "DeleteSource",
-      data
-    );
-    return promise.then((data) =>
-      DeleteSourceResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "DeleteSource", data);
+    return promise.then((data) => DeleteSourceResponse.decode(new _m0.Reader(data)));
   }
 
   UpdateSource(request: UpdateSourceRequest): Promise<UpdateSourceResponse> {
     const data = UpdateSourceRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "UpdateSource",
-      data
-    );
-    return promise.then((data) =>
-      UpdateSourceResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "UpdateSource", data);
+    return promise.then((data) => UpdateSourceResponse.decode(new _m0.Reader(data)));
   }
 
-  UpdateSourceInProject(
-    request: UpdateSourceInProjectRequest
-  ): Promise<UpdateSourceInProjectResponse> {
+  UpdateSourceInProject(request: UpdateSourceInProjectRequest): Promise<UpdateSourceInProjectResponse> {
     const data = UpdateSourceInProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "UpdateSourceInProject",
-      data
-    );
-    return promise.then((data) =>
-      UpdateSourceInProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "UpdateSourceInProject", data);
+    return promise.then((data) => UpdateSourceInProjectResponse.decode(new _m0.Reader(data)));
   }
 
   GetSource(request: GetSourceRequest): Promise<GetSourceResponse> {
     const data = GetSourceRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "GetSource",
-      data
-    );
-    return promise.then((data) =>
-      GetSourceResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetSource", data);
+    return promise.then((data) => GetSourceResponse.decode(new _m0.Reader(data)));
   }
 
   GetSources(request: GetSourcesRequest): Promise<GetSourcesResponse> {
     const data = GetSourcesRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "GetSources",
-      data
-    );
-    return promise.then((data) =>
-      GetSourcesResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetSources", data);
+    return promise.then((data) => GetSourcesResponse.decode(new _m0.Reader(data)));
   }
 
-  AddSourceToProject(
-    request: AddSourceToProjectRequest
-  ): Promise<AddSourceToProjectResponse> {
+  AddSourceToProject(request: AddSourceToProjectRequest): Promise<AddSourceToProjectResponse> {
     const data = AddSourceToProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "AddSourceToProject",
-      data
-    );
-    return promise.then((data) =>
-      AddSourceToProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "AddSourceToProject", data);
+    return promise.then((data) => AddSourceToProjectResponse.decode(new _m0.Reader(data)));
   }
 
-  RemoveSourceFromProject(
-    request: RemoveSourceFromProjectRequest
-  ): Promise<RemoveSourceFromProjectResponse> {
+  RemoveSourceFromProject(request: RemoveSourceFromProjectRequest): Promise<RemoveSourceFromProjectResponse> {
     const data = RemoveSourceFromProjectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.SourceService",
-      "RemoveSourceFromProject",
-      data
-    );
-    return promise.then((data) =>
-      RemoveSourceFromProjectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "RemoveSourceFromProject", data);
+    return promise.then((data) => RemoveSourceFromProjectResponse.decode(new _m0.Reader(data)));
   }
 }
 
 /** The Source Service operates on Collection Live Sources and Project Sources. */
+export type SourceServiceDefinition = typeof SourceServiceDefinition;
 export const SourceServiceDefinition = {
   name: "SourceService",
   fullName: "live.v21.SourceService",
@@ -14490,31 +12935,21 @@ export interface BackendAuthenticationService {
    *
    * Create an access token for a session host
    */
-  CreateAccessToken(
-    request: CreateAccessTokenRequest
-  ): Promise<CreateAccessTokenResponse>;
+  CreateAccessToken(request: CreateAccessTokenRequest): Promise<CreateAccessTokenResponse>;
 }
 
-export class BackendAuthenticationServiceClientImpl
-  implements BackendAuthenticationService
-{
+export class BackendAuthenticationServiceClientImpl implements BackendAuthenticationService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.BackendAuthenticationService";
     this.rpc = rpc;
     this.CreateAccessToken = this.CreateAccessToken.bind(this);
   }
-  CreateAccessToken(
-    request: CreateAccessTokenRequest
-  ): Promise<CreateAccessTokenResponse> {
+  CreateAccessToken(request: CreateAccessTokenRequest): Promise<CreateAccessTokenResponse> {
     const data = CreateAccessTokenRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.BackendAuthenticationService",
-      "CreateAccessToken",
-      data
-    );
-    return promise.then((data) =>
-      CreateAccessTokenResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateAccessToken", data);
+    return promise.then((data) => CreateAccessTokenResponse.decode(new _m0.Reader(data)));
   }
 }
 
@@ -14522,6 +12957,7 @@ export class BackendAuthenticationServiceClientImpl
  * The Backend Authentication Service provides token services for partner
  * backend systems
  */
+export type BackendAuthenticationServiceDefinition = typeof BackendAuthenticationServiceDefinition;
 export const BackendAuthenticationServiceDefinition = {
   name: "BackendAuthenticationService",
   fullName: "live.v21.BackendAuthenticationService",
@@ -14549,79 +12985,91 @@ export interface AuthenticationService {
    *
    * Create an access token for a guest
    */
-  CreateGuestAccessToken(
-    request: CreateGuestAccessTokenRequest
-  ): Promise<CreateGuestAccessTokenResponse>;
+  CreateGuestAccessToken(request: CreateGuestAccessTokenRequest): Promise<CreateGuestAccessTokenResponse>;
+  /**
+   * Get Guest code
+   *
+   * Get an existing guest code
+   */
+  GetGuestCode(request: GetGuestCodeRequest): Promise<GetGuestCodeResponse>;
+  /**
+   * Get Guest Codes
+   *
+   * Get all guest codes owned by the user, optionally associated with a collection or project.
+   */
+  GetGuestCodes(request: GetGuestCodesRequest): Promise<GetGuestCodesResponse>;
+  /**
+   * Delete Guest Code
+   *
+   * Delete a guest code
+   */
+  DeleteGuestCode(request: DeleteGuestCodeRequest): Promise<DeleteGuestCodeResponse>;
   /**
    * Refresh Access Token
    *
    * Forcibly refresh an access token prior to expiration
    */
-  RefreshAccessToken(
-    request: RefreshAccessTokenRequest
-  ): Promise<RefreshAccessTokenResponse>;
+  RefreshAccessToken(request: RefreshAccessTokenRequest): Promise<RefreshAccessTokenResponse>;
   /**
    * Create WebRTC Access Token
    *
    * Create a WebRTC Access Token
    */
-  CreateWebRtcAccessToken(
-    request: CreateWebRtcAccessTokenRequest
-  ): Promise<CreateWebRtcAccessTokenResponse>;
+  CreateWebRtcAccessToken(request: CreateWebRtcAccessTokenRequest): Promise<CreateWebRtcAccessTokenResponse>;
 }
 
 export class AuthenticationServiceClientImpl implements AuthenticationService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.AuthenticationService";
     this.rpc = rpc;
     this.CreateGuestAccessToken = this.CreateGuestAccessToken.bind(this);
+    this.GetGuestCode = this.GetGuestCode.bind(this);
+    this.GetGuestCodes = this.GetGuestCodes.bind(this);
+    this.DeleteGuestCode = this.DeleteGuestCode.bind(this);
     this.RefreshAccessToken = this.RefreshAccessToken.bind(this);
     this.CreateWebRtcAccessToken = this.CreateWebRtcAccessToken.bind(this);
   }
-  CreateGuestAccessToken(
-    request: CreateGuestAccessTokenRequest
-  ): Promise<CreateGuestAccessTokenResponse> {
+  CreateGuestAccessToken(request: CreateGuestAccessTokenRequest): Promise<CreateGuestAccessTokenResponse> {
     const data = CreateGuestAccessTokenRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.AuthenticationService",
-      "CreateGuestAccessToken",
-      data
-    );
-    return promise.then((data) =>
-      CreateGuestAccessTokenResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateGuestAccessToken", data);
+    return promise.then((data) => CreateGuestAccessTokenResponse.decode(new _m0.Reader(data)));
   }
 
-  RefreshAccessToken(
-    request: RefreshAccessTokenRequest
-  ): Promise<RefreshAccessTokenResponse> {
+  GetGuestCode(request: GetGuestCodeRequest): Promise<GetGuestCodeResponse> {
+    const data = GetGuestCodeRequest.encode(request).finish();
+    const promise = this.rpc.request(this.service, "GetGuestCode", data);
+    return promise.then((data) => GetGuestCodeResponse.decode(new _m0.Reader(data)));
+  }
+
+  GetGuestCodes(request: GetGuestCodesRequest): Promise<GetGuestCodesResponse> {
+    const data = GetGuestCodesRequest.encode(request).finish();
+    const promise = this.rpc.request(this.service, "GetGuestCodes", data);
+    return promise.then((data) => GetGuestCodesResponse.decode(new _m0.Reader(data)));
+  }
+
+  DeleteGuestCode(request: DeleteGuestCodeRequest): Promise<DeleteGuestCodeResponse> {
+    const data = DeleteGuestCodeRequest.encode(request).finish();
+    const promise = this.rpc.request(this.service, "DeleteGuestCode", data);
+    return promise.then((data) => DeleteGuestCodeResponse.decode(new _m0.Reader(data)));
+  }
+
+  RefreshAccessToken(request: RefreshAccessTokenRequest): Promise<RefreshAccessTokenResponse> {
     const data = RefreshAccessTokenRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.AuthenticationService",
-      "RefreshAccessToken",
-      data
-    );
-    return promise.then((data) =>
-      RefreshAccessTokenResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "RefreshAccessToken", data);
+    return promise.then((data) => RefreshAccessTokenResponse.decode(new _m0.Reader(data)));
   }
 
-  CreateWebRtcAccessToken(
-    request: CreateWebRtcAccessTokenRequest
-  ): Promise<CreateWebRtcAccessTokenResponse> {
+  CreateWebRtcAccessToken(request: CreateWebRtcAccessTokenRequest): Promise<CreateWebRtcAccessTokenResponse> {
     const data = CreateWebRtcAccessTokenRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.AuthenticationService",
-      "CreateWebRtcAccessToken",
-      data
-    );
-    return promise.then((data) =>
-      CreateWebRtcAccessTokenResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "CreateWebRtcAccessToken", data);
+    return promise.then((data) => CreateWebRtcAccessTokenResponse.decode(new _m0.Reader(data)));
   }
 }
 
 /** The Authentication Service provides token services for clients */
+export type AuthenticationServiceDefinition = typeof AuthenticationServiceDefinition;
 export const AuthenticationServiceDefinition = {
   name: "AuthenticationService",
   fullName: "live.v21.AuthenticationService",
@@ -14636,6 +13084,45 @@ export const AuthenticationServiceDefinition = {
       requestType: CreateGuestAccessTokenRequest,
       requestStream: false,
       responseType: CreateGuestAccessTokenResponse,
+      responseStream: false,
+      options: {},
+    },
+    /**
+     * Get Guest code
+     *
+     * Get an existing guest code
+     */
+    getGuestCode: {
+      name: "GetGuestCode",
+      requestType: GetGuestCodeRequest,
+      requestStream: false,
+      responseType: GetGuestCodeResponse,
+      responseStream: false,
+      options: {},
+    },
+    /**
+     * Get Guest Codes
+     *
+     * Get all guest codes owned by the user, optionally associated with a collection or project.
+     */
+    getGuestCodes: {
+      name: "GetGuestCodes",
+      requestType: GetGuestCodesRequest,
+      requestStream: false,
+      responseType: GetGuestCodesResponse,
+      responseStream: false,
+      options: {},
+    },
+    /**
+     * Delete Guest Code
+     *
+     * Delete a guest code
+     */
+    deleteGuestCode: {
+      name: "DeleteGuestCode",
+      requestType: DeleteGuestCodeRequest,
+      requestStream: false,
+      responseType: DeleteGuestCodeResponse,
       responseStream: false,
       options: {},
     },
@@ -14675,58 +13162,52 @@ export interface PublicAuthenticationService {
    *
    * Get public keys used to sign access tokens
    */
-  GetJsonWebKeySet(
-    request: GetJsonWebKeySetRequest
-  ): Promise<GetJsonWebKeySetResponse>;
+  GetJsonWebKeySet(request: GetJsonWebKeySetRequest): Promise<GetJsonWebKeySetResponse>;
   /**
    * Exchange Guest Access Token
    *
    * Exchange a guest access token with updated user identifiers
    */
-  GuestCodeRedirect(
-    request: GuestCodeRedirectRequest
-  ): Promise<GuestCodeRedirectResponse>;
+  GuestCodeRedirect(request: GuestCodeRedirectRequest): Promise<GuestCodeRedirectResponse>;
+  /**
+   * Exchange Guest Code
+   *
+   * Exchange a guest code token for an access token.
+   */
+  UseGuestCode(request: UseGuestCodeRequest): Promise<UseGuestCodeResponse>;
 }
 
-export class PublicAuthenticationServiceClientImpl
-  implements PublicAuthenticationService
-{
+export class PublicAuthenticationServiceClientImpl implements PublicAuthenticationService {
   private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
+  private readonly service: string;
+  constructor(rpc: Rpc, opts?: { service?: string }) {
+    this.service = opts?.service || "live.v21.PublicAuthenticationService";
     this.rpc = rpc;
     this.GetJsonWebKeySet = this.GetJsonWebKeySet.bind(this);
     this.GuestCodeRedirect = this.GuestCodeRedirect.bind(this);
+    this.UseGuestCode = this.UseGuestCode.bind(this);
   }
-  GetJsonWebKeySet(
-    request: GetJsonWebKeySetRequest
-  ): Promise<GetJsonWebKeySetResponse> {
+  GetJsonWebKeySet(request: GetJsonWebKeySetRequest): Promise<GetJsonWebKeySetResponse> {
     const data = GetJsonWebKeySetRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.PublicAuthenticationService",
-      "GetJsonWebKeySet",
-      data
-    );
-    return promise.then((data) =>
-      GetJsonWebKeySetResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GetJsonWebKeySet", data);
+    return promise.then((data) => GetJsonWebKeySetResponse.decode(new _m0.Reader(data)));
   }
 
-  GuestCodeRedirect(
-    request: GuestCodeRedirectRequest
-  ): Promise<GuestCodeRedirectResponse> {
+  GuestCodeRedirect(request: GuestCodeRedirectRequest): Promise<GuestCodeRedirectResponse> {
     const data = GuestCodeRedirectRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "live.v21.PublicAuthenticationService",
-      "GuestCodeRedirect",
-      data
-    );
-    return promise.then((data) =>
-      GuestCodeRedirectResponse.decode(new _m0.Reader(data))
-    );
+    const promise = this.rpc.request(this.service, "GuestCodeRedirect", data);
+    return promise.then((data) => GuestCodeRedirectResponse.decode(new _m0.Reader(data)));
+  }
+
+  UseGuestCode(request: UseGuestCodeRequest): Promise<UseGuestCodeResponse> {
+    const data = UseGuestCodeRequest.encode(request).finish();
+    const promise = this.rpc.request(this.service, "UseGuestCode", data);
+    return promise.then((data) => UseGuestCodeResponse.decode(new _m0.Reader(data)));
   }
 }
 
 /** The Public Authentication Service provides token verification services */
+export type PublicAuthenticationServiceDefinition = typeof PublicAuthenticationServiceDefinition;
 export const PublicAuthenticationServiceDefinition = {
   name: "PublicAuthenticationService",
   fullName: "live.v21.PublicAuthenticationService",
@@ -14757,68 +13238,75 @@ export const PublicAuthenticationServiceDefinition = {
       responseStream: false,
       options: {},
     },
+    /**
+     * Exchange Guest Code
+     *
+     * Exchange a guest code token for an access token.
+     */
+    useGuestCode: {
+      name: "UseGuestCode",
+      requestType: UseGuestCodeRequest,
+      requestStream: false,
+      responseType: UseGuestCodeResponse,
+      responseStream: false,
+      options: {},
+    },
   },
 } as const;
 
 interface Rpc {
-  request(
-    service: string,
-    method: string,
-    data: Uint8Array
-  ): Promise<Uint8Array>;
+  request(service: string, method: string, data: Uint8Array): Promise<Uint8Array>;
 }
 
 declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
 var globalThis: any = (() => {
-  if (typeof globalThis !== "undefined") return globalThis;
-  if (typeof self !== "undefined") return self;
-  if (typeof window !== "undefined") return window;
-  if (typeof global !== "undefined") return global;
+  if (typeof globalThis !== "undefined") {
+    return globalThis;
+  }
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
   throw "Unable to locate global object";
 })();
 
-const atob: (b64: string) => string =
-  globalThis.atob ||
-  ((b64) => globalThis.Buffer.from(b64, "base64").toString("binary"));
 function bytesFromBase64(b64: string): Uint8Array {
-  const bin = atob(b64);
-  const arr = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; ++i) {
-    arr[i] = bin.charCodeAt(i);
+  if (globalThis.Buffer) {
+    return Uint8Array.from(globalThis.Buffer.from(b64, "base64"));
+  } else {
+    const bin = globalThis.atob(b64);
+    const arr = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; ++i) {
+      arr[i] = bin.charCodeAt(i);
+    }
+    return arr;
   }
-  return arr;
 }
 
-const btoa: (bin: string) => string =
-  globalThis.btoa ||
-  ((bin) => globalThis.Buffer.from(bin, "binary").toString("base64"));
 function base64FromBytes(arr: Uint8Array): string {
-  const bin: string[] = [];
-  arr.forEach((byte) => {
-    bin.push(String.fromCharCode(byte));
-  });
-  return btoa(bin.join(""));
+  if (globalThis.Buffer) {
+    return globalThis.Buffer.from(arr).toString("base64");
+  } else {
+    const bin: string[] = [];
+    arr.forEach((byte) => {
+      bin.push(String.fromCharCode(byte));
+    });
+    return globalThis.btoa(bin.join(""));
+  }
 }
 
-type Builtin =
-  | Date
-  | Function
-  | Uint8Array
-  | string
-  | number
-  | boolean
-  | undefined;
+type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
-export type DeepPartial<T> = T extends Builtin
-  ? T
-  : T extends Array<infer U>
-  ? Array<DeepPartial<U>>
-  : T extends ReadonlyArray<infer U>
-  ? ReadonlyArray<DeepPartial<U>>
-  : T extends {}
-  ? { [K in keyof T]?: DeepPartial<T[K]> }
+export type DeepPartial<T> = T extends Builtin ? T
+  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
+  : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
 
 function toTimestamp(dateStr: string): Timestamp {
@@ -14832,11 +13320,6 @@ function fromTimestamp(t: Timestamp): string {
   let millis = t.seconds * 1_000;
   millis += t.nanos / 1_000_000;
   return new Date(millis).toISOString();
-}
-
-if (_m0.util.Long !== Long) {
-  _m0.util.Long = Long as any;
-  _m0.configure();
 }
 
 function isSet(value: any): boolean {

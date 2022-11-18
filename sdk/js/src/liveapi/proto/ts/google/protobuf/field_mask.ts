@@ -3,8 +3,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * -------------------------------------------------------------------------------------------- */
 /* eslint-disable */
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
+import _m0 from "protobufjs/minimal";
 
 export const protobufPackage = "google.protobuf";
 
@@ -42,7 +41,6 @@ export const protobufPackage = "google.protobuf";
  * The result will not contain specific values for fields x,y and z
  * (their value will be set to the default, and omitted in proto text
  * output):
- *
  *
  *     f {
  *       a : 22
@@ -219,10 +217,7 @@ function createBaseFieldMask(): FieldMask {
 }
 
 export const FieldMask = {
-  encode(
-    message: FieldMask,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: FieldMask, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     for (const v of message.paths) {
       writer.uint32(10).string(v!);
     }
@@ -249,12 +244,11 @@ export const FieldMask = {
 
   fromJSON(object: any): FieldMask {
     return {
-      paths:
-        typeof object === "string"
-          ? object.split(",").filter(Boolean)
-          : Array.isArray(object?.paths)
-          ? object.paths.map(String)
-          : [],
+      paths: typeof (object) === "string"
+        ? object.split(",").filter(Boolean)
+        : Array.isArray(object?.paths)
+        ? object.paths.map(String)
+        : [],
     };
   },
 
@@ -269,7 +263,11 @@ export const FieldMask = {
   },
 
   wrap(paths: string[]): FieldMask {
-    return { paths: paths };
+    const result = createBaseFieldMask();
+
+    result.paths = paths;
+
+    return result;
   },
 
   unwrap(message: FieldMask): string[] {
@@ -277,26 +275,9 @@ export const FieldMask = {
   },
 };
 
-type Builtin =
-  | Date
-  | Function
-  | Uint8Array
-  | string
-  | number
-  | boolean
-  | undefined;
+type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
-export type DeepPartial<T> = T extends Builtin
-  ? T
-  : T extends Array<infer U>
-  ? Array<DeepPartial<U>>
-  : T extends ReadonlyArray<infer U>
-  ? ReadonlyArray<DeepPartial<U>>
-  : T extends {}
-  ? { [K in keyof T]?: DeepPartial<T[K]> }
+export type DeepPartial<T> = T extends Builtin ? T
+  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
+  : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
-
-if (_m0.util.Long !== Long) {
-  _m0.util.Long = Long as any;
-  _m0.configure();
-}

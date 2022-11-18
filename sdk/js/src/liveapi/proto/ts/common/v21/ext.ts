@@ -3,8 +3,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * -------------------------------------------------------------------------------------------- */
 /* eslint-disable */
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
+import _m0 from "protobufjs/minimal";
 
 export const protobufPackage = "common.v21";
 
@@ -48,10 +47,7 @@ function createBaseFieldOptions(): FieldOptions {
 }
 
 export const FieldOptions = {
-  encode(
-    message: FieldOptions,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: FieldOptions, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.future !== undefined) {
       writer.uint32(8).bool(message.future);
     }
@@ -145,39 +141,19 @@ export const FieldOptions = {
   fromJSON(object: any): FieldOptions {
     return {
       future: isSet(object.future) ? Boolean(object.future) : undefined,
-      databaseId: isSet(object.databaseId)
-        ? Boolean(object.databaseId)
-        : undefined,
-      databaseReferenceFrom: isSet(object.databaseReferenceFrom)
-        ? Boolean(object.databaseReferenceFrom)
-        : undefined,
-      databaseReference: isSet(object.databaseReference)
-        ? String(object.databaseReference)
-        : undefined,
-      databaseOwnerReference: isSet(object.databaseOwnerReference)
-        ? String(object.databaseOwnerReference)
-        : undefined,
-      databaseReferenceDeep: isSet(object.databaseReferenceDeep)
-        ? Boolean(object.databaseReferenceDeep)
-        : undefined,
+      databaseId: isSet(object.databaseId) ? Boolean(object.databaseId) : undefined,
+      databaseReferenceFrom: isSet(object.databaseReferenceFrom) ? Boolean(object.databaseReferenceFrom) : undefined,
+      databaseReference: isSet(object.databaseReference) ? String(object.databaseReference) : undefined,
+      databaseOwnerReference: isSet(object.databaseOwnerReference) ? String(object.databaseOwnerReference) : undefined,
+      databaseReferenceDeep: isSet(object.databaseReferenceDeep) ? Boolean(object.databaseReferenceDeep) : undefined,
       databaseReferenceFromArray: isSet(object.databaseReferenceFromArray)
         ? Boolean(object.databaseReferenceFromArray)
         : undefined,
-      databaseReferenceTo: isSet(object.databaseReferenceTo)
-        ? Boolean(object.databaseReferenceTo)
-        : undefined,
-      databaseIgnore: isSet(object.databaseIgnore)
-        ? Boolean(object.databaseIgnore)
-        : undefined,
-      databaseOptimizeSearch: isSet(object.databaseOptimizeSearch)
-        ? Boolean(object.databaseOptimizeSearch)
-        : undefined,
-      urlProtocols: isSet(object.urlProtocols)
-        ? String(object.urlProtocols)
-        : undefined,
-      databaseAutoDelete: isSet(object.databaseAutoDelete)
-        ? Boolean(object.databaseAutoDelete)
-        : undefined,
+      databaseReferenceTo: isSet(object.databaseReferenceTo) ? Boolean(object.databaseReferenceTo) : undefined,
+      databaseIgnore: isSet(object.databaseIgnore) ? Boolean(object.databaseIgnore) : undefined,
+      databaseOptimizeSearch: isSet(object.databaseOptimizeSearch) ? Boolean(object.databaseOptimizeSearch) : undefined,
+      urlProtocols: isSet(object.urlProtocols) ? String(object.urlProtocols) : undefined,
+      databaseAutoDelete: isSet(object.databaseAutoDelete) ? Boolean(object.databaseAutoDelete) : undefined,
     };
   },
 
@@ -185,26 +161,17 @@ export const FieldOptions = {
     const obj: any = {};
     message.future !== undefined && (obj.future = message.future);
     message.databaseId !== undefined && (obj.databaseId = message.databaseId);
-    message.databaseReferenceFrom !== undefined &&
-      (obj.databaseReferenceFrom = message.databaseReferenceFrom);
-    message.databaseReference !== undefined &&
-      (obj.databaseReference = message.databaseReference);
-    message.databaseOwnerReference !== undefined &&
-      (obj.databaseOwnerReference = message.databaseOwnerReference);
-    message.databaseReferenceDeep !== undefined &&
-      (obj.databaseReferenceDeep = message.databaseReferenceDeep);
+    message.databaseReferenceFrom !== undefined && (obj.databaseReferenceFrom = message.databaseReferenceFrom);
+    message.databaseReference !== undefined && (obj.databaseReference = message.databaseReference);
+    message.databaseOwnerReference !== undefined && (obj.databaseOwnerReference = message.databaseOwnerReference);
+    message.databaseReferenceDeep !== undefined && (obj.databaseReferenceDeep = message.databaseReferenceDeep);
     message.databaseReferenceFromArray !== undefined &&
       (obj.databaseReferenceFromArray = message.databaseReferenceFromArray);
-    message.databaseReferenceTo !== undefined &&
-      (obj.databaseReferenceTo = message.databaseReferenceTo);
-    message.databaseIgnore !== undefined &&
-      (obj.databaseIgnore = message.databaseIgnore);
-    message.databaseOptimizeSearch !== undefined &&
-      (obj.databaseOptimizeSearch = message.databaseOptimizeSearch);
-    message.urlProtocols !== undefined &&
-      (obj.urlProtocols = message.urlProtocols);
-    message.databaseAutoDelete !== undefined &&
-      (obj.databaseAutoDelete = message.databaseAutoDelete);
+    message.databaseReferenceTo !== undefined && (obj.databaseReferenceTo = message.databaseReferenceTo);
+    message.databaseIgnore !== undefined && (obj.databaseIgnore = message.databaseIgnore);
+    message.databaseOptimizeSearch !== undefined && (obj.databaseOptimizeSearch = message.databaseOptimizeSearch);
+    message.urlProtocols !== undefined && (obj.urlProtocols = message.urlProtocols);
+    message.databaseAutoDelete !== undefined && (obj.databaseAutoDelete = message.databaseAutoDelete);
     return obj;
   },
 
@@ -216,8 +183,7 @@ export const FieldOptions = {
     message.databaseReference = object.databaseReference ?? undefined;
     message.databaseOwnerReference = object.databaseOwnerReference ?? undefined;
     message.databaseReferenceDeep = object.databaseReferenceDeep ?? undefined;
-    message.databaseReferenceFromArray =
-      object.databaseReferenceFromArray ?? undefined;
+    message.databaseReferenceFromArray = object.databaseReferenceFromArray ?? undefined;
     message.databaseReferenceTo = object.databaseReferenceTo ?? undefined;
     message.databaseIgnore = object.databaseIgnore ?? undefined;
     message.databaseOptimizeSearch = object.databaseOptimizeSearch ?? undefined;
@@ -232,10 +198,7 @@ function createBaseMessageOptions(): MessageOptions {
 }
 
 export const MessageOptions = {
-  encode(
-    message: MessageOptions,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+  encode(message: MessageOptions, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     if (message.databaseModel !== undefined) {
       writer.uint32(8).bool(message.databaseModel);
     }
@@ -268,21 +231,15 @@ export const MessageOptions = {
 
   fromJSON(object: any): MessageOptions {
     return {
-      databaseModel: isSet(object.databaseModel)
-        ? Boolean(object.databaseModel)
-        : undefined,
-      databaseCustomId: isSet(object.databaseCustomId)
-        ? Boolean(object.databaseCustomId)
-        : undefined,
+      databaseModel: isSet(object.databaseModel) ? Boolean(object.databaseModel) : undefined,
+      databaseCustomId: isSet(object.databaseCustomId) ? Boolean(object.databaseCustomId) : undefined,
     };
   },
 
   toJSON(message: MessageOptions): unknown {
     const obj: any = {};
-    message.databaseModel !== undefined &&
-      (obj.databaseModel = message.databaseModel);
-    message.databaseCustomId !== undefined &&
-      (obj.databaseCustomId = message.databaseCustomId);
+    message.databaseModel !== undefined && (obj.databaseModel = message.databaseModel);
+    message.databaseCustomId !== undefined && (obj.databaseCustomId = message.databaseCustomId);
     return obj;
   },
 
@@ -294,29 +251,12 @@ export const MessageOptions = {
   },
 };
 
-type Builtin =
-  | Date
-  | Function
-  | Uint8Array
-  | string
-  | number
-  | boolean
-  | undefined;
+type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
-export type DeepPartial<T> = T extends Builtin
-  ? T
-  : T extends Array<infer U>
-  ? Array<DeepPartial<U>>
-  : T extends ReadonlyArray<infer U>
-  ? ReadonlyArray<DeepPartial<U>>
-  : T extends {}
-  ? { [K in keyof T]?: DeepPartial<T[K]> }
+export type DeepPartial<T> = T extends Builtin ? T
+  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
+  : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
-
-if (_m0.util.Long !== Long) {
-  _m0.util.Long = Long as any;
-  _m0.configure();
-}
 
 function isSet(value: any): boolean {
   return value !== null && value !== undefined;
