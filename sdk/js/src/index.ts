@@ -248,21 +248,30 @@ export class ApiStream {
   /**
    * Initialize the api library and check if we are running inside of the rendering engine
    * @async
-   * @param {string} accessToken - a valid ApiStream access token
+   * @param {string | { accessToken: string } | { guestCode: string }} accessToken - method to authenticate the client
    * @returns {(ApiStream.GuestProject | null)} if we are operating inside of the rendering engine, this is the active project
    */
-  public async load ( accessToken?: string ): Promise<ApiStream.GuestProject | null> {
+  public async load ( accessToken?: string | { accessToken: string } | { guestCode: string; serviceId?: string }): Promise<ApiStream.GuestProject | null> {
+    let resolvedAccessToken = typeof accessToken === 'string' ? accessToken : undefined;
+
     // not specified, check if it is in the query params
     if ( ( accessToken == undefined ) && ( typeof window != 'undefined' ) ) {
       let queryParameters = this.parseQuery();
       if ( queryParameters.get( ApiStream.ACCESS_TOKEN_QUERY_PARAM ) != null ) {
-        accessToken = queryParameters.get( ApiStream.ACCESS_TOKEN_QUERY_PARAM );
+        resolvedAccessToken = queryParameters.get( ApiStream.ACCESS_TOKEN_QUERY_PARAM );
       }
+    } else if ( typeof accessToken == 'object' && accessToken['guestCode'] !== undefined) {
+      await this.liveApi.publicAuthentication.useGuestCode({ code: accessToken['guestCode'], serviceId: accessToken['serviceId'] })
+        .then(res => {
+          resolvedAccessToken = res.accessToken;
+        });
+    } else if ( typeof accessToken == 'object' && accessToken['accessToken'] !== undefined) {
+      resolvedAccessToken = accessToken['accessToken'];
     }
 
     // load access token
-    if ( accessToken != undefined ) {
-      this.setAccessToken( accessToken );
+    if ( resolvedAccessToken != undefined ) {
+      this.setAccessToken( resolvedAccessToken );
       // check for guest project control
       if ( this.decodedAccessToken.guestControl != undefined ) {
         this.log.info( "loading guest token and exchanging" );
