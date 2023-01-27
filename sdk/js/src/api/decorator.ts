@@ -10,17 +10,17 @@
  */
 export function RequiresSdkAuthentication () {
   return function ( target: Object, propertyKey: string ) {
-    let value: any;
+    const _internalPropertyKey = Symbol(propertyKey);
 
     Object.defineProperty( target, propertyKey, {
-      get: () => {
-        if ( !value ) {
+      get: function () {
+        if ( !this[_internalPropertyKey] ) {
           throw new Error( 'Please authenticate ApiStream by calling apiStream.load( accessToken )' );
         }
-        return value;
+        return this[_internalPropertyKey];
       },
-      set: val => {
-        value = val;
+      set: function ( val ) {
+        this[_internalPropertyKey] = val;
       },
     } );
   };
