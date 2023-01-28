@@ -30,6 +30,7 @@
     "lib/**/*"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "bump": "npm version patch; npx genversion src/version/index.js; tsc",
     "build": "tsc"
   },
