@@ -24,7 +24,7 @@ import { Scene } from '../scene';
 import { Login } from '../login';
 import { ButtonGroupConfig, CreateButtonGroupState, IsFulfilled, Sleep } from '../shared/utils';
 
-//const DEBUG_DEV_SERVER = 'https://live.stream.horse/live/v2';
+//const DEBUG_DEV_SERVER = 'https://live.silly.horse/live/v2';
 const DEBUG_DEV_SERVER = 'http://127.0.0.1:7070';
 
 const API_KEY: string | undefined = undefined;
@@ -329,7 +329,7 @@ export const HostView = () => {
 
     if ( location.host.includes( 'live.api.stream' ) ) {
       ENV = 'prod';
-    } else if ( location.host.includes( 'live.stream.horse' ) ) {
+    } else if ( location.host.includes( 'live.silly.horse' ) ) {
       ENV = 'stage';
     }
 
@@ -337,7 +337,7 @@ export const HostView = () => {
     switch ( ENV ) {
       case 'dev':
       case 'stage':
-        liveURL = 'https://live.stream.horse/live/v2';
+        liveURL = 'https://live.silly.horse/live/v2';
         break;
       case 'prod':
         liveURL = 'https://live.api.stream/live/v2';

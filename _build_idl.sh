@@ -8,16 +8,16 @@ rm -rf $PWD/deps/proto/idl/live/*
 rm -rf $PWD/deps/proto/idl/common/*
 
 mkdir -p $PWD/deps/proto/idl/live/v21
-curl -o $PWD/deps/proto/idl/live/v21/api.proto https://live.stream.horse/live/v2/proto/live/v21/api.proto
+curl -o $PWD/deps/proto/idl/live/v21/api.proto https://live.silly.horse/live/v2/proto/live/v21/api.proto
 mkdir -p $PWD/deps/proto/idl/common/v21
-curl -o $PWD/deps/proto/idl/common/v21/ext.proto https://live.stream.horse/live/v2/proto/common/v21/ext.proto
+curl -o $PWD/deps/proto/idl/common/v21/ext.proto https://live.silly.horse/live/v2/proto/common/v21/ext.proto
 # LIGHTSTREAM_PROTO_ROOT=$PWD/../../lightstream/lightstream/proto
 # cp -r $LIGHTSTREAM_PROTO_ROOT/idl/* $PWD/deps/proto/idl/
 
 mkdir -p $PWD/deps/proto/idl/apis/layout/v2
-curl -o $PWD/deps/proto/idl/apis/layout/v2/api.proto https://live.stream.horse/layout/v2/api.proto
+curl -o $PWD/deps/proto/idl/apis/layout/v2/api.proto https://live.silly.horse/layout/v2/api.proto
 mkdir -p $PWD/deps/proto/idl/apis/event/v2
-curl -o $PWD/deps/proto/idl/apis/event/v2/api.proto https://live.stream.horse/event/v2/api.proto
+curl -o $PWD/deps/proto/idl/apis/event/v2/api.proto https://live.silly.horse/event/v2/api.proto
 
 # TS
 OUTPUT_DIR=$PWD/sdk/js/src/liveapi/proto/ts
