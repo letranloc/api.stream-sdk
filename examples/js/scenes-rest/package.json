@@ -1,0 +1,17 @@
+{
+  "name": "scenes-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node src/index"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.2",
+    "node-fetch": "^2.6.9",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.5.2"
+  }
+}

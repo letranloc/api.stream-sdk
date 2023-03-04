@@ -20,7 +20,7 @@ public class ApiStream implements AccessTokenRefreshCallback {
     static {
         API_SERVERS = new HashMap<>();
         API_SERVERS.put(Environment.DEV, "127.0.0.1:9090");
-        API_SERVERS.put(Environment.STAGE, "live.stream.horse:9081");
+        API_SERVERS.put(Environment.STAGE, "live.silly.horse:9081");
         API_SERVERS.put(Environment.PROD, "live.api.stream:9081");
     };
 

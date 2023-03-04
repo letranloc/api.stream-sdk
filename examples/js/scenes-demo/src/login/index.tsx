@@ -23,7 +23,7 @@ const RECAPTCHA_SITE_KEY = '6Lc0HIUfAAAAAIdsyq7vB_3c3skiVvltzdUTCUSx';
 
 // Determine whether this is running on API.stream
 const isLiveURL = () => {
-  return [ 'live.api.stream', 'live.stream.horse', 'localhost' ].some( ( x ) =>
+  return [ 'live.api.stream', 'live.silly.horse', 'localhost' ].some( ( x ) =>
     location.host.includes( x ),
   );
 };

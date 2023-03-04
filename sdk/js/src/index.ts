@@ -31,37 +31,37 @@ const CLIENT_VERSION = require( "./version/index.js" );
 
 const LIVEAPI_SERVERS = {
   "dev": "http://127.0.0.1:8081",
-  "stage": "https://live.stream.horse/grpcweb/live/v2",
+  "stage": "https://live.silly.horse/grpcweb/live/v2",
   "prod": "https://live.api.stream/grpcweb/live/v2"
 };
 
 const LAYOUTAPI_SERVERS = {
-  "dev": 'https://live.stream.horse/grpcweb/layout/v2',
-  "stage": 'https://live.stream.horse/grpcweb/layout/v2',
+  "dev": 'https://live.silly.horse/grpcweb/layout/v2',
+  "stage": 'https://live.silly.horse/grpcweb/layout/v2',
   "prod": 'https://live.api.stream/grpcweb/layout/v2'
 };
 
 const EVENTAPI_WS_SERVERS = {
-  "dev": 'wss://live.stream.horse/event/v2',
-  "stage": 'wss://live.stream.horse/event/v2',
+  "dev": 'wss://live.silly.horse/event/v2',
+  "stage": 'wss://live.silly.horse/event/v2',
   "prod": 'wss://live.api.stream/event/v2'
 };
 
 const EVENTAPI_SERVERS = {
-  "dev": 'https://live.stream.horse/grpcweb/event/v2',
-  "stage": 'https://live.stream.horse/grpcweb/event/v2',
+  "dev": 'https://live.silly.horse/grpcweb/event/v2',
+  "stage": 'https://live.silly.horse/grpcweb/event/v2',
   "prod": 'https://live.api.stream/grpcweb/event/v2'
 };
 
 const LIVEKIT_SERVERS = {
-  "dev": "wss://live.stream.horse/webrtc/v2",
-  "stage": "wss://live.stream.horse/webrtc/v2",
+  "dev": "wss://live.silly.horse/webrtc/v2",
+  "stage": "wss://live.silly.horse/webrtc/v2",
   "prod": "wss://live.api.stream/webrtc/v2"
 };
 
 const LIVEKIT_ADMIN_SERVERS = {
-  "dev": "https://live.stream.horse/webrtc/v2",
-  "stage": "https://live.stream.horse/webrtc/v2",
+  "dev": "https://live.silly.horse/webrtc/v2",
+  "stage": "https://live.silly.horse/webrtc/v2",
   "prod": "https://live.api.stream/webrtc/v2"
 };
 
